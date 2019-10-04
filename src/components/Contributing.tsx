@@ -307,7 +307,7 @@ export const Contributing: React.FC = () => (
 
 
             <br />
-            <h5>Section 4</h5>
+            <h5>Section 5</h5>
             <br />
             <h4>What happens after you submit a contribution</h4>
 
@@ -356,6 +356,15 @@ export const Contributing: React.FC = () => (
 
             <h4>🎉 Your contribution gets accepted.</h4>
             <p className="text-justify">Hooray! You’ve successfully made an open source contribution!</p>
+
+            <br />
+            <h5>Section 6</h5>
+            <br />
+            <h4>You did it!</h4>
+
+            <blockquote className="blockquote">
+            Whether you just made your first open source contribution, or you’re looking for new ways to contribute, we hope you’re inspired to take action. Even if your contribution wasn’t accepted, don’t forget to say thanks when a maintainer put effort into helping you. Open source is made by people like you: one issue, pull request, comment, or high-five at a time.
+            </blockquote>
 
 
         </Container>
