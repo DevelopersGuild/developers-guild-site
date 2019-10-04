@@ -1,6 +1,10 @@
 import React from 'react';
 import { Container, } from 'react-bootstrap';
 
+/**
+ *  Sourced from https://opensource.guide/how-to-contribute/
+ */
+
 export const Contributing: React.FC = () => (
     <React.Fragment>
         <br />
