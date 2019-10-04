@@ -143,9 +143,84 @@ export const Contributing: React.FC = () => (
             <p className="text-justify">Even if you’re a software developer, working on a documentation project can help you get started in open source. It’s often less intimidating to work on projects that don’t involve code, and the process of collaboration will build your confidence and experience.</p>
 
             <br />
-            <h5>Section 1</h5>
+            <h5>Section 3</h5>
             <br />
-            <h4>Why contribute to open source?</h4>
+            <h4>Orienting yourself to a new project</h4>
+
+            <p className="text-justify">For anything more than a typo fix, contributing to open source is like walking up to a group of strangers at a party. If you start talking about llamas, while they were deep in a discussion about goldfish, they’ll probably look at you a little strangely. Before jumping in blindly with your own suggestions, start by learning how to read the room. Doing so increases the chances that your ideas will be noticed and heard.</p>
+
+            <h4>Anatomy of an open source project</h4>
+            <p className="text-justify">
+                Every open source community is different.
+            </p>
+            <p className="text-justify">
+                Spending years on one open source project means you’ve gotten to know one open source project. Move to a different project, and you might find the vocabulary, norms, and communication styles are completely different.
+            </p>
+            <p className="text-justify">
+                That said, many open source projects follow a similar organizational structure. Understanding the different community roles and overall process will help you get quickly oriented to any new project.
+            </p>
+
+            <p className="text-justify">
+                A typical open source project has the following types of people:
+            </p>
+
+            <ul>
+                <li>Author: The person/s or organization that created the project</li>
+                <li>Owner: The person/s who has administrative ownership over the organization or repository (not always the same as the original author)</li>
+                <li>Maintainers: Contributors who are responsible for driving the vision and managing the organizational aspects of the project (They may also be authors or owners of the project.)</li>
+                <li>Contributors: Everyone who has contributed something back to the project</li>
+                <li>Community Members: People who use the project. They might be active in conversations or express their opinion on the project’s direction</li>
+            </ul>
+
+            <p className="text-justify">
+                Bigger projects may also have subcommittees or working groups focused on different tasks, such as tooling, triage, community moderation, and event organizing. Look on a project’s website for a “team” page, or in the repository for governance documentation, to find this information.
+            </p>
+
+            <p className="text-justify">
+                A project also has documentation. These files are usually listed in the top level of a repository.
+            </p>
+
+            <ul>
+                <li>LICENSE: By definition, every open source project must have an open source license. If the project does not have a license, it is not open source.</li>
+                <li>README: The README is the instruction manual that welcomes new community members to the project. It explains why the project is useful and how to get started.</li>
+                <li>CONTRIBUTING: Whereas READMEs help people use the project, contributing docs help people contribute to the project. It explains what types of contributions are needed and how the process works. While not every project has a CONTRIBUTING file, its presence signals that this is a welcoming project to contribute to.</li>
+                <li>CODE_OF_CONDUCT: The code of conduct sets ground rules for participants’ behavior associated and helps to facilitate a friendly, welcoming environment. While not every project has a CODE_OF_CONDUCT file, its presence signals that this is a welcoming project to contribute to.</li>
+                <li>Other documentation: There might be additional documentation, such as tutorials, walkthroughs, or governance policies, especially on bigger projects.</li>
+            </ul>
+
+            <p className="text-justify">Finally, open source projects use the following tools to organize discussion. Reading through the archives will give you a good picture of how the community thinks and works.</p>
+
+            <ul>
+                <li>Issue tracker: Where people discuss issues related to the project.</li>
+                <li>Pull requests: Where people discuss and review changes that are in progress.</li>
+                <li>Discussion forums or mailing lists: Some projects may use these channels for conversational topics (for example, “How do I…“ or “What do you think about…“ instead of bug reports or feature requests). Others use the issue tracker for all conversations.</li>
+                <li>Synchronous chat channel: Some projects use chat channels (such as Slack or IRC) for casual conversation, collaboration, and quick exchanges.</li>
+            </ul>
+
+            <br />
+            <h5>Section 4</h5>
+            <br />
+            <h4>How to submit a contribution</h4>
+
+            <blockquote className="blockquote">
+                You’ve found a project you like, and you’re ready to make a contribution. Finally! Here’s how to get your contribution in the right way.
+            </blockquote>
+
+            <h4>Communicating effectively</h4>
+            <p className="text-justify">
+            Whether you’re a one-time contributor or trying to join a community, working with others is one of the most important skills you’ll develop in open source.
+            </p>
+            <p className="text-justify">
+            Before you open an issue or pull request, or ask a question in chat, keep these points in mind to help your ideas come across effectively.
+            </p>
+
+            <p className="text-justify">
+            Give context. Help others get quickly up to speed. If you’re running into an error, explain what you’re trying to do and how to reproduce it. If you’re suggesting a new idea, explain why you think it’d be useful to the project (not just to you!).
+            </p>
+
+            <p className="text-justify">
+            Do your homework beforehand. It’s OK not to know things, but show that you tried. Before asking for help, be sure to check a project’s README, documentation, issues (open or closed), mailing list, and search the internet for an answer. People will appreciate when you demonstrate that you’re trying to learn.
+            </p>
 
         </Container>
     </React.Fragment>
