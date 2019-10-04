@@ -1,11 +1,10 @@
 import React from 'react';
-import {    } from 'react-router-dom';
+import {  BrowserRouter, Route   } from 'react-router-dom';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-
-    </div>
+    <BrowserRouter>
+    </BrowserRouter>
   );
 }
 
