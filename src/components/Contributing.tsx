@@ -258,8 +258,11 @@ export const Contributing: React.FC = () => (
                 <li>For lightweight communication, such as a clarifying or how-to question, try asking on Stack Overflow, IRC, Slack, or other chat channels, if the project has one</li>
             </ul>
 
-            <p>Before you open an issue or pull request, check the project’s contributing docs (usually a file called CONTRIBUTING, or in the README), to see whether you need to include anything specific. For example, they may ask that you follow a template, or require that you use tests.</p>
-            <p>If you want to make a substantial contribution, open an issue to ask before working on it. It’s helpful to watch the project for a while (on GitHub, you can click “Watch” to be notified of all conversations), and get to know community members, before doing work that might not get accepted.</p>
+            <p className="text-justify">Before you open an issue or pull request, check the project’s contributing docs (usually a file called CONTRIBUTING, or in the README), to see whether you need to include anything specific. For example, they may ask that you follow a template, or require that you use tests.</p>
+            <p className="text-justify">If you want to make a substantial contribution, open an issue to ask before working on it. It’s helpful to watch the project for a while (on GitHub, you can click “Watch” to be notified of all conversations), and get to know community members, before doing work that might not get accepted.</p>
+
+            <h4>Opening an issue</h4>
+
 
         </Container>
     </React.Fragment>
