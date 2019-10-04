@@ -208,48 +208,48 @@ export const Contributing: React.FC = () => (
 
             <h4>Communicating effectively</h4>
             <p className="text-justify">
-            Whether you’re a one-time contributor or trying to join a community, working with others is one of the most important skills you’ll develop in open source.
+                Whether you’re a one-time contributor or trying to join a community, working with others is one of the most important skills you’ll develop in open source.
             </p>
             <p className="text-justify">
-            Before you open an issue or pull request, or ask a question in chat, keep these points in mind to help your ideas come across effectively.
-            </p>
-
-            <p className="text-justify">
-            Give context. Help others get quickly up to speed. If you’re running into an error, explain what you’re trying to do and how to reproduce it. If you’re suggesting a new idea, explain why you think it’d be useful to the project (not just to you!).
+                Before you open an issue or pull request, or ask a question in chat, keep these points in mind to help your ideas come across effectively.
             </p>
 
             <p className="text-justify">
-            Do your homework beforehand. It’s OK not to know things, but show that you tried. Before asking for help, be sure to check a project’s README, documentation, issues (open or closed), mailing list, and search the internet for an answer. People will appreciate when you demonstrate that you’re trying to learn.
+                Give context. Help others get quickly up to speed. If you’re running into an error, explain what you’re trying to do and how to reproduce it. If you’re suggesting a new idea, explain why you think it’d be useful to the project (not just to you!).
             </p>
 
             <p className="text-justify">
-            Keep requests short and direct. Much like sending an email, every contribution, no matter how simple or helpful, requires someone else’s review. Many projects have more incoming requests than people available to help. Be concise. You will increase the chance that someone will be able to help you.
+                Do your homework beforehand. It’s OK not to know things, but show that you tried. Before asking for help, be sure to check a project’s README, documentation, issues (open or closed), mailing list, and search the internet for an answer. People will appreciate when you demonstrate that you’re trying to learn.
             </p>
 
             <p className="text-justify">
-            Keep all communication public. Although it’s tempting, don’t reach out to maintainers privately unless you need to share sensitive information (such as a security issue or serious conduct violation). When you keep the conversation public, more people can learn and benefit from your exchange. Discussions can be, in themselves, contributions.
+                Keep requests short and direct. Much like sending an email, every contribution, no matter how simple or helpful, requires someone else’s review. Many projects have more incoming requests than people available to help. Be concise. You will increase the chance that someone will be able to help you.
             </p>
 
             <p className="text-justify">
-            It’s okay to ask questions (but be patient!). Everybody was new to the project at some point, and even experienced contributors need to get up to speed when they look at a new project. By the same token, even longtime maintainers are not always familiar with every part of the project. Show them the same patience that you’d want them to show to you.
+                Keep all communication public. Although it’s tempting, don’t reach out to maintainers privately unless you need to share sensitive information (such as a security issue or serious conduct violation). When you keep the conversation public, more people can learn and benefit from your exchange. Discussions can be, in themselves, contributions.
             </p>
 
             <p className="text-justify">
-            Respect community decisions. Your ideas may differ from the community’s priorities or vision. They may offer feedback or decide not to pursue your idea. While you should discuss and look for compromise, maintainers have to live with your decision longer than you will. If you disagree with their direction, you can always work on your own fork or start your own project.
+                It’s okay to ask questions (but be patient!). Everybody was new to the project at some point, and even experienced contributors need to get up to speed when they look at a new project. By the same token, even longtime maintainers are not always familiar with every part of the project. Show them the same patience that you’d want them to show to you.
             </p>
 
             <p className="text-justify">
-            Above all, keep it classy. Open source is made up of collaborators from all over the world. Context gets lost across languages, cultures, geographies, and time zones. In addition, written communication makes it harder to convey a tone or mood. Assume good intentions in these conversations. It’s fine to politely push back on an idea, ask for more context, or further clarify your position. Just try to leave the internet a better place than when you found it.
+                Respect community decisions. Your ideas may differ from the community’s priorities or vision. They may offer feedback or decide not to pursue your idea. While you should discuss and look for compromise, maintainers have to live with your decision longer than you will. If you disagree with their direction, you can always work on your own fork or start your own project.
+            </p>
+
+            <p className="text-justify">
+                Above all, keep it classy. Open source is made up of collaborators from all over the world. Context gets lost across languages, cultures, geographies, and time zones. In addition, written communication makes it harder to convey a tone or mood. Assume good intentions in these conversations. It’s fine to politely push back on an idea, ask for more context, or further clarify your position. Just try to leave the internet a better place than when you found it.
             </p>
 
             <h4>Gathering context</h4>
 
             <p className="text-justify">
-            Before doing anything, do a quick check to make sure your idea hasn’t been discussed elsewhere. Skim the project’s README, issues (open and closed), mailing list, and Stack Overflow. You don’t have to spend hours going through everything, but a quick search for a few key terms goes a long way.
+                Before doing anything, do a quick check to make sure your idea hasn’t been discussed elsewhere. Skim the project’s README, issues (open and closed), mailing list, and Stack Overflow. You don’t have to spend hours going through everything, but a quick search for a few key terms goes a long way.
             </p>
 
             <p className="text-justify">
-            If you can’t find your idea elsewhere, you’re ready to make a move. If the project is on GitHub, you’ll likely communicate by opening an issue or pull request:
+                If you can’t find your idea elsewhere, you’re ready to make a move. If the project is on GitHub, you’ll likely communicate by opening an issue or pull request:
             </p>
 
             <ul>
@@ -279,7 +279,7 @@ export const Contributing: React.FC = () => (
             </ul>
 
             <h4>
-            Opening a pull request
+                Opening a pull request
             </h4>
 
             <p className="text-justify">You should usually open a pull request in the following situations:</p>
@@ -289,11 +289,11 @@ export const Contributing: React.FC = () => (
             </ul>
 
             <p className="text-justify">
-            A pull request doesn’t have to represent finished work. It’s usually better to open a pull request early on, so others can watch or give feedback on your progress. Just mark it as a “WIP” (Work in Progress) in the subject line. You can always add more commits later.
+                A pull request doesn’t have to represent finished work. It’s usually better to open a pull request early on, so others can watch or give feedback on your progress. Just mark it as a “WIP” (Work in Progress) in the subject line. You can always add more commits later.
             </p>
 
             <p className="text-justify">
-            If the project is on GitHub, here’s how to submit a pull request:
+                If the project is on GitHub, here’s how to submit a pull request:
             </p>
 
             <ul>
@@ -310,38 +310,53 @@ export const Contributing: React.FC = () => (
             <h5>Section 4</h5>
             <br />
             <h4>What happens after you submit a contribution</h4>
-            
+
             <blockquote className="blockquote">
-            You did it! Congratulations on becoming an open source contributor. We hope it’s the first of many.
+                You did it! Congratulations on becoming an open source contributor. We hope it’s the first of many.
             </blockquote>
 
             <p className="text-justify">
-            After you submit a contribution, one of the following will happen:
+                After you submit a contribution, one of the following will happen:
             </p>
 
             <h4>😭 You don’t get a response.</h4>
 
             <p className="text-justify">Hopefully you checked the project for signs of activity before making a contribution. Even on an active project, however, it’s possible that your contribution won’t get a response.</p>
             <p className="text-justify">
-            If you haven’t gotten a response in over a week, it’s fair to politely respond in that same thread, asking someone for a review. If you know the name of the right person to review your contribution, you can @-mention them in that thread.
+                If you haven’t gotten a response in over a week, it’s fair to politely respond in that same thread, asking someone for a review. If you know the name of the right person to review your contribution, you can @-mention them in that thread.
             </p>
             <p className="text-justify">
-            Don’t reach out to that person privately; remember that public communication is vital to open source projects.
+                Don’t reach out to that person privately; remember that public communication is vital to open source projects.
             </p>
 
             <p className="text-justify">
-            If you make a polite bump and still nobody responds, it’s possible that nobody will respond, ever. It’s not a great feeling, but don’t let that discourage you. It’s happened to everyone! There are many possible reasons why you didn’t get a response, including personal circumstances that may be out of your control. Try to find another project or way to contribute. If anything, this is a good reason not to invest too much time in making a contribution before other community members are engaged and responsive.
+                If you make a polite bump and still nobody responds, it’s possible that nobody will respond, ever. It’s not a great feeling, but don’t let that discourage you. It’s happened to everyone! There are many possible reasons why you didn’t get a response, including personal circumstances that may be out of your control. Try to find another project or way to contribute. If anything, this is a good reason not to invest too much time in making a contribution before other community members are engaged and responsive.
             </p>
 
             <h4>🚧 Someone requests changes to your contribution.</h4>
 
             <p className="text-justify">
-            It’s common that you’ll be asked to make changes to your contribution, whether that’s feedback on the scope of your idea, or changes to your code.
+                It’s common that you’ll be asked to make changes to your contribution, whether that’s feedback on the scope of your idea, or changes to your code.
             </p>
 
             <p className="text-justify">
-            When someone requests changes, be responsive. They’ve taken the time to review your contribution. Opening a PR and walking away is bad form. If you don’t know how to make changes, research the problem, then ask for help if you need it.
+                When someone requests changes, be responsive. They’ve taken the time to review your contribution. Opening a PR and walking away is bad form. If you don’t know how to make changes, research the problem, then ask for help if you need it.
             </p>
+
+            <p className="text-justify">
+                If you don’t have time to work on the issue anymore (for example, if the conversation has been going on for months, and your circumstances have changed), let the maintainer know so they’re not expecting a response. Someone else may be happy to take over.
+            </p>
+
+            <h4>👎 Your contribution doesn’t get accepted.</h4>
+
+            <p className="text-justify">
+                Your contribution may or may not be accepted in the end. Hopefully you didn’t put too much work into it already. If you’re not sure why it wasn’t accepted, it’s perfectly reasonable to ask the maintainer for feedback and clarification. Ultimately, however, you’ll need to respect that this is their decision. Don’t argue or get hostile. You’re always welcome to fork and work on your own version if you disagree!
+            </p>
+
+
+            <h4>🎉 Your contribution gets accepted.</h4>
+            <p className="text-justify">Hooray! You’ve successfully made an open source contribution!</p>
+
 
         </Container>
     </React.Fragment>
