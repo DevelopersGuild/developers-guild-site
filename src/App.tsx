@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
+import {    } from 'react-router-dom';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-        
+
     </div>
   );
 }
