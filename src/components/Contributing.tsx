@@ -263,6 +263,36 @@ export const Contributing: React.FC = () => (
 
             <h4>Opening an issue</h4>
 
+            <p className="text-justify">You should usually open an issue in the following situations:</p>
+            <ul>
+                <li>Report an error you can’t solve yourself</li>
+                <li>Discuss a high-level topic or idea (for example, community, vision or policies)</li>
+                <li>Propose a new feature or other project idea</li>
+            </ul>
+
+            <p className="text-justify">Tips for communicating on issues:</p>
+
+            <ul>
+                <li>If you see an open issue that you want to tackle, comment on the issue to let people know you’re on it. That way, people are less likely to duplicate your work.</li>
+                <li>If an issue was opened a while ago, it’s possible that it’s being addressed somewhere else, or has already been resolved, so comment to ask for confirmation before starting work.</li>
+                <li>If you opened an issue, but figured out the answer later on your own, comment on the issue to let people know, then close the issue. Even documenting that outcome is a contribution to the project.</li>
+            </ul>
+
+            <h4>
+            Opening a pull request
+            </h4>
+
+            <p className="text-justify">You should usually open a pull request in the following situations:</p>
+            <ul>
+                <li>Submit trivial fixes (for example, a typo, a broken link or an obvious error)</li>
+                <li>Start work on a contribution that was already asked for, or that you’ve already discussed, in an issue</li>
+            </ul>
+
+            <p className="text-justify">
+            A pull request doesn’t have to represent finished work. It’s usually better to open a pull request early on, so others can watch or give feedback on your progress. Just mark it as a “WIP” (Work in Progress) in the subject line. You can always add more commits later.
+            </p>
+
+            
 
         </Container>
     </React.Fragment>
