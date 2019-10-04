@@ -6,9 +6,9 @@ export const Landing: React.FC = () => (
         <br />
         <Container>
             <Jumbotron>
-                <h1>Developers' Guild - De Anza</h1>
-                    <p>
-                    A project based programming club.
+                <h1>Developers Guild - De Anza</h1>
+                <p>
+                    A project and contribution based programming club.
                     </p>
                 <p>
                     <Button variant="primary">Learn more</Button>
