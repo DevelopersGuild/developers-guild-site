@@ -7,13 +7,13 @@ export const Landing: React.FC = () => {
             <Navbar bg="light">
                 <Navbar.Brand href="#home">Developers Guild</Navbar.Brand>
             </Navbar>
+            <br />
             <Container>
                 <Jumbotron>
-                    <h1>Hello, world!</h1>
+                    <h1>Developers' Guild - De Anza</h1>
                     <p>
-                        This is a simple hero unit, a simple jumbotron-style component for calling
-                        extra attention to featured content or information.
-  </p>
+                        A project based programming club.
+                    </p>
                     <p>
                         <Button variant="primary">Learn more</Button>
                     </p>
