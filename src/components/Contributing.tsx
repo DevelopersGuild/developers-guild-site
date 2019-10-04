@@ -305,6 +305,44 @@ export const Contributing: React.FC = () => (
                 <li>Contribute in the style of the project to the best of your abilities. This may mean using indents, semi-colons or comments differently than you would in your own repository, but makes it easier for the maintainer to merge, others to understand and maintain in the future.</li>
             </ul>
 
+
+            <br />
+            <h5>Section 4</h5>
+            <br />
+            <h4>What happens after you submit a contribution</h4>
+            
+            <blockquote className="blockquote">
+            You did it! Congratulations on becoming an open source contributor. We hope it’s the first of many.
+            </blockquote>
+
+            <p className="text-justify">
+            After you submit a contribution, one of the following will happen:
+            </p>
+
+            <h4>😭 You don’t get a response.</h4>
+
+            <p className="text-justify">Hopefully you checked the project for signs of activity before making a contribution. Even on an active project, however, it’s possible that your contribution won’t get a response.</p>
+            <p className="text-justify">
+            If you haven’t gotten a response in over a week, it’s fair to politely respond in that same thread, asking someone for a review. If you know the name of the right person to review your contribution, you can @-mention them in that thread.
+            </p>
+            <p className="text-justify">
+            Don’t reach out to that person privately; remember that public communication is vital to open source projects.
+            </p>
+
+            <p className="text-justify">
+            If you make a polite bump and still nobody responds, it’s possible that nobody will respond, ever. It’s not a great feeling, but don’t let that discourage you. It’s happened to everyone! There are many possible reasons why you didn’t get a response, including personal circumstances that may be out of your control. Try to find another project or way to contribute. If anything, this is a good reason not to invest too much time in making a contribution before other community members are engaged and responsive.
+            </p>
+
+            <h4>🚧 Someone requests changes to your contribution.</h4>
+
+            <p className="text-justify">
+            It’s common that you’ll be asked to make changes to your contribution, whether that’s feedback on the scope of your idea, or changes to your code.
+            </p>
+
+            <p className="text-justify">
+            When someone requests changes, be responsive. They’ve taken the time to review your contribution. Opening a PR and walking away is bad form. If you don’t know how to make changes, research the problem, then ask for help if you need it.
+            </p>
+
         </Container>
     </React.Fragment>
 )
