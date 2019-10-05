@@ -11,9 +11,6 @@ export const Landing: React.FC = () => (
                 <p>
                     A project and contribution based programming club.
                     </p>
-                <p>
-                    <Button variant="primary">Learn more</Button>
-                </p>
             </Jumbotron>
             <br />
             <GithubBar />
