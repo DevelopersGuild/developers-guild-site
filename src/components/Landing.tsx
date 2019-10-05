@@ -14,6 +14,7 @@ export const Landing: React.FC = () => (
             </Jumbotron>
             <br />
             <GithubBar />
+            <br/>
         </Container>
     </React.Fragment>
 )
