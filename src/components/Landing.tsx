@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Jumbotron, Button } from 'react-bootstrap';
-import { GithubBar } from './GithubBar';
+import GithubBar from './GithubBar';
 
 export const Landing: React.FC = () => (
     <React.Fragment>
