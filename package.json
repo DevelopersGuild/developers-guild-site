@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.0",
-    "@types/showdown": "^1.9.3"
+    "@types/showdown": "^1.9.3",
+    "gh-pages": "^2.1.1"
   }
 }
