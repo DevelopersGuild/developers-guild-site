@@ -3,10 +3,15 @@ import { Container } from 'react-bootstrap';
 
 
 const RolesRaw: React.FC = () => {
+
+    useEffect(() => {
+
+    })
+
     return(
         <React.Fragment>
             <Container>
-                
+
             </Container>
         </React.Fragment>
     )
