@@ -5,6 +5,7 @@ import { Contact } from './components/Contact';
 import { NavbarMain } from './components/NavbarMain';
 import { About } from './components/About';
 import { Contributing } from './components/Contributing';
+import Roles from './components/Roles';
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
       <Route exact path='/contact' component={Contact} />
       <Route exact path='/about' component={About} />
       <Route exact path='/contributing' component={Contributing} />
+      <Route exact path='/roles' component={Roles} />
     </BrowserRouter>
   );
 }
