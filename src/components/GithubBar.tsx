@@ -24,7 +24,11 @@ const GithubBarRaw: React.FC = () => {
                                     <Card.Body>
                                         <Card.Title>{e.full_name}</Card.Title>
                                         <Card.Subtitle className="mb-2 text-muted">{e.description}</Card.Subtitle>
-                                        <Card.Text> 🍴Forks:{e.forks_count} {" "} 👁 Watchers:{e.watchers} {" "} 💻 Language: {e.language}</Card.Text>
+                                        <Card.Text> {" "}
+                                            <span aria-label="forks" role="img">🍴</span> {" "} Forks:{e.forks_count} {" "} 
+                                            <span aria-label="watchers" role="img">👁</span> {" "} Watchers:{e.watchers} {" "}
+                                            <span aria-label="language" role="img">💻</span> {" "} Language: {e.language}
+                                        </Card.Text>
                                         <Card.Link href={e.html_url}>Repository</Card.Link>
                                     </Card.Body>
                                 </React.Fragment>
