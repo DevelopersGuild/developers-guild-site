@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 const GithubBarRaw: React.FC = () => {
 
@@ -13,16 +13,31 @@ const GithubBarRaw: React.FC = () => {
     });
 
     return (
-        <React.Fragment>
-            {repos.map((e, index) => (
-                <React.Fragment key={index}>
-                    <h5>{e.full_name}</h5>
-                    <p>{e.description}</p>
-                    <p>{e.forks_count}</p>
-                    <Button><a href={e.html_url}>Repo</a></Button>
-                </React.Fragment>
-            ))}
-        </React.Fragment>
+        <Card>
+            <Card.Body>
+                <Card.Title>
+                    Github Repositories
+            </Card.Title>
+                <div>
+                    <div style={{ overflow: 'auto', maxHeight: 400 }}>
+                        {repos.map((e, index) => (
+                            <React.Fragment key={index}>
+                                <Card>
+                                    <Card.Body>
+                                        <Card.Title>{e.full_name}</Card.Title>
+                                        <Card.Subtitle className="mb-2 text-muted">{e.description}</Card.Subtitle>
+                                        <Card.Text> 🍴Forks:{e.forks_count} {" "} 👁 Watchers:{e.watchers} {" "} 💻 Language: {e.language}</Card.Text>
+                                        <Card.Link href={e.html_url}>Repository</Card.Link>
+                                        {/* <Card.Link href={e.collaborators_url}>Collaborators</Card.Link> */}
+                                    </Card.Body>
+                                </Card>
+                            </React.Fragment>
+                        ))}
+                    </div>
+                    <br />
+                </div>
+            </Card.Body>
+        </Card>
     );
 };
 
