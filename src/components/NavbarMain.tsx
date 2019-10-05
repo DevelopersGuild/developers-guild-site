@@ -16,6 +16,9 @@ export const NavbarMain: React.FC = () => (
                 <Nav.Item>
                     <Nav.Link eventKey="link-3" href="/contact" >Contact Us</Nav.Link>
                 </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link eventKey="link-4" href="/roles" >Roles</Nav.Link>
+                </Nav.Item>
             </Nav>
         </Navbar>
     </React.Fragment>
