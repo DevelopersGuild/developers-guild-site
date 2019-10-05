@@ -22,15 +22,13 @@ const GithubBarRaw: React.FC = () => {
                     <div style={{ overflow: 'auto', maxHeight: 400 }}>
                         {repos.map((e, index) => (
                             <React.Fragment key={index}>
-                                <Card>
-                                    <Card.Body>
-                                        <Card.Title>{e.full_name}</Card.Title>
-                                        <Card.Subtitle className="mb-2 text-muted">{e.description}</Card.Subtitle>
-                                        <Card.Text> 🍴Forks:{e.forks_count} {" "} 👁 Watchers:{e.watchers} {" "} 💻 Language: {e.language}</Card.Text>
-                                        <Card.Link href={e.html_url}>Repository</Card.Link>
-                                        {/* <Card.Link href={e.collaborators_url}>Collaborators</Card.Link> */}
-                                    </Card.Body>
-                                </Card>
+                                <Card.Body>
+                                    <Card.Title>{e.full_name}</Card.Title>
+                                    <Card.Subtitle className="mb-2 text-muted">{e.description}</Card.Subtitle>
+                                    <Card.Text> 🍴Forks:{e.forks_count} {" "} 👁 Watchers:{e.watchers} {" "} 💻 Language: {e.language}</Card.Text>
+                                    <Card.Link href={e.html_url}>Repository</Card.Link>
+                                    {/* <Card.Link href={e.collaborators_url}>Collaborators</Card.Link> */}
+                                </Card.Body>
                             </React.Fragment>
                         ))}
                     </div>
