@@ -18,7 +18,7 @@ const RolesRaw: React.FC = () => {
 
     return (
         <React.Fragment>
-            <br/>
+            <br />
             <Container className='role-container'>
                 <div dangerouslySetInnerHTML={{ __html: markDown }} ></div>
             </Container>
