@@ -323,7 +323,7 @@ export const Contributing: React.FC = () => (
                 After you submit a contribution, one of the following will happen:
             </p>
 
-            <h4>😭 You don’t get a response.</h4>
+            <h4> <span aria-label="sad face" role="img" >😭</span> You don’t get a response.</h4>
 
             <p className="text-justify">Hopefully you checked the project for signs of activity before making a contribution. Even on an active project, however, it’s possible that your contribution won’t get a response.</p>
             <p className="text-justify">
@@ -337,7 +337,7 @@ export const Contributing: React.FC = () => (
                 If you make a polite bump and still nobody responds, it’s possible that nobody will respond, ever. It’s not a great feeling, but don’t let that discourage you. It’s happened to everyone! There are many possible reasons why you didn’t get a response, including personal circumstances that may be out of your control. Try to find another project or way to contribute. If anything, this is a good reason not to invest too much time in making a contribution before other community members are engaged and responsive.
             </p>
 
-            <h4>🚧 Someone requests changes to your contribution.</h4>
+            <h4> <span aria-label="construction sign" role="img">🚧</span> Someone requests changes to your contribution.</h4>
 
             <p className="text-justify">
                 It’s common that you’ll be asked to make changes to your contribution, whether that’s feedback on the scope of your idea, or changes to your code.
@@ -351,14 +351,14 @@ export const Contributing: React.FC = () => (
                 If you don’t have time to work on the issue anymore (for example, if the conversation has been going on for months, and your circumstances have changed), let the maintainer know so they’re not expecting a response. Someone else may be happy to take over.
             </p>
 
-            <h4>👎 Your contribution doesn’t get accepted.</h4>
+            <h4><span aria-label="thumbs down" role="img">👎</span> Your contribution doesn’t get accepted.</h4>
 
             <p className="text-justify">
                 Your contribution may or may not be accepted in the end. Hopefully you didn’t put too much work into it already. If you’re not sure why it wasn’t accepted, it’s perfectly reasonable to ask the maintainer for feedback and clarification. Ultimately, however, you’ll need to respect that this is their decision. Don’t argue or get hostile. You’re always welcome to fork and work on your own version if you disagree!
             </p>
 
 
-            <h4>🎉 Your contribution gets accepted.</h4>
+            <h4><span aria-label="confetti" role="img">🎉</span> Your contribution gets accepted.</h4>
             <p className="text-justify">Hooray! You’ve successfully made an open source contribution!</p>
 
             <br />
@@ -367,7 +367,7 @@ export const Contributing: React.FC = () => (
             <h4>You did it!</h4>
 
             <blockquote className="blockquote">
-            Whether you just made your first open source contribution, or you’re looking for new ways to contribute, we hope you’re inspired to take action. Even if your contribution wasn’t accepted, don’t forget to say thanks when a maintainer put effort into helping you. Open source is made by people like you: one issue, pull request, comment, or high-five at a time.
+                Whether you just made your first open source contribution, or you’re looking for new ways to contribute, we hope you’re inspired to take action. Even if your contribution wasn’t accepted, don’t forget to say thanks when a maintainer put effort into helping you. Open source is made by people like you: one issue, pull request, comment, or high-five at a time.
             </blockquote>
 
 
