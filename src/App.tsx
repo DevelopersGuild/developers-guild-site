@@ -12,11 +12,11 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <NavbarMain />
-      <Route exact path='/' component={Landing} />
-      <Route exact path='contact' component={Contact} />
-      <Route exact path='about' component={About} />
-      <Route exact path='contributing' component={Contributing} />
-      <Route exact path='roles' component={Roles} />
+      <Route path='/' exact component={Landing} />
+      <Route path='/contact'exact component={Contact} />
+      <Route path='/about' exact component={About} />
+      <Route path='/contributing' exact component={Contributing} />
+      <Route path='/roles' exact component={Roles} />
     </BrowserRouter>
   );
 }
