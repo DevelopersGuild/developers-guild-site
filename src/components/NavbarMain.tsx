@@ -1,12 +1,17 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import MainLogo from './graphic-assets/Main-Logo.svg'
 
 export const NavbarMain: React.FC = () => (
     <React.Fragment>
         <Navbar bg="dark" variant="dark" expand="lg">
-            <Navbar.Brand href="/">Developers Guild</Navbar.Brand>
+            <Navbar.Brand href="/">
+                <img src={MainLogo} alt="Logo" width="30"
+                    height="30"
+                    className="d-inline-block align-top"
+                />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
