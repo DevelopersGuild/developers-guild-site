@@ -10,13 +10,13 @@ export const Landing: React.FC = () => (
             <Jumbotron>
                 <Row>
                     <Col>
-                        <img src={MainLogo} alt="Logo" width="30"
-                            height="30"
+                        <img src={MainLogo} alt="Logo" width="100"
+                            height="100"
                             className="d-inline-block align-top"
                         />
                     </Col>
 
-                    <Col>
+                    <Col xs={6}>
                         <h1>Developers Guild - De Anza</h1>
                         <p>
                             A project and contribution based programming club.
