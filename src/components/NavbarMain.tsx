@@ -11,16 +11,16 @@ export const NavbarMain: React.FC = () => (
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Item>
-                        <Link to="/about">About</Link>
+                        <Nav.Link><Link to="/about">About</Link></Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Link to="/contributing">Contributing</Link>
+                            <Nav.Link><Link to="/contributing">Contributing</Link></Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Link to="/contact">Contact Us</Link>
+                       <Nav.Link><Link to="/contact">Contact Us</Link></Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Link to="/roles">Roles</Link>
+                            <Nav.Link><Link to="/roles">Roles</Link></Nav.Link>
                     </Nav.Item>
                 </Nav>
             </Navbar.Collapse>
