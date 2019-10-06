@@ -8,21 +8,20 @@ export const Landing: React.FC = () => (
         <br />
         <Container>
             <Jumbotron>
-                <Row>
-                    <Col>
-                        <img src={MainLogo} alt="Logo" width="100"
-                            height="100"
-                            className="d-inline-block align-top"
-                        />
-                    </Col>
 
-                    <Col xs={10}>
-                        <h1>Developers Guild - De Anza</h1>
-                        <p>
-                            A project and contribution based programming club.
+                <div style={{ display: 'flex' }}>
+
+                    <span>  <img src={MainLogo} alt="Logo" width="150"
+                        height="150"
+                    /></span>
+
+                    <h1>Developers Guild - De Anza</h1>
+                    <p>
+                        A project and contribution based programming club.
                     </p>
-                    </Col>
-                </Row>
+
+                </div>
+
             </Jumbotron>
             <br />
             <GithubBar />
