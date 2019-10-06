@@ -13,12 +13,17 @@ const RolesRaw: React.FC = () => {
              * Takes data from a Markdown file that's easy to edit through the developers guild github
              * and parses it out on this page.
              */
-            const response = await (await fetch('https://raw.githubusercontent.com/DevelopersGuild/developers-guild-site-roles/master/Roles.md')).arrayBuffer();
+            const abortController = new AbortController();
+            const signal = abortController.signal;
+            const response = await (await fetch('https://raw.githubusercontent.com/DevelopersGuild/developers-guild-site-roles/master/Roles.md', { signal })).arrayBuffer();
             const stringParsed = new TextDecoder("utf-8").decode(response);
             const showdownMarkdown = new showdown.Converter().makeHtml(stringParsed);
             setMarkDown(showdownMarkdown);
+            return function cleanup() {
+                abortController.abort();
+            }
         })();
-    })
+    }, [])
 
     return (
         <React.Fragment>

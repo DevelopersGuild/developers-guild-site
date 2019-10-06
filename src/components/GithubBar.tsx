@@ -7,10 +7,15 @@ const GithubBarRaw: React.FC = () => {
 
     useEffect(() => {
         (async () => {
-            const response = await (await fetch('https://api.github.com/orgs/DevelopersGuild/repos')).json();
+            const abortController = new AbortController();
+            const signal = abortController.signal;
+            const response = await (await fetch('https://api.github.com/orgs/DevelopersGuild/repos', { signal })).json();
             setRepos(response);
+            return function cleanup() {
+                abortController.abort();
+            }
         })();
-    });
+    }, []);
 
     return (
         <React.Fragment>
@@ -25,7 +30,7 @@ const GithubBarRaw: React.FC = () => {
                                         <Card.Title>{e.full_name}</Card.Title>
                                         <Card.Subtitle className="mb-2 text-muted">{e.description}</Card.Subtitle>
                                         <Card.Text> {" "}
-                                            <span aria-label="forks" role="img">🍴</span> {" "} Forks:{e.forks_count} {" "} 
+                                            <span aria-label="forks" role="img">🍴</span> {" "} Forks:{e.forks_count} {" "}
                                             <span aria-label="watchers" role="img">👁</span> {" "} Watchers:{e.watchers} {" "}
                                             <span aria-label="language" role="img">💻</span> {" "} Language: {e.language}
                                         </Card.Text>
