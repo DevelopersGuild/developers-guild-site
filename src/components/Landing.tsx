@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Jumbotron } from 'react-bootstrap';
 import GithubBar from './GithubBar';
+import MainLogo from './graphic-assets/Main-Logo.svg'
 
 export const Landing: React.FC = () => (
     <React.Fragment>
