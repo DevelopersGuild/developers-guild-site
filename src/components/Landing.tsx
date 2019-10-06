@@ -16,7 +16,7 @@ export const Landing: React.FC = () => (
                         />
                     </Col>
 
-                    <Col xs={6}>
+                    <Col xs={10}>
                         <h1>Developers Guild - De Anza</h1>
                         <p>
                             A project and contribution based programming club.
