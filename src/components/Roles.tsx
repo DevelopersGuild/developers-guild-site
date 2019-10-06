@@ -30,6 +30,7 @@ const RolesRaw: React.FC = () => {
             <br />
             <Container className='role-container'>
                 <div dangerouslySetInnerHTML={{ __html: markDown }} ></div>
+                {/* https://github.com/DevelopersGuild/developers-guild-site-roles/blob/master/Roles.md */}
             </Container>
         </React.Fragment>
     )
