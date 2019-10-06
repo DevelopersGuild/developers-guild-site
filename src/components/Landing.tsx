@@ -9,14 +9,19 @@ export const Landing: React.FC = () => (
         <Container>
             <Jumbotron>
                 <Row>
-                    <img src={MainLogo} alt="Logo" width="30"
-                        height="30"
-                        className="d-inline-block align-top"
-                    />
-                    <h1>Developers Guild - De Anza</h1>
-                    <p>
-                        A project and contribution based programming club.
+                    <Col>
+                        <img src={MainLogo} alt="Logo" width="30"
+                            height="30"
+                            className="d-inline-block align-top"
+                        />
+                    </Col>
+
+                    <Col>
+                        <h1>Developers Guild - De Anza</h1>
+                        <p>
+                            A project and contribution based programming club.
                     </p>
+                    </Col>
                 </Row>
             </Jumbotron>
             <br />
