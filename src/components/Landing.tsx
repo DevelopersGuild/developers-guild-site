@@ -8,6 +8,10 @@ export const Landing: React.FC = () => (
         <br />
         <Container>
             <Jumbotron>
+                <img src={MainLogo} alt="Logo" width="30"
+                    height="30"
+                    className="d-inline-block align-top"
+                />
                 <h1>Developers Guild - De Anza</h1>
                 <p>
                     A project and contribution based programming club.
@@ -15,7 +19,7 @@ export const Landing: React.FC = () => (
             </Jumbotron>
             <br />
             <GithubBar />
-            <br/>
+            <br />
         </Container>
     </React.Fragment>
 )
