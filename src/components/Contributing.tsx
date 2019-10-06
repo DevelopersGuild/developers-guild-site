@@ -9,6 +9,7 @@ import OpenSourceHeader from './graphic-assets/open-source.png'
 export const Contributing: React.FC = () => (
     <React.Fragment>
         <br />
+        <img src={OpenSourceHeader} alt="Header"/>
         <Container>
             <h4>How to Contribute to Open Source Developers Guild Projects</h4>
             <p className="text-justify">
