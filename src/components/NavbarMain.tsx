@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 export const NavbarMain: React.FC = () => (
@@ -10,16 +11,16 @@ export const NavbarMain: React.FC = () => (
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Item>
-                        <Nav.Link eventKey="link-1" href="/about">About</Nav.Link>
+                        <Link to="/about">About</Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link eventKey="link-2" href="/contributing">Contributing</Nav.Link>
+                        <Link to="/contributing">Contributing</Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link eventKey="link-3" href="/contact" >Contact Us</Nav.Link>
+                        <Link to="/contact">Contact Us</Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link eventKey="link-4" href="/roles" >Roles</Nav.Link>
+                        <Link to="/roles">Roles</Link>
                     </Nav.Item>
                 </Nav>
             </Navbar.Collapse>
