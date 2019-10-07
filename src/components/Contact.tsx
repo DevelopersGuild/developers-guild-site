@@ -15,7 +15,7 @@ export const Contact: React.FC = () => (
                     </p>
                 </Container>
                 <img className="open-source-header" style={{ width: '30vw', alignSelf: 'center' }} src={ContactHeader} alt="Header" />
-                <Container className='role-container'>
+                <Container >
                 </Container>
             </div>
     </React.Fragment>
