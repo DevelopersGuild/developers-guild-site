@@ -38,10 +38,12 @@ const RolesRaw: React.FC = () => {
                 </Container>
                 <img className="open-source-header" style={{ width: '30vw', alignSelf: 'center' }} src={RolesHeader} alt="Header" />
                 <Container className='role-container'>
-                    <h4>Roles:</h4>
+                    <br/>
                     <br/>
                     <div dangerouslySetInnerHTML={{ __html: markDown }} ></div>
                     <a target="__blank" href="https://github.com/DevelopersGuild/developers-guild-site-roles/blob/master/Roles.md">Edit this page here.</a>
+                    <br/>
+                    <br/>
                 </Container>
             </div>
 
