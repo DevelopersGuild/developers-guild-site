@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './styles/image-headers.css'
-import ContactHeader from './graphic-assets/contact.gif'
+import ContactHeader from './graphic-assets/contact.jpg'
 
 
 export const Contact: React.FC = () => (
