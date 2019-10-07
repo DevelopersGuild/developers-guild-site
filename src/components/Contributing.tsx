@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import OpenSourceHeader from './graphic-assets/open-source.png'
-
+import './styles/image-headers.css'
 /**
  *  Sourced from https://opensource.guide/how-to-contribute/
  */
@@ -17,7 +17,7 @@ export const Contributing: React.FC = () => (
             </p>
             </Container>
 
-            <img className="OpenSourceHeader" style={{ width: '30vw', alignSelf: 'center' }} src={OpenSourceHeader} alt="Header" />
+            <img className="open-source-header" style={{ width: '30vw', alignSelf: 'center' }} src={OpenSourceHeader} alt="Header" />
 
             <Container>
                 <br />

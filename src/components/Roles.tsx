@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import showdown from 'showdown';
+import RolesHeader from './graphic-assets/roles.jpg'
 
 
 const RolesRaw: React.FC = () => {
@@ -28,10 +29,20 @@ const RolesRaw: React.FC = () => {
     return (
         <React.Fragment>
             <br />
-            <Container className='role-container'>
-                <div dangerouslySetInnerHTML={{ __html: markDown }} ></div>
-                <a target="__blank" href="https://github.com/DevelopersGuild/developers-guild-site-roles/blob/master/Roles.md">Edit this page here.</a>
-            </Container>
+            <div style={{ display: "flex", flexDirection: 'column' }} >
+                <Container>
+                    <h4>Developers Guild Roles</h4>
+                    <p className="text-justify">
+                        These are roles currently open at the developers guild.
+                    </p>
+                </Container>
+                <img className="open-source-header" style={{ width: '30vw', alignSelf: 'center' }} src={RolesHeader} alt="Header" />
+                <Container className='role-container'>
+                    <div dangerouslySetInnerHTML={{ __html: markDown }} ></div>
+                    <a target="__blank" href="https://github.com/DevelopersGuild/developers-guild-site-roles/blob/master/Roles.md">Edit this page here.</a>
+                </Container>
+            </div>
+
         </React.Fragment>
     )
 }
