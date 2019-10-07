@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import './styles/image-headers.css'
 
 
 export const Contact: React.FC = () => (
