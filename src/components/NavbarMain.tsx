@@ -1,11 +1,12 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './styles/navbar.css'
 import MainLogo from './graphic-assets/Main-Logo.svg'
 
 export const NavbarMain: React.FC = () => (
     <React.Fragment>
-        <Navbar bg="light" variant="light" expand="lg">
+        <Navbar className="navbar-main"  variant="light" expand="lg">
             <Navbar.Brand href="/">
                 <img src={MainLogo} alt="Logo" width="30"
                     height="30"
