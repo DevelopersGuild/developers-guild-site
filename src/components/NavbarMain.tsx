@@ -15,7 +15,7 @@ export const NavbarMain: React.FC = () => (
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
+                <Nav className="mr-auto" style={{color: 'black', fontWeight: 'bold'}}>
                     <Nav.Item>
                         <Link className="nav-link" to="/about">About</Link>
                     </Nav.Item>
