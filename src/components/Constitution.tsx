@@ -33,7 +33,7 @@ const ConstitutionRaw: React.FC = () => {
                     <br/>
                     <br/>
                     <div dangerouslySetInnerHTML={{ __html: markDown }} ></div>
-                    <a target="__blank" href="https://github.com/DevelopersGuild/developers-guild-site-roles/blob/master/Roles.md">Edit this page here.</a>
+                    <a target="__blank" href="https://github.com/DevelopersGuild/developers-guild-site-roles/blob/master/Constitution.md">Edit this page here.</a>
                     <br/>
                     <br/>
                 </Container>
