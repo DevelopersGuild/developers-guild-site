@@ -19,6 +19,9 @@ export const Contact: React.FC = () => (
                 <Table striped bordered hover>
                     <tbody>
                         <tr>
+                            <td colSpan={2}>Advisors</td>
+                        </tr>
+                        <tr>
                             <td>Email</td>
                             <td><a href="mailto:developersguildclub@gmail.com">developersguildclub@gmail.com</a></td>
                         </tr>
@@ -43,8 +46,7 @@ export const Contact: React.FC = () => (
                         </tr>
                         <tr>
                             <td>Delia Garbacea</td>
-                            <td><a href="mailto:GarbaceaDelia@deanza.edu">GarbaceaDelia@deanza.edu</a></td>
-                            <td><a href="tel:408-864-8308">408-864-8308</a></td>
+                            <td><a href="mailto:GarbaceaDelia@deanza.edu">GarbaceaDelia@deanza.edu</a> or <a href="tel:408-864-8308">408-864-8308</a></td>
                         </tr>
                     </tbody>
                 </Table>
