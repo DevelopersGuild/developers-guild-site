@@ -23,7 +23,7 @@ export const NavbarMain: React.FC = () => (
                         <Link className="nav-link" to="/contributing">Contributing</Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Link className="nav-link" to="/contact">Contact Us</Link>
+                        <Link className="nav-link" to="/contact">Contact</Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Link className="nav-link" to="/roles">Roles</Link>
