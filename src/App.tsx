@@ -18,7 +18,7 @@ const App: React.FC = () => {
       <Route path='/about' exact component={About} />
       <Route path='/contributing' exact component={Contributing} />
       <Route path='/roles' exact component={Roles} />
-      <Route path="/roles" exact component={Constitution} />
+      <Route path="/constitution" exact component={Constitution} />
     </BrowserRouter>
   );
 }
