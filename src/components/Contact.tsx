@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Table} from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
 import './styles/image-headers.css'
 import ContactHeader from './graphic-assets/contact.jpg'
 
@@ -28,11 +28,23 @@ export const Contact: React.FC = () => (
                         </tr>
                         <tr>
                             <td>Facebook</td>
-                           <td> <a href="https://www.facebook.com/officialdevelopersguild/">https://www.facebook.com/officialdevelopersguild</a></td>
+                            <td> <a href="https://www.facebook.com/officialdevelopersguild/">https://www.facebook.com/officialdevelopersguild</a></td>
                         </tr>
                         <tr>
                             <td>Instagram</td>
                             <td><a href="https://www.instagram.com/da.devguild/">https://www.instagram.com/da.devguild</a></td>
+                        </tr>
+                        <tr>
+                            <td colSpan={2}>Advisors</td>
+                        </tr>
+                        <tr>
+                            <td>Ronald Kleinman</td>
+                            <td><a href="mailto:kleinmanronald@deanza.edu">kleinmanronald@deanza.edu</a></td>
+                        </tr>
+                        <tr>
+                            <td>Delia Garbacea</td>
+                            <td><a href="mailto:GarbaceaDelia@deanza.edu">GarbaceaDelia@deanza.edu</a></td>
+                            <td><a href="tel:408-864-8308">408-864-8308</a></td>
                         </tr>
                     </tbody>
                 </Table>
