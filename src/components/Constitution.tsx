@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import showdown from 'showdown';
+import ConstitutionHeader from './graphic-assets/the-creation-of-design.png'
+import './styles/image-headers.css'
+
 
 
 const ConstitutionRaw: React.FC = () => {
@@ -29,13 +32,14 @@ const ConstitutionRaw: React.FC = () => {
         <React.Fragment>
             <br />
             <div style={{ display: "flex", flexDirection: 'column' }} >
+                <img className="open-source-header" style={{ width: '30vw', alignSelf: 'center' }} src={ConstitutionHeader} alt="Header" />
                 <Container className='role-container'>
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     <div dangerouslySetInnerHTML={{ __html: markDown }} ></div>
                     <a target="__blank" href="https://github.com/DevelopersGuild/developers-guild-site-roles/blob/master/Constitution.md">Edit this page here.</a>
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                 </Container>
             </div>
 
