@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
+* {
+  -webkit-user-drag: auto;
+}
+
 body {
   text-rendering: optimizeLegibility;
   margin: 0;
