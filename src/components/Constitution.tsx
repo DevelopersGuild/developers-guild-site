@@ -32,6 +32,12 @@ const ConstitutionRaw: React.FC = () => {
         <React.Fragment>
             <br />
             <div style={{ display: "flex", flexDirection: 'column' }} >
+            <Container>
+                    <h4>Developers Guild Constitution</h4>
+                    <p className="text-justify">
+                        Amended in the blood of Martyrs by Yusuf himself.
+                    </p>
+                </Container>
                 <img className="open-source-header" style={{ width: '30vw', alignSelf: 'center' }} src={ConstitutionHeader} alt="Header" />
                 <Container className='role-container'>
                     <br />
