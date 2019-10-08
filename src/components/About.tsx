@@ -16,6 +16,7 @@ export const About: React.FC = () => (
             </Container>
             <img className="open-source-header" style={{ width: '30vw', alignSelf: 'center' }} src={AboutHeader} alt="Header" />
             <Container>
+                
             </Container>
         </div>
     </React.Fragment>
