@@ -16,7 +16,6 @@ export const Contact: React.FC = () => (
             </Container>
             <img className="open-source-header" style={{ width: '30vw', alignSelf: 'center' }} src={ContactHeader} alt="Header" />
             <Container >
-                <br />
                 <Table striped bordered hover>
                     <tbody>
                         <tr>
@@ -52,7 +51,7 @@ export const Contact: React.FC = () => (
                     </tbody>
                 </Table>
             </Container>
-            <br />
+
         </div>
     </React.Fragment>
 )
