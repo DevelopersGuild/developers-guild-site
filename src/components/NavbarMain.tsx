@@ -28,6 +28,9 @@ export const NavbarMain: React.FC = () => (
                     <Nav.Item>
                         <Link className="nav-link" to="/roles">Roles</Link>
                     </Nav.Item>
+                    <Nav.Item>
+                        <Link className="nav-link" to="/constitution">Constitution</Link>
+                    </Nav.Item>
                 </Nav>
             </Navbar.Collapse>
 
