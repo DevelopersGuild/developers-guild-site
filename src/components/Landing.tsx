@@ -1,7 +1,14 @@
 import React, { lazy, Suspense } from 'react';
 import { Container, Jumbotron } from 'react-bootstrap';
+import { toast } from 'react-toastify';
 import MainLogo from './graphic-assets/Main-Logo.svg'
 const GithubBar = lazy(() => import('./GithubBar'));
+
+
+// toast (anouncement) code information
+toast.configure();
+toast("Wow so easy !");
+// toast code end!
 
 export const Landing: React.FC = () => (
     <React.Fragment>
