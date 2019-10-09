@@ -10,9 +10,6 @@ import { Contributing } from './components/Contributing';
 const RolesLazy = lazy(() => import('./components/Roles'));
 const ConstitutionLazy = lazy(() => import('./components/Constitution'));
 const MemoizedToastContainer = React.memo(ToastContainer);
-  {/* Notification Code Start. */}
-  <MemoizedToastContainer/>
-  {/* Notification Code End. */}
 
 // independent parsed resources on the network being lazily loaded
 const Roles = () => (
@@ -28,10 +25,14 @@ const Constitution = () => (
 );
 
 
-
+toast.configure();
+toast("Wow so easy !");
 const App: React.FC = () => {
   return (
     <BrowserRouter>
+      {/* Notification Container*/}
+      <MemoizedToastContainer />
+      {/* Notification Container */}
       <NavbarMain />
       <Route path='/' exact component={Landing} />
       <Route path='/contact' exact component={Contact} />
