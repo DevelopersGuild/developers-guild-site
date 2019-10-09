@@ -5,7 +5,7 @@ import { Landing } from './components/Landing';
 import { Contact } from './components/Contact';
 import { NavbarMain } from './components/NavbarMain';
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import { About } from './components/About';
 import { Contributing } from './components/Contributing';
 const RolesLazy = lazy(() => import('./components/Roles'));
