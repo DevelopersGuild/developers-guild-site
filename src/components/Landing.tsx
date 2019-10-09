@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Container, Jumbotron } from 'react-bootstrap';
-import GithubBar from './GithubBar';
 import MainLogo from './graphic-assets/Main-Logo.svg'
+const GithubBar = lazy(() => import('./GithubBar'));
 
 export const Landing: React.FC = () => (
     <React.Fragment>
@@ -24,7 +24,9 @@ export const Landing: React.FC = () => (
 
             </Jumbotron>
             <br />
-            <GithubBar />
+            <Suspense fallback={<div>Loading...</div>}>
+                <GithubBar />
+            </Suspense>
             <br />
         </Container>
     </React.Fragment>
