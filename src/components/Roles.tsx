@@ -36,7 +36,7 @@ const RolesRaw: React.FC = () => {
                         These are roles currently open at the developers guild.
                     </p>
                 </Container>
-                <img className="open-source-header" style={{ width: '30vw', alignSelf: 'center' }} src={RolesHeader} alt="Header" />
+                <img className="open-source-header lazyload" style={{ width: '30vw', alignSelf: 'center' }} data-src={RolesHeader} alt="Header" />
                 <Container className='role-container'>
                     <br/>
                     <br/>
