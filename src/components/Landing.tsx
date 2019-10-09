@@ -5,9 +5,13 @@ import MainLogo from './graphic-assets/Main-Logo.svg'
 const GithubBar = lazy(() => import('./GithubBar'));
 
 
-// toast (anouncement) code information
+// toast (anouncement) code information.
 toast.configure();
-toast.info("Wow so easy !");
+toast.info("Developers' Guild first meeting October 11th 2019", {
+    autoClose: 6000,
+    pauseOnHover: true,
+    hideProgressBar: false
+});
 // toast code end!
 
 export const Landing: React.FC = () => (
