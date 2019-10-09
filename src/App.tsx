@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Landing } from './components/Landing';
 import { Contact } from './components/Contact';
