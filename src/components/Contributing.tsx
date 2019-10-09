@@ -17,7 +17,7 @@ export const Contributing: React.FC = () => (
             </p>
             </Container>
 
-            <img className="open-source-header" style={{ width: '30vw', alignSelf: 'center' }} src={OpenSourceHeader} alt="Header" />
+            <img className="open-source-header lazyload" style={{ width: '30vw', alignSelf: 'center' }} data-src={OpenSourceHeader} alt="Header" />
 
             <Container>
                 <br />

@@ -14,7 +14,7 @@ export const Contact: React.FC = () => (
                     Here are different ways to contact the developers guild.
                     </p>
             </Container>
-            <img className="open-source-header" style={{ width: '30vw', alignSelf: 'center' }} src={ContactHeader} alt="Header" />
+            <img className="open-source-header lazyload" style={{ width: '30vw', alignSelf: 'center' }} data-src={ContactHeader} alt="Header" />
             <Container >
                 <Table striped bordered hover>
                     <tbody>
