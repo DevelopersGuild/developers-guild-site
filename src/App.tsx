@@ -25,11 +25,6 @@ const Constitution = () => (
   </Suspense>
 );
 
-// toast (anouncement) code information
-toast.configure();
-toast("Wow so easy !");
-// toast code end!
-
 const App: React.FC = () => {
   return (
     <BrowserRouter>
