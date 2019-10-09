@@ -7,7 +7,7 @@ const GithubBar = lazy(() => import('./GithubBar'));
 
 // toast (anouncement) code information
 toast.configure();
-toast("Wow so easy !");
+toast.info("Wow so easy !");
 // toast code end!
 
 export const Landing: React.FC = () => (
