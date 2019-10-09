@@ -5,8 +5,21 @@ import { Contact } from './components/Contact';
 import { NavbarMain } from './components/NavbarMain';
 import { About } from './components/About';
 import { Contributing } from './components/Contributing';
-import Roles from './components/Roles';
-import Constitution from './components/Constitution';
+const RolesLazy = lazy(() => import('./components/Roles'));
+const ConstitutionLazy = lazy(() => import('./components/Constitution'));
+
+const Roles = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <RolesLazy />
+  </Suspense>
+)
+
+const Constitution = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <ConstitutionLazy />
+  </Suspense>
+);
+
 
 
 const App: React.FC = () => {
