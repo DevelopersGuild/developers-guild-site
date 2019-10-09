@@ -9,6 +9,7 @@ body {
   text-rendering: optimizeLegibility;
   margin: 0;
   font-family: 'Raleway', sans-serif !important;
+  font-display: swap;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -16,10 +17,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  font-display: swap;
 }
 
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Cabin', sans-serif !important;
+  font-display: swap;
 }
-
