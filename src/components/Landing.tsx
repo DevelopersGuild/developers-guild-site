@@ -7,10 +7,10 @@ const GithubBar = lazy(() => import('./GithubBar'));
 
 // toast (anouncement) code information.
 toast.configure();
-toast.info("Developers' Guild first meeting October 11th 2019", {
+toast("First meeting is October 11, 2019 ♎", {
     autoClose: 6000,
     pauseOnHover: true,
-    hideProgressBar: false
+    // hideProgressBar: true
 });
 // toast code end!
 
