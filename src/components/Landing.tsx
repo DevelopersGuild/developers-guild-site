@@ -11,7 +11,7 @@ export const Landing: React.FC = () => (
 
                 <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
 
-                    <img style={{ marginRight: 20 }} src={MainLogo} alt="Logo" width="150"
+                    <img className="lazyload" style={{ marginRight: 20 }} data-src={MainLogo} alt="Logo" width="150"
                         height="150"
                     />
                     <div>
