@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { Container } from 'react-bootstrap'
 import { Landing } from './components/Landing';
 import { Contact } from './components/Contact';
 import { NavbarMain } from './components/NavbarMain';
@@ -8,14 +9,16 @@ import { Contributing } from './components/Contributing';
 const RolesLazy = lazy(() => import('./components/Roles'));
 const ConstitutionLazy = lazy(() => import('./components/Constitution'));
 
+
+// independent parsed resources on the network being lazily loaded
 const Roles = () => (
-  <Suspense fallback={<div>Loading...</div>}>
+  <Suspense fallback={<Container><div>Loading...</div></Container>}>
     <RolesLazy />
   </Suspense>
 )
 
 const Constitution = () => (
-  <Suspense fallback={<div>Loading...</div>}>
+  <Suspense fallback={<Container><div>Loading...</div></Container>}>
     <ConstitutionLazy />
   </Suspense>
 );
