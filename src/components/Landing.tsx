@@ -8,7 +8,6 @@ export const Landing: React.FC = () => (
         <br />
         <Container>
             <Jumbotron>
-
                 <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
 
                     <img className="lazyload" style={{ marginRight: 20 }} data-src={MainLogo} alt="Logo" width="150"
@@ -18,7 +17,8 @@ export const Landing: React.FC = () => (
                         <h1>Developers Guild - De Anza</h1>
                         <p>
                             A project and contribution based programming club.
-                    </p>
+                        </p>
+                        <p>Fridays 1:30PM-4:00PM AT311</p>
                     </div>
                 </div>
 
