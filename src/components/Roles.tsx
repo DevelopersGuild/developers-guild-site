@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy, Suspense  } from 'react'; 
+import React, { useState, useEffect } from 'react'; 
 import { Container } from 'react-bootstrap';
 import showdown from 'showdown';
 import RolesHeader from './graphic-assets/roles.jpg'
