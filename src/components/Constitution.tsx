@@ -38,7 +38,7 @@ const ConstitutionRaw: React.FC = () => {
                         Amended in the blood of Martyrs by Yusuf himself.
                     </p>
                 </Container>
-                <img className="open-source-header" style={{ width: '30vw', alignSelf: 'center' }} src={ConstitutionHeader} alt="Header" />
+                <img className="open-source-header lazyload" style={{ width: '30vw', alignSelf: 'center' }} data-src={ConstitutionHeader} alt="Header" />
                 <Container className='role-container'>
                     <br />
                     <br />

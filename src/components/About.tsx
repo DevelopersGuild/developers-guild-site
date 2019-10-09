@@ -14,7 +14,7 @@ export const About: React.FC = () => (
                     Learn more about the developers guild.
                     </p>
             </Container>
-            <img className="open-source-header" style={{ width: '30vw', alignSelf: 'center' }} src={AboutHeader} alt="Header" />
+            <img className="open-source-header lazyload" style={{ width: '30vw', alignSelf: 'center' }} data-src={AboutHeader} alt="Header" />
             <Container>
                 
             </Container>
