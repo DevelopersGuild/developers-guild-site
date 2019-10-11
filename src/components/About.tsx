@@ -19,7 +19,13 @@ export const About: React.FC = () => (
                 <br />
                 <h5>Section 1</h5>
                 <p className="text-justify">
-                Developers’ Guild is a club that started in 2014 with its main goal is to facilitate the exploration of computer science through hands-on experience. Developers’ Guild creates a casual environment to practice real-world programming. We foster a community of avid programmers by tackling projects that interest us, competing/participating in events, and gathering skills and experience for the future. Our members are divided into various groups. Each group focuses on a different aspect of computer science. Video Game Development, Machine Learning/AI, and Web application development are some of the groups we provide. Members in these groups will learn these computer science concepts and create projects to apply what they learned. We have various projects for all skill levels ranging from beginner to more experienced programming projects. When you join DG and attend our meetings, you can help contribute code to existing and new projects that you can then put on your portfolio for future jobs and even transfer. Learn new concepts with a community of people that share a passion for programming. 
+                    Developers’ Guild started in 2014 with the goal of facilitating the exploration of computer science through hands-on experience. Developers’ Guild creates a casual environment to practice real-world programming. We foster a community of avid programmers by tackling projects that interest us, participating and competing in events, and gathering skills and experience for the future. Our members are divided into various groups that focus on a different aspect of computer science, such as video game development, machine learning/AI, and web application development. Members in these groups will learn these computer science concepts and create projects to apply what they learn. We have various projects for skill levels ranging from beginner to more experienced programming projects. 
+                </p>
+                <p className="text-justify">
+                    Even people who aren’t majoring in computer science can still join! Learn to work with computer programmers and create software that’s appealing to end-users! There are more aspects of software development than just coding and we at Developers’ Guild understand that. Create assets for games and UI mockups for websites and applications!
+                </p> 
+                <p className="text-justify">
+                    When you join DG and attend our meetings, you can help contribute code and more to existing and new projects that you can add to your portfolio for future jobs or even transfer. Learn new concepts with a community of people that share a passion for programming!
                 </p>
                 <br/>
                 <h5>TL;DR</h5>
