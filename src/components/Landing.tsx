@@ -6,12 +6,12 @@ const GithubBar = lazy(() => import('./GithubBar'));
 
 
 // toast (anouncement) code information.
-toast.configure();
-toast("First meeting is October 11, 2019 ♎", {
-    autoClose: 6000,
-    pauseOnHover: true,
-    // hideProgressBar: true
-});
+// toast.configure();
+// toast("First meeting is October 11, 2019 ♎", {
+//     autoClose: 6000,
+//     pauseOnHover: true,
+//     // hideProgressBar: true
+// });
 // toast code end!
 
 export const Landing: React.FC = () => (
