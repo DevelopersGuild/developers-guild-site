@@ -17,7 +17,6 @@ export const About: React.FC = () => (
             <img className="open-source-header lazyload" style={{ width: '30vw', alignSelf: 'center' }} data-src={AboutHeader} alt="Header" />
             <Container>
                 <br />
-                <h5>Section 1</h5>
                 <p className="text-justify">
                     Developers’ Guild started in 2014 with the goal of facilitating the exploration of computer science through hands-on experience. Developers’ Guild creates a casual environment to practice real-world programming. We foster a community of avid programmers by tackling projects that interest us, participating and competing in events, and gathering skills and experience for the future. Our members are divided into various groups that focus on a different aspect of computer science, such as video game development, machine learning/AI, and web application development. Members in these groups will learn these computer science concepts and create projects to apply what they learn. We have various projects for skill levels ranging from beginner to more experienced programming projects. 
                 </p>
