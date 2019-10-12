@@ -38,6 +38,10 @@ export const Contact: React.FC = () => (
                             <td><a href="https://www.instagram.com/da.devguild/">https://www.instagram.com/da.devguild</a></td>
                         </tr>
                         <tr>
+                            <td>Medium</td>
+                            <td><a href="https://medium.com/@developersguild">https://medium.com/@developersguild</a></td>
+                        </tr>
+                        <tr>
                             <td colSpan={2}><strong>Advisors</strong></td>
                         </tr>
                         <tr>
