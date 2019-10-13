@@ -29,6 +29,7 @@ export const About: React.FC = () => (
                 <br/>
                 <h5>TL;DR</h5>
                 <ul>
+                    <li>No prior experience necessary!</li>
                     <li>Provide a good way to get real-world programming experience.</li>
                     <li>To facilitate the exploration of computer science through hands-on experience.</li>
                     <li>Adept Programmers can work on new challenges and mentor others.</li>
