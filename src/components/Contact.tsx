@@ -9,9 +9,9 @@ export const Contact: React.FC = () => (
         <br />
         <div style={{ display: "flex", flexDirection: 'column' }} >
             <Container>
-                <h4>Contact The Developers Guild</h4>
+                <h4>Contact The Developers' Guild</h4>
                 <p className="text-justify">
-                    Here are different ways to contact the developers guild.
+                    Here are different ways to contact the Developers' Guild.
                     </p>
             </Container>
             <img className="open-source-header lazyload" style={{ width: '30vw', alignSelf: 'center' }} data-src={ContactHeader} alt="Header" />
