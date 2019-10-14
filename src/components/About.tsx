@@ -9,9 +9,9 @@ export const About: React.FC = () => (
         <br />
         <div style={{ display: "flex", flexDirection: 'column' }} >
             <Container>
-                <h4>About The Developers Guild</h4>
+                <h4>About The Developers' Guild</h4>
                 <p className="text-justify">
-                    Learn more about the developers guild.
+                    Learn more about the Developers' Guild.
                     </p>
             </Container>
             <img className="open-source-header lazyload" style={{ width: '30vw', alignSelf: 'center' }} data-src={AboutHeader} alt="Header" />
@@ -32,10 +32,10 @@ export const About: React.FC = () => (
                     <li>No prior experience necessary!</li>
                     <li>Provide a good way to get real-world programming experience.</li>
                     <li>To facilitate the exploration of computer science through hands-on experience.</li>
-                    <li>Adept Programmers can work on new challenges and mentor others.</li>
-                    <li>Open Source Projects for your portfolio and resume!</li>
-                    <li>Collaboration with individuals with differnent skills, perspectives and backgrounds.</li>
-                    <li>Communication with Mentors, Industry Leaders and Speakers.</li>
+                    <li>Adept programmers can work on new challenges and mentor others.</li>
+                    <li>Contribute/Create open-source projects for your portfolio and resume!</li>
+                    <li>Collaboration with individuals with different skills, perspectives and backgrounds.</li>
+                    <li>Communication with mentors, industry leaders and speakers.</li>
                 </ul>
                 <br/>
             </Container>
