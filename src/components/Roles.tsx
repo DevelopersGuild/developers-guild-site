@@ -31,9 +31,9 @@ const RolesRaw: React.FC = () => {
             <br />
             <div style={{ display: "flex", flexDirection: 'column' }} >
                 <Container>
-                    <h4>Developers Guild Roles</h4>
+                    <h4>Developers' Guild Roles</h4>
                     <p className="text-justify">
-                        These are roles currently open at the developers guild.
+                        These are roles currently open at the Developers' Guild.
                     </p>
                 </Container>
                 <img className="open-source-header lazyload" style={{ width: '30vw', alignSelf: 'center' }} data-src={RolesHeader} alt="Header" />
