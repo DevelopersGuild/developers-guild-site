@@ -33,7 +33,7 @@ const ConstitutionRaw: React.FC = () => {
             <br />
             <div style={{ display: "flex", flexDirection: 'column' }} >
             <Container>
-                    <h4>Developers Guild Constitution</h4>
+                    <h4>Developers' Guild Constitution</h4>
                     <p className="text-justify">
                         Amended in the blood of Martyrs by Yusuf himself.
                     </p>
