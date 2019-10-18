@@ -2,6 +2,8 @@
 This site is intended to help developer guild members 
 and community contributors at De Anza College. 
 
+### `yarn`
+(DO THIS FIRST!) Installs yarn into the project
 
 ### `yarn start`
 
