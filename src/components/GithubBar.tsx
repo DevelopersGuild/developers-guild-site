@@ -9,7 +9,7 @@ const GithubBarRaw: React.FC = () => {
         (async () => {
             const abortController = new AbortController();
             const signal = abortController.signal;
-            const response = await (await fetch('https://api.github.com/orgs/DevelopersGuild/repos', { signal })).json();
+            const response = await (await fetch('https://api.github.com/orgs/DevelopersGuild/repos?sort=updated', { signal })).json();
             setRepos(response);
             return function cleanup() {
                 abortController.abort();
