@@ -7,10 +7,14 @@
     "@types/node": "12.12.7",
     "@types/react": "16.9.11",
     "@types/react-dom": "16.9.4",
+    "@types/react-router-dom": "^5.1.2",
+    "grommet": "^2.8.0",
+    "polished": "^3.4.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
+    "styled-components": "^4.4.1",
     "typescript": "3.7.2"
   },
   "scripts": {
