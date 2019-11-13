@@ -1,10 +1,11 @@
 import React from 'react';
+import { Grommet, grommet } from 'grommet';
 
 const Landing: React.FC = () => {
     return(
-        <React.Fragment>
+        <Grommet theme={grommet}>
 
-        </React.Fragment>
+        </Grommet>
     );
 }
 
