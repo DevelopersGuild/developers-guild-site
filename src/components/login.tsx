@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Heading, TextInput, Button, Text, Grommet, grommet, Grid } from 'grommet';
+import loftryTheme from './Theme';
+import { Box, Heading, TextInput, Button, Text, Grommet, Grid, Anchor } from 'grommet';
 
 const Login: React.FC = () => {
     const [email, setEmail] = React.useState('');
@@ -10,8 +11,8 @@ const Login: React.FC = () => {
     }
 
     return (
-        <Grommet full theme={grommet}>
-            <Box fill background="url(https://images.unsplash.com/photo-1511066754093-eabd2492352b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80)">
+        <Grommet full theme={loftryTheme}>
+            <Box fill background="url(https://images.unsplash.com/photo-1495029894030-991588d334b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80)">
                 <Grid
                     fill rows={["auto", "flex"]}
                     columns={["auto", "flex"]}
@@ -26,12 +27,25 @@ const Login: React.FC = () => {
                         align="center"
                         justify="between"
                         pad={{ horizontal: "medium", vertical: "small" }}
-                        background="dark-2"
                         margin={{ bottom: "large" }}
                     >
-                        <Text size="large">Loftry</Text>
+                        <Text size="xxlarge" color = "white">Loftry</Text>
+                        <Anchor href="#" label="About" />
+                        <Anchor href="#" label="FAQ" />
+                        <Anchor href="#" label="Help" />
+
                     </Box>
-                    <Box  background="dark-2" margin={{ left: "small" }} gridArea="main" justify="start" align="center" width="medium" height="medium" direction="column" pad="medium" round="small" border={{ color: 'grey', size: 'large' }} >
+                    <Box  
+                    background="white" 
+                    margin={{ left: "xlarge",top: "xlarge" }} 
+                    gridArea="main" justify="start" 
+                    align="center" 
+                    width="medium" 
+                    height="large" 
+                    direction="column" 
+                    pad="medium" 
+                    round="small" 
+                    border={{ color: 'white', size: 'large' }} >
                         <Heading margin="none">Welcome Back</Heading>
                         <br />
                         <Box width="medium">
@@ -53,7 +67,7 @@ const Login: React.FC = () => {
                         </Box>
                         <br />
                         <Box width="medium" >
-                            <Button primary label="Primary" onClick={handleSubmission} />
+                            <Button primary label="Login" color = "#098589" onClick={handleSubmission} />
                         </Box>
                         <hr />
                         <Text>Don't have an account? <a href="/signup" >Sign up</a></Text>
@@ -61,7 +75,7 @@ const Login: React.FC = () => {
                 </Grid>
             </Box>
         </Grommet>
-    );
+    )
 }
 
 export default Login;
