@@ -6,5 +6,5 @@
   yarn start
 ```
 ### Testing Tools 
-https://airbnb.io/enzyme/
-https://jestjs.io/docs/en/getting-started.html
+- https://airbnb.io/enzyme/
+- https://jestjs.io/docs/en/getting-started.html
