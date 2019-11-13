@@ -11,42 +11,55 @@ const Login: React.FC = () => {
 
     return (
         <Grommet full theme={grommet}>
-            <Grid rows={['xxsmall', 'xsmall']}
-                columns={['xsmall', 'small']}
-                gap="small"
-                areas={[
-                    { name: 'header', start: [0, 0], end: [1, 0] },
-                    { name: 'nav', start: [0, 1], end: [0, 1] },
-                    { name: 'main', start: [1, 1], end: [1, 1] },
-                ]}>
-                <Box justify="start" align="center" width="medium" direction="column" pad="medium" round="small" border={{ color: 'grey', size: 'large' }} >
-                    <Heading margin="none">Welcome Back</Heading>
-                    <br />
-                    <Box width="medium">
-                        <TextInput
-                            placeholder="email"
-                            value={email}
-                            type="email"
-                            onChange={event => setEmail(event.target.value)}
-                        />
+            <Box fill background="url(https://images.unsplash.com/photo-1511066754093-eabd2492352b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80)">
+                <Grid
+                    fill rows={["auto", "flex"]}
+                    columns={["auto", "flex"]}
+                    areas={[
+                        { name: "header", start: [0, 0], end: [1, 0] },
+                        { name: "main", start: [1, 1], end: [1, 1] }
+                    ]}
+                >
+                    <Box
+                        gridArea="header"
+                        direction="row"
+                        align="center"
+                        justify="between"
+                        pad={{ horizontal: "medium", vertical: "small" }}
+                        background="dark-2"
+                        margin={{ bottom: "large" }}
+                    >
+                        <Text size="large">Loftry</Text>
                     </Box>
-                    <br />
-                    <Box width="medium">
-                        <TextInput
-                            placeholder="password"
-                            value={password}
-                            type="password"
-                            onChange={event => setPassword(event.target.value)}
-                        />
+                    <Box  background="dark-2" margin={{ left: "small" }} gridArea="main" justify="start" align="center" width="medium" height="medium" direction="column" pad="medium" round="small" border={{ color: 'grey', size: 'large' }} >
+                        <Heading margin="none">Welcome Back</Heading>
+                        <br />
+                        <Box width="medium">
+                            <TextInput
+                                placeholder="email"
+                                value={email}
+                                type="email"
+                                onChange={event => setEmail(event.target.value)}
+                            />
+                        </Box>
+                        <br />
+                        <Box width="medium">
+                            <TextInput
+                                placeholder="password"
+                                value={password}
+                                type="password"
+                                onChange={event => setPassword(event.target.value)}
+                            />
+                        </Box>
+                        <br />
+                        <Box width="medium" >
+                            <Button primary label="Primary" onClick={handleSubmission} />
+                        </Box>
+                        <hr />
+                        <Text>Don't have an account? <a href="/signup" >Sign up</a></Text>
                     </Box>
-                    <br />
-                    <Box width="medium" >
-                        <Button primary label="Primary" onClick={handleSubmission} />
-                    </Box>
-                    <hr />
-                    <Text>Don't have an account? <a href="/signup" >Sign up</a></Text>
-                </Box>
-            </Grid>
+                </Grid>
+            </Box>
         </Grommet>
     );
 }
