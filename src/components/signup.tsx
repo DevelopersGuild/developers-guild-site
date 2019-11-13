@@ -3,9 +3,9 @@ import { Grommet, grommet } from 'grommet';
 
 const Signup: React.FC = () => {
     return(
-        <React.Fragment>
+        <Grommet theme={grommet}> 
 
-        </React.Fragment>
+        </Grommet>
     );
 }
 
