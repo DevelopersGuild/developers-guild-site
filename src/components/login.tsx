@@ -11,7 +11,14 @@ const Login: React.FC = () => {
 
     return (
         <Grommet full theme={grommet}>
-            <Grid>
+            <Grid rows={['xxsmall', 'xsmall']}
+                columns={['xsmall', 'small']}
+                gap="small"
+                areas={[
+                    { name: 'header', start: [0, 0], end: [1, 0] },
+                    { name: 'nav', start: [0, 1], end: [0, 1] },
+                    { name: 'main', start: [1, 1], end: [1, 1] },
+                ]}>
                 <Box justify="start" align="center" width="medium" direction="column" pad="medium" round="small" border={{ color: 'grey', size: 'large' }} >
                     <Heading margin="none">Welcome Back</Heading>
                     <br />
