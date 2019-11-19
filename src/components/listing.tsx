@@ -5,13 +5,14 @@ import {Wifi,} from 'grommet-icons';
 
 const ListingTemplate: React.FC = () => {
     return (
-        <Grommet theme={loftryTheme}>
+        <Grommet full theme={loftryTheme}>
             <Box
                 direction="row"
                 align="center"
                 justify="between"
-                margin = "stretch"
-                background = "dark-4">
+                background = "dark-4"
+                fill="horizontal"
+                >
                   <Heading level = '2' color = "black">Loftry</Heading>
                         <Box
                             direction = "row"
