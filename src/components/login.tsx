@@ -1,6 +1,6 @@
 import React from 'react';
 import loftryTheme from './Theme';
-import { Box, Heading, TextInput, Button, Text, Grommet, Grid, Anchor } from 'grommet';
+import { Box, Heading, TextInput, Button, Text, Grommet, Grid, Anchor, DropButton } from 'grommet';
 
 const Login: React.FC = () => {
     const [email, setEmail] = React.useState('');
@@ -14,30 +14,38 @@ const Login: React.FC = () => {
         <Grommet full theme={loftryTheme}>
             <Box fill background="url(https://images.unsplash.com/photo-1495029894030-991588d334b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80)">
                 <Grid
-                    fill rows={["auto", "flex"]}
-                    columns={["auto", "flex"]}
-                    areas={[
-                        { name: "header", start: [0, 0], end: [1, 0] },
-                        { name: "main", start: [1, 1], end: [1, 1] }
-                    ]}
+                     fill rows={["auto", "flex"]}
+                     columns={["auto", "flex"]}
+                     gap="small"
+                     areas={[
+                       { name: 'links', start: [0, 0], end: [1, 0] },
+                       { name: 'header', start: [0, 0], end: [1, 0] },
+                       { name: "main", start: [1, 1], end: [1, 1] }
+                   
+                     ]}
+
                 >
                     <Box
                         gridArea="header"
                         direction="row"
                         align="center"
                         justify="between"
-                        pad={{ horizontal: "medium", vertical: "small" }}
-                        margin={{ bottom: "large" }}
+                        pad={{ horizontal: "medium", vertical: "none" }}
+                        margin={{ bottom: "medium" }}
                     >
-                        <Text size="xxlarge" color = "white">Loftry</Text>
-                        <Anchor href="#" label="About" />
-                        <Anchor href="#" label="FAQ" />
-                        <Anchor href="#" label="Help" />
+                        <Heading level = '2' color = "white">Loftry</Heading>
+                        <Box
+                            direction = "row"
+                        >   
+                        <Anchor href="#" size= "large" color = "white" margin={{horizontal :"large"}} label="About" />
+                        <Anchor href="#" size= "large" color = "white" margin={{horizontal :"large"}} label="FAQ" />
+                        <Anchor href="#" size= "large" color = "white" margin={{horizontal :"large"}} label="Help" />
+                        </Box>
 
                     </Box>
                     <Box  
                     background="white" 
-                    margin={{ left: "xlarge",top: "xlarge" }} 
+                    margin={{ left: "xlarge",top: "large" }} 
                     gridArea="main" justify="start" 
                     align="center" 
                     width="medium" 
@@ -72,6 +80,15 @@ const Login: React.FC = () => {
                         <hr />
                         <Text>Don't have an account? <a href="/signup" >Sign up</a></Text>
                     </Box>
+                    <DropButton
+                    label="Fancy Selector"
+                    margin={{ left: "xlarge",top: "xlarge" }} 
+                    color = "White"
+                    dropAlign={{ top: 'bottom', right: 'right' }}
+                    dropContent={
+                        <Box pad="large" background="light-2" />
+                        }
+                    />
                 </Grid>
             </Box>
         </Grommet>
