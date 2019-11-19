@@ -1,9 +1,26 @@
 import React from 'react';
-import { Grommet, grommet, Box, Carousel, Image, Heading, Text, Button } from 'grommet';
+import loftryTheme from './Theme';
+import { Grommet, Box, Carousel, Image, Heading, Text, Button,Anchor } from 'grommet';
 
 const ListingTemplate: React.FC = () => {
     return (
-        <Grommet theme={grommet}>
+        <Grommet theme={loftryTheme}>
+            <Box
+                direction="row"
+                align="center"
+                justify="between"
+                pad={{ horizontal: "medium", vertical: "none" }}
+                margin="none">
+                  <Heading level = '2' color = "black">Loftry</Heading>
+                        <Box
+                            direction = "row"
+                        >   
+                        <Anchor href="#" size= "large" color = "black" margin={{horizontal :"large"}} label="My Profile" />
+                        <Anchor href="#" size= "large" color = "black" margin={{horizontal :"large"}} label="Teams" />
+                        <Anchor href="#" size= "large" color = "black" margin={{horizontal :"large"}} label="Map" />
+                        <Button primary label="Log Out" margin={{horizontal :"large"}} color = "brand"/>
+                        </Box>
+            </Box>
             <Box fill="vertical" align="center" justify="center" direction="column" >
                 <Box fill="horizontal" margin={{ top: "medium" }} direction="row" alignContent="end" justify="end">
                     <Button color="accent-1" label="Contact Listing Owner" onClick={() => { alert('Contacted User.') }} />
@@ -14,19 +31,21 @@ const ListingTemplate: React.FC = () => {
                         <Text size="large" margin={{ left: "medium" }}>22639 Oakcrest Ct # B, Cupertino, CA 95014</Text> <Text size="large" margin={{ left: "small" }}>from <a href="#userid">@Jonathan Smith</a></Text> <Text size="large" margin={{ left: "small" }}> at $2400 a month</Text>
                     </Box>
                 </Box>
-                <Box margin={{ top: "medium" }} alignSelf="center" height="medium" width="large" overflow="hidden">
-                    <Carousel fill>
-                        <Image fit="cover" src="https://photos.zillowstatic.com/cc_ft_1536/ISaxjuxrjssj9n1000000000.webp" />
-                        <Image fit="cover" src="https://photos.zillowstatic.com/cc_ft_768/ISecmdzu1wjd7c1000000000.webp" />
-                        <Image fit="cover" src="https://photos.zillowstatic.com/cc_ft_768/ISyv6uvouff0an1000000000.webp" />
-                        <Image fit="cover" src="https://photos.zillowstatic.com/cc_ft_768/ISq5lhsvo65san1000000000.webp" />
-                    </Carousel>
-                </Box>
-                <Box margin={{ top: "medium" }} width="large" alignContent="center" justify="center" direction="column">
-                    <Text size="large" >Description:</Text>
-                    <Text textAlign="start" margin={{ top: "small" }}>
-                        Studio - Living area + Bedroom (separated from the bedroom by a curtain), Full Bathroom, Walk-in Closet, Laundry room (Washer and Dryer). Fits 2-4 people. Small but full kitchen in the living area equipped with granite counter-top, Dishwasher, Filtered water faucet, Garbage disposer, Built-in microwave-oven, a 2-burner cook top, and a small refrigerator and freezer. Furniture: Double bed + 2 night stands & built-in night lights, Sofa bed, Coffee table. Additional furniture can be brought in by the landlord upon request. WiFi (New blazing speed 5GHz router with your own private network), 150Mbps Internet, Smart TV + premium Cable, Built-in Blue tooth speaker. Phone line can be connected upon request for an additional modest fee. Big yard with fruit trees, artificial lawn, BBQ, play structure, and some patio furniture. Separate entrance, Ample parking on the street, or off street parking for an additional (modest) fee. The studio becomes available Jan/31. Long term Lease is preferred, but shorter terms will be considered for higher rent. There's also participation in utilities. The premises is pets friendly, with owners approval and with additional cleaning fee and security deposit. The studio was built last year as an "in-law" unit on our property located in a great neighborhood in Cupertino, nestled among mature trees on the edge of the foothills, yet very accessible: only 1-2 minutes drive from 280 and 85 freeways. 2-3 minutes from shopping, 5 minutes drive from De-Anza college and from Apple headquarters, 5-10 minutes drive from Foothill college, 15 minutes drive to Santa Clara University, San Jose State University and Stanford University, and 90% of the high tech companies in the silicon valley are within 5-25 minute drive. The house is very close to the border of Los Altos and Sunnyvale, walking distance from shopping, Rancho San Antonio park and other hiking and bicycle routes, 2 minutes walk to the nearest bus-stop, 10 minutes drive to Caltrain, 15 minute drive from San Jose airport and Amtrak, and 30-45 minute drive from San Francisco airport. Address: 22639 Oakcrest Court, Cupertino CA 95014. NO Smoking! Utilities participation is on top of rent starting at ~$180 for one person, Most pets OK, but it requires $200 onetime deodorizing fee and slightly higher security deposit..
-                    </Text>
+                <Box fill="vertical" align="center" justify="center" direction="row" >
+                    <Box margin={{ top: "small", right:"large" }} width="xlarge" alignContent="start" justify="start" direction="column" alignSelf="start">
+                        <Text size="xxlarge" margin={{ left: "medium" }} >Description:</Text>
+                        <Text textAlign="start" margin={{ top: "small",left: "medium" }}>
+                            Studio - Living area + Bedroom (separated from the bedroom by a curtain), Full Bathroom, Walk-in Closet, Laundry room (Washer and Dryer). Fits 2-4 people. Small but full kitchen in the living area equipped with granite counter-top, Dishwasher, Filtered water faucet, Garbage disposer, Built-in microwave-oven, a 2-burner cook top, and a small refrigerator and freezer. Furniture: Double bed + 2 night stands & built-in night lights, Sofa bed, Coffee table. Additional furniture can be brought in by the landlord upon request. WiFi (New blazing speed 5GHz router with your own private network), 150Mbps Internet, Smart TV + premium Cable, Built-in Blue tooth speaker. Phone line can be connected upon request for an additional modest fee. Big yard with fruit trees, artificial lawn, BBQ, play structure, and some patio furniture. Separate entrance, Ample parking on the street, or off street parking for an additional (modest) fee. The studio becomes available Jan/31. Long term Lease is preferred, but shorter terms will be considered for higher rent. There's also participation in utilities. The premises is pets friendly, with owners approval and with additional cleaning fee and security deposit. The studio was built last year as an "in-law" unit on our property located in a great neighborhood in Cupertino, nestled among mature trees on the edge of the foothills, yet very accessible: only 1-2 minutes drive from 280 and 85 freeways. 2-3 minutes from shopping, 5 minutes drive from De-Anza college and from Apple headquarters, 5-10 minutes drive from Foothill college, 15 minutes drive to Santa Clara University, San Jose State University and Stanford University, and 90% of the high tech companies in the silicon valley are within 5-25 minute drive. The house is very close to the border of Los Altos and Sunnyvale, walking distance from shopping, Rancho San Antonio park and other hiking and bicycle routes, 2 minutes walk to the nearest bus-stop, 10 minutes drive to Caltrain, 15 minute drive from San Jose airport and Amtrak, and 30-45 minute drive from San Francisco airport. Address: 22639 Oakcrest Court, Cupertino CA 95014. NO Smoking! Utilities participation is on top of rent starting at ~$180 for one person, Most pets OK, but it requires $200 onetime deodorizing fee and slightly higher security deposit..
+                        </Text>
+                    </Box>
+                    <Box margin={{ top: "medium" }} alignSelf="end" height="medium" width="large" overflow="hidden">
+                        <Carousel fill play={5000}>
+                            <Image fit="cover" src="https://photos.zillowstatic.com/cc_ft_1536/ISaxjuxrjssj9n1000000000.webp" />
+                            <Image fit="cover" src="https://photos.zillowstatic.com/cc_ft_768/ISecmdzu1wjd7c1000000000.webp" />
+                            <Image fit="cover" src="https://photos.zillowstatic.com/cc_ft_768/ISyv6uvouff0an1000000000.webp" />
+                            <Image fit="cover" src="https://photos.zillowstatic.com/cc_ft_768/ISq5lhsvo65san1000000000.webp" />
+                        </Carousel>
+                    </Box>
                 </Box>
             </Box>
         </Grommet>
