@@ -1,6 +1,6 @@
 import React from 'react';
 import loftryTheme from './Theme';
-import { Grommet, Box, Carousel, Image, Heading, Text, Button, Anchor } from 'grommet';
+import { Grommet, Box, Carousel, Image, Heading, Text, Button, Anchor, grommet } from 'grommet';
 import { Wifi, Bike, Gamepad, Run } from 'grommet-icons';
 
 const ListingTemplate: React.FC = () => {
@@ -10,7 +10,7 @@ const ListingTemplate: React.FC = () => {
                 direction="row"
                 align="center"
                 justify="between"
-                background="dark-4"
+                background="light-1"
                 fill="horizontal"
                 pad={{ right: "xsmall", left: "xsmall" }}
             >
@@ -18,10 +18,10 @@ const ListingTemplate: React.FC = () => {
                 <Box
                     direction="row"
                 >
-                    <Anchor href="#" size="large" color="black" margin={{ horizontal: "large" }} label="My Profile" />
-                    <Anchor href="#" size="large" color="black" margin={{ horizontal: "large" }} label="Teams" />
-                    <Anchor href="#" size="large" color="black" margin={{ horizontal: "large" }} label="Map" />
-                    <Button primary label="Log Out" margin={{ horizontal: "large" }} hoverIndicator={{ color: "accent-1" }} color="brand" />
+                    <Anchor href="#" size="medium" color="black" margin={{ horizontal: "large" }} label="My Profile" />
+                    <Anchor href="#" size="medium" color="black" margin={{ horizontal: "large" }} label="Teams" />
+                    <Anchor href="#" size="medium" color="black" margin={{ horizontal: "large" }} label="Map" />
+                    <Anchor href="#" size="medium" color="black" margin={{ horizontal: "large" }} label="Settings" />
                 </Box>
             </Box>
             <Box fill="horizontal" margin={{ top: "medium" }} direction="column" alignContent="start" justify="start" >
