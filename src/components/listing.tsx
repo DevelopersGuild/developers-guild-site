@@ -1,7 +1,7 @@
 import React from 'react';
 import loftryTheme from './Theme';
 import { Grommet, grommet, Box, Carousel, Image, Heading, Text, Button, Anchor } from 'grommet';
-import { Wifi, } from 'grommet-icons';
+import { Wifi, Bike } from 'grommet-icons';
 
 const ListingTemplate: React.FC = () => {
     return (
@@ -43,18 +43,15 @@ const ListingTemplate: React.FC = () => {
                     <Image fit="cover" src="https://photos.zillowstatic.com/cc_ft_768/ISq5lhsvo65san1000000000.webp" />
                 </Carousel>
             </Box>
-            <Box direction="row" margin="small">
-                <Box direction="column">
-                    <Text size="xlarge" >Cupertino | 1 Bedroom, 1 Bathroom</Text>
-                    <Box direction="column">
-                        <Heading level='2' color="black">Amenities</Heading>
-                        <Box direction="row">
-                            <Text margin={{ left: "small" }}> <Wifi /></Text>
-                        </Box>
+            <Box pad="medium" direction="column">
+                <Text size="xlarge">1 Bedroom, 1 Bathroom</Text>
+                {/* Amenities */}
+                <Box pad="medium" direction="column">
+                    <Heading level='2' color="black">Amenities</Heading>
+                    <Box wrap direction="row">
+                        <Wifi data-tip="Wifi" />
+                        <Bike data-tip="Bike Racks" />
                     </Box>
-                </Box>
-                <Box direction="row">
-
                 </Box>
             </Box>
             <Box fill="vertical" align="center" justify="center" direction="column" >
