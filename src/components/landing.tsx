@@ -1,6 +1,6 @@
 import React from 'react';
 import loftryTheme from './Theme';
-import { Grommet, grommet, Box, Heading, Button, Tab, Tabs, Text } from 'grommet';
+import { Grommet, Box, Heading, Button, Tab, Tabs, Text } from 'grommet';
 
 
 const Landing: React.FC = () => {
