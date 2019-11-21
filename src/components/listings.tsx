@@ -1,6 +1,6 @@
 import React from 'react';
 import loftryTheme from './Theme';
-import { Grommet, Box, Carousel, Image, Heading, Text, Button, Anchor, grommet, InfiniteScroll } from 'grommet';
+import { Grommet, Box, Carousel, Image, Heading, InfiniteScroll } from 'grommet';
 import Thumbnail from './thumbnail';
 
 const Listings: React.FC = () => {
