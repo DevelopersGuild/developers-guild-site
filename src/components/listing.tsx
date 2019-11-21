@@ -14,7 +14,7 @@ const ListingTemplate: React.FC = () => {
                 fill="horizontal"
                 pad={{ right: "xsmall", left: "xsmall" }}
             >
-                <Heading alignSelf="start" level='2' color="black">Loftry</Heading>
+                <Heading margin="medium" alignSelf="start" level='2' color="black">Loftry</Heading>
                 <Box
                     direction="row"
                 >
