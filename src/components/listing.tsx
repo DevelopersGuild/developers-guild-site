@@ -1,6 +1,6 @@
 import React from 'react';
 import loftryTheme from './Theme';
-import { Grommet, Box, Carousel, Image, Heading, Text, Button, Anchor, grommet } from 'grommet';
+import { Grommet, Box, Carousel, Image, Heading, Text, Button, Anchor } from 'grommet';
 import { Wifi, Bike, Gamepad, Run } from 'grommet-icons';
 
 const ListingTemplate: React.FC = () => {
