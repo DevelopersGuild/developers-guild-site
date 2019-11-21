@@ -1,6 +1,6 @@
 import React from 'react';
 import loftryTheme from './Theme';
-import { Grommet, Box, Carousel, Image, Heading, Text, Button, Anchor } from 'grommet';
+import { Grommet, grommet, Box, Carousel, Image, Heading, Text, Button, Anchor } from 'grommet';
 import { Wifi, } from 'grommet-icons';
 
 const ListingTemplate: React.FC = () => {
@@ -12,8 +12,9 @@ const ListingTemplate: React.FC = () => {
                 justify="between"
                 background="dark-4"
                 fill="horizontal"
+                pad="xsmall"
             >
-                <Heading level='2' color="black">Loftry</Heading>
+                <Heading alignSelf="start" level='2' color="black">Loftry</Heading>
                 <Box
                     direction="row"
                 >
@@ -23,30 +24,32 @@ const ListingTemplate: React.FC = () => {
                     <Button primary label="Log Out" margin={{ horizontal: "large" }} hoverIndicator={{ color: "accent-1" }} color="brand" />
                 </Box>
             </Box>
-            <Box fill="horizontal" margin={{ top: "medium" }} direction="row" alignContent="end" justify="end">
-                <Button color="accent-1" label="Contact Listing Owner" onClick={() => { alert('Contacted User.') }} />
-            </Box>
             <Box fill="horizontal" margin={{ top: "medium" }} direction="column" alignContent="start" justify="start" >
+                {/* User Actions Panel. */}
+                <Box pad="xsmall" fill="horizontal" direction="row" alignContent="end" justify="end">
+                    <Button margin="xsmall" color="accent-1" label="Contact Listing Owner" onClick={() => { alert('Contacted User.') }} />
+                    <Button margin="xsmall" color="accent-1" label="View Neighborhood" onClick={() => { alert('Viewed Neighborhood.') }} />
+                    <Button margin="xsmall" color="accent-1" label="Share With Team" onClick={() => { alert('Shared with Team.') }} />
+                </Box>
                 <Heading truncate margin={{ left: "medium" }} alignSelf="start" size="xsmall">Studio: Living Area + Bedroom</Heading>
                 <Box alignContent="start" alignSelf="start" direction="row" justify="center" >
                     <Text size="large" margin={{ left: "medium" }}>22639 Oakcrest Ct # B, Cupertino, CA 95014</Text> <Text size="large" margin={{ left: "small" }}>from <a href="#userid">@Jonathan Smith</a></Text> <Text size="large" margin={{ left: "small" }}> at $2400 a month</Text>
                 </Box>
             </Box>
-            <Box margin={{ top: "medium" }} alignSelf="stretch" overflow="hidden">
+            <Box margin="medium" alignSelf="stretch" overflow="hidden">
                 <Carousel fill play={5000} alignSelf="stretch">
                     <Image fit="cover" src="https://photos.zillowstatic.com/cc_ft_768/ISecmdzu1wjd7c1000000000.webp" />
                     <Image fit="cover" src="https://photos.zillowstatic.com/cc_ft_768/ISyv6uvouff0an1000000000.webp" />
                     <Image fit="cover" src="https://photos.zillowstatic.com/cc_ft_768/ISq5lhsvo65san1000000000.webp" />
                 </Carousel>
             </Box>
-            <Box direction="row" margin="medium">
+            <Box direction="row" margin="small">
                 <Box direction="column">
                     <Text size="xlarge" >Cupertino | 1 Bedroom, 1 Bathroom</Text>
                     <Box direction="column">
                         <Heading level='2' color="black">Amenities</Heading>
                         <Box direction="row">
-                            <Wifi />
-                            <Text margin={{ left: "small" }}>WiFi</Text>
+                            <Text margin={{ left: "small" }}> <Wifi /></Text>
                         </Box>
                     </Box>
                 </Box>
@@ -67,4 +70,3 @@ const ListingTemplate: React.FC = () => {
 }
 
 export default ListingTemplate;
-// <Image fit="cover" src="https://photos.zillowstatic.com/cc_ft_1536/ISaxjuxrjssj9n1000000000.webp" />

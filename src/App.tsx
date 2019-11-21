@@ -4,11 +4,13 @@ import Login from './components/login';
 import Signup from './components/signup';
 import ListingTemplate from './components/listing';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import ReactTooltip from 'react-tooltip'
 
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
+      <ReactTooltip />
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route exact path="/login" component={Login} />
