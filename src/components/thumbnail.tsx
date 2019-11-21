@@ -17,7 +17,7 @@ const Thumbnail: React.FC = () => {
                 </Box>
                 <Box alignSelf="end" direction="row">
                     <Text margin="xsmall" size="medium" >Cupertino CA</Text>
-                    <Anchor margin="xsmall" href="#" size="medium" color="black" label="View" />
+                    <Anchor margin="xsmall" href="/example-listing" size="medium" color="black" label="View" />
                 </Box>
             </Box>
         </Grommet>
