@@ -10,7 +10,7 @@ const Landing: React.FC = () => {
                 <Box align="center" justify="center" direction="column" >
                     <Heading color="light-1" >Introducing Loftly Housing. <br /> Welcome to AI Powered Co-living and TRM.</Heading>
                     <Box flex direction="row" align="center">
-                        <Button margin="xsmall" primary label="Living with Loftly" />
+                        <Button href="/login" margin="xsmall" primary label="Living with Loftly" />
                         <Button margin="xsmall" primary label="Use the Loftly TRM" />
                     </Box>
                 </Box>
