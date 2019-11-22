@@ -26,7 +26,9 @@ const Signup: React.FC = () => {
                     </Box>
                     <br />
                     <Box>
-                        <TextInput placeholder="school" type="text" value={school} onChange={event => setSchool(event.target.value)} />
+                        <FormField label="school">
+                            <TextInput placeholder="school" type="text" value={school} onChange={event => setSchool(event.target.value)} />
+                        </FormField>
                     </Box>
                     <br />
                     <Box>
