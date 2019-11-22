@@ -42,8 +42,10 @@ const Signup: React.FC = () => {
                     </Box>
                     <br />
                     <Box>
-                        <TextArea placeholder="wifi,bike racks, pet friendly, smoke free, hackerhouse" value={preferences}
-                            onChange={event => setPreferences(event.target.value)} />
+                        <FormField label="preferences">
+                            <TextArea placeholder="wifi,bike racks, pet friendly, smoke free, hackerhouse" value={preferences}
+                                onChange={event => setPreferences(event.target.value)} />
+                        </FormField>
                     </Box>
                 </Box>
             </Box>
