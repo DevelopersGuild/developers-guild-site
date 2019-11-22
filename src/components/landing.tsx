@@ -1,17 +1,25 @@
 import React from 'react';
-import loftryTheme from './Theme';
+import loftlyTheme from './Theme';
 import { Grommet, Box, Heading, Button, Tab, Tabs, Text } from 'grommet';
 
 
 const Landing: React.FC = () => {
     return (
-        <Grommet full theme={loftryTheme}>
-            <Box align="center" justify="center" fill background={{ image: 'url(https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)' }} >
-                <Box align="center" justify="center" direction="column" >
-                    <Heading color="light-1" >Introducing Loftly Housing. <br /> Welcome to AI Powered Co-living and TRM.</Heading>
+        <Grommet full theme={loftlyTheme}>
+            <Box fill background={{ image: 'url(https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)' }} >
+                <Box
+                margin="xsmall"
+                alignSelf = "end"
+                direction="row"
+                >
+                    <Button  margin="xsmall" primary label="Login" />
+                    <Button  margin="xsmall" primary label="Signup" />
+                </Box>
+                <Box align="center" margin={{top:"276px"}} justify="center"direction="column" >
+                    <Heading color="light-1" level="1">Introducing Loftly Housing. <br /> Welcome to AI Powered Co-living and TRM.</Heading>
                     <Box flex direction="row" align="center">
-                        <Button style={{ color: "#ffffff" }} href="/login" margin="xsmall" primary label="Living with Loftly" />
-                        <Button style={{ color: "#ffffff" }} margin="xsmall" primary label="Use the Loftly TRM" />
+                        <Button  margin="xsmall" primary label="Living with Loftly" />
+                        <Button  margin="xsmall" primary label="Use the Loftly TRM" />
                     </Box>
                 </Box>
             </Box>

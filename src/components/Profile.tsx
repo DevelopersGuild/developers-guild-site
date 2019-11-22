@@ -1,18 +1,25 @@
 import React from 'react';
 import loftlyTheme from './Theme';
-import { Grommet, Box, Heading, InfiniteScroll,Anchor,Button } from 'grommet';
-import Thumbnail from './thumbnail';
+import { Grommet,Box,Heading,Anchor,Button,Grid } from 'grommet'; 
 
-const Listings: React.FC = () => {
-    const test: number[] = [];
-    for (let i = 0; i < 1000; i++) {
-        test.push(i);
-    }
-    return (
+const Profile: React.FC = () => {
+    return(
         <Grommet theme={loftlyTheme}>
-             <Box
+            <Grid
+                     fill rows={["auto", "flex"]}
+                     columns={["auto", "flex"]}
+                     gap="small"
+                     areas={[
+                        { name: 'header', start: [0, 0], end: [1, 0] },
+                        { name: 'login', start: [0, 1], end: [0, 1] },
+                        { name: 'main', start: [1, 1], end: [1, 1] }
+                     ]}
+
+                >
+                    <Box
                 direction="row"
                 align="center"
+                gridArea = "header"
                 justify="around"
                 background="light-1"
                 fill="horizontal"
@@ -30,17 +37,10 @@ const Listings: React.FC = () => {
                     <Anchor href="#" size="large" color="black" label="Settings" />
                     <Button primary label="Log Out" />
                 </Box>
-            </Box> 
-            <Box align="center" justify="center">
-                <Heading>Listings</Heading>
-                <Box overflow="auto" align="center" justify="center" direction="row" wrap>
-                    <InfiniteScroll items={test}>
-                        {(item) => <Thumbnail key={item} />}
-                    </InfiniteScroll>
-                </Box>
-            </Box>
+            </Box>  
+                </Grid>
         </Grommet>
-    )
+    );
 }
 
-export default Listings; 
+export default Profile;

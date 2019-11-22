@@ -1,29 +1,32 @@
 import React from 'react';
-import loftryTheme from './Theme';
+import loftlyTheme from './Theme';
 import { Grommet, Box, Carousel, Image, Heading, Text, Button, Anchor } from 'grommet';
 import { Wifi, Bike, Gamepad, Run } from 'grommet-icons';
 
 const ListingTemplate: React.FC = () => {
     return (
-        <Grommet full theme={loftryTheme}>
+        <Grommet full theme={loftlyTheme}>
             <Box
                 direction="row"
                 align="center"
-                justify="between"
+                justify="around"
                 background="light-1"
                 fill="horizontal"
                 pad={{ right: "xsmall", left: "xsmall" }}
             >
-                <Heading margin="medium" alignSelf="start" level='2' color="black">Loftry</Heading>
+                <Heading margin="medium" alignSelf="start" level='2' color="black">Loftly</Heading>
                 <Box
+                    gap = "large"
                     direction="row"
+                    margin={{left:"1000px"}}
                 >
-                    <Anchor href="#" size="medium" color="black" margin={{ horizontal: "large" }} label="My Profile" />
-                    <Anchor href="#" size="medium" color="black" margin={{ horizontal: "large" }} label="Teams" />
-                    <Anchor href="#" size="medium" color="black" margin={{ horizontal: "large" }} label="Map" />
-                    <Anchor href="#" size="medium" color="black" margin={{ horizontal: "large" }} label="Settings" />
+                    <Anchor href="#" size="large" color="black" label="My Profile" />
+                    <Anchor href="#" size="large" color="black" label="Teams" />
+                    <Anchor href="#" size="large" color="black" label="Map" />
+                    <Anchor href="#" size="large" color="black" label="Settings" />
+                    <Button primary label="Log Out" />
                 </Box>
-            </Box>
+            </Box> 
             <Box fill="horizontal" margin={{ top: "medium" }} direction="column" alignContent="start" justify="start" >
                 {/* User Actions Panel. */}
                 <Box wrap pad="xsmall" fill="horizontal" direction="row" alignContent="end" justify="end">
