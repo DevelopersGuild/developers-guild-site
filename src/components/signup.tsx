@@ -5,7 +5,7 @@ const Signup: React.FC = () => {
     return(
         <Grommet theme={grommet}> 
             <Box>
-                
+                <Text>Sign Up</Text>
             </Box> 
         </Grommet>
     );
