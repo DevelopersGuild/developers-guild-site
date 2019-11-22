@@ -15,6 +15,10 @@ const Signup: React.FC = () => {
                     <Box>
                         <TextInput placeholder="password" type="password" />
                     </Box>
+                    <br />
+                    <Box>
+                        <TextInput placeholder="school" type="text" />
+                    </Box>
                 </Box>
             </Box>
         </Grommet>
