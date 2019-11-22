@@ -22,9 +22,9 @@ const Login: React.FC = () => {
                 >
                     <Heading level='2'>Loftry</Heading>
                     <Box direction="row">
-                        <Anchor href="#" color="black" size="large" margin={{ horizontal: "large" }} label="About" />
-                        <Anchor href="#" color="black" size="large" margin={{ horizontal: "large" }} label="FAQ" />
-                        <Anchor href="#" color="black" size="large" margin={{ horizontal: "large" }} label="Help" />
+                        <Anchor href="/about" color="black" size="large" margin={{ horizontal: "large" }} label="About" />
+                        <Anchor href="/faq" color="black" size="large" margin={{ horizontal: "large" }} label="FAQ" />
+                        <Anchor href="/help" color="black" size="large" margin={{ horizontal: "large" }} label="Help" />
                     </Box>
                 </Box>
                 <Box
