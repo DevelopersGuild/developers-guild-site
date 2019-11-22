@@ -20,19 +20,18 @@ const Login: React.FC = () => {
                     justify="between"
                     margin="medium"
                 >
-                    <Heading level='2' color="white">Loftry</Heading>
+                    <Heading level='2'>Loftry</Heading>
                     <Box direction="row">
-                        <Anchor href="#" size="large" margin={{ horizontal: "large" }} label="About" />
-                        <Anchor href="#" size="large" margin={{ horizontal: "large" }} label="FAQ" />
-                        <Anchor href="#" size="large" margin={{ horizontal: "large" }} label="Help" />
+                        <Anchor href="#" color="black" size="large" margin={{ horizontal: "large" }} label="About" />
+                        <Anchor href="#" color="black" size="large" margin={{ horizontal: "large" }} label="FAQ" />
+                        <Anchor href="#" color="black" size="large" margin={{ horizontal: "large" }} label="Help" />
                     </Box>
 
                 </Box>
                 <Box
+                    margin={{ left: "xlarge" }}
                     background="white"
-                    margin={{ left: "xlarge", top: "large" }}
-                    gridArea="main" justify="start"
-                    align="center"
+                    alignSelf="start"
                     width="medium"
                     height="large"
                     direction="column"
