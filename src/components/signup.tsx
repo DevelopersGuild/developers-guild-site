@@ -4,7 +4,9 @@ import { Grommet, grommet, Box, Text, TextInput} from 'grommet';
 const Signup: React.FC = () => {
     return(
         <Grommet theme={grommet}> 
-
+            <Box>
+                
+            </Box> 
         </Grommet>
     );
 }
