@@ -1,7 +1,8 @@
 import React from 'react';
-import { Grommet, grommet, Box, Text, TextInput, Select } from 'grommet';
+import { Grommet, grommet, Box, Text, TextInput, Select, TextArea } from 'grommet';
 
 const Signup: React.FC = () => {
+    const [gender, setGender] = React.useState('other');
     return (
         <Grommet full theme={grommet}>
             <Box fill align="center" justify="center">
@@ -18,6 +19,14 @@ const Signup: React.FC = () => {
                     <br />
                     <Box>
                         <TextInput placeholder="school" type="text" />
+                    </Box>
+                    <br />
+                    <Box>
+                        <Select
+                            options={['man', 'woman', 'other']}
+                            value={gender}
+                            onChange={({ option }) => setGender(option)}
+                        />
                     </Box>
                 </Box>
             </Box>
