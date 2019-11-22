@@ -6,6 +6,7 @@ const Signup: React.FC = () => {
     const [preferences, setPreferences] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [school, setSchool] = React.useState('');
+    const [email, setEmail] = React.useState('');
     return (
         <Grommet full theme={grommet}>
             <Box fill align="center" justify="center">
@@ -13,7 +14,7 @@ const Signup: React.FC = () => {
                     <Text>Sign Up</Text>
                     <br />
                     <Box>
-                        <TextInput placeholder="email" type="email" />
+                        <TextInput placeholder="email" type="email" value={email} onChange={event => setEmail(event.target.value)} />
                     </Box>
                     <br />
                     <Box>
