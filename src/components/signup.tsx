@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grommet, grommet, Box, Text, TextInput, Select, TextArea, FormField, Button } from 'grommet';
+import loftlyTheme from './Theme';
+import { Grommet, Box, Text, TextInput, Select, TextArea, FormField, Button } from 'grommet';
 
 const Signup: React.FC = () => {
     const [gender, setGender] = React.useState('other');
@@ -8,7 +9,7 @@ const Signup: React.FC = () => {
     const [school, setSchool] = React.useState('');
     const [email, setEmail] = React.useState('');
     return (
-        <Grommet full theme={grommet}>
+        <Grommet full theme={loftlyTheme}>
             <Box fill align="center" justify="center">
                 <Box width="medium">
                     <Text size="large" >Sign Up</Text>
@@ -48,7 +49,9 @@ const Signup: React.FC = () => {
                         </FormField>
                     </Box>
                     <br/>
-                    
+                   <Box>
+                       <Button primary label="submit"/>
+                    </Box> 
                 </Box>
             </Box>
         </Grommet>
