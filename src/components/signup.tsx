@@ -10,7 +10,7 @@ const Signup: React.FC = () => {
     const [email, setEmail] = React.useState('');
 
     const handleSubmission = () => {
-
+        alert(`${gender} ${password} ${school} ${email} ${preferences}`)
     }
 
     return (
