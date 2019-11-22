@@ -6,6 +6,14 @@ const Signup: React.FC = () => {
         <Grommet theme={grommet}> 
             <Box>
                 <Text>Sign Up</Text>
+                <br/>
+                <Box>
+                    <TextInput placeholder="email" type="email" />
+                </Box>
+                <br/>
+                <Box>
+                    <TextInput placeholder="password" type="password" />
+                </Box>
             </Box> 
         </Grommet>
     );
