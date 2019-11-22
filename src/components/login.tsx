@@ -26,7 +26,6 @@ const Login: React.FC = () => {
                         <Anchor href="#" color="black" size="large" margin={{ horizontal: "large" }} label="FAQ" />
                         <Anchor href="#" color="black" size="large" margin={{ horizontal: "large" }} label="Help" />
                     </Box>
-
                 </Box>
                 <Box
                     margin={{ left: "xlarge" }}
