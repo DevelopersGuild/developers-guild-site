@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grommet, grommet } from 'grommet'; 
+import { Grommet, grommet, Box, Text, TextInput} from 'grommet'; 
 
 const Signup: React.FC = () => {
     return(
