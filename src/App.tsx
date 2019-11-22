@@ -23,7 +23,7 @@ const App: React.FC = () => {
         <Route exact path="/listings" component={Listings} />
         <Route exact path="/about" component={About} />
         <Route exact path="/faq" component={Faq} />
-        
+        <Route exact path="/help" component={Help} />
       </Switch>
     </BrowserRouter>
   );
