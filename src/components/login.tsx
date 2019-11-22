@@ -63,8 +63,7 @@ const Login: React.FC = () => {
                     <Box width="medium" >
                         <Button style={{ color: "#ffffff" }} margin="xsmall" primary label="Login" onClick={handleSubmission} />
                     </Box>
-                    <hr />
-                    <Text>Don't have an account? <a href="/signup" >Sign up</a></Text>
+                    <Text margin="small" >Don't have an account? <a href="/signup" >Sign up</a></Text>
                 </Box>
             </Box>
         </Grommet>
