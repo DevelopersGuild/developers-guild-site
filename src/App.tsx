@@ -21,7 +21,7 @@ const App: React.FC = () => {
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/example-listing" component={ListingTemplate} />
         <Route exact path="/listings" component={Listings} />
-        <Route exact path="/about" />
+        <Route exact path="/about" component={About} />
       </Switch>
     </BrowserRouter>
   );
