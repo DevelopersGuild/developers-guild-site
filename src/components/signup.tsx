@@ -48,10 +48,10 @@ const Signup: React.FC = () => {
                                 onChange={event => setPreferences(event.target.value)} />
                         </FormField>
                     </Box>
-                    <br/>
-                   <Box>
-                       <Button primary label="submit"/>
-                    </Box> 
+                    <br />
+                    <Box>
+                        <Button primary label="submit" />
+                    </Box>
                 </Box>
             </Box>
         </Grommet>
