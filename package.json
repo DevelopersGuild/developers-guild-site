@@ -15,6 +15,7 @@
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
+    "react-tooltip": "^3.11.1",
     "styled-components": "^4.4.1",
     "typescript": "3.7.2"
   },
@@ -38,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-tooltip": "^3.11.0"
   }
 }

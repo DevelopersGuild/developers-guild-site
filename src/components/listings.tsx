@@ -1,5 +1,5 @@
 import React from 'react';
-import loftryTheme from './Theme';
+import loftlyTheme from './Theme';
 import { Grommet, Box, Heading, InfiniteScroll,Anchor,Button } from 'grommet';
 import Thumbnail from './thumbnail';
 
@@ -9,7 +9,7 @@ const Listings: React.FC = () => {
         test.push(i);
     }
     return (
-        <Grommet theme={loftryTheme}>
+        <Grommet theme={loftlyTheme}>
              <Box
                 direction="row"
                 align="center"

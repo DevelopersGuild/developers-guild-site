@@ -1,13 +1,12 @@
 import React from 'react';
 import loftlyTheme from './Theme';
 import { Box, Heading, TextInput, Button, Text, Grommet, Grid, Anchor } from 'grommet';
-
 const Login: React.FC = () => {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
 
-    const handleSubmission = () => {
-        alert(`${password}, ${email}`);
+    const handleSubmission = async () => {
+        console.log(JSON.stringify({ email, password }));
     }
 
     return (
