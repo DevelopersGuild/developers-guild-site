@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grommet, grommet, Box, Text, TextInput, Select, TextArea, FormField } from 'grommet';
+import { Grommet, grommet, Box, Text, TextInput, Select, TextArea, FormField, Form } from 'grommet';
 
 const Signup: React.FC = () => {
     const [gender, setGender] = React.useState('other');
@@ -14,11 +14,15 @@ const Signup: React.FC = () => {
                     <Text>Sign Up</Text>
                     <br />
                     <Box>
-                        <TextInput placeholder="email" type="email" value={email} onChange={event => setEmail(event.target.value)} />
+                        <FormField label="email">
+                            <TextInput placeholder="email" type="email" value={email} onChange={event => setEmail(event.target.value)} />
+                        </FormField>
                     </Box>
                     <br />
                     <Box>
-                        <TextInput placeholder="password" type="password" value={password} onChange={event => setPassword(event.target.value)} />
+                        <FormField label="password">
+                            <TextInput placeholder="password" type="password" value={password} onChange={event => setPassword(event.target.value)} />
+                        </FormField>
                     </Box>
                     <br />
                     <Box>
