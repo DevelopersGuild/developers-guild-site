@@ -8,6 +8,11 @@ const Signup: React.FC = () => {
     const [password, setPassword] = React.useState('');
     const [school, setSchool] = React.useState('');
     const [email, setEmail] = React.useState('');
+
+    const handleSubmission = () => {
+        
+    }
+
     return (
         <Grommet full theme={loftlyTheme}>
             <Box fill align="center" justify="center">
@@ -50,7 +55,7 @@ const Signup: React.FC = () => {
                     </Box>
                     <br />
                     <Box>
-                        <Button style={{ color: "#ffffff" }} primary label="submit" />
+                        <Button onChange={} style={{ color: "#ffffff" }} primary label="submit" />
                     </Box>
                 </Box>
             </Box>
