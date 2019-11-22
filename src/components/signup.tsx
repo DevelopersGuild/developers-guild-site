@@ -55,7 +55,7 @@ const Signup: React.FC = () => {
                     </Box>
                     <br />
                     <Box>
-                        <Button onChange={handleSubmission} style={{ color: "#ffffff" }} primary label="submit" />
+                        <Button onClick={handleSubmission} style={{ color: "#ffffff" }} primary label="submit" />
                     </Box>
                 </Box>
             </Box>
