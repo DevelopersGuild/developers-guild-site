@@ -3,6 +3,8 @@ import { Grommet, grommet, Box, Text, TextInput, Select, TextArea } from 'gromme
 
 const Signup: React.FC = () => {
     const [gender, setGender] = React.useState('other');
+    const [preferences, setPreferences] = React.useState('');
+    const [school, setSchool] = React.useState('');
     return (
         <Grommet full theme={grommet}>
             <Box fill align="center" justify="center">
@@ -18,7 +20,7 @@ const Signup: React.FC = () => {
                     </Box>
                     <br />
                     <Box>
-                        <TextInput placeholder="school" type="text" />
+                        <TextInput placeholder="school" type="text" value={school} onChange={event => setSchool(event.target.value)} />
                     </Box>
                     <br />
                     <Box>
@@ -27,6 +29,11 @@ const Signup: React.FC = () => {
                             value={gender}
                             onChange={({ option }) => setGender(option)}
                         />
+                    </Box>
+                    <br />
+                    <Box>
+                        <TextArea placeholder="wifi,bike racks, pet friendly, smoke free, hackerhouse" value={preferences}
+                            onChange={event => setPreferences(event.target.value)} />
                     </Box>
                 </Box>
             </Box>
