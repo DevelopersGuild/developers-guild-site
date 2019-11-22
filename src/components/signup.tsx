@@ -1,20 +1,20 @@
 import React from 'react';
-import { Grommet, grommet, Box, Text, TextInput} from 'grommet'; 
+import { Grommet, grommet, Box, Text, TextInput } from 'grommet';
 
 const Signup: React.FC = () => {
-    return(
-        <Grommet theme={grommet}> 
+    return (
+        <Grommet theme={grommet}>
             <Box>
                 <Text>Sign Up</Text>
-                <br/>
+                <br />
                 <Box>
                     <TextInput placeholder="email" type="email" />
                 </Box>
-                <br/>
+                <br />
                 <Box>
                     <TextInput placeholder="password" type="password" />
                 </Box>
-            </Box> 
+            </Box>
         </Grommet>
     );
 }
