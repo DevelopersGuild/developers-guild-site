@@ -4,7 +4,7 @@ import Login from './components/login';
 import Signup from './components/signup';
 import ListingTemplate from './components/listing';
 import Listings from './components/listings';
-import About from './components/about'; 
+import About from './components/about';
 import Faq from './components/faq';
 import Help from './components/help';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
