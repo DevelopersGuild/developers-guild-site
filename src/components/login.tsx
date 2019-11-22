@@ -12,7 +12,7 @@ const Login: React.FC = () => {
 
     return (
         <Grommet full theme={loftryTheme}>
-            <Box fill background="url(https://images.unsplash.com/photo-1495029894030-991588d334b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80)">
+            <Box fill background="url(https://images.unsplash.com/43/L6sQn4GyQdSBW7pLgEz7_DSC_0013.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1945&q=80)">
                 <Box
                     gridArea="header"
                     direction="row"
