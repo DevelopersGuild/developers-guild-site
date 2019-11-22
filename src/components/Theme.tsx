@@ -18,7 +18,7 @@ const loftryTheme = deepMerge(grommet, {
       "accent-4": "9b9b9b",
       "neutral-1": "#8bac",
       "neutral-2": "#cadc9f",
-      "neutral-3": "#E87068"
+      "neutral-3": "#E87068",
     }
   }
 });
