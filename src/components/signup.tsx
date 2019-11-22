@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grommet, grommet, Box, Text, TextInput, Select, TextArea, FormField, Form } from 'grommet';
+import { Grommet, grommet, Box, Text, TextInput, Select, TextArea, FormField, Button } from 'grommet';
 
 const Signup: React.FC = () => {
     const [gender, setGender] = React.useState('other');
@@ -47,6 +47,8 @@ const Signup: React.FC = () => {
                                 onChange={event => setPreferences(event.target.value)} />
                         </FormField>
                     </Box>
+                    <br/>
+                    
                 </Box>
             </Box>
         </Grommet>
