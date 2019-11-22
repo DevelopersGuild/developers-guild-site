@@ -18,14 +18,13 @@ const Login: React.FC = () => {
                     direction="row"
                     align="center"
                     justify="between"
-                    pad={{ horizontal: "medium", vertical: "none" }}
-                    margin={{ bottom: "medium" }}
+                    margin="medium"
                 >
                     <Heading level='2' color="white">Loftry</Heading>
                     <Box direction="row">
-                        <Anchor href="#" size="large" color="white" margin={{ horizontal: "large" }} label="About" />
-                        <Anchor href="#" size="large" color="white" margin={{ horizontal: "large" }} label="FAQ" />
-                        <Anchor href="#" size="large" color="white" margin={{ horizontal: "large" }} label="Help" />
+                        <Anchor href="#" size="large" margin={{ horizontal: "large" }} label="About" />
+                        <Anchor href="#" size="large" margin={{ horizontal: "large" }} label="FAQ" />
+                        <Anchor href="#" size="large" margin={{ horizontal: "large" }} label="Help" />
                     </Box>
 
                 </Box>
