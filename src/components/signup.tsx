@@ -32,7 +32,7 @@ const Signup: React.FC = () => {
                     </Box>
                     <br />
                     <Box>
-                        <FormField>
+                        <FormField label="gender">
                             <Select
                                 options={['man', 'woman', 'other']}
                                 value={gender}
