@@ -10,7 +10,7 @@ const Signup: React.FC = () => {
     const [email, setEmail] = React.useState('');
 
     const handleSubmission = () => {
-        
+
     }
 
     return (
@@ -55,7 +55,7 @@ const Signup: React.FC = () => {
                     </Box>
                     <br />
                     <Box>
-                        <Button onChange={} style={{ color: "#ffffff" }} primary label="submit" />
+                        <Button onChange={handleSubmission} style={{ color: "#ffffff" }} primary label="submit" />
                     </Box>
                 </Box>
             </Box>
