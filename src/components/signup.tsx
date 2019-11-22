@@ -11,7 +11,7 @@ const Signup: React.FC = () => {
         <Grommet full theme={grommet}>
             <Box fill align="center" justify="center">
                 <Box width="medium">
-                    <Text>Sign Up</Text>
+                    <Text size="large" >Sign Up</Text>
                     <br />
                     <Box>
                         <FormField label="email">
