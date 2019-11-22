@@ -4,6 +4,7 @@ import { Grommet, grommet, Box, Text, TextInput, Select, TextArea } from 'gromme
 const Signup: React.FC = () => {
     const [gender, setGender] = React.useState('other');
     const [preferences, setPreferences] = React.useState('');
+    const [password, setPassword] = React.useState('');
     const [school, setSchool] = React.useState('');
     return (
         <Grommet full theme={grommet}>
@@ -16,7 +17,7 @@ const Signup: React.FC = () => {
                     </Box>
                     <br />
                     <Box>
-                        <TextInput placeholder="password" type="password" />
+                        <TextInput placeholder="password" type="password" value={password} onChange={event => setPassword(event.target.value)} />
                     </Box>
                     <br />
                     <Box>
