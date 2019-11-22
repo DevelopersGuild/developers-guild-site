@@ -50,7 +50,7 @@ const Signup: React.FC = () => {
                     </Box>
                     <br />
                     <Box>
-                        <Button  style={{ color: "#ffffff" }} primary label="submit" />
+                        <Button style={{ color: "#ffffff" }} primary label="submit" />
                     </Box>
                 </Box>
             </Box>
