@@ -11,7 +11,7 @@ const Register = () => {
     const [school, setSchool] = React.useState('');
 
     const handleSubmissionSignUp = () => {
-        alert(`${gender} ${password} ${school} ${email} ${preferences}`)
+        alert(`${gender} ${password} ${school} ${email} ${preferences.split(",")}`)
     }
 
     return (
