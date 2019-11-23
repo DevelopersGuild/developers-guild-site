@@ -1,6 +1,5 @@
 import React from 'react';
 import Front from './components/front';
-import Signup from './components/signup';
 import ListingTemplate from './components/listing';
 import Listings from './components/listings';
 import About from './components/about';
@@ -16,7 +15,6 @@ const App: React.FC = () => {
       <ReactTooltip />
       <Switch>
         <Route exact path="/" component={Front} />
-        <Route exact path="/signup" component={Signup} />
         <Route exact path="/example-listing" component={ListingTemplate} />
         <Route exact path="/listings" component={Listings} />
         <Route exact path="/about" component={About} />
