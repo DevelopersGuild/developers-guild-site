@@ -5,9 +5,6 @@ import { Grommet, Box, Text, Tabs, Tab, Heading } from 'grommet';
 const Faq: React.FC = () => {
     return (
         <Grommet theme={loftryTheme}>
-            <Box>
-                <Text>Faq</Text>
-            </Box>
             <Box align="center" justify="start" fill >
                 <Box pad="small" align="center" >
                     <Tabs>
