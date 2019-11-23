@@ -13,6 +13,7 @@ import Profile from './components/Profile';
 const App: React.FC = () => {
   return (
     <BrowserRouter>
+    {/* Allows highlighting hints over any element. */}
       <ReactTooltip />
       <Switch>
         <Route exact path="/" component={Front} />
