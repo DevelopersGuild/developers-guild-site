@@ -1,11 +1,11 @@
 import React from 'react';
-import loftlyTheme from './Theme';
+import loftryTheme from './Theme';
 import { Grommet, Box, Carousel, Image, Heading, Text, Button, Anchor } from 'grommet';
 import { Wifi, Bike, Gamepad, Run } from 'grommet-icons';
 
 const ListingTemplate: React.FC = () => {
     return (
-        <Grommet full theme={loftlyTheme}>
+        <Grommet full theme={loftryTheme}>
             <Box
                 direction="row"
                 align="center"
@@ -24,7 +24,7 @@ const ListingTemplate: React.FC = () => {
                     <Anchor href="#" size="large" color="black" label="Teams" />
                     <Anchor href="#" size="large" color="black" label="Map" />
                     <Anchor href="#" size="large" color="black" label="Settings" />
-                    <Button primary label="Log Out" />
+                    <Button  style={{ color: "#ffffff" }} primary label="Log Out" />
                 </Box>
             </Box> 
             <Box fill="horizontal" margin={{ top: "medium" }} direction="column" alignContent="start" justify="start" >

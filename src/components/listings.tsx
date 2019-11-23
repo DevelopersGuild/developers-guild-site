@@ -1,5 +1,5 @@
 import React from 'react';
-import loftlyTheme from './Theme';
+import loftryTheme from './Theme';
 import { Grommet, Box, Heading, InfiniteScroll,Anchor,Button } from 'grommet';
 import Thumbnail from './thumbnail';
 
@@ -9,8 +9,8 @@ const Listings: React.FC = () => {
         test.push(i);
     }
     return (
-        <Grommet theme={loftlyTheme}>
-             <Box
+        <Grommet theme={loftryTheme}>
+            <Box
                 direction="row"
                 align="center"
                 justify="around"
@@ -28,9 +28,9 @@ const Listings: React.FC = () => {
                     <Anchor href="#" size="large" color="black" label="Teams" />
                     <Anchor href="#" size="large" color="black" label="Map" />
                     <Anchor href="#" size="large" color="black" label="Settings" />
-                    <Button primary label="Log Out" />
+                    <Button primary style={{ color: "#ffffff" }} label="Log Out" />
                 </Box>
-            </Box> 
+            </Box>
             <Box align="center" justify="center">
                 <Heading>Listings</Heading>
                 <Box overflow="auto" align="center" justify="center" direction="row" wrap>
