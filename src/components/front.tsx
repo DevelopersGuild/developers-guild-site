@@ -5,12 +5,14 @@ import { Box, Heading, TextInput, Button, Text, Grommet, Anchor,Tabs,Tab,Layer, 
 const Front: React.FC = () => {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
+    const [emailSignUp, setEmailSignUp] = React.useState('');
+    const [passwordSignUp, setPasswordSignUp] = React.useState('');
     const [gender, setGender] = React.useState('other');
     const [preferences, setPreferences] = React.useState('');   
     const [school, setSchool] = React.useState('');
 
     const handleSubmissionSignUp = () => {
-        alert(`${gender} ${password} ${school} ${email} ${preferences}`)
+        alert(`${gender} ${passwordSignUp} ${school} ${emailSignUp} ${preferences}`)
     }
     const handleSubmission = async () => {
         console.log(JSON.stringify({ email, password }));
@@ -28,6 +30,7 @@ const Front: React.FC = () => {
             >
                 <Heading margin="medium" alignSelf="start" level='2' color="black">Loftly</Heading>
                 <Box
+                    animation = {["fadeIn","slideLeft"]}
                     gap = "large"
                     direction="row"
                     margin = {{left:"1450px"}}
@@ -48,6 +51,7 @@ const Front: React.FC = () => {
                     direction="column"
                     pad="medium"
                     round="small"
+                    animation={["fadeIn","slideRight"]}
                     border={{ color: 'white', size: 'large' }} >
                     <Heading margin="none">Welcome Back</Heading>
                     <br />
@@ -84,13 +88,13 @@ const Front: React.FC = () => {
                        <br />
                        <Box>
                            <FormField label="email">
-                               <TextInput placeholder="email" type="email" value={email} onChange={event => setEmail(event.target.value)} />
+                               <TextInput placeholder="email" type="email" value={email} onChange={event => setEmailSignUp(event.target.value)} />
                            </FormField>
                        </Box>
                        <br />
                        <Box>
                            <FormField label="password">
-                               <TextInput placeholder="password" type="password" value={password} onChange={event => setPassword(event.target.value)} />
+                               <TextInput placeholder="password" type="password" value={password} onChange={event => setPasswordSignUp(event.target.value)} />
                            </FormField>
                        </Box>
                        <br />
@@ -125,11 +129,11 @@ const Front: React.FC = () => {
                             </Layer>
                             )}
                 </Box>
-                <Box align="start" margin = {{top:"260px", left:"142px"}} direction="column" >
-                    <Heading color="light-1" level="1" textAlign = "start" >Introducing Loftly Housing. <br /> Welcome to AI Powered Co-living and TRM.</Heading>
+                <Box align="start" margin = {{top:"214px", left:"181px"}} direction="column" animation={["fadeIn","slideUp"]}>
+                    <Heading color="light-1" level="1" textAlign = "start" >Introducing Loftly Housing <br /> Welcome to AI Powered Co-living.</Heading>
                     <Box direction="row" align="start" gap= "large">
                         <Button style={{ color: "#ffffff" }} margin="small" primary label="Living with Loftly" />
-                        <Button style={{ color: "#ffffff" }} margin="small" primary label="Use the Loftly TRM" />
+                        <Button style={{ color: "#ffffff" }} margin="small" primary label="Renting with Loftly" />
                     </Box>
                 </Box>
                 </Box>
