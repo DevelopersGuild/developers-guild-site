@@ -1,7 +1,8 @@
 import React from 'react';
 import loftryTheme from './Theme';
-import { Grommet, Box, Heading, InfiniteScroll,Anchor,Button } from 'grommet';
+import { Grommet, Box, Heading, InfiniteScroll} from 'grommet';
 import Thumbnail from './thumbnail';
+import Menu from './menu';
 
 const Listings: React.FC = () => {
     const test: number[] = [];
@@ -10,30 +11,10 @@ const Listings: React.FC = () => {
     }
     return (
         <Grommet theme={loftryTheme}>
-            <Box
-                direction="row"
-                align="center"
-                justify="around"
-                background="light-1"
-                fill="horizontal"
-                pad={{ right: "xsmall", left: "xsmall" }}
-            >
-                <Heading margin="medium" alignSelf="start" level='2' color="black">Loftly</Heading>
-                <Box
-                    gap = "large"
-                    direction="row"
-                    margin={{left:"1000px"}}
-                >
-                    <Anchor href="#" size="large" color="black" label="My Profile" />
-                    <Anchor href="#" size="large" color="black" label="Teams" />
-                    <Anchor href="#" size="large" color="black" label="Map" />
-                    <Anchor href="#" size="large" color="black" label="Settings" />
-                    <Button primary style={{ color: "#ffffff" }} label="Log Out" />
-                </Box>
-            </Box>
+            <Menu/>
             <Box align="center" justify="center">
                 <Heading>Listings</Heading>
-                <Box overflow="auto" align="center" justify="center" direction="row" wrap>
+                <Box overflow="auto"  background={{"color":"white"}} align="center" justify="center" direction="row" wrap>
                     <InfiniteScroll items={test}>
                         {(item) => <Thumbnail key={item} />}
                     </InfiniteScroll>

@@ -3,12 +3,6 @@ import { grommet } from 'grommet';
 
 const loftryTheme = deepMerge(grommet, {
   global: {
-    size: {
-      medium: "438px",
-      large: "568px",
-      xxlarge: "1836px",
-      xxxlarge: "1836px"
-    },
     colors: {
       "brand": "#fc3d4d",
       "selected": "#D31B2A",
