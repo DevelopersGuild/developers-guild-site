@@ -1,32 +1,13 @@
 import React from 'react';
 import loftryTheme from './Theme';
-import { Grommet, Box, Carousel, Image, Heading, Text, Button, Anchor } from 'grommet';
-import { Wifi, Bike, Gamepad, Run } from 'grommet-icons';
+import { Grommet, Box, Carousel, Image, Heading, Text, Button} from 'grommet';
+import { Wifi, Bike, Gamepad, Run} from 'grommet-icons';
+import Menu from './menu';
 
 const ListingTemplate: React.FC = () => {
     return (
         <Grommet full theme={loftryTheme}>
-            <Box
-                direction="row"
-                align="center"
-                justify="around"
-                background="light-1"
-                fill="horizontal"
-                pad={{ right: "xsmall", left: "xsmall" }}
-            >
-                <Heading margin="medium" alignSelf="start" level='2' color="black">Loftly</Heading>
-                <Box
-                    gap = "large"
-                    direction="row"
-                    margin={{left:"1000px"}}
-                >
-                    <Anchor href="#" size="large" color="black" label="My Profile" />
-                    <Anchor href="#" size="large" color="black" label="Teams" />
-                    <Anchor href="#" size="large" color="black" label="Map" />
-                    <Anchor href="#" size="large" color="black" label="Settings" />
-                    <Button  style={{ color: "#ffffff" }} primary label="Log Out" />
-                </Box>
-            </Box> 
+            <Menu/>
             <Box fill="horizontal" margin={{ top: "medium" }} direction="column" alignContent="start" justify="start" >
                 {/* User Actions Panel. */}
                 <Box wrap pad="xsmall" fill="horizontal" direction="row" alignContent="end" justify="end">
