@@ -1,6 +1,6 @@
 import React from 'react';
 import loftlyTheme from './Theme';
-import { Grommet, grommet, Grid, Box, Image, Heading, Text, Anchor, Paragraph } from 'grommet'
+import { Grommet, Box, Image, Heading, Text, Anchor, Paragraph } from 'grommet'
 import { Checkmark, Flag, Language, Briefcase, Cubes, Facebook } from 'grommet-icons'
 import Menu from './menu';
 
@@ -8,7 +8,7 @@ const Profile: React.FC = () => {
     return(
         <Grommet theme={loftlyTheme}>
         <Menu/>
-        <Box direction = "row">
+        <Box direction = "row" justify = "center">
         <Box align="center" justify="start" direction="column" gap="xxsmall">
          <Box align="center" justify="center" width="medium" height="medium" pad="small">
            <Image src="https://i.imgur.com/04HODpp.jpg" fit="contain" />

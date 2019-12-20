@@ -22,19 +22,19 @@ const Register = () => {
                     <br />
                     <Box>
                         <FormField label="email">
-                            <TextInput placeholder=".edu or organizational email" type="email" value={email} onChange={event => setEmail(event.target.value)} />
+                            <TextInput placeholder="email" type="email" value={email} onChange={event => setEmail(event.target.value)} />
                         </FormField>
                     </Box>
                     <br />
                     <Box>
                         <FormField label="password">
-                            <TextInput aria-label="password" placeholder="password" type="password" value={password} onChange={event => setPassword(event.target.value)} />
+                            <TextInput placeholder="password" type="password" value={password} onChange={event => setPassword(event.target.value)} />
                         </FormField>
                     </Box>
                     <br />
                     <Box>
-                        <FormField label="organization">
-                            <TextInput placeholder="De Anza College or Seagate Cupertino" type="text" value={school} onChange={event => setSchool(event.target.value)} />
+                        <FormField label="school">
+                            <TextInput placeholder="school" type="text" value={school} onChange={event => setSchool(event.target.value)} />
                         </FormField>
                     </Box>
                     <br />
