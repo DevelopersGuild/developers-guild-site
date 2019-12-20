@@ -24,6 +24,7 @@ const Front: React.FC = () => {
             <Anchor href = "/about" label="About" size="large" />
             <Anchor href = "/faq" label="FAQ" size="large" />
             <Anchor href = "/help" label="Help" size="large" />
+            <Anchor href = "/example-profile" label="Profile" size="large" />
           </Box>
         </Header>
         <Box align="center" justify="center" direction="row" gap="medium">
