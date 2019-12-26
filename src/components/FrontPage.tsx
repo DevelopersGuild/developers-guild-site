@@ -1,6 +1,6 @@
 import React from 'react';
 import loftryTheme from './Theme';
-import { Box, Header, Layer, Heading, TextInput, Button, Text, Grommet, Anchor, Tabs, Tab, } from 'grommet';
+import { Box, Header, Layer, Heading, TextInput, Button, Text, Grommet, Anchor } from 'grommet';
 import { Login } from 'grommet-icons';
 import Register from './Register';
 
@@ -57,9 +57,6 @@ const Front: React.FC = () => {
             </Box>
           </Box>
         </Box>
-        <Box fill="horizontal" tag="footer" pad="small" background="dark-1">
-        footer
-          </Box>
       </Box>
     </Grommet>
   )
