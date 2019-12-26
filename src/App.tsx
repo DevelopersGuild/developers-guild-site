@@ -1,5 +1,5 @@
 import React from 'react';
-import Front from './components/front';
+import Front from './components/FrontPage';
 import ListingTemplate from './components/listing';
 import Listings from './components/ListingsPage';
 import About from './components/about';
