@@ -1,12 +1,26 @@
 import React from 'react';
 
-export const AuthContext = React.createContext({});
+/**
+ * Describes the shape of the Authentication context.
+ */
+interface AuthenticationContextInterface { 
+    token?: string;
+    setToken?(newToken: string): void;
+}
 
-export const AuthProvider = (props: any) => {
+/**
+ * Raw Authentication Context.
+ */
+export const Context = React.createContext<AuthenticationContextInterface | any>({})
+
+/**
+ * Authentication Context Provider Wrapper as a React Element.
+ */
+export const Provider = (props: any) =>  {
     const [token, setToken] = React.useState(null);
     return(
-        <AuthContext.Provider value={[token, setToken]} >
+        <Context.Provider value={{token, setToken}}>
             {props.children}
-        </AuthContext.Provider>
-    )
-}
+        </Context.Provider>
+    );
+} 
