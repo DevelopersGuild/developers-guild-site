@@ -57,10 +57,10 @@ const Front: React.FC = () => {
             </Box>
           </Box>
         </Box>
-      </Box>
-      <Box tag="footer" pad="small" background="dark-1">
+        <Box fill="horizontal" tag="footer" pad="small" background="dark-1">
         footer
           </Box>
+      </Box>
     </Grommet>
   )
 }
