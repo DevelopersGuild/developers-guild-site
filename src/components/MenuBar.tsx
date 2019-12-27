@@ -8,7 +8,7 @@ const Menu: React.FC = () =>  {
     <Grommet theme={loftlyTheme} >
       <Box justify="between" direction="row" background={{"color":"white"}} gap="xlarge" border={{"side":"bottom","style":"outset"}}>
           <Box direction="row" gap="small">
-            <Button hoverIndicator={true} fill="vertical">
+            <Button hoverIndicator={true} href="/" fill="vertical">
               <Box align="center" justify="center" pad={{"vertical":"small","horizontal":"medium"}} direction="row" gap="small" fill="vertical">
                 <Text weight="bold" size="xxlarge">
                   Loftly
@@ -39,7 +39,7 @@ const Menu: React.FC = () =>  {
                 </Text>
               </Box>
             </Button>
-            <Button hoverIndicator={true} href = '#'>
+            <Button hoverIndicator={true} href = '/settings'>
               <Box align="start" justify="center" pad={{"horizontal":"small","vertical":"medium"}} direction="row" gap="xsmall">
                 <UserSettings size="medium" />
                 <Text>
