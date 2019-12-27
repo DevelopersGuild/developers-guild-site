@@ -47,6 +47,4 @@ const Thumbnail: React.FC = () => {
   )
 }
 
-
-export { ThumbnailRefactored };
 export default Thumbnail; 

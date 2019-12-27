@@ -2,7 +2,7 @@ import React from 'react';
 import loftlyTheme from './Theme';
 import { Grommet, Box, Image, Heading, Text, Anchor, Paragraph } from 'grommet'
 import { Checkmark, Flag, Language, Briefcase, Cubes, Facebook } from 'grommet-icons'
-import Menu from './menu';
+import Menu from './MenuBar';
 
 const Profile: React.FC = () => {
     return(
