@@ -7,9 +7,15 @@ import Register from './Register';
 const Front: React.FC = () => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
-
+  
   const handleSubmission = async () => {
-    console.log(JSON.stringify({ email, password }));
+    try {
+      const payload = JSON.stringify({ email, password })
+      const result =  await (await fetch('https://loftly-core.aws.fhda.edu/auth/login', { method: 'POST', body: payload })).json();
+      console.log(JSON.stringify(result));
+    } catch (error) {
+      console.log(error.message)
+    }
   }
   const [show, setShow] = React.useState(false);
 
