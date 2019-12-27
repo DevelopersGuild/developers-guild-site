@@ -11,7 +11,7 @@ const Front: React.FC = () => {
   const handleSubmission = async () => {
     console.log(JSON.stringify({ email, password }));
   }
-  const [show, setShow] = React.useState();
+  const [show, setShow] = React.useState(false);
 
   return (
     <Grommet full theme={loftryTheme}>

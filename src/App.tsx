@@ -1,10 +1,10 @@
 import React from 'react';
 import Front from './components/FrontPage';
-import ListingTemplate from './components/listing';
+import ListingTemplate from './components/Listing';
 import Listings from './components/ListingsPage';
-import About from './components/about';
-import Faq from './components/faq';
-import Help from './components/help';
+import About from './components/AboutPage';
+import Faq from './components/FaqPage';
+import Help from './components/HelpPage';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip'
 import Profile from './components/Profile';
