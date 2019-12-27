@@ -5,6 +5,7 @@ import { Action, Close, Announce, Phone, MailOption, Edit } from 'grommet-icons'
 import Menu from './MenuBar';
 import { AppearanceType, SizeType } from '@atlaskit/avatar';
 import AvatarGroup from '@atlaskit/avatar-group';
+import Badge from '@atlaskit/badge';
 
 const meterValue = 49;
 
@@ -53,7 +54,7 @@ const Team: React.FC = () => {
           <Box align="stretch" justify="center" width="xlarge">
             <Box align="start" justify="start" pad="small">
               <Heading size="small">
-                House Issues
+                House Issues <Badge appearance="important" >{5}</Badge>
             </Heading>
             </Box>
           </Box>
@@ -69,7 +70,7 @@ const Team: React.FC = () => {
         {/* Posts and Team Budget Start */}
         <Box margin={{ top: "small" }} align="start" justify="center" direction="column" gap="xsmall" width="xxlarge">
           <Heading size="small">
-            Updates and Posts
+            Updates and Posts  <Badge appearance="important" >{5}</Badge>
             </Heading>
 
           <Box align="start" justify="start" overflow="scroll">
@@ -212,19 +213,22 @@ const Team: React.FC = () => {
         )}
         {/* issues end */}
 
-        <Box align="start" justify="center" fill="horizontal" gap="small">
+        <Box align="start" justify="center" fill="horizontal" >
           <Heading size="small">
             The Unicorn <span aria-label="unicorn" role="img">🦄</span> House
             </Heading>
-            <Heading size="small" level="2">
+          <Heading size="small" level="2">
             Budget: $5600
             </Heading>
           <Heading size="small" level="2">
             Studio: Living Area + Bedroom
             </Heading>
+          <Box fill="horizontal" pad="medium" >
+            <Image fit="cover" src="https://photos.zillowstatic.com/cc_ft_768/ISecmdzu1wjd7c1000000000.webp" />
+          </Box>
           <Text textAlign="start">
             22639 Oakcrest Ct Cupertino, CA 95014
-            </Text>
+          </Text>
           <Button href="/example-listing" label="View Listing" />
         </Box>
       </Box>
