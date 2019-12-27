@@ -2,7 +2,7 @@ import React from 'react';
 import loftryTheme from './Theme';
 import { Grommet, Box, Carousel, Image, Heading, Text, Button} from 'grommet';
 import { Wifi, Bike, Gamepad, Run} from 'grommet-icons';
-import Menu from './menu';
+import Menu from './MenuBar';
 
 const ListingTemplate: React.FC = () => {
     return (

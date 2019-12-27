@@ -2,7 +2,7 @@ import React from 'react';
 import loftlyTheme from './Theme';
 import { Grommet, Box, Meter, Heading, Button, Text, Image, Layer, Anchor,Stack} from 'grommet'
 import { Action, Close, Announce, Phone, MailOption, Edit } from 'grommet-icons'
-import Menu from './menu';
+import Menu from './MenuBar';
 
 const meterValue = 49;
 
