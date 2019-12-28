@@ -13,8 +13,8 @@ const Score: React.FC = () => {
             type="circle"
             background="light-2"
             values={[{ value: meterValue }]}
-            size="small"
-            thickness="medium"
+            size="xsmall"
+            thickness="small"
           />
           <Box direction="row" align="center" pad={{ bottom: "xsmall" }}>
             <Text size="xlarge" weight="bold">
