@@ -3,6 +3,7 @@ import loftlyTheme from './Theme';
 import { Grommet, Box, Meter, Heading, Button, Text, Image, Layer, Anchor,Stack} from 'grommet'
 import { Action, Close, Announce, Phone, MailOption, Edit } from 'grommet-icons'
 import Menu from './menu';
+import Score from './colivingscore';
 
 const meterValue = 49;
 
@@ -14,20 +15,7 @@ const Team: React.FC = () =>  {
       <Box overflow="auto" align="start" direction="row">
         <Box align="center" justify="center" pad="xsmall" width="xlarge">
           <Box align="center" justify="center" fill="horizontal" pad="small">
-          <Stack anchor="center">
-          <Meter
-            type="circle"
-            background="light-2"
-            values={[{ value: meterValue }]}
-            size="small"
-            thickness="medium"
-          />
-          <Box direction="row" align="center" pad={{ bottom: "xsmall" }}>
-            <Text size="xlarge" weight="bold">
-              {meterValue}
-            </Text>
-          </Box>
-        </Stack>
+          <Score/>
           </Box>
           <Box align="stretch" justify="center" width="xlarge">
             <Box align="start" justify="start" pad="small">

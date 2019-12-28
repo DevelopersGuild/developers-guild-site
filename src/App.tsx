@@ -9,6 +9,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip'
 import Profile from './components/Profile';
 import Team from './components/Team';
+import LoginUser from './components/login' 
 
 
 const App: React.FC = () => {
@@ -18,6 +19,7 @@ const App: React.FC = () => {
       <ReactTooltip />
       <Switch>
         <Route exact path="/" component={Front} />
+        <Route exact path="/login" component={LoginUser} />
         <Route exact path="/example-listing" component={ListingTemplate} />
         <Route exact path="/example-profile" component={Profile} />
         <Route exact path="/example-team" component={Team} />
