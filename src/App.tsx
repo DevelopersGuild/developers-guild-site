@@ -1,6 +1,6 @@
 import React from 'react';
 import Front from './components/FrontPage';
-import ListingTemplate from './components/Listing';
+import ListingTemplate from './components/listing';
 import Listings from './components/ListingsPage';
 import About from './components/AboutPage';
 import Faq from './components/FaqPage';
@@ -10,6 +10,7 @@ import ReactTooltip from 'react-tooltip'
 import Profile from './components/Profile';
 import Team from './components/Team';
 import Settings from './components/SettingsPage';
+import LoginUser from './components/login';
 
 
 const App: React.FC = () => {
@@ -19,6 +20,7 @@ const App: React.FC = () => {
       <ReactTooltip />
       <Switch>
         <Route exact path="/" component={Front} />
+        <Route exact path="/login" component={LoginUser} />
         <Route exact path="/example-listing" component={ListingTemplate} />
         <Route exact path="/example-profile" component={Profile} />
         <Route exact path="/example-team" component={Team} />

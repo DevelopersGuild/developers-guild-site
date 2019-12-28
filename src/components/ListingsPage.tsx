@@ -1,7 +1,7 @@
 import React from 'react';
 import loftryTheme from './Theme';
 import { Grommet, Box, Heading, InfiniteScroll} from 'grommet';
-import Thumbnail from './Thumbnail';
+import Thumbnail from './thumbnail';
 import Menu from './MenuBar';
 
 const Listings: React.FC = () => {
