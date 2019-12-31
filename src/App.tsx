@@ -10,7 +10,7 @@ import ReactTooltip from 'react-tooltip'
 import Profile from './components/Profile';
 import Team from './components/Team';
 import Settings from './components/SettingsPage';
-import LoginUser from './components/login';
+import LoginUser from './components/Login';
 
 
 const App: React.FC = () => {
