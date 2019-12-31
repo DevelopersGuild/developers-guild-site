@@ -1,6 +1,6 @@
 import React from 'react';
 import loftryTheme from './Theme';
-import { Box, Heading, TextInput, Button, Text, Grommet, Tabs, Tab, Image,Footer,Anchor } from 'grommet';
+import { Box, Heading, TextInput, Button, Text, Grommet, Image,Footer,Anchor } from 'grommet';
 import {Search,CaretNext} from 'grommet-icons';
 
 const Front: React.FC = () => {
