@@ -1,26 +1,28 @@
 import React from 'react';
 import loftryTheme from './Theme';
 import { Box, Layer, Heading, TextInput, Button, Text, Grommet, Anchor } from 'grommet';
+import { Provider, Context } from '../utils/Auth'
 import { Login } from 'grommet-icons';
 import Register from './Register';
 import ApolloClient, { gql } from 'apollo-boost';
 
 const client = new ApolloClient({
-  uri: "https://loftly-core.aws.fhda.edu/graphql",
+  uri: "http://localhost:3000/graphql",
 });
 
 const LoginUser: React.FC = () => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const {token, setToken} = React.useContext(Context);
 
   const handleSubmission = async () => {
-      client.query({
-        query: gql`
+    client.query({
+      query: gql`
           {
             login(email:"${email}", password: "${password}")
           }
         `
-      }).then(result => console.log(result))
+    }).then(result => setToken(result.data.login))
       .catch((error) => {
         console.log(error.message);
         alert('Login Failed')
@@ -79,6 +81,7 @@ const LoginUser: React.FC = () => {
             <TextInput placeholder="Email" value={email} type="email" onChange={event => setEmail(event.target.value)} />
             <TextInput placeholder="Password" type="password" value={password} onChange={event => setPassword(event.target.value)} />
             <Button label="Login" color="brand" fill="horizontal" icon={<Login />} primary={true} onClick={handleSubmission} />
+            <Button label="token check" color="brand" onClick={() => { console.log(token) }} />
             <Text textAlign="start">
               Don't have an account? <Anchor onClick={() => setShow(true)}> Sign Up</Anchor>
             </Text>
@@ -97,4 +100,9 @@ const LoginUser: React.FC = () => {
   )
 }
 
-export default LoginUser;
+const LoginWrapped = () => (<Provider>
+  <LoginUser />
+</Provider>)
+
+// const LoginWrapped = 
+export default LoginWrapped;
