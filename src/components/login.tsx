@@ -7,7 +7,7 @@ import Register from './Register';
 import ApolloClient, { gql } from 'apollo-boost';
 
 const client = new ApolloClient({
-  uri: "http://localhost:3000/graphql",
+  uri: "https://loftly-core.aws.fhda.edu/graphql",
 });
 
 const LoginUser: React.FC = () => {
