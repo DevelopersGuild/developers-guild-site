@@ -1,6 +1,6 @@
 import React from 'react';
 import Front from './components/FrontPage';
-import ListingTemplate from './components/listing';
+import ListingTemplate from './components/Listing';
 import Listings from './components/ListingsPage';
 import About from './components/AboutPage';
 import Faq from './components/FaqPage';

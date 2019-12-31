@@ -2,7 +2,7 @@ import React from 'react';
 import loftryTheme from './Theme';
 import { Box, Header, Layer, Heading, TextInput, Button, Text, Grommet, Anchor } from 'grommet';
 import { Login } from 'grommet-icons';
-import Register from './register';
+import Register from './Register';
 
 const LoginUser: React.FC = () => {
   const [email, setEmail] = React.useState('');
