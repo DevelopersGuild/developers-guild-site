@@ -1,59 +1,69 @@
 import React from 'react';
 import loftryTheme from './Theme';
-import { Box, Header, Layer, Heading, TextInput, Button, Text, Grommet, Anchor } from 'grommet';
+import { Box, Layer, Heading, TextInput, Button, Text, Grommet, Anchor } from 'grommet';
 import { Login } from 'grommet-icons';
-import Register from './register';
+import Register from './Register';
+import ApolloClient, { gql } from 'apollo-boost';
+
+const client = new ApolloClient({
+  uri: "https://loftly-core.aws.fhda.edu/graphql",
+});
 
 const LoginUser: React.FC = () => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
-  
+
   const handleSubmission = async () => {
-    try {
-      const payload = JSON.stringify({ email, password })
-      const result =  await (await fetch('https://loftly-core.aws.fhda.edu/auth/login', { method: 'POST', body: payload })).json();
-      console.log(JSON.stringify(result));
-    } catch (error) {
-      console.log(error.message)
-    }
+      client.query({
+        query: gql`
+          {
+            login(email:"${email}", password: "${password}")
+          }
+        `
+      }).then(result => console.log(result))
+      .catch((error) => {
+        console.log(error.message);
+        alert('Login Failed')
+      })
   }
+
   const [show, setShow] = React.useState(false);
 
   return (
     <Grommet full theme={loftryTheme}>
       <Box fill="vertical" overflow="hidden" align="center" flex="grow" background="url(https://images.unsplash.com/photo-1488342994276-7c3bc0742042?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)" direction="column">
-      <Box justify="between" direction="row" gap="xlarge" fill="horizontal">
+        <Box justify="between" direction="row" gap="xlarge" fill="horizontal">
           <Box direction="row" gap="medium">
-          <Button  hoverIndicator={false} href="/">
-              <Box align="center" justify="center" pad={{"vertical":"small","horizontal":"medium"}} direction="row" gap="small" fill="vertical">
+            <Button hoverIndicator={false} href="/">
+              <Box align="center" justify="center" pad={{ "vertical": "small", "horizontal": "medium" }} direction="row" gap="small" fill="vertical">
                 <Text weight="bold" size="xxlarge" color="white">
                   Loftly
                 </Text>
               </Box>
             </Button>
             <Button hoverIndicator={false} href="/about">
-              <Box align="start" justify="center" pad={{"horizontal":"small","vertical":"medium"}} direction="row" gap="xsmall">
+              <Box align="start" justify="center" pad={{ "horizontal": "small", "vertical": "medium" }} direction="row" gap="xsmall">
                 <Text color="white">
                   About
                 </Text>
               </Box>
             </Button>
-            <Button hoverIndicator={false} href = "/landowners">
-              <Box align="start" justify="center" pad={{"horizontal":"small","vertical":"medium"}} direction="row" gap="xsmall">
+            <Button hoverIndicator={false} href="/landowners">
+              <Box align="start" justify="center" pad={{ "horizontal": "small", "vertical": "medium" }} direction="row" gap="xsmall">
                 <Text color="white">
                   Renting
                 </Text>
               </Box>
             </Button>
             <Button hoverIndicator={false} href="/faq">
-              <Box align="start" justify="center" pad={{"horizontal":"small","vertical":"medium"}} direction="row" gap="xsmall">
+              <Box align="start" justify="center" pad={{ "horizontal": "small", "vertical": "medium" }} direction="row" gap="xsmall">
                 <Text color="white">
                   FAQ
                 </Text>
               </Box>
             </Button>
             <Button hoverIndicator={false} href="help">
-              <Box align="start" justify="center" pad={{"horizontal":"small","vertical":"medium"}} direction="row" gap="xsmall">
+              <Box align="start" justify="center" pad={{ "horizontal": "small", "vertical": "medium" }} direction="row" gap="xsmall">
                 <Text color="white">
                   Help
                 </Text>

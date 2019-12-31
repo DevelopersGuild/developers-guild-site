@@ -1,6 +1,6 @@
 import React from 'react';
 import Front from './components/FrontPage';
-import ListingTemplate from './components/listing';
+import ListingTemplate from './components/Listing';
 import Listings from './components/ListingsPage';
 import About from './components/AboutPage';
 import Faq from './components/FaqPage';
@@ -10,7 +10,7 @@ import ReactTooltip from 'react-tooltip'
 import Profile from './components/Profile';
 import Team from './components/Team';
 import Settings from './components/SettingsPage';
-import LoginUser from './components/login';
+import LoginUser from './components/Login';
 
 
 const App: React.FC = () => {
