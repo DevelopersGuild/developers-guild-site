@@ -11,11 +11,19 @@ import Profile from './components/Profile';
 import Team from './components/Team';
 import Settings from './components/SettingsPage';
 import LoginUser from './components/Login';
+import { ApolloProvider } from '@apollo/react-hooks';
+
+import ApolloClient from 'apollo-boost';
+
+const client = new ApolloClient({
+  uri: "https://loftly-core.aws.fhda.edu/graphql",
+});
 
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <ApolloProvider client={client}>
+         <BrowserRouter>
     {/* Allows highlighting hints over any element. */}
       <ReactTooltip />
       <Switch>
@@ -31,6 +39,7 @@ const App: React.FC = () => {
         <Route exact path="/settings" component={Settings} />
       </Switch>
     </BrowserRouter>
+    </ApolloProvider>
   );
 }
 
