@@ -14,7 +14,6 @@ import {
   Provider as AuthProvider,
   Context as AuthContext
 } from "../utils/Auth";
-import { Redirect } from "react-router";
 import { Login } from "grommet-icons";
 import Register from "./Register";
 import ApolloClient, { gql } from "apollo-boost";
