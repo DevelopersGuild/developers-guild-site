@@ -39,7 +39,7 @@ const Thumbnail: React.FC = () => {
             Full Bathroom, Walk-in Closet, Laundry room (Washer and Dryer). Fits 2-4 people. Small but full kitchen in the living area equipped with granite counter-top, Dishwasher, Filtered water faucet, Garbage disposer, Built-in microwave-oven, a 2-burner cook top, and a small refrigerator and freezer.
             </Paragraph>
           <Box align="center" justify="center" pad="small" direction="row-responsive" flex={true} alignSelf="center" basis="xxsmall" gap="small" margin="xsmall">
-            <Button label="View" primary={true} plain={false} href="/example-listing" />
+            <Button label="View" primary={true} plain={false} href="/listing" />
           </Box>
         </Box>
       </Box>

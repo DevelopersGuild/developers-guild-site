@@ -47,7 +47,7 @@ const Menu: React.FC = () => {
               </Text>
             </Box>
           </Button>
-          <Button hoverIndicator={true} href="/example-profile">
+          <Button hoverIndicator={true} href="/profile">
             <Box
               align="start"
               justify="center"
@@ -71,7 +71,7 @@ const Menu: React.FC = () => {
               <Text>Map</Text>
             </Box>
           </Button>
-          <Button hoverIndicator={true} href="/example-team">
+          <Button hoverIndicator={true} href="/team">
             <Box
               align="start"
               justify="center"
