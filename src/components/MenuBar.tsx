@@ -17,8 +17,7 @@ const Menu: React.FC = () => {
   const { setToken } = React.useContext(AuthContext);
 
   const logoutHandler = () => {
-    alert('Hello World!');
-    // getting rid of token credentials
+    // clearing credential tokens from memory cache and system cache and storage.
     setToken(null);
     localStorage.removeItem('token');
     window.location.href='/'
