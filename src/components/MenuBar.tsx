@@ -19,9 +19,9 @@ const Menu: React.FC = () => {
   const logoutHandler = () => {
     // clearing credential tokens from memory cache and system cache and storage.
     setToken(null);
-    localStorage.removeItem('token');
-    window.location.href='/'
-  }
+    localStorage.removeItem("token");
+    window.location.href = "/";
+  };
 
   return (
     <Grommet theme={loftlyTheme}>
@@ -103,7 +103,7 @@ const Menu: React.FC = () => {
           direction="row"
           gap="xxsmall"
         >
-          <Button onClick={logoutHandler} hoverIndicator={true} >
+          <Button onClick={logoutHandler} hoverIndicator={true}>
             <Box
               align="start"
               justify="center"
@@ -123,8 +123,8 @@ const Menu: React.FC = () => {
 
 const MenuWrapped = () => (
   <AuthProvider>
-    <Menu/>
+    <Menu />
   </AuthProvider>
-)
+);
 
 export default MenuWrapped;
