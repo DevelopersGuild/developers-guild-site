@@ -1,6 +1,7 @@
-import React, {useEffect} from 'react';
+import React, { useState } from 'react';
 import theme from '../Theme';
 import { Grommet, Box, Text } from 'grommet';
+import ReactMapGL from 'react-map-gl';
 
 const  MapView: React.FC = () => {
     return (
