@@ -2,6 +2,7 @@ import React from "react";
 import Front from "./components/FrontPage";
 import ListingTemplate from "./components/Listing";
 import Listings from "./components/ListingsPage";
+import MapView from "./components/MapView";
 import About from "./components/AboutPage";
 import Faq from "./components/FaqPage";
 import Help from "./components/HelpPage";
@@ -56,6 +57,7 @@ const App: React.FC = () => {
           <Route exact path="/faq" component={Faq} />
           <Route exact path="/help" component={Help} />
           <Route exact path="/settings" component={Settings} />
+          <Route exact path="/map-view" component={MapView} />
         </Switch>
       </BrowserRouter>
     </ApolloProvider>
