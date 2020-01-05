@@ -2,7 +2,7 @@ import React from "react";
 import Front from "./components/FrontPage";
 import ListingTemplate from "./components/Listing";
 import Listings from "./components/ListingsPage";
-import MapView from "./components/MapView";
+import MapView from "./components/MapViewKit/MapView";
 import About from "./components/AboutPage";
 import Faq from "./components/FaqPage";
 import Help from "./components/HelpPage";

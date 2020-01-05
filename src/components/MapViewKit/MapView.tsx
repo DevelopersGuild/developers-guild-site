@@ -1,5 +1,5 @@
 import React from 'react';
-import theme from './Theme';
+import theme from '../Theme';
 import { Grommet, Box, Text } from 'grommet';
 
 const  MapView: React.FC = () => {
