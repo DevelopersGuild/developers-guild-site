@@ -42,7 +42,7 @@ const LoginUser: React.FC = () => {
         setToken(result.data.login);
         if (!token) localStorage.setItem("token", result.data.login);
         // redirecting to profile page
-        window.location.href = '/profile';
+        window.location.href = '/example-profile';
       })
       .catch(error => {
         console.log(error.message);
