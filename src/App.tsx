@@ -2,6 +2,7 @@ import React from "react";
 import Front from "./components/FrontPage";
 import ListingTemplate from "./components/Listing";
 import Listings from "./components/ListingsPage";
+import MapTest from "./components/MapViewKit/MapTest";
 import About from "./components/AboutPage";
 import Faq from "./components/FaqPage";
 import Help from "./components/HelpPage";
@@ -52,14 +53,15 @@ const App: React.FC = () => {
           <Route exact path="/login" component={LoginUser} />
           <Route exact path="/signup" component={SignupUser} />
           <Route exact path="/landowners" component={Landowners} />
-          <Route exact path="/example-listing" component={ListingTemplate} />
-          <Route exact path="/example-profile" component={Profile} />
-          <Route exact path="/example-team" component={Team} />
+          <Route exact path="/listing" component={ListingTemplate} />
+          <Route exact path="/profile" component={Profile} />
+          <Route exact path="/team" component={Team} />
           <Route exact path="/listings" component={Listings} />
           <Route exact path="/about" component={About} />
           <Route exact path="/faq" component={Faq} />
           <Route exact path="/help" component={Help} /> 
           <Route exact path="/settings" component={Settings} />
+          <Route exact path="/map-view" component={MapTest} />
         </Switch>
       </BrowserRouter>
     </ApolloProvider>
