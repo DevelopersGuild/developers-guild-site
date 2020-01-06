@@ -1,14 +1,7 @@
 import React from "react";
 import loftlyTheme from "./Theme";
 import { Grommet, Box, Image, Heading, Text, Anchor, Paragraph } from "grommet";
-import {
-  Checkmark,
-  Flag,
-  Language,
-  Briefcase,
-  Cubes,
-  Facebook
-} from "grommet-icons";
+import { Checkmark, Flag, Language, Briefcase, Cubes } from "grommet-icons";
 import Menu from "./MenuBar";
 import { useQuery } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
@@ -21,14 +14,33 @@ const UserQuery = gql`
       location
       languages
       job
+      biography
+      lifeStyleBeliefs
+      verifications
     }
   }
 `;
 
 const Profile: React.FC = () => {
   const { loading, error, data } = useQuery(UserQuery);
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (loading)
+    return (
+      <Grommet theme={loftlyTheme}>
+        <Menu />
+        <Box alignContent="center" justify="center">
+          <Heading>Loading....</Heading>
+        </Box>
+      </Grommet>
+    );
+  if (error)
+    return (
+      <Grommet theme={loftlyTheme}>
+        <Menu />
+        <Box alignContent="center" justify="center">
+          <Heading>Error: {error.message}</Heading>
+        </Box>
+      </Grommet>
+    );
   return (
     <Grommet theme={loftlyTheme}>
       <Menu />
@@ -63,46 +75,18 @@ const Profile: React.FC = () => {
                 </Box>
               </Box>
               <Box align="start" justify="start" gap="medium" fill="horizontal">
-                <Box
-                  align="center"
-                  justify="between"
-                  direction="row-responsive"
-                  gap="xlarge"
-                  fill="horizontal"
-                >
-                  <Text size="medium">Email</Text>
-                  <Checkmark />
-                </Box>
-                <Box
-                  align="center"
-                  justify="between"
-                  direction="row-responsive"
-                  gap="xlarge"
-                  fill="horizontal"
-                >
-                  <Text size="medium">Government ID</Text>
-                  <Checkmark />
-                </Box>
-                <Box
-                  align="center"
-                  justify="between"
-                  direction="row-responsive"
-                  gap="xlarge"
-                  fill="horizontal"
-                >
-                  <Text size="medium">Phone</Text>
-                  <Checkmark />
-                </Box>
-                <Box
-                  align="center"
-                  justify="between"
-                  direction="row-responsive"
-                  gap="xlarge"
-                  fill="horizontal"
-                >
-                  <Text size="medium">Facebook</Text>
-                  <Checkmark />
-                </Box>
+                {data.user.verifications.map((verification: string) => (
+                  <Box
+                    align="center"
+                    justify="between"
+                    direction="row-responsive"
+                    gap="xlarge"
+                    fill="horizontal"
+                  >
+                    <Text size="medium">{verification}</Text>
+                    <Checkmark />
+                  </Box>
+                ))}
               </Box>
             </Box>
           </Box>
@@ -138,10 +122,7 @@ const Profile: React.FC = () => {
               height="small"
             >
               <Paragraph textAlign="start" size="medium">
-                I am an Data Scientist working at Google and I have 3 cats I
-                love meeting people from different parts of the world and I look
-                forward to connecting with you as a roomate. I will do my best
-                to make your co-living experience as best as possible
+                {data.user.biography}
               </Paragraph>
             </Box>
             <Box
@@ -167,7 +148,7 @@ const Profile: React.FC = () => {
                 >
                   <Language />
                   <Text size="medium">
-                    Speaks {data.user.languages.join(', ')}
+                    Speaks {data.user.languages.join(", ")}
                   </Text>
                 </Box>
                 <Box
@@ -188,17 +169,9 @@ const Profile: React.FC = () => {
                   fill="horizontal"
                 >
                   <Cubes />
-                  <Text size="medium">Believes in Founders Mindset</Text>
-                </Box>
-                <Box
-                  align="center"
-                  justify="start"
-                  direction="row-responsive"
-                  gap="small"
-                  fill="horizontal"
-                >
-                  <Text size="medium">Connected Accounts -</Text>
-                  <Facebook />
+                  <Text size="medium">
+                    {data.user.lifeStyleBeliefs.join(", ")}
+                  </Text>
                 </Box>
               </Box>
             </Box>
