@@ -2,7 +2,7 @@ import React from 'react';
 import loftryTheme from './Theme';
 import { Grommet, Box, Image,Heading,Text,Button } from 'grommet';
 
-const About: React.FC = () => {
+const Landowners: React.FC = () => {
     return (
         <Grommet full theme={loftryTheme}>
             <Box align="center" overflow = "auto" justify="center"  background={{"image":"url('https://i.imgur.com/zouAfs0.png')"}}>
@@ -133,4 +133,4 @@ const About: React.FC = () => {
       )
 }
 
-export default About; 
+export default Landowners; 

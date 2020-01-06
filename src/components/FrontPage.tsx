@@ -1,7 +1,7 @@
 import React from 'react';
 import loftryTheme from './Theme';
 import { Box, Heading, TextInput, Button, Text, Grommet, Image,Footer,Anchor } from 'grommet';
-import {Search,CaretNext, Bold} from 'grommet-icons';
+import {Search,CaretNext} from 'grommet-icons';
 
 const Front: React.FC = () => {
  
@@ -46,7 +46,7 @@ const Front: React.FC = () => {
           </Box>
           <Box align="center" justify="center" pad={{"horizontal":"small"}} direction="row" gap="medium">
             <Button label="Login" color="white" primary={true} href="/login" />
-            <Button label="Sign Up" primary={true} color="white" href ="signup" />
+            <Button label="Sign Up" primary={true} color="white" href ="/signup" />
           </Box>
         </Box>
         <Box align="start" justify="center" direction="column" gap="medium" pad="large">
@@ -101,7 +101,7 @@ Rent units with a Team of people that share simular preferences to divide the co
             </Box>
           </Box>
           <Box align="end" justify="end" margin="xlarge" direction="column" pad="xsmall" gap="small">
-            <Button>
+            <Button href="/about">
               <Box align="center" justify="center" pad="medium" direction="row" gap="small">
                 <Text>
                   Learn More

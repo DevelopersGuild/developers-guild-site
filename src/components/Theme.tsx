@@ -13,6 +13,12 @@ const loftryTheme = deepMerge(grommet, {
       "neutral-1": "#8bac",
       "neutral-2": "#cadc9f",
       "neutral-3": "#E87068",
+    },
+    focus: {
+      border: {
+        color : "active-background"
+      }
+
     }
   }
 });

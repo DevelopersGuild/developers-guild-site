@@ -4,6 +4,7 @@ import ListingTemplate from "./components/Listing";
 import Listings from "./components/ListingsPage";
 import MapTest from "./components/MapViewKit/MapTest";
 import About from "./components/AboutPage";
+import Landowners from "./components/LandownersPage";
 import Faq from "./components/FaqPage";
 import Help from "./components/HelpPage";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
@@ -12,6 +13,7 @@ import Profile from "./components/Profile";
 import Team from "./components/Team";
 import Settings from "./components/SettingsPage";
 import LoginUser from "./components/Login";
+import SignupUser from "./components/Signup";
 import { ApolloProvider } from "@apollo/react-hooks";
 
 import { ApolloClient } from "apollo-client";
@@ -50,11 +52,13 @@ const App: React.FC = () => {
         <Switch>
           <Route exact path="/" component={Front} />
           <Route exact path="/login" component={LoginUser} />
+          <Route exact path="/signup" component={SignupUser} />
           <Route exact path="/listing" component={ListingTemplate} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/team" component={Team} />
           <Route exact path="/listings" component={Listings} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/landowners" component={Landowners} />
           <Route exact path="/faq" component={Faq} />
           <Route exact path="/help" component={Help} />
           <Route exact path="/settings" component={Settings} />
@@ -64,5 +68,4 @@ const App: React.FC = () => {
     </ApolloProvider>
   );
 };
-
 export default App;

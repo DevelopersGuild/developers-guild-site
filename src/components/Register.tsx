@@ -1,67 +1,62 @@
 import React from 'react';
 import loftryTheme from './Theme';
-import { Box, TextInput, Button, Text, Grommet, FormField, Select, TextArea } from 'grommet';
+import { Box, TextInput, Button, Heading,Text, Grommet, Form ,FormField, Select, TextArea } from 'grommet';
+import ApolloClient, { gql } from "apollo-boost";
+
+const client = new ApolloClient({
+  uri: "https://loftly-core.aws.fhda.edu/graphql"
+});
+
+const SignupMutation = (email: string, password: string, name:string,organization:string,gender:string) => gql`
+{
+  mutation{
+  user(email:"${email}",organization:"${organization}",name:"${password}",gender:"${gender}",password:"${password}")
+   }
+}
+`;
+
+const FormFieldLabel = (props:any) => {
+    const { required, label, ...rest } = props;
+    return (
+      <FormField
+        label={
+          required ? (
+            <Box direction="row">
+              <Text>{label}</Text>
+              <Text color="status-critical">*</Text>
+            </Box>
+          ) : (
+            label
+          )
+        }
+        required={required}
+        {...rest}
+      />
+    );
+  };
 
 const Register = () => {
-
-    const [email, setEmail] = React.useState('');
-    const [password, setPassword] = React.useState('');
-    const [gender, setGender] = React.useState('other');
-    const [preferences, setPreferences] = React.useState('');
-    const [school, setSchool] = React.useState('');
-
-    const handleSubmissionSignUp = () => {
-        alert(`${gender} ${password} ${school} ${email} ${preferences.split(",")}`)
-    }
-
-    return (
+    return(
         <Grommet theme={loftryTheme}>
-            <Box fill align="center" justify="center">
-                <Box width="xlarge" background="white" round="medium" border={{ color: 'white', size: 'xlarge' }}>
-                    <Text size="large" >Sign Up</Text>
-                    <br />
-                    <Box>
-                        <FormField label="email">
-                            <TextInput placeholder="email" type="email" value={email} onChange={event => setEmail(event.target.value)} />
-                        </FormField>
-                    </Box>
-                    <br />
-                    <Box>
-                        <FormField label="password">
-                            <TextInput placeholder="password" type="password" value={password} onChange={event => setPassword(event.target.value)} />
-                        </FormField>
-                    </Box>
-                    <br />
-                    <Box>
-                        <FormField label="school">
-                            <TextInput placeholder="school" type="text" value={school} onChange={event => setSchool(event.target.value)} />
-                        </FormField>
-                    </Box>
-                    <br />
-                    <Box>
-                        <FormField label="gender">
-                            <Select
-                                options={['man', 'woman', 'other']}
-                                value={gender}
-                                onChange={({ option }) => setGender(option)}
-                            />
-                        </FormField>
-                    </Box>
-                    <br />
-                    <Box>
-                        <FormField label="preferences">
-                            <TextArea placeholder="wifi,bike racks, pet friendly, smoke free, hackerhouse" value={preferences}
-                                onChange={event => setPreferences(event.target.value)} />
-                        </FormField>
-                    </Box>
-                    <br />
-                    <Box>
-                        <Button onClick={handleSubmissionSignUp} style={{ color: "#ffffff" }} primary label="submit" />
-                    </Box>
-                </Box>
-            </Box>
-        </Grommet>
-    )
+      <Box align="stretch"  background ="white" pad="medium" width = "large" round="medium" gap="large">
+      <Heading textAlign="start" margin="small" size="medium" level="1">
+              Sign Up
+      </Heading>
+        <Form>
+          <FormFieldLabel name="fullName" label="Full Name" component={TextInput} placeholder="Full Name" required />
+          <FormFieldLabel name="email" label="Email" component={TextInput} placeholder="Email" type="email" required />
+          <FormFieldLabel name="gender" label="Gender"  component={Select} options={['man', 'woman', 'other','prefer not to say']} placeholder="Gender" required />
+          <FormFieldLabel name = 'organization' label = 'Organization' component={TextInput} placeholder="Organization" required />
+          <FormFieldLabel name="password" label="Password" component={TextInput} placeholder="Password" type="password" required />
+          <FormFieldLabel label = "preferences" component={TextArea} placeholder="wifi,bike racks, pet friendly, smoke free, hackerhouse" />
+          <Button type="submit" label="Submit" primary />
+          <Text margin={{ left: "small" }} size="small" color="status-critical">
+            * Required Field
+          </Text>
+        </Form>
+      </Box>
+    </Grommet>
+    )   
 }
 
 
