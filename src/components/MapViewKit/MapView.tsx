@@ -3,9 +3,9 @@ import theme from "../Theme";
 import { Grommet, Box, Text } from "grommet";
 import ReactMapGL from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { config } from '../../config';
 
 const MapView: React.FC = () => {
-  console.log(process.env)
   const [viewport, setViewport] = useState({
     width: 400,
     height: 400,
@@ -17,7 +17,7 @@ const MapView: React.FC = () => {
     <Grommet theme={theme}>
       <Box height="180px">
         <Text>MapView</Text>
-        <ReactMapGL {...viewport} mapboxApiAccessToken={process.env.MAPBOX_TOKEN}  onViewportChange={setViewport} />
+        <ReactMapGL {...viewport} mapboxApiAccessToken={config.MAPBOX_TOKEN}  onViewportChange={setViewport} />
       </Box>
     </Grommet>
   );
