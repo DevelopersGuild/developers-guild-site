@@ -2,6 +2,7 @@ import React from "react";
 import Front from "./components/FrontPage";
 import ListingTemplate from "./components/Listing";
 import Listings from "./components/ListingsPage";
+import MapTest from "./components/MapViewKit/MapTest";
 import About from "./components/AboutPage";
 import Faq from "./components/FaqPage";
 import Help from "./components/HelpPage";
@@ -17,6 +18,7 @@ import { ApolloClient } from "apollo-client";
 import { createHttpLink } from "apollo-link-http";
 import { setContext } from "apollo-link-context";
 import { InMemoryCache } from "apollo-cache-inmemory";
+
 
 const httpLink = createHttpLink({
   uri: "https://loftly-core.aws.fhda.edu/graphql"
@@ -56,6 +58,7 @@ const App: React.FC = () => {
           <Route exact path="/faq" component={Faq} />
           <Route exact path="/help" component={Help} />
           <Route exact path="/settings" component={Settings} />
+          <Route exact path="/map-view" component={MapTest} />
         </Switch>
       </BrowserRouter>
     </ApolloProvider>
