@@ -1,7 +1,7 @@
 import React from 'react';
 import loftryTheme from './Theme';
-import { Box, Heading, TextInput, Button, Text, Grommet, Tabs, Tab, Image,Footer,Anchor } from 'grommet';
-import {Search,CaretNext} from 'grommet-icons';
+import { Box, Heading, TextInput, Button, Text, Grommet, Image,Footer,Anchor } from 'grommet';
+import {Search,CaretNext, Bold} from 'grommet-icons';
 
 const Front: React.FC = () => {
  
@@ -52,7 +52,7 @@ const Front: React.FC = () => {
         <Box align="start" justify="center" direction="column" gap="medium" pad="large">
           <Box align="start" justify="center" direction="column" fill="horizontal"animation={[{"type":"fadeIn"},{"type":"slideLeft"}]}>
             <Heading textAlign="start" color="white" margin={{"left":"xlarge"}}>
-              Introducing Loftly.<br/>Welcome to AI Powered Co-living.
+              Introducing Loftly,<br/> AI Powered Co-living
             </Heading>
           </Box>
           <Box align="stretch" justify="start" fill={false} background={{"color":"background"}} pad="large" wrap={false} round="medium" gap="large" direction="column" margin={{"horizontal":"xlarge"}} animation={[{"type":"fadeIn"},{"type":"slideLeft"}]}>
@@ -69,7 +69,7 @@ const Front: React.FC = () => {
           <Box align="center" justify="center" gap="xlarge">
             <Box align="center" justify="center" fill="horizontal" pad={{"bottom":"xlarge","vertical":"medium"}}>
               <Heading level="2">
-                Enjoy affordable, safe living in your favorite city
+                Enjoy affordable living in your favorite city
               </Heading>
             </Box>
             <Box align="center" justify="center" direction="row-responsive" animation={[{"type":"fadeIn"},{"type":"slideLeft"}]} fill="horizontal" pad={{"bottom":"xlarge"}} gap="medium">
@@ -78,21 +78,20 @@ const Front: React.FC = () => {
               </Box>
               <Box align="start" justify="center" width="medium" pad="medium">
                 <Heading level="3">
-                  Private Rooms in Beautiful Furnished Homes
+                  Connecting with A.I  
                 </Heading>
                 <Text>
-                  
-Enjoy peace & solitude in a comfortable private room. We also fully furnish your common space areas- no heavy lifting with us!
+Connecting users to room listings and teamates that most closely match their preferences   
                 </Text>
               </Box>
             </Box>
             <Box align="end" justify="center" fill="horizontal" direction="row" gap="medium" pad={{"top":"xlarge"}}>
               <Box align="center" justify="center" width="medium">
                 <Heading level="3">
-                  Private Rooms in Beautiful Furnished Homes
+                  Rent with Teams!  
                 </Heading>
                 <Text>
-                  Enjoy curated events by our community team at your choosing-- Hiking trips, wine & cheese tastings, monthly mixers, you name it!
+Rent units with a Team of people that share simular preferences to divide the cost of a unit and <b>rent affordably</b> 
                 </Text>
               </Box>
               <Box align="center" justify="center" background={{"image":"url('')"}} height="small" width="small">
