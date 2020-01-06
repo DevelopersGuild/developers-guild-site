@@ -5,7 +5,7 @@ import ReactMapGL from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 const MapView: React.FC = () => {
-    console.log(process.env.MAPBOX_TOKEN);
+  console.log(process.env)
   const [viewport, setViewport] = useState({
     width: 400,
     height: 400,
