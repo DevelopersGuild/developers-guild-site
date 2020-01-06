@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import theme from "../Theme";
-import { Grommet, Box, Text } from "grommet";
+import { Grommet, Box } from "grommet";
 import ReactMapGL from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { config } from '../../config';
@@ -24,9 +24,9 @@ const MapView: React.FC<MapKitPropsInterface> = (props) => {
     zoom
   });
   return (
-    <Grommet theme={theme}>
+      <Grommet theme={theme}>
       <Box height={`${height}px`} width={`${width}px`}  >
-        <ReactMapGL {...viewport} mapboxApiAccessToken={config.MAPBOX_TOKEN}  onViewportChange={setViewport} />
+        <ReactMapGL {...viewport} mapboxApiAccessToken={config.MAPBOX_TOKEN} onViewportChange={setViewport} />
       </Box>
     </Grommet>
   );
