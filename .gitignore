@@ -23,6 +23,9 @@
 
 ### Reasonml ###
 /lib
+.merlin
+.bsb.lock
+
 
 npm-debug.log*
 yarn-debug.log*
