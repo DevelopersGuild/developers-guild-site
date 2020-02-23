@@ -34,7 +34,7 @@
     "re:build": "bsb -make-world -clean-world",
     "re:watch": "bsb -make-world -clean-world -w",
     "loftly:watch": "npm-run-all --parallel re:watch start",
-    "loftly:build": "npm run-all --serial re:build build"
+    "loftly:build": "npm-run-all --serial re:build build"
   },
   "eslintConfig": {
     "extends": "react-app"

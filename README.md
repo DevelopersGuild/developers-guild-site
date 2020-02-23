@@ -13,9 +13,6 @@ usually helps with a clean build.
 ### Build Application 
 ```sh 
   yarn loftly:build
-  ## alternatively you can run 
-  yarn re:build
-  yarn build
 ```
 
 ### Testing Tools 
