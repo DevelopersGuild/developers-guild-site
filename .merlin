@@ -1,0 +1,13 @@
+####{BSB GENERATED: NO EDIT
+B lib/bs
+FLG -open FrontendDaHousingApp
+FLG -ppx '/Users/carlosalbag/Desktop/frontend-da-housing-app/node_modules/bs-platform/lib/bsppx.exe -bs-jsx 3'
+S /Users/carlosalbag/Desktop/frontend-da-housing-app/node_modules/bs-platform/lib/ocaml
+B /Users/carlosalbag/Desktop/frontend-da-housing-app/node_modules/bs-platform/lib/ocaml
+FLG -nostdlib
+FLG -w -30-40+6+7+27+32..39+44+45+101
+S /Users/carlosalbag/Desktop/frontend-da-housing-app/node_modules/reason-react/lib/ocaml
+B /Users/carlosalbag/Desktop/frontend-da-housing-app/node_modules/reason-react/lib/ocaml
+S src/components/ExampleReason
+B lib/bs/src/components/ExampleReason
+####BSB GENERATED: NO EDIT}

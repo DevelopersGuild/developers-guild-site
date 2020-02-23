@@ -15,6 +15,7 @@ import Settings from "./components/SettingsPage";
 import LoginUser from "./components/Login";
 import SignupUser from "./components/Signup";
 import { ApolloProvider } from "@apollo/react-hooks";
+import { make as ReasonExample } from './components/ExampleReason/ExampleReason.bs';
 
 import { ApolloClient } from "apollo-client";
 import { createHttpLink } from "apollo-link-http";
@@ -63,6 +64,7 @@ const App: React.FC = () => {
           <Route exact path="/help" component={Help} />
           <Route exact path="/settings" component={Settings} />
           <Route exact path="/map-view" component={MapTest} />
+          <Route exact path="/reason-example" component={() => <ReasonExample name="Carlos"/>} />
         </Switch>
       </BrowserRouter>
     </ApolloProvider>

@@ -8,3 +8,6 @@
 ### Testing Tools 
 - https://airbnb.io/enzyme/
 - https://jestjs.io/docs/en/getting-started.html
+
+### Important Todos
+- Add build steps for ReasonReact

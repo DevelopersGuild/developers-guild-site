@@ -21,6 +21,9 @@
 .env.test.local
 .env.production.local
 
+### Reasonml ###
+/lib
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
