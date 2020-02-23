@@ -1,10 +1,20 @@
 ### Start Application
 ```sh 
-  # Install Dependencies
+  # install application depedencies
   yarn
-  # Start Site Server
-  yarn start
+  # Watch File Changes and Start Development Server 
+  yarn loftly:watch
 ```
+### If loftly:watch fails
+try running the re:build script 
+and reinstalling dependencies this 
+usually helps with a clean build. 
+
+### Build Application 
+```sh 
+  yarn loftly:build
+```
+
 ### Testing Tools 
 - https://airbnb.io/enzyme/
 - https://jestjs.io/docs/en/getting-started.html
