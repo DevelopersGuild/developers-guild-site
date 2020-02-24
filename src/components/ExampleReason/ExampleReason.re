@@ -1,3 +1,5 @@
+// The gen type annotation adds type declaration files for us automatically
+[@genType]
 [@react.component]
 let make = (~name: string, _children) => {
   let (count, setCount) = React.useState(() => 0);
