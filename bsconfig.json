@@ -25,7 +25,12 @@
   ],
   "gentypeconfig": {
     "language": "typescript",
-    "shims": {},
+    "shims": {
+      "React": "ReactShim",
+      "ReactEvent": "ReactEvent",
+      "ReasonPervasives": "ReasonPervasives",
+      "ReasonReact": "ReactShim"
+    },
     "debug": {
       "all": false,
       "basic": false

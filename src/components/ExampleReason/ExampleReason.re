@@ -1,3 +1,18 @@
+[@genType]
+type roomMatchListing = {
+  title: string,
+  description: string,
+  tags: list(string),
+  photos: list(string),
+  landmarks: list(string), 
+  address: list(string),
+  currentNumberOfOcuppants: float, 
+  housePerks: list(string),
+  monthlyRent: float, 
+  estimatedMonthlyUtilities: float, 
+  homeApplicantRequirements: string
+};
+
 // The gen type annotation adds type declaration files for us automatically
 [@genType]
 [@react.component]
