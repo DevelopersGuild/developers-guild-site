@@ -15,7 +15,7 @@ import Settings from "./components/SettingsPage";
 import LoginUser from "./components/Login";
 import SignupUser from "./components/Signup";
 import { ApolloProvider } from "@apollo/react-hooks";
-import { make as ReasonExample } from './components/ExampleReason/ExampleReason.gen';
+import { make as ReasonExample } from './components/ReasonCode/ExampleReason.gen';
 
 import { ApolloClient } from "apollo-client";
 import { createHttpLink } from "apollo-link-http";

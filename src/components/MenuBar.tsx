@@ -1,6 +1,7 @@
 import React from "react";
 import loftlyTheme from "./Theme";
 import { Grommet, Box, Button, Text } from "grommet";
+
 import {
   User,
   MapLocation,
