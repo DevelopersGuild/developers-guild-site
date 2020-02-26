@@ -1,19 +1,19 @@
 import React from 'react';
 import loftryTheme from './Theme';
 import { Box, TextInput, Button, Heading,Text, Grommet, Form ,FormField, Select, TextArea } from 'grommet';
-import ApolloClient, { gql } from "apollo-boost";
+// import ApolloClient, { gql } from "apollo-boost";
 
-const client = new ApolloClient({
-  uri: "https://loftly-core.aws.fhda.edu/graphql"
-});
+// const client = new ApolloClient({
+//   uri: "https://loftly-core.aws.fhda.edu/graphql"
+// });
 
-const SignupMutation = (email: string, password: string, name:string,organization:string,gender:string) => gql`
-{
-  mutation{
-  user(email:"${email}",organization:"${organization}",name:"${password}",gender:"${gender}",password:"${password}")
-   }
-}
-`;
+// const SignupMutation = (email: string, password: string, name:string,organization:string,gender:string) => gql`
+// {
+//   mutation{
+//   user(email:"${email}",organization:"${organization}",name:"${password}",gender:"${gender}",password:"${password}")
+//    }
+// }
+// `;
 
 const FormFieldLabel = (props:any) => {
     const { required, label, ...rest } = props;
