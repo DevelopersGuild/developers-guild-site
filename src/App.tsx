@@ -23,6 +23,13 @@ import { setContext } from "apollo-link-context";
 import { InMemoryCache } from "apollo-cache-inmemory";
 
 
+
+import MenuBar from './components/MenuBar';
+import loftlyTheme from "./components/Theme";
+import { Grommet } from 'grommet';
+
+
+
 const httpLink = createHttpLink({
   uri: "https://loftly-core.aws.fhda.edu/graphql"
 });
@@ -44,6 +51,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
+
 const App: React.FC = () => {
   return (
     <ApolloProvider client={client}>
@@ -64,7 +72,10 @@ const App: React.FC = () => {
           <Route exact path="/help" component={Help} />
           <Route exact path="/settings" component={Settings} />
           <Route exact path="/map-view" component={MapTest} />
-          <Route exact path="/reason-example" component={() => <ReasonExample name="Carlos"/>} />
+          <Route exact path="/reason-example" component={() => <Grommet theme={loftlyTheme}>
+            <MenuBar />
+            <ReasonExample name="Carlos" />
+          </Grommet>} />
         </Switch>
       </BrowserRouter>
     </ApolloProvider>

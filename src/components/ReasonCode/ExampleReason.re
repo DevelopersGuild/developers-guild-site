@@ -239,7 +239,7 @@ let make = (~name: string, _children) => {
     },
     [|setFoo|],
   );
-  <div>
+  <React.Fragment>
     <h1> {ReasonReact.string("Future Roommate Listings")} </h1>
     <p>
       {ReasonReact.string(
@@ -257,5 +257,5 @@ let make = (~name: string, _children) => {
     <div style=listingsContainerStyles>
       {ReasonReact.array(Array.of_list(listingsProcessed))}
     </div>
-  </div>;
+  </React.Fragment>;
 };

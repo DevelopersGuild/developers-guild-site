@@ -274,7 +274,9 @@ function ExampleReason(Props, _children) {
                 }));
           return ;
         }), /* array */[setFoo]);
-  return React.createElement("div", undefined, React.createElement("h1", undefined, "Future Roommate Listings"), React.createElement("p", undefined, "This page was developed with Reason and React this allows for strict types and better type inferences."), React.createElement("p", undefined, name + (" clicked " + (String(count) + " times"))), React.createElement("button", {
+  return React.createElement(React.Fragment, {
+              children: null
+            }, React.createElement("h1", undefined, "Future Roommate Listings"), React.createElement("p", undefined, "This page was developed with Reason and React this allows for strict types and better type inferences."), React.createElement("p", undefined, name + (" clicked " + (String(count) + " times"))), React.createElement("button", {
                   onClick: (function (param) {
                       return Curry._1(setCount, (function (param) {
                                     return count + 1 | 0;
