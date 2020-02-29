@@ -256,7 +256,7 @@ var listingsProcessed = List.mapi((function (index, listing) {
                           }, $$Array.of_list(housePerksMapProcessed(listing[/* housePerks */7])))));
       }), listingsGroup);
 
-function ExampleReason(Props, _children) {
+function RoomMateMatch(Props, _children) {
   var name = Props.name;
   var match = React.useState((function () {
           return 0;
@@ -287,7 +287,7 @@ function ExampleReason(Props, _children) {
                 }, $$Array.of_list(listingsProcessed)));
 }
 
-var make = ExampleReason;
+var make = RoomMateMatch;
 
 export {
   listingsContainerStyles ,

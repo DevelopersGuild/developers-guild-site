@@ -15,7 +15,7 @@ import Settings from "./components/SettingsPage";
 import LoginUser from "./components/Login";
 import SignupUser from "./components/Signup";
 import { ApolloProvider } from "@apollo/react-hooks";
-import { make as ReasonExample } from './components/ReasonCode/ExampleReason.gen';
+import { make as ReasonExample } from './reasonComponents/RoomMateMatch/RoomMateMatch.gen';
 
 import { ApolloClient } from "apollo-client";
 import { createHttpLink } from "apollo-link-http";
@@ -31,7 +31,7 @@ import { Grommet } from 'grommet';
 
 
 const httpLink = createHttpLink({
-  uri: "https://loftly-core.aws.fhda.edu/graphql"
+  uri: "https://loftly-core.aws.fhda.edu/"
 });
 
 const authLink = setContext((_, { headers }) => {
