@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import OpenSourceHeader from './graphic-assets/open-source.png'
-import './styles/image-headers.css'
+import OpenSourceHeader from '../graphic-assets/open-source.png'
+import '../styles/image-headers.css'
 /**
  *  Sourced from https://opensource.guide/how-to-contribute/
  */

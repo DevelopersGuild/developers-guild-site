@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Table } from 'react-bootstrap';
-import './styles/image-headers.css'
-import ContactHeader from './graphic-assets/contact.jpg'
+import '../styles/image-headers.css'
+import ContactHeader from '../graphic-assets/contact.jpg'
 
 
 export const Contact: React.FC = () => (

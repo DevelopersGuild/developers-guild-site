@@ -1,18 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { Container, Jumbotron } from 'react-bootstrap';
-import { toast } from 'react-toastify';
-import MainLogo from './graphic-assets/Main-Logo.svg'
-const GithubBar = lazy(() => import('./GithubBar'));
-
-
-// toast (anouncement) code information.
-// toast.configure();
-// toast("First meeting is October 11, 2019 ♎", {
-//     autoClose: 6000,
-//     pauseOnHover: true,
-//     // hideProgressBar: true
-// });
-// toast code end!
+import MainLogo from '../graphic-assets/Main-Logo.svg'
+const GithubBar = lazy(() => import('../GithubBar'));
 
 export const Landing: React.FC = () => (
     <React.Fragment>
@@ -32,7 +21,6 @@ export const Landing: React.FC = () => (
                         <p>Fridays 1:30PM-4:00PM AT311</p>
                     </div>
                 </div>
-
             </Jumbotron>
             <br />
             <Suspense fallback={<div>Loading...</div>}>

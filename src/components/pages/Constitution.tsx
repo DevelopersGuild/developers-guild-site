@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import showdown from 'showdown';
-import ConstitutionHeader from './graphic-assets/the-creation-of-design.png'
-import './styles/image-headers.css'
+import ConstitutionHeader from '../graphic-assets/the-creation-of-design.png'
+import '../styles/image-headers.css'
 
 
 

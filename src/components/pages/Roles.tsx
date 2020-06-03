@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'; 
 import { Container } from 'react-bootstrap';
 import showdown from 'showdown';
-import RolesHeader from './graphic-assets/roles.jpg'
-import './styles/image-headers.css'
+import RolesHeader from '../graphic-assets/roles.jpg'
+import '../styles/image-headers.css'
 
 const RolesRaw: React.FC = () => {
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, } from 'react-bootstrap';
-import './styles/image-headers.css'
-import AboutHeader from './graphic-assets/about.png'
+import '../styles/image-headers.css'
+import AboutHeader from '../graphic-assets/about.png'
 
 
 export const About: React.FC = () => (
