@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap'
 import { Landing } from './components/pages/Landing';
 import { Contact } from './components/pages/Contact';
-import { NavbarMain } from './components/NavbarMain';
+import { NavbarMain } from './components/ui/NavbarMain';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import { About } from './components/pages/About';
