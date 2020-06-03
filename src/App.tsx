@@ -5,12 +5,10 @@ import { Landing } from './components/pages/Landing';
 import { Contact } from './components/pages/Contact';
 import { NavbarMain } from './components/ui/NavbarMain';
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
 import { About } from './components/pages/About';
 import { Contributing } from './components/pages/Contributing';
 const RolesLazy = lazy(() => import('./components/pages/Roles'));
 const ConstitutionLazy = lazy(() => import('./components/pages/Constitution'));
-const MemoizedToastContainer = React.memo(ToastContainer);
 
 // independent parsed resources on the network being lazily loaded
 const Roles = () => (
@@ -28,9 +26,6 @@ const Constitution = () => (
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      {/* Notification Container*/}
-      <MemoizedToastContainer />
-      {/* Notification Container */}
       <NavbarMain />
       <Route path='/' exact component={Landing} />
       <Route path='/contact' exact component={Contact} />
