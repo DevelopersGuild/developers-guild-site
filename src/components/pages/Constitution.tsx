@@ -4,6 +4,7 @@ import showdown from "showdown";
 import ConstitutionHeader from "../graphic-assets/the-creation-of-design.png";
 import "../styles/image-headers.css";
 import { useQuery } from "react-query";
+import { StyleSheet, css } from "aphrodite";
 
 async function fetchConstitutionMarkdown(): Promise<string> {
   const response = await (
@@ -27,7 +28,7 @@ function Constitution(): JSX.Element {
   return (
     <React.Fragment>
       <br />
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div className={css(styles.containerOne)}>
         <Container>
           <h4>Developers' Guild Constitution</h4>
           <p className="text-justify">
@@ -57,5 +58,9 @@ function Constitution(): JSX.Element {
     </React.Fragment>
   );
 }
+
+const styles = StyleSheet.create({
+  containerOne: { display: "flex", flexDirection: "column" },
+});
 
 export default Constitution;

@@ -3,27 +3,23 @@ import { Container, Jumbotron } from "react-bootstrap";
 import MainLogo from "../graphic-assets/Main-Logo.svg";
 import GithubBar from "../ui/GithubBar";
 import Curated from "../ui/Curated";
+import { StyleSheet, css } from "aphrodite";
 
 export const Landing: React.FC = () => (
   <React.Fragment>
     <br />
     <Container>
       <Jumbotron>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            alignItems: "center",
-          }}
-        >
+        <div className={css(styles.jumboContainer)}>
           <img
             className="lazyload"
-            style={{ marginRight: 20 }}
             data-src={MainLogo}
+            style={{
+              marginRight: 20,
+              width: "150px",
+              height: "150px",
+            }}
             alt="Logo"
-            width="150"
-            height="150"
           />
           <div>
             <h1>Developers Guild - De Anza</h1>
@@ -40,3 +36,12 @@ export const Landing: React.FC = () => (
     </Container>
   </React.Fragment>
 );
+
+const styles = StyleSheet.create({
+  jumboContainer: {
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    alignItems: "center",
+  },
+});
