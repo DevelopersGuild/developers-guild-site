@@ -27,6 +27,7 @@ function Code(): JSX.Element {
 
   return (
     <Container>
+      <h2>Code Snippets</h2>
       {data.map((x) => (
         <CodeBlock
           key={x.hash}

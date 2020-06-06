@@ -1,6 +1,7 @@
 import React from "react";
 import { AkCodeBlock } from "@atlaskit/code";
 import { StyleSheet, css } from "aphrodite";
+import { Link } from "react-router-dom";
 
 type CodeBlockProps = {
   content: ReadonlyArray<string>;
@@ -10,26 +11,32 @@ type CodeBlockProps = {
   readonly href?: string;
 };
 
-function CodeBlock({ content, hash, name, language, href }: CodeBlockProps) {
-  if (content.length === 1) {
+function CodeBlock({
+  content,
+  hash,
+  name,
+  language,
+  href,
+}: CodeBlockProps): JSX.Element {
+  if (content.length === 1 && href) {
     return (
       <div className={css(styles.container)}>
-        <a href={href} target="__blank">
+        <Link to={href} target="__blank">
           <h5>
             {name} - {hash}
           </h5>
-        </a>
+        </Link>
         <AkCodeBlock language={language.toString()} text={content.toString()} />
       </div>
     );
-  } else {
+  } else if (content.length > 1 && href) {
     return (
       <div className={css(styles.container)}>
-        <a href={href} target="__blank">
+        <Link to={href} target="__blank">
           <h5>
             {name} - {hash}
           </h5>
-        </a>
+        </Link>
         <div className={css(styles.contentRow)}>
           {content.map((x) => (
             <div className={css(styles.blockHolder)}>
@@ -40,6 +47,7 @@ function CodeBlock({ content, hash, name, language, href }: CodeBlockProps) {
       </div>
     );
   }
+  return <div>No Results</div>;
 }
 
 const styles = StyleSheet.create({
