@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 import { Container } from "react-bootstrap";
 import CodeBlock from "../../ui/CodeBlock";
+import { Link } from "react-router-dom";
 
 type CodeFunctionResponse = ReadonlyArray<{
   content: ReadonlyArray<string>;
@@ -26,7 +27,11 @@ function Code(): JSX.Element {
 
   return (
     <Container>
+      <br />
       <h2>Code Snippets</h2>
+      <Link className="float-right" to="/code/new">
+        New Snippet
+      </Link>
       {data.map((x) => (
         <CodeBlock
           key={x.hash}
@@ -37,6 +42,7 @@ function Code(): JSX.Element {
           href={`/code/${x.hash}`}
         />
       ))}
+      <br />
     </Container>
   );
 }

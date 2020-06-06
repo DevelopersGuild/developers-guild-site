@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "center",
     flexWrap: "nowrap",
-    height: "463px",
+    maxHeight: "463px",
     whiteSpace: "nowrap",
     overflowY: "hidden",
     overflowX: "auto",
