@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { useQuery } from "react-query";
+import { StyleSheet, css } from "aphrodite";
 
 async function fetchRepos() {
   const response = await (
@@ -17,11 +18,11 @@ function GithubBar(): JSX.Element {
   if (status === "error") return <div>Error: {error}</div>;
   return (
     <React.Fragment>
-      <h5>Github Repositories</h5>
+      <h2 className={css(styles.header)}>Github Repositories</h2>
       <Card>
         <Card.Body>
           <div>
-            <div style={{ overflow: "auto", maxHeight: 400 }}>
+            <div className={css(styles.subCards)}>
               {data.map((e: any, index: any) => (
                 <React.Fragment key={index}>
                   <Card.Body>
@@ -56,5 +57,15 @@ function GithubBar(): JSX.Element {
     </React.Fragment>
   );
 }
+
+const styles = StyleSheet.create({
+  header: {
+    marginTop: "1vh",
+  },
+  subCards: {
+    overflow: "auto",
+    maxHeight: 400,
+  },
+});
 
 export default GithubBar;
