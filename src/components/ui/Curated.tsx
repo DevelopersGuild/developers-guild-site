@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
     marginBottom: "1vh",
   },
   contentRow: {
-    position: "relative",
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
