@@ -8,6 +8,7 @@ import { Contributing } from "./components/pages/Contributing";
 import { Thanks } from "./components/pages/Thanks";
 import Constitution from "./components/pages/Constitution";
 import Roles from "./components/pages/Roles";
+import Curated from "./components/pages/Curated";
 
 const App: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
       <Route path="/roles" exact component={Roles} />
       <Route path="/constitution" exact component={Constitution} />
       <Route path="/thanks" exact component={Thanks} />
+      <Route path="/curated" exact component={Curated} />
     </BrowserRouter>
   );
 };
