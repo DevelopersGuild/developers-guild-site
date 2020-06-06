@@ -21,8 +21,8 @@ async function fetchThankYou(): Promise<ReadonlyArray<Post>> {
 export const Thanks: React.FC = () => {
   const { status, data, error } = useQuery("fetch-thank-yous", fetchThankYou);
 
-  if (status === "loading") return <div>Loading...</div>;
-  if (status === "error") return <div>Error: {error}</div>;
+  if (status === "loading") return <Container>Loading...</Container>;
+  if (status === "error") return <Container>Error: {error}</Container>;
 
   return (
     <>

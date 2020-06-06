@@ -21,8 +21,8 @@ function Constitution(): JSX.Element {
     fetchConstitutionMarkdown
   );
 
-  if (status === "loading") return <div>Loading...</div>;
-  if (status === "error") return <div>Error: {error}</div>;
+  if (status === "loading") return <Container>Loading...</Container>;
+  if (status === "error") return <Container>Error: {error}</Container>;
 
   return (
     <React.Fragment>
