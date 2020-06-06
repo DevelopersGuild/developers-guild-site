@@ -13,7 +13,7 @@ type CodeData = {
 };
 
 async function fetchCodeSnippets(_: string, hash?: string): Promise<CodeData> {
-  const endpoint = `https://us-central1-winter-runway-279100.cloudfunctions.net/function-code?hash=${hash}`;
+  const endpoint = `https://utilapi-rqg4sqdiwq-uc.a.run.app/code/${hash}`;
   const response: ReadonlyArray<CodeData> = await (
     await fetch(endpoint)
   ).json();

@@ -10,6 +10,7 @@ import Constitution from "./components/pages/Constitution";
 import Roles from "./components/pages/Roles";
 import Code from "./components/pages/Code/Code";
 import CodeDetailView from "./components/pages/Code/CodeDetailView";
+import NewCodeBlock from "./components/pages/Code/NewCodeBlock";
 
 const App: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const App: React.FC = () => {
         <Route path="/constitution" exact component={Constitution} />
         <Route path="/thanks" exact component={Thanks} />
         <Route path="/code" exact component={Code} />
+        <Route path="/code/new" exact component={NewCodeBlock} />
         <Route path="/code/:hash" exact component={CodeDetailView} />
       </Switch>
     </BrowserRouter>

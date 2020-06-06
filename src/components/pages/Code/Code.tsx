@@ -11,8 +11,7 @@ type CodeFunctionResponse = ReadonlyArray<{
 }>;
 
 async function fetchCodeSnippets(): Promise<CodeFunctionResponse> {
-  const endpoint =
-    "https://us-central1-winter-runway-279100.cloudfunctions.net/function-code";
+  const endpoint = "https://utilapi-rqg4sqdiwq-uc.a.run.app/code";
   return await (await fetch(endpoint)).json();
 }
 
