@@ -7,8 +7,8 @@ import { NavbarMain } from "./components/ui/NavbarMain";
 import { About } from "./components/pages/About";
 import { Contributing } from "./components/pages/Contributing";
 import { Thanks } from "./components/pages/Thanks";
+import Constitution from "./components/pages/Constitution";
 const RolesLazy = lazy(() => import("./components/pages/Roles"));
-const ConstitutionLazy = lazy(() => import("./components/pages/Constitution"));
 
 // independent parsed resources on the network being lazily loaded
 const Roles = () => (
@@ -20,18 +20,6 @@ const Roles = () => (
     }
   >
     <RolesLazy />
-  </Suspense>
-);
-
-const Constitution = () => (
-  <Suspense
-    fallback={
-      <Container>
-        <div>Loading...</div>
-      </Container>
-    }
-  >
-    <ConstitutionLazy />
   </Suspense>
 );
 
