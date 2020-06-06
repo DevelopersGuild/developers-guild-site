@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Jumbotron } from "react-bootstrap";
 import MainLogo from "../graphic-assets/Main-Logo.svg";
 import GithubBar from "../ui/GithubBar";
+import Curated from "../ui/Curated";
 
 export const Landing: React.FC = () => (
   <React.Fragment>
@@ -31,6 +32,8 @@ export const Landing: React.FC = () => (
           </div>
         </div>
       </Jumbotron>
+      <br />
+      <Curated />
       <br />
       <GithubBar />
       <br />
