@@ -65,7 +65,7 @@ function Curated(): JSX.Element {
         <EmbeddedField
           height={300}
           width={500}
-          videoID={stripVideoID("https://www.youtube.com/watch?v=K8MF3aDg-bM")}
+          videoID={stripVideoID("https://www.youtube.com/watch?v=cbSrsYiRamo")}
         />
         <EmbeddedField
           height={300}
