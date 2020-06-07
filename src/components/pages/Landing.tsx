@@ -4,6 +4,7 @@ import MainLogo from "../graphic-assets/Main-Logo.svg";
 import GithubBar from "../ui/GithubBar";
 import Curated from "../ui/Curated";
 import { StyleSheet, css } from "aphrodite";
+import { youtubeMainPageHardCoded } from "../data/hardcode";
 
 export const Landing: React.FC = () => (
   <React.Fragment>
@@ -29,7 +30,7 @@ export const Landing: React.FC = () => (
         </div>
       </Jumbotron>
       <br />
-      <Curated />
+      <Curated curatedDataCollection={youtubeMainPageHardCoded} />
       <br />
       <GithubBar />
       <br />

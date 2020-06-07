@@ -42,41 +42,25 @@ function stripVideoID(passed: string): string {
   return passed.split("https://www.youtube.com/watch?v=")[1];
 }
 
-function Curated(): JSX.Element {
+// feed in Youtube Video Array
+type Props = {
+  curatedDataCollection: ReadonlyArray<string>;
+};
+
+function Curated(props: Props): JSX.Element {
+  const { curatedDataCollection } = props;
   return (
     <Container className={css(styles.container)}>
       <h2>Community Curated Videos</h2>
       <div className={css(styles.contentRow)}>
-        <EmbeddedField
-          height={300}
-          width={500}
-          videoID={stripVideoID("https://www.youtube.com/watch?v=6ptI5B4a-ag")}
-        />
-        <EmbeddedField
-          height={300}
-          width={500}
-          videoID={stripVideoID("https://www.youtube.com/watch?v=Hfr-e13av5I")}
-        />
-        <EmbeddedField
-          height={300}
-          width={500}
-          videoID={stripVideoID("https://www.youtube.com/watch?v=FYTZkE5BZ-0")}
-        />
-        <EmbeddedField
-          height={300}
-          width={500}
-          videoID={stripVideoID("https://www.youtube.com/watch?v=cbSrsYiRamo")}
-        />
-        <EmbeddedField
-          height={300}
-          width={500}
-          videoID={stripVideoID("https://www.youtube.com/watch?v=JTOJsU3FSD8")}
-        />
-        <EmbeddedField
-          height={300}
-          width={500}
-          videoID={stripVideoID("https://www.youtube.com/watch?v=g2nMKzhkvxw")}
-        />
+        {curatedDataCollection.map((youtubeVideo) => (
+          <EmbeddedField
+            key={youtubeVideo}
+            height={300}
+            width={500}
+            videoID={stripVideoID(youtubeVideo)}
+          />
+        ))}
       </div>
     </Container>
   );
