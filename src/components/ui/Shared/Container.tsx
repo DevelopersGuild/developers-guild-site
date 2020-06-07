@@ -5,7 +5,7 @@ import { StyleSheet, css } from "aphrodite";
 type ContainerType = "normal" | "fluid";
 
 type Props = {
-  readonly children: JSX.Element | Array<JSX.Element>;
+  readonly children: React.ReactNode;
   readonly style?: StyleDeclarationValue | false | null | void;
   readonly type: ContainerType;
 };

@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
+import Container from "../ui/Shared/Container";
 import "../styles/image-headers.css";
 import ContactHeader from "../graphic-assets/contact.jpg";
 import { StyleSheet, css } from "aphrodite";
@@ -8,7 +9,7 @@ export const Contact: React.FC = () => (
   <React.Fragment>
     <br />
     <div className={css(styles.containerOne)}>
-      <Container>
+      <Container type="normal">
         <h4>Contact The Developers' Guild</h4>
         <p className="text-justify">
           Here are different ways to contact the Developers' Guild.
@@ -20,7 +21,7 @@ export const Contact: React.FC = () => (
         data-src={ContactHeader}
         alt="Header"
       />
-      <Container>
+      <Container type="normal">
         <Table striped bordered hover>
           <tbody>
             <tr>

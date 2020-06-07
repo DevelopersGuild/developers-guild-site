@@ -1,7 +1,7 @@
 import React from "react";
 import { AkCodeBlock } from "@atlaskit/code";
 import { StyleSheet, css } from "aphrodite";
-import { Container } from "react-bootstrap";
+import Container from "../../ui/Shared/Container";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 
@@ -26,13 +26,15 @@ function CodeDetailView(): JSX.Element {
     ["fetching-single-snippet", hash],
     fetchCodeSnippets
   );
-  if (status === "loading") return <Container>Loading...</Container>;
-  if (status === "error") return <Container>Error: {error}</Container>;
-  if (!data) return <Container>No Results</Container>;
+  if (status === "loading")
+    return <Container type="normal">Loading...</Container>;
+  if (status === "error")
+    return <Container type="normal">Error: {error}</Container>;
+  if (!data) return <Container type="normal">No Results</Container>;
 
   if (data.content.length === 1) {
     return (
-      <Container>
+      <Container type="normal">
         <div className={css(styles.container)}>
           <h5>
             {data.name} - {hash}
@@ -46,7 +48,7 @@ function CodeDetailView(): JSX.Element {
     );
   } else if (data.content.length > 1) {
     return (
-      <Container>
+      <Container type="normal">
         <div className={css(styles.container)}>
           <h5>
             {data.name} - {data.hash}
@@ -65,7 +67,7 @@ function CodeDetailView(): JSX.Element {
       </Container>
     );
   }
-  return <Container>No Results</Container>;
+  return <Container type="normal">No Results</Container>;
 }
 
 const styles = StyleSheet.create({

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import Container from "../ui/Shared/Container";
 import showdown from "showdown";
 import ConstitutionHeader from "../graphic-assets/the-creation-of-design.png";
 import "../styles/image-headers.css";
@@ -22,14 +22,16 @@ function Constitution(): JSX.Element {
     fetchConstitutionMarkdown
   );
 
-  if (status === "loading") return <Container>Loading...</Container>;
-  if (status === "error") return <Container>Error: {error}</Container>;
+  if (status === "loading")
+    return <Container type="normal">Loading...</Container>;
+  if (status === "error")
+    return <Container type="normal">Error: {error}</Container>;
 
   return (
     <React.Fragment>
       <br />
       <div className={css(styles.containerOne)}>
-        <Container>
+        <Container type="normal">
           <h4>Developers' Guild Constitution</h4>
           <p className="text-justify">
             Amended in the blood of Martyrs by Yusuf himself.
@@ -41,7 +43,7 @@ function Constitution(): JSX.Element {
           data-src={ConstitutionHeader}
           alt="Header"
         />
-        <Container className="role-container">
+        <Container type="normal">
           <br />
           <br />
           <div dangerouslySetInnerHTML={{ __html: data ? data : "" }}></div>

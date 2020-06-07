@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import Container from "../ui/Shared/Container";
 import OpenSourceHeader from "../graphic-assets/open-source.png";
 import "../styles/image-headers.css";
 import { StyleSheet, css } from "aphrodite";
@@ -11,7 +11,7 @@ export const Contributing: React.FC = () => (
   <React.Fragment>
     <br />
     <div className={css(styles.containerOne)}>
-      <Container>
+      <Container type="normal">
         <h4>How to Contribute to Open Source Developers Guild Projects</h4>
         <p className="text-justify">
           Want to contribute to open source? A guide to making open source
@@ -26,7 +26,7 @@ export const Contributing: React.FC = () => (
         alt="Header"
       />
 
-      <Container>
+      <Container type="normal">
         <br />
         <h5>Section 1</h5>
         <br />

@@ -1,9 +1,9 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import showdown from "showdown";
 import RolesHeader from "../graphic-assets/roles.jpg";
 import "../styles/image-headers.css";
 import { useQuery } from "react-query";
+import Container from "../ui/Shared/Container";
 
 async function fetchRolesMarkdown(): Promise<string> {
   const response = await (
@@ -18,14 +18,16 @@ async function fetchRolesMarkdown(): Promise<string> {
 const Roles: React.FC = () => {
   const { status, data, error } = useQuery("fetch-roles", fetchRolesMarkdown);
 
-  if (status === "loading") return <Container>Loading...</Container>;
-  if (status === "error") return <Container>Error: {error}</Container>;
+  if (status === "loading")
+    return <Container type="normal">Loading...</Container>;
+  if (status === "error")
+    return <Container type="normal">Error: {error}</Container>;
 
   return (
     <React.Fragment>
       <br />
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <Container>
+        <Container type="normal">
           <h4>Developers' Guild Roles</h4>
           <p className="text-justify">
             These are roles currently open at the Developers' Guild.
@@ -37,7 +39,7 @@ const Roles: React.FC = () => {
           data-src={RolesHeader}
           alt="Header"
         />
-        <Container className="role-container">
+        <Container type="normal">
           <br />
           <br />
           <div dangerouslySetInnerHTML={{ __html: data ? data : "" }}></div>
