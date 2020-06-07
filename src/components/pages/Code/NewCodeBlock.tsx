@@ -87,7 +87,7 @@ function NewCodeBlock(): JSX.Element {
               setInput((e.target as HTMLTextAreaElement).value);
             }}
             as="textarea"
-            rows="20"
+            rows={20}
             placeholder="Write Code Here"
             value={input}
           />
