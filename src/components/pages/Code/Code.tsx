@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery } from "react-query";
-import { Container } from "react-bootstrap";
+import Container from "../../ui/Shared/Container";
 import CodeBlock from "../../ui/CodeBlock";
 import { Link } from "react-router-dom";
 
@@ -21,12 +21,14 @@ function Code(): JSX.Element {
     "fetch-all-code-snippets",
     fetchCodeSnippets
   );
-  if (status === "loading") return <Container>Loading...</Container>;
-  if (status === "error") return <Container>Error: {error}</Container>;
-  if (!data) return <Container>No Results</Container>;
+  if (status === "loading")
+    return <Container type="normal">Loading...</Container>;
+  if (status === "error")
+    return <Container type="normal">Error: {error}</Container>;
+  if (!data) return <Container type="normal">No Results</Container>;
 
   return (
-    <Container>
+    <Container type="normal">
       <br />
       <h2>Code Snippets</h2>
       <Link className="float-right" to="/code/new">

@@ -1,5 +1,7 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+
+import Container from "../ui/Shared/Container";
+
 import "../styles/image-headers.css";
 import AboutHeader from "../graphic-assets/about.png";
 import { StyleSheet, css } from "aphrodite";
@@ -8,7 +10,7 @@ export const About: React.FC = () => (
   <React.Fragment>
     <br />
     <div className={css(styles.containerOne)}>
-      <Container>
+      <Container type="normal">
         <h4>About The Developers' Guild</h4>
         <p className="text-justify">Learn more about the Developers' Guild.</p>
       </Container>
@@ -18,7 +20,7 @@ export const About: React.FC = () => (
         data-src={AboutHeader}
         alt="Header"
       />
-      <Container>
+      <Container type="normal">
         <br />
         <p className="text-justify">
           Developers’ Guild started in 2014 with the goal of facilitating the

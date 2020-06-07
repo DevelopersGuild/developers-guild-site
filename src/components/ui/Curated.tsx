@@ -1,6 +1,7 @@
 import React from "react";
-import { Container, ResponsiveEmbed } from "react-bootstrap";
+import { ResponsiveEmbed } from "react-bootstrap";
 import { StyleSheet, css } from "aphrodite";
+import Container from "../ui/Shared/Container";
 
 type EmbeddedFieldProps = {
   videoID: string;
@@ -50,7 +51,7 @@ type Props = {
 function Curated(props: Props): JSX.Element {
   const { curatedDataCollection } = props;
   return (
-    <Container className={css(styles.container)}>
+    <Container type="normal" style={styles.container}>
       <h2>Community Curated Videos</h2>
       <div className={css(styles.contentRow)}>
         {curatedDataCollection.map((youtubeVideo) => (

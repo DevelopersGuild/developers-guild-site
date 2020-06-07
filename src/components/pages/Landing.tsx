@@ -1,15 +1,16 @@
 import React from "react";
-import { Container, Jumbotron } from "react-bootstrap";
+import { Jumbotron } from "react-bootstrap";
 import MainLogo from "../graphic-assets/Main-Logo.svg";
 import GithubBar from "../ui/GithubBar";
 import Curated from "../ui/Curated";
 import { StyleSheet, css } from "aphrodite";
 import { youtubeMainPageHardCoded } from "../data/hardcode";
+import Container from "../ui/Shared/Container";
 
 export const Landing: React.FC = () => (
   <React.Fragment>
     <br />
-    <Container>
+    <Container type="normal">
       <Jumbotron>
         <div className={css(styles.jumboContainer)}>
           <img

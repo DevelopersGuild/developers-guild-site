@@ -1,6 +1,7 @@
 import { SupportedLanguages } from "@atlaskit/code/supportedLanguages";
 import React, { useState } from "react";
-import { Container, Form, Button } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
+import Container from "../../ui/Shared/Container";
 import { SupportedLanguagesOption } from "../../data/runtime-types";
 import { generateName } from "../../data/generate";
 import { AkCodeBlock } from "@atlaskit/code";
@@ -59,7 +60,7 @@ function NewCodeBlock(): JSX.Element {
   }
 
   return (
-    <Container>
+    <Container type="normal">
       <h2>Share a Code Snippet!</h2>
       <Form onSubmit={handleSubmission}>
         <Form.Group controlId="formBasicEmail">
