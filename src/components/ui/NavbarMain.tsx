@@ -49,6 +49,16 @@ export const NavbarMain: React.FC = () => (
               Code Snippets
             </Link>
           </Nav.Item>
+          <Nav.Item>
+            <Link className="nav-link" to="/lab">
+              The Lab
+            </Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Link className="nav-link" to="/thanks">
+              Thanks
+            </Link>
+          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
