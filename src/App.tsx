@@ -6,6 +6,7 @@ import { NavbarMain } from "./components/ui/NavbarMain";
 import { About } from "./components/pages/About";
 import { Contributing } from "./components/pages/Contributing";
 import { Thanks } from "./components/pages/Thanks";
+import Lab from "./components/pages/Lab";
 import Constitution from "./components/pages/Constitution";
 import Roles from "./components/pages/Roles";
 import Code from "./components/pages/Code/Code";
@@ -24,6 +25,7 @@ const App: React.FC = () => {
         <Route path="/roles" exact component={Roles} />
         <Route path="/constitution" exact component={Constitution} />
         <Route path="/thanks" exact component={Thanks} />
+        <Route path="/lab" exact component={Lab}/>
         <Route path="/code" exact component={Code} />
         <Route path="/code/new" exact component={NewCodeBlock} />
         <Route path="/code/:hash" exact component={CodeDetailView} />
