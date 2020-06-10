@@ -7,4 +7,3 @@ steps:
     args:
       - deploy
       - --only=hosting
-      - --project=winter-runway-279100
