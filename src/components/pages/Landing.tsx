@@ -24,7 +24,7 @@ export const Landing: React.FC = () => (
             alt="Logo"
           />
           <div>
-            <h1>Developers Guild - De Anza</h1>
+            <h1>Developers Guild - De Anza (Testing Cloud Build)</h1>
             <p>A project and contribution based programming club.</p>
             <p>Fridays 1:30PM-4:00PM AT311</p>
           </div>
