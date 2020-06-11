@@ -4,9 +4,11 @@ import Container from "../ui/Shared/Container";
 import "../styles/image-headers.css";
 import ContactHeader from "../graphic-assets/contact.jpg";
 import { StyleSheet, css } from "aphrodite";
+import { NavbarMain } from "../ui/NavbarMain";
 
 export const Contact: React.FC = () => (
   <React.Fragment>
+    <NavbarMain />
     <br />
     <div className={css(styles.containerOne)}>
       <Container type="normal">

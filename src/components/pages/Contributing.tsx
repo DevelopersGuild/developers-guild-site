@@ -3,12 +3,16 @@ import Container from "../ui/Shared/Container";
 import OpenSourceHeader from "../graphic-assets/open-source.png";
 import "../styles/image-headers.css";
 import { StyleSheet, css } from "aphrodite";
+
+import { NavbarMain } from "../ui/NavbarMain";
+
 /**
  *  Sourced from https://opensource.guide/how-to-contribute/
  */
 
 export const Contributing: React.FC = () => (
   <React.Fragment>
+    <NavbarMain />
     <br />
     <div className={css(styles.containerOne)}>
       <Container type="normal">

@@ -4,6 +4,7 @@ import { StyleSheet, css } from "aphrodite";
 import Container from "../../ui/Shared/Container";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
+import { NavbarMain } from "../../ui/NavbarMain";
 
 type CodeData = {
   content: ReadonlyArray<string>;
@@ -130,10 +131,20 @@ function CodeDetailView(props: any): JSX.Element {
   const stateObject: CodeData = props.location.state;
 
   if (stateObject) {
-    return <CodeDetailViewPassed data={stateObject} />;
+    return (
+      <>
+        <NavbarMain />
+        <CodeDetailViewPassed data={stateObject} />
+      </>
+    );
   }
 
-  return <CodeDetailViewQueried hash={hash} />;
+  return (
+    <>
+      <NavbarMain />
+      <CodeDetailViewQueried hash={hash} />
+    </>
+  );
 }
 
 const styles = StyleSheet.create({

@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Landing } from "./components/pages/Landing";
 import { Contact } from "./components/pages/Contact";
-import { NavbarMain } from "./components/ui/NavbarMain";
 import { About } from "./components/pages/About";
 import { Contributing } from "./components/pages/Contributing";
 import { Thanks } from "./components/pages/Thanks";
@@ -12,11 +11,11 @@ import Roles from "./components/pages/Roles";
 import Code from "./components/pages/Code/Code";
 import CodeDetailView from "./components/pages/Code/CodeDetailView";
 import NewCodeBlock from "./components/pages/Code/NewCodeBlock";
+import Lms from "./lms/pages/Lms";
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <NavbarMain />
       <Switch>
         <Route path="/" exact component={Landing} />
         <Route path="/contact" exact component={Contact} />
@@ -29,6 +28,8 @@ const App: React.FC = () => {
         <Route path="/code" exact component={Code} />
         <Route path="/code/new" exact component={NewCodeBlock} />
         <Route path="/code/:hash" exact component={CodeDetailView} />
+        {/* Coptic Routes */}
+        <Route path="/coptic" exact component={Lms} />
       </Switch>
     </BrowserRouter>
   );

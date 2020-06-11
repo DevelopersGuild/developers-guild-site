@@ -5,6 +5,7 @@ import Container from "../../ui/Shared/Container";
 import { SupportedLanguagesOption } from "../../data/runtime-types";
 import { generateName } from "../../data/generate";
 import { AkCodeBlock } from "@atlaskit/code";
+import { NavbarMain } from "../../ui/NavbarMain";
 
 import { StyleSheet, css } from "aphrodite";
 
@@ -60,67 +61,70 @@ function NewCodeBlock(): JSX.Element {
   }
 
   return (
-    <Container type="normal">
-      <h2>Share a Code Snippet!</h2>
-      <Form onSubmit={handleSubmission}>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>Name</Form.Label>
-          <Form.Control
-            onChange={(e: any) => {
-              setName((e.target as HTMLTextAreaElement).value);
-            }}
-            type="text"
-            value={name}
-          />
-          <Form.Text className="text-muted">
-            You can name your snippet but we have already generated a name for
-            you.
-          </Form.Text>
-        </Form.Group>
-        {/*  */}
-        <Form.Group controlId="codeForm.CodeArea">
-          <Form.Label>Code Snippet: {option}</Form.Label>
-          <Button onClick={handleNewSnippet} variant="link">
-            Add Snippet
+    <>
+      <NavbarMain />
+      <Container type="normal">
+        <h2>Share a Code Snippet!</h2>
+        <Form onSubmit={handleSubmission}>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Name</Form.Label>
+            <Form.Control
+              onChange={(e: any) => {
+                setName((e.target as HTMLTextAreaElement).value);
+              }}
+              type="text"
+              value={name}
+            />
+            <Form.Text className="text-muted">
+              You can name your snippet but we have already generated a name for
+              you.
+            </Form.Text>
+          </Form.Group>
+          {/*  */}
+          <Form.Group controlId="codeForm.CodeArea">
+            <Form.Label>Code Snippet: {option}</Form.Label>
+            <Button onClick={handleNewSnippet} variant="link">
+              Add Snippet
+            </Button>
+            <Form.Control
+              onChange={(e) => {
+                setInput((e.target as HTMLTextAreaElement).value);
+              }}
+              as="textarea"
+              rows={20}
+              placeholder="Write Code Here"
+              value={input}
+            />
+          </Form.Group>
+          {stashedInput.map((y: string) => (
+            <div key={y} className={css(styles.block)}>
+              <AkCodeBlock language={option} text={y} />
+            </div>
+          ))}
+          {/*  */}
+          <Form.Group controlId="codeForm.LanguageArea">
+            <Form.Label>Language</Form.Label>
+            <Form.Control
+              as="select"
+              value={option}
+              onChange={(e) => {
+                const changed = (e.target as HTMLSelectElement).value;
+                setOption(changed as SupportedLanguages);
+              }}
+            >
+              {SupportedLanguagesOption.map((x) => (
+                <option value={x} key={x}>
+                  {x}
+                </option>
+              ))}
+            </Form.Control>
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Submit
           </Button>
-          <Form.Control
-            onChange={(e) => {
-              setInput((e.target as HTMLTextAreaElement).value);
-            }}
-            as="textarea"
-            rows={20}
-            placeholder="Write Code Here"
-            value={input}
-          />
-        </Form.Group>
-        {stashedInput.map((y: string) => (
-          <div key={y} className={css(styles.block)}>
-            <AkCodeBlock language={option} text={y} />
-          </div>
-        ))}
-        {/*  */}
-        <Form.Group controlId="codeForm.LanguageArea">
-          <Form.Label>Language</Form.Label>
-          <Form.Control
-            as="select"
-            value={option}
-            onChange={(e) => {
-              const changed = (e.target as HTMLSelectElement).value;
-              setOption(changed as SupportedLanguages);
-            }}
-          >
-            {SupportedLanguagesOption.map((x) => (
-              <option value={x} key={x}>
-                {x}
-              </option>
-            ))}
-          </Form.Control>
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
-    </Container>
+        </Form>
+      </Container>
+    </>
   );
 }
 

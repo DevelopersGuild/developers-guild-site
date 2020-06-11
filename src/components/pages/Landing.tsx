@@ -6,9 +6,11 @@ import Curated from "../ui/Curated";
 import { StyleSheet, css } from "aphrodite";
 import { youtubeMainPageHardCoded } from "../data/hardcode";
 import Container from "../ui/Shared/Container";
+import { NavbarMain } from "../ui/NavbarMain";
 
 export const Landing: React.FC = () => (
   <React.Fragment>
+    <NavbarMain />
     <br />
     <Container type="normal">
       <Jumbotron>
