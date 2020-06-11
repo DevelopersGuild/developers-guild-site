@@ -4,6 +4,8 @@ import "../styles/image-headers.css";
 import { useQuery } from "react-query";
 import Container from "../ui/Shared/Container";
 
+import { NavbarMain } from "../ui/NavbarMain";
+
 async function fetchRolesMarkdown(): Promise<string> {
   const response = await (
     await fetch(
@@ -24,6 +26,7 @@ const Lab: React.FC = () => {
 
   return (
     <React.Fragment>
+      <NavbarMain />
       <br />
       <div style={{ display: "flex", flexDirection: "column" }}>
         <Container type="normal">

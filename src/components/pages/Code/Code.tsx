@@ -3,6 +3,7 @@ import { useQuery } from "react-query";
 import Container from "../../ui/Shared/Container";
 import CodeBlock from "../../ui/CodeBlock";
 import { Link } from "react-router-dom";
+import { NavbarMain } from "../../ui/NavbarMain";
 
 type CodeFunctionResponse = ReadonlyArray<{
   content: ReadonlyArray<string>;
@@ -28,24 +29,27 @@ function Code(): JSX.Element {
   if (!data) return <Container type="normal">No Results</Container>;
 
   return (
-    <Container type="normal">
-      <br />
-      <h2>Code Snippets</h2>
-      <Link className="float-right" to="/code/new">
-        New Snippet
-      </Link>
-      {data.map((x) => (
-        <CodeBlock
-          key={x.hash}
-          content={x.content}
-          hash={x.hash}
-          name={x.name}
-          language={x.language}
-          href={`/code/${x.hash}`}
-        />
-      ))}
-      <br />
-    </Container>
+    <>
+      <NavbarMain />
+      <Container type="normal">
+        <br />
+        <h2>Code Snippets</h2>
+        <Link className="float-right" to="/code/new">
+          New Snippet
+        </Link>
+        {data.map((x) => (
+          <CodeBlock
+            key={x.hash}
+            content={x.content}
+            hash={x.hash}
+            name={x.name}
+            language={x.language}
+            href={`/code/${x.hash}`}
+          />
+        ))}
+        <br />
+      </Container>
+    </>
   );
 }
 

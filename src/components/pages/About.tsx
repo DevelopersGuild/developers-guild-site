@@ -5,9 +5,10 @@ import Container from "../ui/Shared/Container";
 import "../styles/image-headers.css";
 import AboutHeader from "../graphic-assets/about.png";
 import { StyleSheet, css } from "aphrodite";
-
+import { NavbarMain } from "../ui/NavbarMain";
 export const About: React.FC = () => (
   <React.Fragment>
+    <NavbarMain />
     <br />
     <div className={css(styles.containerOne)}>
       <Container type="normal">

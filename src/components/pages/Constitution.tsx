@@ -5,6 +5,7 @@ import ConstitutionHeader from "../graphic-assets/the-creation-of-design.png";
 import "../styles/image-headers.css";
 import { useQuery } from "react-query";
 import { StyleSheet, css } from "aphrodite";
+import { NavbarMain } from "../ui/NavbarMain";
 
 async function fetchConstitutionMarkdown(): Promise<string> {
   const response = await (
@@ -29,6 +30,7 @@ function Constitution(): JSX.Element {
 
   return (
     <React.Fragment>
+      <NavbarMain />
       <br />
       <div className={css(styles.containerOne)}>
         <Container type="normal">
