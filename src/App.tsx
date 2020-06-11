@@ -25,7 +25,7 @@ const App: React.FC = () => {
         <Route path="/roles" exact component={Roles} />
         <Route path="/constitution" exact component={Constitution} />
         <Route path="/thanks" exact component={Thanks} />
-        <Route path="/lab" exact component={Lab}/>
+        <Route path="/lab" exact component={Lab} />
         <Route path="/code" exact component={Code} />
         <Route path="/code/new" exact component={NewCodeBlock} />
         <Route path="/code/:hash" exact component={CodeDetailView} />

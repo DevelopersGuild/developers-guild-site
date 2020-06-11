@@ -21,7 +21,18 @@ function CodeBlock({
   if (content.length === 1 && href) {
     return (
       <div className={css(styles.container)}>
-        <Link to={href} target="__blank">
+        <Link
+          to={{
+            pathname: href.toString(),
+            state: {
+              content,
+              hash,
+              name,
+              language,
+              href,
+            },
+          }}
+        >
           <h5>
             {name} - {hash}
           </h5>
@@ -32,14 +43,25 @@ function CodeBlock({
   } else if (content.length > 1 && href) {
     return (
       <div className={css(styles.container)}>
-        <Link to={href} target="__blank">
+        <Link
+          to={{
+            pathname: href.toString(),
+            state: {
+              content,
+              hash,
+              name,
+              language,
+              href,
+            },
+          }}
+        >
           <h5>
             {name} - {hash}
           </h5>
         </Link>
         <div className={css(styles.contentRow)}>
-          {content.map((x) => (
-            <div className={css(styles.blockHolder)}>
+          {content.map((x, i) => (
+            <div key={i.toString()} className={css(styles.blockHolder)}>
               <AkCodeBlock language={language.toString()} text={x.toString()} />
             </div>
           ))}
