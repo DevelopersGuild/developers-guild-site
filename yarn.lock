@@ -9064,10 +9064,10 @@ react-overlays@^3.1.2:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
-react-query@^1.5.8:
-  version "1.5.8"
-  resolved "https://registry.yarnpkg.com/react-query/-/react-query-1.5.8.tgz#80cd99cb279d1ff0ac64122761d95a3e4b014d49"
-  integrity sha512-tQIndH00/pJ21jCIche2jwcoflNGPrSBx0m9MxuDEbTwbQztp5dCzN+3/tKWk6dRw2jrhsV78KhoeYrR21SkZQ==
+react-query@^2.4.6:
+  version "2.4.6"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-2.4.6.tgz#6ea1157fa684dcd3362d044006777ed6b938af1b"
+  integrity sha512-xOyXGZ8QPAMP351H9ABKIaVNZsF4WzZWBZc33bSQdKHeiT6Vhxob21H3h4zJNOptwsfsEHCDNxXqroDvtrXtRQ==
   dependencies:
     "@scarf/scarf" "^1.0.6"
     ts-toolbelt "^6.9.4"
