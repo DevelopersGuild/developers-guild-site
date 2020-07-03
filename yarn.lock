@@ -1398,11 +1398,6 @@
     lodash "^4.17.15"
     lodash-es "^4.17.15"
 
-"@scarf/scarf@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@scarf/scarf/-/scarf-1.0.6.tgz#52011dfb19187b53b75b7b6eac20da0810ddd88f"
-  integrity sha512-y4+DuXrAd1W5UIY3zTcsosi/1GyYT8k5jGnZ/wG7UUHVrU+MHlH4Mp87KK2/lvMW4+H7HVcdB+aJhqywgXksjA==
-
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"
@@ -9064,12 +9059,11 @@ react-overlays@^3.1.2:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
-react-query@^1.5.8:
-  version "1.5.8"
-  resolved "https://registry.yarnpkg.com/react-query/-/react-query-1.5.8.tgz#80cd99cb279d1ff0ac64122761d95a3e4b014d49"
-  integrity sha512-tQIndH00/pJ21jCIche2jwcoflNGPrSBx0m9MxuDEbTwbQztp5dCzN+3/tKWk6dRw2jrhsV78KhoeYrR21SkZQ==
+react-query@^2.4.12:
+  version "2.4.12"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-2.4.12.tgz#6ec75c5fe5e502eaa3fe85491a3bff1e42d26ccc"
+  integrity sha512-wFL7qD85FmNM45gC4RjqK2RsxCFg7W/4ZAvBlWqBq9GWed0+mUTqkE+7Q/ZGszeqiStnGcnyf+Qyku3u+M4ezg==
   dependencies:
-    "@scarf/scarf" "^1.0.6"
     ts-toolbelt "^6.9.4"
 
 react-router-dom@^5.1.2:
