@@ -2,20 +2,20 @@
 # yarn lockfile v1
 
 
-"@atlaskit/code@^11.1.6":
-  version "11.1.6"
-  resolved "https://registry.yarnpkg.com/@atlaskit/code/-/code-11.1.6.tgz#1f986624c0a00e408ff82e1def0f86e8f0682a1d"
-  integrity sha512-hmYpEPvlve/zLQxUWSVQoNXWhzobrtdmTlVZCVZO2uYjrNl2qqdCPIwCheb5qGs3e808tYooGTbvEHijGH6xXw==
+"@atlaskit/code@^12.0.0":
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/code/-/code-12.0.0.tgz#fbdaa671f2d10f0619e2f8befcb199e9a63cf2aa"
+  integrity sha512-7zzHOywqBq+uNJTnhMHDJNaKFzSSAqeeVuL9hhR3WMDDU9DAnLPxFuoSe36wMtpjjmtat3O304uu0hzgeTRmDw==
   dependencies:
-    "@atlaskit/theme" "^9.5.1"
+    "@atlaskit/theme" "^10.0.0"
     memoize-one "^5.1.0"
     react-syntax-highlighter "^10.0.1"
     tslib "^1.9.3"
 
-"@atlaskit/theme@^9.5.1":
-  version "9.5.3"
-  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-9.5.3.tgz#7239b024093959dcc8e0e18283d91b08f1338d7e"
-  integrity sha512-GA8zpyDZHO81vPcSJbObQuRt3ajQxOHY+Qz6Zi1yIepr4Y6xz/fXIiFzamP/VJB/TvHQEhyNE0yeQIYVHGuhyg==
+"@atlaskit/theme@^10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-10.0.0.tgz#81c23562e4fbb16b9a01eb730194054ab01ce733"
+  integrity sha512-/uD3Aj3+bsHl9vE1eTrf5ll0bkioGYF8pDdujGqS2FVSrVkvssPkCW5u10W0VnwdYvWqsClcXX1A5TQ415Ic/g==
   dependencies:
     exenv "^1.2.2"
     prop-types "^15.5.10"
