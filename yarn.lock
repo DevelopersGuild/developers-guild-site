@@ -2,20 +2,20 @@
 # yarn lockfile v1
 
 
-"@atlaskit/code@^11.1.6":
-  version "11.1.6"
-  resolved "https://registry.yarnpkg.com/@atlaskit/code/-/code-11.1.6.tgz#1f986624c0a00e408ff82e1def0f86e8f0682a1d"
-  integrity sha512-hmYpEPvlve/zLQxUWSVQoNXWhzobrtdmTlVZCVZO2uYjrNl2qqdCPIwCheb5qGs3e808tYooGTbvEHijGH6xXw==
+"@atlaskit/code@^12.0.1":
+  version "12.0.1"
+  resolved "https://registry.yarnpkg.com/@atlaskit/code/-/code-12.0.1.tgz#7e86d048dc8632dfb8edd9f8d40bf45d0ec99d52"
+  integrity sha512-QHteoJQofhrIsnqE9m4/6x+eEbY3cbVseMqN2R/X+mNqd3PGZWaOzA+00FkPmhnDCpOzacI5JDpURkMKfdPwIw==
   dependencies:
-    "@atlaskit/theme" "^9.5.1"
+    "@atlaskit/theme" "^10.0.0"
     memoize-one "^5.1.0"
     react-syntax-highlighter "^10.0.1"
     tslib "^1.9.3"
 
-"@atlaskit/theme@^9.5.1":
-  version "9.5.3"
-  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-9.5.3.tgz#7239b024093959dcc8e0e18283d91b08f1338d7e"
-  integrity sha512-GA8zpyDZHO81vPcSJbObQuRt3ajQxOHY+Qz6Zi1yIepr4Y6xz/fXIiFzamP/VJB/TvHQEhyNE0yeQIYVHGuhyg==
+"@atlaskit/theme@^10.0.0":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-10.0.1.tgz#91c6fed6e369f154b7af2d99fbed98d9cefef6e6"
+  integrity sha512-XUor9lYlX0yTRSxd/rvaL8i2gdm0PDbOV+KhuezpuGBaS0opzseRrCnEc+OMGmpWRYHjCRyEugp6FwSSquFb8w==
   dependencies:
     exenv "^1.2.2"
     prop-types "^15.5.10"
@@ -1398,11 +1398,6 @@
     lodash "^4.17.15"
     lodash-es "^4.17.15"
 
-"@scarf/scarf@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@scarf/scarf/-/scarf-1.0.6.tgz#52011dfb19187b53b75b7b6eac20da0810ddd88f"
-  integrity sha512-y4+DuXrAd1W5UIY3zTcsosi/1GyYT8k5jGnZ/wG7UUHVrU+MHlH4Mp87KK2/lvMW4+H7HVcdB+aJhqywgXksjA==
-
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"
@@ -1600,10 +1595,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/node@*", "@types/node@14.0.13":
-  version "14.0.13"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.13.tgz#ee1128e881b874c371374c1f72201893616417c9"
-  integrity sha512-rouEWBImiRaSJsVA+ITTFM6ZxibuAlTuNOCyxVbwreu6k6+ujs7DfnU9o+PShFhET78pMBl3eH+AGSI5eOTkPA==
+"@types/node@*", "@types/node@14.0.23":
+  version "14.0.23"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.23.tgz#676fa0883450ed9da0bb24156213636290892806"
+  integrity sha512-Z4U8yDAl5TFkmYsZdFPdjeMa57NOvnaf1tljHzhouaPEp7LCj2JKkejpI1ODviIAQuW4CcQmxkQ77rnLsOOoKw==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -9064,12 +9059,11 @@ react-overlays@^3.1.2:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
-react-query@^1.5.8:
-  version "1.5.8"
-  resolved "https://registry.yarnpkg.com/react-query/-/react-query-1.5.8.tgz#80cd99cb279d1ff0ac64122761d95a3e4b014d49"
-  integrity sha512-tQIndH00/pJ21jCIche2jwcoflNGPrSBx0m9MxuDEbTwbQztp5dCzN+3/tKWk6dRw2jrhsV78KhoeYrR21SkZQ==
+react-query@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-2.5.1.tgz#f4ec966567346b35d5a1681a1ae142162f4bb017"
+  integrity sha512-VziTyEGU1oHNHU7/uTBpX+dOt05+WEubrkl7paWSxxyAcHvLrNmtl88b0hXc76Rjk2XAxcoqtZ+EczYT6GNIAA==
   dependencies:
-    "@scarf/scarf" "^1.0.6"
     ts-toolbelt "^6.9.4"
 
 react-router-dom@^5.1.2:
@@ -10762,10 +10756,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@3.9.5:
-  version "3.9.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.5.tgz#586f0dba300cde8be52dd1ac4f7e1009c1b13f36"
-  integrity sha512-hSAifV3k+i6lEoCJ2k6R2Z/rp/H3+8sdmcn5NrS3/3kE7+RyZXm9aqvxWqjEXHAd8b0pShatpcdMTvEdvAJltQ==
+typescript@3.9.7:
+  version "3.9.7"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
+  integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
 
 uncontrollable@^7.0.0:
   version "7.1.1"
