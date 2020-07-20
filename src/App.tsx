@@ -12,8 +12,6 @@ import Code from "./components/pages/Code/Code";
 import CodeDetailView from "./components/pages/Code/CodeDetailView";
 import NewCodeBlock from "./components/pages/Code/NewCodeBlock";
 import Lms from "./lms/pages/Lms";
-import sitedata from "./sitedata";
-import ogimagepath from "./components/graphic-assets/og.jpg";
 
 const App: React.FC = () => {
   return (
