@@ -1,32 +1,18 @@
 import React from "react";
 import Container from "../ui/Shared/Container";
-import showdown from "showdown";
 import ConstitutionHeader from "../graphic-assets/the-creation-of-design.png";
 import "../styles/image-headers.css";
-import { useQuery } from "react-query";
 import { StyleSheet, css } from "aphrodite";
 import { NavbarMain } from "../ui/NavbarMain";
-
-async function fetchConstitutionMarkdown(): Promise<string> {
-  const response = await (
-    await fetch(
-      "https://raw.githubusercontent.com/DevelopersGuild/developers-guild-site-roles/master/Constitution.md"
-    )
-  ).arrayBuffer();
-  const parsed = new TextDecoder("utf-8").decode(response);
-  return new showdown.Converter().makeHtml(parsed);
-}
+import useMarkdown from "../hooks/useMarkdown";
+import ReactMarkdown from "react-markdown";
+import constitutionpath from "../markdown/Constitution.md";
 
 function Constitution(): JSX.Element {
-  const { status, data, error } = useQuery(
-    "fetch-constitution",
-    fetchConstitutionMarkdown
-  );
+  const { markdown, loading, error } = useMarkdown(constitutionpath);
 
-  if (status === "loading")
-    return <Container type="normal">Loading...</Container>;
-  if (status === "error")
-    return <Container type="normal">Error: {error}</Container>;
+  if (loading) return <Container type="normal">Loading...</Container>;
+  if (error) return <Container type="normal">Error: {error}</Container>;
 
   return (
     <React.Fragment>
@@ -48,7 +34,7 @@ function Constitution(): JSX.Element {
         <Container type="normal">
           <br />
           <br />
-          <div dangerouslySetInnerHTML={{ __html: data ? data : "" }}></div>
+          <ReactMarkdown source={markdown} />
           <a
             target="__blank"
             href="https://github.com/DevelopersGuild/developers-guild-site-roles/blob/master/Constitution.md"
