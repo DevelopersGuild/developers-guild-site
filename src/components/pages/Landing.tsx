@@ -7,12 +7,17 @@ import { StyleSheet, css } from "aphrodite";
 import { youtubeMainPageHardCoded } from "../data/hardcode";
 import Container from "../ui/Shared/Container";
 import { NavbarMain } from "../ui/NavbarMain";
+import DiscordLink from "../ui/DiscordLink";
 
 export const Landing: React.FC = () => (
   <React.Fragment>
     <NavbarMain />
     <br />
     <Container type="normal">
+      <DiscordLink className="float-right" />
+      <br />
+      <br />
+      <br />
       <Jumbotron>
         <div className={css(styles.jumboContainer)}>
           <img
