@@ -1,31 +1,20 @@
 import React from "react";
-import showdown from "showdown";
 import RolesHeader from "../graphic-assets/roles.jpg";
 import "../styles/image-headers.css";
-import { useQuery } from "react-query";
 import Container from "../ui/Shared/Container";
 import { NavbarMain } from "../ui/NavbarMain";
-
-async function fetchRolesMarkdown(): Promise<string> {
-  const response = await (
-    await fetch(
-      "https://raw.githubusercontent.com/DevelopersGuild/developers-guild-site-roles/master/Roles.md"
-    )
-  ).arrayBuffer();
-  const parsed = new TextDecoder("utf-8").decode(response);
-  return new showdown.Converter().makeHtml(parsed);
-}
+import rolesdata from "../markdown/Roles.md";
+import ReactMarkdown from "react-markdown";
+import useMarkdown from "../hooks/useMarkdown";
 
 const Roles: React.FC = () => {
-  const { status, data, error } = useQuery("fetch-roles", fetchRolesMarkdown);
+  const { markdown, loading, error } = useMarkdown(rolesdata);
 
-  if (status === "loading")
-    return <Container type="normal">Loading...</Container>;
-  if (status === "error")
-    return <Container type="normal">Error: {error}</Container>;
+  if (loading) return <Container type="normal">Loading...</Container>;
+  if (error) return <Container type="normal">Error: {error}</Container>;
 
   return (
-    <React.Fragment>
+    <>
       <NavbarMain />
       <br />
       <div style={{ display: "flex", flexDirection: "column" }}>
@@ -44,7 +33,7 @@ const Roles: React.FC = () => {
         <Container type="normal">
           <br />
           <br />
-          <div dangerouslySetInnerHTML={{ __html: data ? data : "" }}></div>
+          <ReactMarkdown source={markdown} />
           <a
             target="__blank"
             href="https://github.com/DevelopersGuild/developers-guild-site-roles/blob/master/Roles.md"
@@ -55,7 +44,7 @@ const Roles: React.FC = () => {
           <br />
         </Container>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
