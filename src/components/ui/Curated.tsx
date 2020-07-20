@@ -1,3 +1,4 @@
+import type { CuratedCollection } from "../data/hardcode";
 import React from "react";
 import { ResponsiveEmbed } from "react-bootstrap";
 import { StyleSheet, css } from "aphrodite";
@@ -45,7 +46,7 @@ function stripVideoID(passed: string): string {
 
 // feed in Youtube Video Array
 type Props = {
-  curatedDataCollection: ReadonlyArray<string>;
+  curatedDataCollection: CuratedCollection;
 };
 
 function Curated(props: Props): JSX.Element {
@@ -54,12 +55,12 @@ function Curated(props: Props): JSX.Element {
     <Container type="normal" style={styles.container}>
       <h2>Community Curated Videos</h2>
       <div className={css(styles.contentRow)}>
-        {curatedDataCollection.map((youtubeVideo) => (
+        {curatedDataCollection.data.map((youtubeVideo, idx) => (
           <EmbeddedField
-            key={youtubeVideo}
+            key={`${idx}-${youtubeVideo.recommendedBy}`}
             height={300}
             width={500}
-            videoID={stripVideoID(youtubeVideo)}
+            videoID={stripVideoID(youtubeVideo.source)}
           />
         ))}
       </div>
