@@ -37,7 +37,7 @@ function Constitution(): JSX.Element {
           <ReactMarkdown source={markdown} />
           <a
             target="__blank"
-            href="https://github.com/DevelopersGuild/developers-guild-site-roles/blob/master/Constitution.md"
+            href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/markdown/Constitution.md"
           >
             Edit this page here.
           </a>

@@ -1,6 +1,7 @@
-## Interview Prep Group
+# Interview Prep Group
 
-**Quarter Proposed**: Winter Quarter 2020 <br/>
+**Quarter Proposed**: Winter Quarter 2020
+
 **Project Proposer**: Tung Dao
 
 **Project Leader**: Tung Dao
@@ -13,7 +14,8 @@
 
 ## Apprenticeship Group
 
-**Quarter Proposed**: Winter Quarter 2020 <br/>
+**Quarter Proposed**: Winter Quarter 2020
+
 **Quarter Closed**: Winter Quarter 2020
 
 **Project Proposer**: Jooho (Brad) Jeong

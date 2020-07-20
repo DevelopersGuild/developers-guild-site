@@ -36,7 +36,7 @@ const Roles: React.FC = () => {
           <ReactMarkdown source={markdown} />
           <a
             target="__blank"
-            href="https://github.com/DevelopersGuild/developers-guild-site-roles/blob/master/Roles.md"
+            href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/markdown/Roles.md"
           >
             Edit this page here.
           </a>

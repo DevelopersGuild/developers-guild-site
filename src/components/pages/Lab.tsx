@@ -28,7 +28,7 @@ const Lab: React.FC = () => {
           <ReactMarkdown source={markdown} />
           <a
             target="__blank"
-            href="https://github.com/DevelopersGuild/developers-guild-site-roles/blob/master/Groups-Lab.md"
+            href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/markdown/Groups-Lab.md"
           >
             Edit this page here.
           </a>
