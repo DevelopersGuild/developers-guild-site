@@ -34,7 +34,11 @@ export const Landing: React.FC = () => (
           <div>
             <h1>Developers Guild - De Anza</h1>
             <p>A project and contribution based programming club.</p>
-            <p>Fridays 1:30PM-4:00PM AT311</p>
+            <p>
+              Fridays 1:30PM-4:00PM{" "}
+              <span style={{ textDecoration: "line-through" }}>AT311</span>
+              <strong> Discord & Zoom</strong>
+            </p>
           </div>
         </div>
       </Jumbotron>
