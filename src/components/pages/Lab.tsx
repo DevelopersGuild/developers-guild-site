@@ -1,29 +1,16 @@
 import React from "react";
-import showdown from "showdown";
 import "../styles/image-headers.css";
-import { useQuery } from "react-query";
 import Container from "../ui/Shared/Container";
-
+import labpath from "../markdown/Groups-Lab.md";
 import { NavbarMain } from "../ui/NavbarMain";
-
-async function fetchRolesMarkdown(): Promise<string> {
-  const response = await (
-    await fetch(
-      "https://raw.githubusercontent.com/DevelopersGuild/developers-guild-site-roles/master/Groups-Lab.md"
-    )
-  ).arrayBuffer();
-  const parsed = new TextDecoder("utf-8").decode(response);
-  return new showdown.Converter().makeHtml(parsed);
-}
+import ReactMarkdown from "react-markdown";
+import useMarkdown from "../hooks/useMarkdown";
 
 const Lab: React.FC = () => {
-  const { status, data, error } = useQuery("fetch-roles", fetchRolesMarkdown);
+  const { markdown, loading, error } = useMarkdown(labpath);
 
-  if (status === "loading")
-    return <Container type="normal">Loading...</Container>;
-  if (status === "error")
-    return <Container type="normal">Error: {error}</Container>;
-
+  if (loading) return <Container type="normal">Loading...</Container>;
+  if (error) return <Container type="normal">Error: {error}</Container>;
   return (
     <React.Fragment>
       <NavbarMain />
@@ -38,7 +25,7 @@ const Lab: React.FC = () => {
         <Container type="normal">
           <br />
           <br />
-          <div dangerouslySetInnerHTML={{ __html: data ? data : "" }}></div>
+          <ReactMarkdown source={markdown} />
           <a
             target="__blank"
             href="https://github.com/DevelopersGuild/developers-guild-site-roles/blob/master/Groups-Lab.md"
