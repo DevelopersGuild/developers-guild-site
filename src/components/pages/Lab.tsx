@@ -5,6 +5,7 @@ import labpath from "../markdown/Groups-Lab.md";
 import { NavbarMain } from "../ui/NavbarMain";
 import ReactMarkdown from "react-markdown";
 import useMarkdown from "../hooks/useMarkdown";
+import SaferLink from "../ui/SaferLink";
 
 const Lab: React.FC = () => {
   const { markdown, loading, error } = useMarkdown(labpath);
@@ -26,12 +27,9 @@ const Lab: React.FC = () => {
           <br />
           <br />
           <ReactMarkdown source={markdown} />
-          <a
-            target="__blank"
-            href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/markdown/Groups-Lab.md"
-          >
+          <SaferLink href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/markdown/Groups-Lab.md">
             Edit this page here.
-          </a>
+          </SaferLink>
           <br />
           <br />
         </Container>

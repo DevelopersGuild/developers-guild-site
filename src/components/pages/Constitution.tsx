@@ -7,6 +7,7 @@ import { NavbarMain } from "../ui/NavbarMain";
 import useMarkdown from "../hooks/useMarkdown";
 import ReactMarkdown from "react-markdown";
 import constitutionpath from "../markdown/Constitution.md";
+import SaferLink from "../ui/SaferLink";
 
 function Constitution(): JSX.Element {
   const { markdown, loading, error } = useMarkdown(constitutionpath);
@@ -35,12 +36,9 @@ function Constitution(): JSX.Element {
           <br />
           <br />
           <ReactMarkdown source={markdown} />
-          <a
-            target="__blank"
-            href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/markdown/Constitution.md"
-          >
+          <SaferLink href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/markdown/Constitution.md">
             Edit this page here.
-          </a>
+          </SaferLink>
           <br />
           <br />
         </Container>

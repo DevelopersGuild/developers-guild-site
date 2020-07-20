@@ -6,6 +6,7 @@ import { NavbarMain } from "../ui/NavbarMain";
 import rolespath from "../markdown/Roles.md";
 import ReactMarkdown from "react-markdown";
 import useMarkdown from "../hooks/useMarkdown";
+import SaferLink from "../ui/SaferLink";
 
 const Roles: React.FC = () => {
   const { markdown, loading, error } = useMarkdown(rolespath);
@@ -34,12 +35,9 @@ const Roles: React.FC = () => {
           <br />
           <br />
           <ReactMarkdown source={markdown} />
-          <a
-            target="__blank"
-            href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/markdown/Roles.md"
-          >
+          <SaferLink href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/markdown/Roles.md">
             Edit this page here.
-          </a>
+          </SaferLink>
           <br />
           <br />
         </Container>
