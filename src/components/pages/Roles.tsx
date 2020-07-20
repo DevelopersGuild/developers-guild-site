@@ -3,12 +3,12 @@ import RolesHeader from "../graphic-assets/roles.jpg";
 import "../styles/image-headers.css";
 import Container from "../ui/Shared/Container";
 import { NavbarMain } from "../ui/NavbarMain";
-import rolesdata from "../markdown/Roles.md";
+import rolespath from "../markdown/Roles.md";
 import ReactMarkdown from "react-markdown";
 import useMarkdown from "../hooks/useMarkdown";
 
 const Roles: React.FC = () => {
-  const { markdown, loading, error } = useMarkdown(rolesdata);
+  const { markdown, loading, error } = useMarkdown(rolespath);
 
   if (loading) return <Container type="normal">Loading...</Container>;
   if (error) return <Container type="normal">Error: {error}</Container>;
