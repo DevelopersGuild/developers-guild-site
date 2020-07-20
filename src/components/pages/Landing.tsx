@@ -10,7 +10,7 @@ import { NavbarMain } from "../ui/NavbarMain";
 import DiscordLink from "../ui/DiscordLink";
 
 export const Landing: React.FC = () => (
-  <React.Fragment>
+  <div>
     <NavbarMain />
     <br />
     <Container type="normal">
@@ -43,7 +43,7 @@ export const Landing: React.FC = () => (
       <GithubBar />
       <br />
     </Container>
-  </React.Fragment>
+  </div>
 );
 
 const styles = StyleSheet.create({
