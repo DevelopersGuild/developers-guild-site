@@ -5,6 +5,7 @@ import "../styles/image-headers.css";
 import ContactHeader from "../graphic-assets/contact.jpg";
 import { StyleSheet, css } from "aphrodite";
 import { NavbarMain } from "../ui/NavbarMain";
+import SaferLink from "../ui/SaferLink";
 
 export const Contact: React.FC = () => (
   <React.Fragment>
@@ -34,42 +35,41 @@ export const Contact: React.FC = () => (
             <tr>
               <td>Email</td>
               <td>
-                <a href="mailto:developersguildclub@gmail.com">
+                <SaferLink href="mailto:developersguildclub@gmail.com">
                   developersguildclub@gmail.com
-                </a>
+                </SaferLink>
               </td>
             </tr>
             <tr>
               <td>Github</td>
               <td>
-                <a href="https://github.com/DevelopersGuild">
+                <SaferLink href="https://github.com/DevelopersGuild">
                   https://github.com/DevelopersGuild
-                </a>
+                </SaferLink>
               </td>
             </tr>
             <tr>
               <td>Facebook</td>
               <td>
-                {" "}
-                <a href="https://www.facebook.com/officialdevelopersguild/">
+                <SaferLink href="https://www.facebook.com/officialdevelopersguild/">
                   https://www.facebook.com/officialdevelopersguild
-                </a>
+                </SaferLink>
               </td>
             </tr>
             <tr>
               <td>Instagram</td>
               <td>
-                <a href="https://www.instagram.com/da.devguild/">
+                <SaferLink href="https://www.instagram.com/da.devguild/">
                   https://www.instagram.com/da.devguild
-                </a>
+                </SaferLink>
               </td>
             </tr>
             <tr>
               <td>Medium</td>
               <td>
-                <a href="https://medium.com/@developersguild">
+                <SaferLink href="https://medium.com/@developersguild">
                   https://medium.com/@developersguild
-                </a>
+                </SaferLink>
               </td>
             </tr>
             <tr>
@@ -80,18 +80,18 @@ export const Contact: React.FC = () => (
             <tr>
               <td>Ronald Kleinman</td>
               <td>
-                <a href="mailto:kleinmanronald@deanza.edu">
+                <SaferLink href="mailto:kleinmanronald@deanza.edu">
                   kleinmanronald@deanza.edu
-                </a>
+                </SaferLink>
               </td>
             </tr>
             <tr>
               <td>Delia Garbacea</td>
               <td>
-                <a href="mailto:GarbaceaDelia@deanza.edu">
+                <SaferLink href="mailto:GarbaceaDelia@deanza.edu">
                   GarbaceaDelia@deanza.edu
-                </a>{" "}
-                or <a href="tel:408-864-8308">408-864-8308</a>
+                </SaferLink>
+                or <SaferLink href="tel:408-864-8308">408-864-8308</SaferLink>
               </td>
             </tr>
           </tbody>
