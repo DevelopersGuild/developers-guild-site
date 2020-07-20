@@ -1,5 +1,6 @@
 export const youtubeMainPageHardCoded: ReadonlyArray<string> = [
   "https://www.youtube.com/watch?v=6ptI5B4a-ag",
+  "https://www.youtube.com/watch?v=FTeE3OrTNoA",
   "https://www.youtube.com/watch?v=_NrSWLQsDL4",
   "https://www.youtube.com/watch?v=CZO3AxdkgqM",
   "https://www.youtube.com/watch?v=Hfr-e13av5I",
