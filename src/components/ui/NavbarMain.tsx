@@ -3,7 +3,6 @@ import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 import MainLogo from "../graphic-assets/Main-Logo.svg";
-import DiscordLink from "../ui/DiscordLink";
 
 export const NavbarMain: React.FC = () => (
   <React.Fragment>
