@@ -26,45 +26,47 @@ export const Thanks: React.FC = () => {
   if (status === "loading") return <Container>Loading...</Container>;
   if (status === "error") return <Container>Error: {error}</Container>;
 
+  /**
+   * TODO(1) merge mentions and mentionsPictures into a array of tuples to use
+   * mentions as a alt={mentioned} and key={mentioned} for the array.
+   */
+
   return (
     <>
       <NavbarMain />
       <br />
-      <Container>{JSON.stringify(data)}</Container>
-      <Card style={{ width: "18rem" }}>
-        <Card.Body>
-          <Media>
-            <img
-              width={64}
-              height={64}
-              src="https://cdn.discordapp.com/avatars/480160173361725451/43a19472064aed12d00311b7de8fa67b.webp"
-              alt="test 1"
-            />
-            <img
-              width={54}
-              height={54}
-              src="https://cdn.discordapp.com/avatars/427309830517161995/0c900c648a6aa8443bdf7be27d7ce4db.webp"
-              alt="test 2"
-            />
-            <img
-              width={54}
-              height={54}
-              src="https://cdn.discordapp.com/avatars/533408170706600007/7a824e78ee38c187cfa4e5c30c9d2f30.webp"
-              alt="test 3"
-            />
-            <img
-              width={54}
-              height={54}
-              src="https://cdn.discordapp.com/avatars/260660906130669569/4ffbc0df1ff23ca1747ab79336418453.webp"
-              alt="test 4"
-            />
-          </Media>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-        </Card.Body>
-      </Card>
+      <Container>
+        {data?.map((thanks, thanksidx) => (
+          <Card
+            key={`author-${thanks.author}-${thanksidx}`}
+            style={{ width: "18rem", marginBottom: "1vh" }}
+          >
+            <Card.Body>
+              <Media>
+                <img
+                  width={64}
+                  height={64}
+                  src={thanks.authorPicture}
+                  alt={thanks.author}
+                />
+                {thanks.mentionsPictures
+                  .filter((mentioned) => mentioned !== thanks.authorPicture)
+                  .map((mentioned, idx) => (
+                    <img
+                      width={54}
+                      height={54}
+                      src={mentioned}
+                      key={`mentioned-${idx}`}
+                      alt={`mentioned-${idx}`}
+                    />
+                  ))}
+              </Media>
+              <Card.Text>{thanks.message}</Card.Text>
+            </Card.Body>
+          </Card>
+        ))}
+        <br />
+      </Container>
     </>
   );
 };
