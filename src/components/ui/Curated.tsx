@@ -81,6 +81,10 @@ const styles = StyleSheet.create({
     whiteSpace: "nowrap",
     overflowY: "hidden",
     overflowX: "auto",
+    scrollbarWidth: "none",
+    "::-webkit-scrollbar": {
+      display: "none",
+    },
   },
 });
 
