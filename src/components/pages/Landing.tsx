@@ -8,6 +8,7 @@ import { youtubeMainPageHardCoded } from "../data/hardcode";
 import Container from "../ui/Shared/Container";
 import { NavbarMain } from "../ui/NavbarMain";
 import DiscordLink from "../ui/DiscordLink";
+import SaferLink from "../ui/SaferLink";
 
 export const Landing: React.FC = () => (
   <div>
@@ -41,6 +42,14 @@ export const Landing: React.FC = () => (
       <Curated curatedDataCollection={youtubeMainPageHardCoded} />
       <br />
       <GithubBar />
+      <br />
+      <SaferLink
+        className="float-right"
+        href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/data/main-curated.json"
+      >
+        Want to recommend some videos for the Curated section?
+      </SaferLink>
+      <br />
       <br />
     </Container>
   </div>
