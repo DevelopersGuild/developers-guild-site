@@ -16,6 +16,9 @@ function GithubBar(): JSX.Element {
   const { status, data, error } = useQuery("github-repos", fetchRepos);
   if (status === "loading") return <div>Loading...</div>;
   if (status === "error") return <div>Error: {error}</div>;
+  if (data.message.includes("API rate limit exceeded")) {
+    return <></>;
+  }
   return (
     <React.Fragment>
       <h2 className={css(styles.header)}>Github Repositories</h2>
