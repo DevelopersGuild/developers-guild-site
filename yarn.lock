@@ -9247,10 +9247,10 @@ react-overlays@^4.0.0:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
-react-query@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/react-query/-/react-query-2.5.1.tgz#f4ec966567346b35d5a1681a1ae142162f4bb017"
-  integrity sha512-VziTyEGU1oHNHU7/uTBpX+dOt05+WEubrkl7paWSxxyAcHvLrNmtl88b0hXc76Rjk2XAxcoqtZ+EczYT6GNIAA==
+react-query@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-2.7.0.tgz#54ce04f108515e2f33b57b70efbe4ac38f2e4e2f"
+  integrity sha512-+3VoqjBs8fxK5Nh75/+tRFKI85AmYFPvazoiKSy1yxmzH80xsAd5pCUn5E0zIIi0KKWN/13kYnKUdvIUPyuRqA==
   dependencies:
     ts-toolbelt "^6.9.4"
 
