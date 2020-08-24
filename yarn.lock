@@ -2,15 +2,15 @@
 # yarn lockfile v1
 
 
-"@atlaskit/code@^12.0.1":
-  version "12.0.1"
-  resolved "https://registry.yarnpkg.com/@atlaskit/code/-/code-12.0.1.tgz#7e86d048dc8632dfb8edd9f8d40bf45d0ec99d52"
-  integrity sha512-QHteoJQofhrIsnqE9m4/6x+eEbY3cbVseMqN2R/X+mNqd3PGZWaOzA+00FkPmhnDCpOzacI5JDpURkMKfdPwIw==
+"@atlaskit/code@^12.0.3":
+  version "12.0.3"
+  resolved "https://registry.yarnpkg.com/@atlaskit/code/-/code-12.0.3.tgz#eca2b1ad06cfc74dc0cbaf8953a7df1f72f0d428"
+  integrity sha512-BQMSkHEqbMgSsQV1tvfk8MWsiPfl+9Nlc0UwhKWLdKJpBMP5wZ6mygagNIFG2zTSJyI3kDxCV6nUaoMRhYEItQ==
   dependencies:
     "@atlaskit/theme" "^10.0.0"
     memoize-one "^5.1.0"
     react-syntax-highlighter "^10.0.1"
-    tslib "^1.9.3"
+    tslib "^2.0.0"
 
 "@atlaskit/theme@^10.0.0":
   version "10.0.1"
@@ -10925,6 +10925,11 @@ tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
   integrity sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
+
+tslib@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.1.tgz#410eb0d113e5b6356490eec749603725b021b43e"
+  integrity sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
 
 tsutils@^3.17.1:
   version "3.17.1"
