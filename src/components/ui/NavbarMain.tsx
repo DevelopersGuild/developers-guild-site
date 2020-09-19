@@ -54,11 +54,6 @@ export const NavbarMain: React.FC = () => (
               Thanks
             </Link>
           </Nav.Item>
-          <Nav.Item>
-            <Link className="nav-link" to="/code">
-              Code Snippets
-            </Link>
-          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

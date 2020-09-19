@@ -11,7 +11,6 @@ import Roles from "./components/pages/Roles";
 import Code from "./components/pages/Code/Code";
 import CodeDetailView from "./components/pages/Code/CodeDetailView";
 import NewCodeBlock from "./components/pages/Code/NewCodeBlock";
-import Lms from "./lms/pages/Lms";
 
 const App: React.FC = () => {
   return (
@@ -26,11 +25,6 @@ const App: React.FC = () => {
           <Route path="/constitution" exact component={Constitution} />
           <Route path="/thanks" exact component={Thanks} />
           <Route path="/lab" exact component={Lab} />
-          <Route path="/code" exact component={Code} />
-          <Route path="/code/new" exact component={NewCodeBlock} />
-          <Route path="/code/:hash" exact component={CodeDetailView} />
-          {/* Coptic Routes */}
-          <Route path="/coptic" exact component={Lms} />
         </Switch>
       </BrowserRouter>
     </div>
