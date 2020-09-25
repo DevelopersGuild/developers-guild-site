@@ -1,11 +1,11 @@
 import React from "react";
-import "../styles/image-headers.css";
-import Container from "../ui/Shared/Container";
-import labpath from "../markdown/Groups-Lab.md";
-import { NavbarMain } from "../ui/NavbarMain";
+import "../components/styles/image-headers.css";
+import Container from "../components/ui/Shared/Container";
+import labpath from "../components/markdown/Groups-Lab.md";
+import { NavbarMain } from "../components/ui/NavbarMain";
 import ReactMarkdown from "react-markdown";
-import useMarkdown from "../hooks/useMarkdown";
-import SaferLink from "../ui/SaferLink";
+import useMarkdown from "../components/hooks/useMarkdown";
+import SaferLink from "../components/ui/SaferLink";
 
 const Lab: React.FC = () => {
   const { markdown, loading, error } = useMarkdown(labpath);

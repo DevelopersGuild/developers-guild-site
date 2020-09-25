@@ -1,12 +1,12 @@
 import React from "react";
-import RolesHeader from "../graphic-assets/roles.jpg";
-import "../styles/image-headers.css";
-import Container from "../ui/Shared/Container";
-import { NavbarMain } from "../ui/NavbarMain";
-import rolespath from "../markdown/Roles.md";
+import RolesHeader from "../components/graphic-assets/roles.jpg";
+import "../components/styles/image-headers.css";
+import Container from "../components/ui/Shared/Container";
+import { NavbarMain } from "../components/ui/NavbarMain";
+import rolespath from "../components/markdown/Roles.md";
 import ReactMarkdown from "react-markdown";
-import useMarkdown from "../hooks/useMarkdown";
-import SaferLink from "../ui/SaferLink";
+import useMarkdown from "../components/hooks/useMarkdown";
+import SaferLink from "../components/ui/SaferLink";
 
 const Roles: React.FC = () => {
   const { markdown, loading, error } = useMarkdown(rolespath);
