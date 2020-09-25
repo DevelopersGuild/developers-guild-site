@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@atlaskit/code": "^13.0.1",
-    "@types/jest": "26.0.4",
+    "@types/jest": "26.0.14",
     "@types/node": "14.11.2",
     "@types/react": "^16.9.43",
     "@types/react-dom": "16.9.8",
@@ -16,11 +16,11 @@
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.10.2",
     "react-markdown": "^4.3.1",
-    "react-query": "^2.5.1",
+    "react-query": "^2.23.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.3",
     "showdown": "^1.9.0",
-    "styled-components": "^5.1.1",
+    "styled-components": "^5.2.0",
     "typescript": "4.0.3"
   },
   "scripts": {
