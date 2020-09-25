@@ -1,13 +1,13 @@
 import React from "react";
-import Container from "../ui/Shared/Container";
-import ConstitutionHeader from "../graphic-assets/the-creation-of-design.png";
-import "../styles/image-headers.css";
+import Container from "../components/ui/Shared/Container";
+import ConstitutionHeader from "../components/graphic-assets/the-creation-of-design.png";
+import "../components/styles/image-headers.css";
 import { StyleSheet, css } from "aphrodite";
-import { NavbarMain } from "../ui/NavbarMain";
-import useMarkdown from "../hooks/useMarkdown";
+import { NavbarMain } from "../components/ui/NavbarMain";
+import useMarkdown from "../components/hooks/useMarkdown";
 import ReactMarkdown from "react-markdown";
-import constitutionpath from "../markdown/Constitution.md";
-import SaferLink from "../ui/SaferLink";
+import constitutionpath from "../components/markdown/Constitution.md";
+import SaferLink from "../components/ui/SaferLink";
 
 function Constitution(): JSX.Element {
   const { markdown, loading, error } = useMarkdown(constitutionpath);

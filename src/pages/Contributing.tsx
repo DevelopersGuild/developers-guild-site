@@ -1,10 +1,10 @@
 import React from "react";
-import Container from "../ui/Shared/Container";
-import OpenSourceHeader from "../graphic-assets/open-source.png";
-import "../styles/image-headers.css";
+import Container from "../components/ui/Shared/Container";
+import OpenSourceHeader from "../components/graphic-assets/open-source.png";
+import "../components/styles/image-headers.css";
 import { StyleSheet, css } from "aphrodite";
 
-import { NavbarMain } from "../ui/NavbarMain";
+import { NavbarMain } from "../components/ui/NavbarMain";
 
 /**
  *  Sourced from https://opensource.guide/how-to-contribute/

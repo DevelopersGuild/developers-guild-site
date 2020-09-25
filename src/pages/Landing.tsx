@@ -1,14 +1,14 @@
 import React from "react";
 import { Jumbotron } from "react-bootstrap";
-import MainLogo from "../graphic-assets/Main-Logo.svg";
-import GithubBar from "../ui/GithubBar";
-import Curated from "../ui/Curated";
+import MainLogo from "../components/graphic-assets/Main-Logo.svg";
+import GithubBar from "../components/ui/GithubBar";
+import Curated from "../components/ui/Curated";
 import { StyleSheet, css } from "aphrodite";
-import { youtubeMainPageHardCoded } from "../data/hardcode";
-import Container from "../ui/Shared/Container";
-import { NavbarMain } from "../ui/NavbarMain";
-import DiscordLink from "../ui/DiscordLink";
-import SaferLink from "../ui/SaferLink";
+import { youtubeMainPageHardCoded } from "../components/data/hardcode";
+import Container from "../components/ui/Shared/Container";
+import { NavbarMain } from "../components/ui/NavbarMain";
+import DiscordLink from "../components/ui/DiscordLink";
+import SaferLink from "../components/ui/SaferLink";
 
 export const Landing: React.FC = () => (
   <div>

@@ -1,11 +1,11 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import Container from "../ui/Shared/Container";
-import "../styles/image-headers.css";
-import ContactHeader from "../graphic-assets/contact.jpg";
+import Container from "../components/ui/Shared/Container";
+import "../components/styles/image-headers.css";
+import ContactHeader from "../components/graphic-assets/contact.jpg";
 import { StyleSheet, css } from "aphrodite";
-import { NavbarMain } from "../ui/NavbarMain";
-import SaferLink from "../ui/SaferLink";
+import { NavbarMain } from "../components/ui/NavbarMain";
+import SaferLink from "../components/ui/SaferLink";
 
 export const Contact: React.FC = () => (
   <React.Fragment>
