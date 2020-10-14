@@ -24,21 +24,13 @@ export const NavbarMain: React.FC = () => (
               About
             </Link>
           </Nav.Item>
-          <Nav.Item>
-            <Link className="nav-link" to="/contributing">
-              Contributing
-            </Link>
-          </Nav.Item>
+
           <Nav.Item>
             <Link className="nav-link" to="/contact">
               Contact
             </Link>
           </Nav.Item>
-          <Nav.Item>
-            <Link className="nav-link" to="/roles">
-              Roles
-            </Link>
-          </Nav.Item>
+
           <Nav.Item>
             <Link className="nav-link" to="/constitution">
               Constitution
