@@ -4,7 +4,7 @@ import Container from "../components/ui/Shared/Container";
 import "../components/styles/image-headers.css";
 import { StyleSheet, css } from "aphrodite";
 import { NavbarMain } from "../components/ui/NavbarMain";
-import SaferLink from "../components/ui/SaferLink";
+import { make as SaferLink } from "../components/ui/SaferLink.bs";
 
 export const Contact: React.FC = () => (
   <React.Fragment>

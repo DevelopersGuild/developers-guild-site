@@ -6,7 +6,7 @@ import { NavbarMain } from "../components/ui/NavbarMain";
 import useMarkdown from "../components/hooks/useMarkdown";
 import ReactMarkdown from "react-markdown";
 import constitutionpath from "../components/markdown/Constitution.md";
-import SaferLink from "../components/ui/SaferLink";
+import { make as SaferLink } from "../components/ui/SaferLink.bs";
 
 function Constitution(): JSX.Element {
   const { markdown, loading, error } = useMarkdown(constitutionpath);

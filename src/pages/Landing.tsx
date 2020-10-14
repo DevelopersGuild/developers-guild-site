@@ -8,7 +8,7 @@ import { youtubeMainPageHardCoded } from "../components/data/hardcode";
 import Container from "../components/ui/Shared/Container";
 import { NavbarMain } from "../components/ui/NavbarMain";
 import DiscordLink from "../components/ui/DiscordLink";
-import SaferLink from "../components/ui/SaferLink";
+import { make as SaferLink } from "../components/ui/SaferLink.bs";
 
 export const Landing: React.FC = () => (
   <>
