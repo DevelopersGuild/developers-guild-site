@@ -6,7 +6,7 @@ import MainLogo from "../graphic-assets/Main-Logo.svg";
 
 export const NavbarMain: React.FC = () => (
   <React.Fragment>
-    <Navbar className="navbar-main" variant="light" expand="lg">
+    <Navbar className="navbar-main" bg="dark" variant="dark" expand="lg">
       <Navbar.Brand href="/">
         <img
           src={MainLogo}

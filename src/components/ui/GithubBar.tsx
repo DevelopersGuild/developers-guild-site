@@ -142,13 +142,11 @@ const styles = StyleSheet.create({
     fontWeight: 700,
     fontSize: "24px",
     lineHeight: "32px",
-    color: "#14171a",
   },
   description: {
     fontWeight: 400,
     fontSize: "16px",
     lineHeight: "24px",
-    color: "#14171a",
   },
   language: {
     fontWeight: 400,
@@ -160,7 +158,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: "16px",
     lineHeight: "24px",
-    color: "#14171a",
+    color: "#ffffff",
+    ":hover": {
+      color: "#7289da",
+    },
   },
   header: {
     marginTop: "1vh",
