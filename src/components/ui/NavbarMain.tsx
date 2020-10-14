@@ -3,10 +3,11 @@ import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 import MainLogo from "../graphic-assets/Main-Logo.svg";
+import SaferLink from "./SaferLink";
 
 export const NavbarMain: React.FC = () => (
   <React.Fragment>
-    <Navbar className="navbar-main" variant="light" expand="lg">
+    <Navbar className="navbar-main" bg="dark" variant="dark" expand="lg">
       <Navbar.Brand href="/">
         <img
           src={MainLogo}
@@ -24,21 +25,13 @@ export const NavbarMain: React.FC = () => (
               About
             </Link>
           </Nav.Item>
-          <Nav.Item>
-            <Link className="nav-link" to="/contributing">
-              Contributing
-            </Link>
-          </Nav.Item>
+
           <Nav.Item>
             <Link className="nav-link" to="/contact">
               Contact
             </Link>
           </Nav.Item>
-          <Nav.Item>
-            <Link className="nav-link" to="/roles">
-              Roles
-            </Link>
-          </Nav.Item>
+
           <Nav.Item>
             <Link className="nav-link" to="/constitution">
               Constitution
@@ -48,6 +41,11 @@ export const NavbarMain: React.FC = () => (
             <Link className="nav-link" to="/lab">
               The Lab
             </Link>
+          </Nav.Item>
+          <Nav.Item>
+            <SaferLink className="nav-link" href="https://dahack.dev/">
+              DA Hack
+            </SaferLink>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>

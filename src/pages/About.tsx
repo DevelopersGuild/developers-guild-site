@@ -3,7 +3,6 @@ import React from "react";
 import Container from "../components/ui/Shared/Container";
 
 import "../components/styles/image-headers.css";
-import AboutHeader from "../components/graphic-assets/about.png";
 import { StyleSheet, css } from "aphrodite";
 import { NavbarMain } from "../components/ui/NavbarMain";
 export const About: React.FC = () => (
@@ -14,15 +13,7 @@ export const About: React.FC = () => (
       <Container type="normal">
         <h4>About The Developers' Guild</h4>
         <p className="text-justify">Learn more about the Developers' Guild.</p>
-      </Container>
-      <img
-        className="open-source-header lazyload"
-        style={{ width: "30vw", alignSelf: "center" }}
-        data-src={AboutHeader}
-        alt="Header"
-      />
-      <Container type="normal">
-        <br />
+
         <p className="text-justify">
           Developers’ Guild started in 2014 with the goal of facilitating the
           exploration of computer science through hands-on experience.

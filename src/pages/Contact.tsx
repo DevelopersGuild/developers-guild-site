@@ -2,7 +2,6 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import Container from "../components/ui/Shared/Container";
 import "../components/styles/image-headers.css";
-import ContactHeader from "../components/graphic-assets/contact.jpg";
 import { StyleSheet, css } from "aphrodite";
 import { NavbarMain } from "../components/ui/NavbarMain";
 import SaferLink from "../components/ui/SaferLink";
@@ -17,14 +16,6 @@ export const Contact: React.FC = () => (
         <p className="text-justify">
           Here are different ways to contact the Developers' Guild.
         </p>
-      </Container>
-      <img
-        className="open-source-header lazyload"
-        style={{ width: "30vw", alignSelf: "center" }}
-        data-src={ContactHeader}
-        alt="Header"
-      />
-      <Container type="normal">
         <Table striped bordered hover>
           <tbody>
             <tr>
