@@ -93,7 +93,7 @@ function GithubBar(): JSX.Element {
   if (data !== undefined && data.length > 1) {
     return (
       <>
-        <h2 className={css(styles.header)}>Projects</h2>
+        <h2>Projects</h2>
         <br />
         <div className="row">
           {data.map((node) => {
@@ -105,14 +105,11 @@ function GithubBar(): JSX.Element {
                 <h1 className={css(styles.projectName)}>{node.name}</h1>
                 <div
                   style={{
-                    height: "10px",
-                    width: "50%",
-                    borderBottomStyle: "solid",
-                    borderBottomWidth: "5px",
                     borderBottomColor: node.language
                       ? generateLanguageColor(node.language.toLowerCase())
                       : generateLanguageColor("none"),
                   }}
+                  className={css(styles.languageColorIndicator)}
                 >
                   {""}
                 </div>
@@ -154,6 +151,14 @@ const styles = StyleSheet.create({
     lineHeight: "20px",
     color: "#657786",
   },
+  languageColorIndicator: {
+    height: "10px",
+    width: "50%",
+    borderBottomStyle: "solid",
+    borderBottomWidth: "5px",
+    marginTop: "1vh",
+    marginBottom: "1vh",
+  },
   link: {
     fontWeight: "bold",
     fontSize: "16px",
@@ -162,9 +167,6 @@ const styles = StyleSheet.create({
     ":hover": {
       color: "#7289da",
     },
-  },
-  header: {
-    marginTop: "1vh",
   },
 });
 
