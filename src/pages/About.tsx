@@ -3,7 +3,6 @@ import React from "react";
 import Container from "../components/ui/Shared/Container";
 
 import "../components/styles/image-headers.css";
-import AboutHeader from "../components/graphic-assets/about.png";
 import { StyleSheet, css } from "aphrodite";
 import { NavbarMain } from "../components/ui/NavbarMain";
 export const About: React.FC = () => (

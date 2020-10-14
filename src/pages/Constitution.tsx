@@ -1,6 +1,5 @@
 import React from "react";
 import Container from "../components/ui/Shared/Container";
-import ConstitutionHeader from "../components/graphic-assets/the-creation-of-design.png";
 import "../components/styles/image-headers.css";
 import { StyleSheet, css } from "aphrodite";
 import { NavbarMain } from "../components/ui/NavbarMain";
