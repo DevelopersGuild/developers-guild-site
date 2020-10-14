@@ -10,6 +10,7 @@
     "@types/react-dom": "16.9.8",
     "aphrodite": "^2.4.0",
     "bootstrap": "^4.3.1",
+    "bs-platform": "^8.3.1",
     "clsx": "^1.1.1",
     "lazysizes": "^5.1.2",
     "react": "^16.10.2",
@@ -19,6 +20,7 @@
     "react-query": "^2.23.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.3",
+    "reason-react": "^0.9.1",
     "showdown": "^1.9.0",
     "styled-components": "^5.2.0",
     "typescript": "4.0.3"
