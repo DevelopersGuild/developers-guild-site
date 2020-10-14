@@ -10,19 +10,17 @@ import Roles from "./pages/Roles";
 
 const App: React.FC = () => {
   return (
-    <div>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" exact component={Landing} />
-          <Route path="/contact" exact component={Contact} />
-          <Route path="/about" exact component={About} />
-          <Route path="/contributing" exact component={Contributing} />
-          <Route path="/roles" exact component={Roles} />
-          <Route path="/constitution" exact component={Constitution} />
-          <Route path="/lab" exact component={Lab} />
-        </Switch>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Landing} />
+        <Route path="/contact" exact component={Contact} />
+        <Route path="/about" exact component={About} />
+        <Route path="/contributing" exact component={Contributing} />
+        <Route path="/roles" exact component={Roles} />
+        <Route path="/constitution" exact component={Constitution} />
+        <Route path="/lab" exact component={Lab} />
+      </Switch>
+    </BrowserRouter>
   );
 };
 
