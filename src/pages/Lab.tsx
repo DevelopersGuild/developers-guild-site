@@ -5,7 +5,7 @@ import labpath from "../components/markdown/Groups-Lab.md";
 import { NavbarMain } from "../components/ui/NavbarMain";
 import ReactMarkdown from "react-markdown";
 import useMarkdown from "../components/hooks/useMarkdown";
-import SaferLink from "../components/ui/SaferLink";
+import { make as SaferLink } from "../components/ui/SaferLink.bs";
 
 const Lab: React.FC = () => {
   const { markdown, loading, error } = useMarkdown(labpath);

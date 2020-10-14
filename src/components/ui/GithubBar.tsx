@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { StyleSheet, css } from "aphrodite";
-import SaferLink from "./SaferLink";
+import { make as SaferLink } from "./SaferLink.bs";
 
 type TLiteralUnion<T extends U, U = string> =
   | T

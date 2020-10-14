@@ -1,33 +1,23 @@
 import { useState, useEffect } from "react";
 
-type QueryResponse = {
-  readonly markdown: string;
-  readonly loading: boolean;
-  readonly error: Error | null;
+type TQueryResponseError = Error | null;
+type TQueryResponse = {
+  markdown: string;
+  loading: boolean;
+  error: TQueryResponseError;
 };
 
-function useMarkdown(path: string): QueryResponse {
+export default function useMarkdown(path: string): TQueryResponse {
   const [markdown, setMarkdown] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   useEffect(() => {
-    try {
-      setLoading(true);
-      fetch(path)
-        .then((response) => response.text())
-        .then((text) => {
-          setMarkdown(text);
-          setLoading(false);
-        });
-    } catch (error) {
-      setError(error);
-    }
+    setLoading(true);
+    fetch(path)
+      .then((response) => response.text())
+      .then((text) => setMarkdown(text))
+      .catch((error) => setError(error));
+    setLoading(false);
   }, [path]);
-  return {
-    markdown,
-    loading,
-    error,
-  };
+  return { markdown, loading, error };
 }
-
-export default useMarkdown;

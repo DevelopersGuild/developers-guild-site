@@ -3,15 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@atlaskit/code": "^13.0.1",
-    "@types/jest": "26.0.14",
-    "@types/node": "14.11.2",
-    "@types/react": "^16.9.43",
-    "@types/react-dom": "16.9.8",
     "aphrodite": "^2.4.0",
     "bootstrap": "^4.3.1",
+    "bs-fetch": "^0.6.2",
+    "bs-platform": "^8.3.1",
     "clsx": "^1.1.1",
-    "lazysizes": "^5.1.2",
     "react": "^16.10.2",
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.10.2",
@@ -19,9 +15,8 @@
     "react-query": "^2.23.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.3",
-    "showdown": "^1.9.0",
-    "styled-components": "^5.2.0",
-    "typescript": "4.0.3"
+    "reason-react": "^0.9.1",
+    "typescript": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -29,7 +24,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "bs:build": "bsb -make-world",
+    "bs:clean": "bsb -clean-world"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -48,8 +44,12 @@
   },
   "devDependencies": {
     "@babel/helper-call-delegate": "^7.10.4",
+    "@types/jest": "26.0.14",
+    "@types/node": "14.11.2",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "16.9.8",
     "@types/react-router-dom": "^5.1.0",
     "@types/showdown": "^1.9.3",
-    "gh-pages": "^3.1.0"
+    "gentype": "^3.36.0"
   }
 }

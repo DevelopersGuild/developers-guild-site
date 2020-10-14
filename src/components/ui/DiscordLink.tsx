@@ -2,7 +2,7 @@ import React from "react";
 import discordsource from "../graphic-assets/discord.svg";
 import "../styles/discordlink.css";
 import clsx from "clsx";
-import SaferLink from "./SaferLink";
+import { make as SaferLink } from "./SaferLink.bs";
 
 type Props = {
   style?: React.CSSProperties;
