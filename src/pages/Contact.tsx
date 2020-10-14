@@ -17,14 +17,6 @@ export const Contact: React.FC = () => (
         <p className="text-justify">
           Here are different ways to contact the Developers' Guild.
         </p>
-      </Container>
-      <img
-        className="open-source-header lazyload"
-        style={{ width: "30vw", alignSelf: "center" }}
-        data-src={ContactHeader}
-        alt="Header"
-      />
-      <Container type="normal">
         <Table striped bordered hover>
           <tbody>
             <tr>

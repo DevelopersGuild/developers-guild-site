@@ -14,15 +14,7 @@ export const About: React.FC = () => (
       <Container type="normal">
         <h4>About The Developers' Guild</h4>
         <p className="text-justify">Learn more about the Developers' Guild.</p>
-      </Container>
-      <img
-        className="open-source-header lazyload"
-        style={{ width: "30vw", alignSelf: "center" }}
-        data-src={AboutHeader}
-        alt="Header"
-      />
-      <Container type="normal">
-        <br />
+
         <p className="text-justify">
           Developers’ Guild started in 2014 with the goal of facilitating the
           exploration of computer science through hands-on experience.

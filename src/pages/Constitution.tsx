@@ -21,20 +21,6 @@ function Constitution(): JSX.Element {
       <br />
       <div className={css(styles.containerOne)}>
         <Container type="normal">
-          <h4>Developers' Guild Constitution</h4>
-          <p className="text-justify">
-            Amended in the blood of Martyrs by Yusuf himself.
-          </p>
-        </Container>
-        <img
-          className="open-source-header lazyload"
-          style={{ width: "30vw", alignSelf: "center" }}
-          data-src={ConstitutionHeader}
-          alt="Header"
-        />
-        <Container type="normal">
-          <br />
-          <br />
           <ReactMarkdown source={markdown} />
           <SaferLink href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/markdown/Constitution.md">
             Edit this page here.
