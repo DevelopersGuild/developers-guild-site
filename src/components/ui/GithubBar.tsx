@@ -1,73 +1,84 @@
 import React from "react";
-import { Card } from "react-bootstrap";
 import { useQuery } from "react-query";
 import { StyleSheet, css } from "aphrodite";
+import SaferLink from "./SaferLink";
 
-async function fetchRepos() {
-  const response = await (
+async function fetchRepos(): Promise<Array<TGithubProject>> {
+  return await (
     await fetch(
       "https://api.github.com/orgs/DevelopersGuild/repos?sort=updated"
     )
   ).json();
-  return response;
 }
+
+type TGithubProject = {
+  id: number;
+  name: string;
+  description: string;
+  forks_count: number;
+  watchers: number;
+  language: string;
+  html_url: string;
+};
 
 function GithubBar(): JSX.Element {
   const { status, data, error } = useQuery("github-repos", fetchRepos);
   if (status === "loading") return <div>Loading...</div>;
   if (status === "error") return <div>Error: {error}</div>;
-  if (data.message && data.message.includes("API rate limit exceeded")) {
-    return <></>;
+  if (data !== undefined && data.length > 1) {
+    return (
+      <>
+        <h2 className={css(styles.header)}>Projects</h2>
+        <br />
+        <div className="row">
+          {data.map((node) => {
+            return (
+              <div key={node.id} className="col-sm-4">
+                <h1 className={css(styles.projectName)}>{node.name}</h1>
+                <hr />
+                <p className={css(styles.description)}>{node.description}</p>
+                <p className={css(styles.language)}>{node.language}</p>
+                <SaferLink className={css(styles.link)} href={node.html_url}>
+                  GitHub
+                </SaferLink>
+              </div>
+            );
+          })}
+        </div>
+      </>
+    );
   }
-  return (
-    <React.Fragment>
-      <h2 className={css(styles.header)}>Github Repositories</h2>
-      <Card>
-        <Card.Body>
-          <div>
-            <div className={css(styles.subCards)}>
-              {data.map((e: any, index: any) => (
-                <React.Fragment key={index}>
-                  <Card.Body>
-                    <Card.Title>{e.full_name}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">
-                      {e.description}
-                    </Card.Subtitle>
-                    <Card.Text>
-                      {" "}
-                      <span aria-label="forks" role="img">
-                        🍴
-                      </span>{" "}
-                      Forks:{e.forks_count}{" "}
-                      <span aria-label="watchers" role="img">
-                        👁
-                      </span>{" "}
-                      Watchers:{e.watchers}{" "}
-                      <span aria-label="language" role="img">
-                        💻
-                      </span>{" "}
-                      Language: {e.language}
-                    </Card.Text>
-                    <Card.Link href={e.html_url}>Repository</Card.Link>
-                  </Card.Body>
-                </React.Fragment>
-              ))}
-            </div>
-            <br />
-          </div>
-        </Card.Body>
-      </Card>
-    </React.Fragment>
-  );
+
+  return <></>;
 }
 
 const styles = StyleSheet.create({
+  projectName: {
+    fontWeight: 700,
+    fontSize: "24px",
+    lineHeight: "32px",
+    color: "#14171a",
+  },
+  description: {
+    fontWeight: 400,
+    fontSize: "16px",
+    lineHeight: "24px",
+    color: "#14171a",
+  },
+  language: {
+    fontWeight: 400,
+    fontSize: "14px",
+    lineHeight: "20px",
+    color: "#657786",
+  },
+  link: {
+    fontWeight: 400,
+    fontSize: "16px",
+    lineHeight: "24px",
+    color: "#14171a",
+  },
   header: {
     marginTop: "1vh",
-  },
-  subCards: {
-    overflow: "auto",
-    maxHeight: 400,
   },
 });
 
