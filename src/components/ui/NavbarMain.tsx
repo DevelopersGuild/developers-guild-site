@@ -3,6 +3,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 import MainLogo from "../graphic-assets/Main-Logo.svg";
+import SaferLink from "./SaferLink";
 
 export const NavbarMain: React.FC = () => (
   <React.Fragment>
@@ -40,6 +41,11 @@ export const NavbarMain: React.FC = () => (
             <Link className="nav-link" to="/lab">
               The Lab
             </Link>
+          </Nav.Item>
+          <Nav.Item>
+            <SaferLink className="nav-link" href="https://dahack.dev/">
+              DA Hack
+            </SaferLink>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>
