@@ -5,13 +5,8 @@ function ix(filename) {
   return "/" + filename;
 }
 
-function mxref(filename) {
-  return "/markdown/" + filename;
-}
-
 export {
   ix ,
-  mxref ,
   
 }
 /* No side effect */

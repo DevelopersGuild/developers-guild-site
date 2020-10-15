@@ -4,7 +4,7 @@ import Container from "../components/Container";
 import labpath from "../components/markdown/Groups-Lab.md";
 import { NavbarMain } from "../components/ui/NavbarMain";
 import ReactMarkdown from "react-markdown";
-import useMarkdown from "../components/hooks/useMarkdown";
+import useMarkdown from "../lib/hooks/useMarkdown";
 import { make as SaferLink } from "../components/ui/SaferLink.bs";
 
 const Lab: React.FC = () => {
