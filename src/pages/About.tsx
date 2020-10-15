@@ -6,7 +6,7 @@ import "../components/styles/image-headers.css";
 import { StyleSheet, css } from "aphrodite";
 import { NavbarMain } from "../components/ui/NavbarMain";
 export const About: React.FC = () => (
-  <React.Fragment>
+  <>
     <NavbarMain />
     <br />
     <div className={css(styles.containerOne)}>
@@ -66,7 +66,7 @@ export const About: React.FC = () => (
         <br />
       </Container>
     </div>
-  </React.Fragment>
+  </>
 );
 
 const styles = StyleSheet.create({

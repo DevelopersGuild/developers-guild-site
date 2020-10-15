@@ -7,7 +7,7 @@ import { NavbarMain } from "../components/ui/NavbarMain";
 import { make as SaferLink } from "../components/ui/SaferLink.bs";
 
 export const Contact: React.FC = () => (
-  <React.Fragment>
+  <>
     <NavbarMain />
     <br />
     <div className={css(styles.containerOne)}>
@@ -89,7 +89,7 @@ export const Contact: React.FC = () => (
         </Table>
       </Container>
     </div>
-  </React.Fragment>
+  </>
 );
 
 const styles = StyleSheet.create({

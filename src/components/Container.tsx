@@ -1,12 +1,11 @@
-import type { StyleDeclarationValue } from "aphrodite";
 import React from "react";
-import { StyleSheet, css } from "aphrodite";
+import styles from "../styles/container.module.css";
 
 type ContainerType = "normal" | "fluid";
 
-type Props = {
+type TProps = {
   readonly children: React.ReactNode;
-  readonly style?: StyleDeclarationValue | false | null | void;
+  readonly style?: React.CSSProperties;
   readonly type: ContainerType;
 };
 
@@ -21,43 +20,11 @@ function selectContainerType(type: ContainerType): object {
   }
 }
 
-function Container(props: Props) {
+function Container(props: TProps) {
   const { children, style, type } = props;
   return (
-    <div className={css(selectContainerType(type), style)}>{children}</div>
+    <div className={`${selectContainerType(type)} ${style}`}>{children}</div>
   );
 }
-
-const styles = StyleSheet.create({
-  containerFluid: {
-    width: "100%",
-    paddingRight: "1rem",
-    paddingLeft: "1rem",
-    marginRight: "auto",
-    marginLeft: "auto",
-  },
-  container: {
-    width: "100%",
-    paddingRight: "1rem",
-    paddingLeft: "1rem",
-    marginRight: "auto",
-    marginLeft: "auto",
-    "@media (min-width: 576px)": {
-      maxWidth: "540px",
-    },
-    "@media (min-width: 768px)": {
-      maxWidth: "720px",
-    },
-    "@media (min-width: 992px)": {
-      maxWidth: "960px",
-    },
-    "@media (min-width: 1200px)": {
-      maxWidth: "1140px",
-    },
-    "@media (min-width: 1400px)": {
-      maxWidth: "1320px",
-    },
-  },
-});
 
 export default Container;

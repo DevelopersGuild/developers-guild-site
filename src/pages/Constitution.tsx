@@ -15,7 +15,7 @@ function Constitution(): JSX.Element {
   if (error) return <Container type="normal">Error: {error}</Container>;
 
   return (
-    <React.Fragment>
+    <>
       <NavbarMain />
       <br />
       <div className={css(styles.containerOne)}>
@@ -28,7 +28,7 @@ function Constitution(): JSX.Element {
           <br />
         </Container>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 

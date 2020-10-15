@@ -13,7 +13,7 @@ const Lab: React.FC = () => {
   if (loading) return <Container type="normal">Loading...</Container>;
   if (error) return <Container type="normal">Error: {error}</Container>;
   return (
-    <React.Fragment>
+    <>
       <NavbarMain />
       <br />
       <div style={{ display: "flex", flexDirection: "column" }}>
@@ -34,7 +34,7 @@ const Lab: React.FC = () => {
           <br />
         </Container>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

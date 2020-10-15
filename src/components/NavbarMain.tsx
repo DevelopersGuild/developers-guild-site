@@ -1,45 +1,45 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
-// import "../styles/navbar.css";
-// import MainLogo from "../graphic-assets/Main-Logo.svg";
+import Link from "next/link";
 import { make as SaferLink } from "./SaferLink.bs";
+import { ix } from "../ix/ix.gen";
+import styles from "../styles/navbar.module.css";
 
-export const NavbarMain: React.FC = () => (
-  <React.Fragment>
-    <Navbar className="navbar-main" bg="dark" variant="dark" expand="lg">
+const NavbarMain = () => (
+  <>
+    <Navbar className={styles.navbarMain} bg="dark" variant="dark" expand="lg">
       <Navbar.Brand href="/">
-        {/* <img
-          src={MainLogo}
+        <img
+          src={ix("Main-Logo.svg")}
           alt="Logo"
           width="30"
           height="30"
           className="d-inline-block align-top"
-        /> */}
+        />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto" style={{ color: "black", fontWeight: "bold" }}>
           <Nav.Item>
-            <Link className="nav-link" to="/about">
-              About
+            <Link href="/about">
+              <a className="nav-link">About</a>
             </Link>
           </Nav.Item>
 
           <Nav.Item>
-            <Link className="nav-link" to="/contact">
-              Contact
+            <Link href="/contact">
+              <a className="nav-link">Contact</a>
             </Link>
           </Nav.Item>
 
           <Nav.Item>
-            <Link className="nav-link" to="/constitution">
-              Constitution
+            <Link href="/constitution">
+              <a className="nav-link">Constitution</a>
             </Link>
           </Nav.Item>
           <Nav.Item>
-            <Link className="nav-link" to="/lab">
-              The Lab
+            <Link href="/lab">
+              <a className="nav-link">The Lab</a>
             </Link>
           </Nav.Item>
           <Nav.Item>
@@ -50,5 +50,7 @@ export const NavbarMain: React.FC = () => (
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  </React.Fragment>
+  </>
 );
+
+export default NavbarMain;

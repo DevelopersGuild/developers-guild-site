@@ -1,13 +1,12 @@
 import React from "react";
-import { useQuery } from "react-query";
-import { StyleSheet, css } from "aphrodite";
 import { make as SaferLink } from "./SaferLink.bs";
+import styles from "../styles/github-bar.module.css";
 
 type TLiteralUnion<T extends U, U = string> =
   | T
   | (U & { zz_IGNORE_ME?: never });
 
-type TGithubProject = {
+export type TGithubProject = {
   id: number;
   name: string;
   description: string;
@@ -17,7 +16,7 @@ type TGithubProject = {
   html_url: string;
 };
 
-type TGithubLanguageType = TLiteralUnion<
+export type TGithubLanguageType = TLiteralUnion<
   | "javascript"
   | "typescript"
   | "css"
@@ -32,7 +31,7 @@ type TGithubLanguageType = TLiteralUnion<
   | "none"
 >;
 
-type TGithubColor = TLiteralUnion<
+export type TGithubColor = TLiteralUnion<
   | "#2b7489"
   | "#f1e05a"
   | "#563d7c"
@@ -46,6 +45,10 @@ type TGithubColor = TLiteralUnion<
   | "#375eab"
   | "#808080"
 >;
+
+type TProps = {
+  readonly data: Array<TGithubProject>;
+};
 
 function generateLanguageColor(language: TGithubLanguageType): TGithubColor {
   switch (language) {
@@ -78,18 +81,7 @@ function generateLanguageColor(language: TGithubLanguageType): TGithubColor {
   }
 }
 
-async function fetchRepos(): Promise<Array<TGithubProject>> {
-  return await (
-    await fetch(
-      "https://api.github.com/orgs/DevelopersGuild/repos?sort=updated"
-    )
-  ).json();
-}
-
-function GithubBar(): JSX.Element {
-  const { status, data, error } = useQuery("github-repos", fetchRepos);
-  if (status === "loading") return <div>Loading...</div>;
-  if (status === "error") return <div>Error: {error}</div>;
+function GithubBar({ data }: TProps): JSX.Element {
   if (data !== undefined && data.length > 1) {
     return (
       <>
@@ -98,26 +90,21 @@ function GithubBar(): JSX.Element {
         <div className="row">
           {data.map((node) => {
             return (
-              <div
-                key={node.id}
-                className={`${css(styles.projectNode)} col-sm-4`}
-              >
-                <h1 className={css(styles.projectName)}>{node.name}</h1>
+              <div key={node.id} className={`${styles.projectNode} col-sm-4`}>
+                <h1 className={styles.projectName}>{node.name}</h1>
                 <div
                   style={{
                     borderBottomColor: node.language
                       ? generateLanguageColor(node.language.toLowerCase())
                       : generateLanguageColor("none"),
                   }}
-                  className={css(styles.languageColorIndicator)}
+                  className={styles.languageColorIndicator}
                 >
                   {""}
                 </div>
-                <div className={css(styles.description)}>
-                  {node.description}
-                </div>
-                <p className={css(styles.language)}>{node.language}</p>
-                <SaferLink className={css(styles.link)} href={node.html_url}>
+                <div className={styles.description}>{node.description}</div>
+                <p className={styles.language}>{node.language}</p>
+                <SaferLink className={styles.link} href={node.html_url}>
                   GitHub
                 </SaferLink>
               </div>
@@ -130,44 +117,5 @@ function GithubBar(): JSX.Element {
 
   return <></>;
 }
-
-const styles = StyleSheet.create({
-  projectNode: {
-    padding: "30px",
-  },
-  projectName: {
-    fontWeight: 700,
-    fontSize: "24px",
-    lineHeight: "32px",
-  },
-  description: {
-    fontWeight: 400,
-    fontSize: "16px",
-    lineHeight: "24px",
-  },
-  language: {
-    fontWeight: 400,
-    fontSize: "14px",
-    lineHeight: "20px",
-    color: "#657786",
-  },
-  languageColorIndicator: {
-    height: "10px",
-    width: "50%",
-    borderBottomStyle: "solid",
-    borderBottomWidth: "5px",
-    marginTop: "1vh",
-    marginBottom: "1vh",
-  },
-  link: {
-    fontWeight: "bold",
-    fontSize: "16px",
-    lineHeight: "24px",
-    color: "#ffffff",
-    ":hover": {
-      color: "#7289da",
-    },
-  },
-});
 
 export default GithubBar;
