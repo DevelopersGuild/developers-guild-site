@@ -1,10 +1,7 @@
+import type { TLiteralUnion } from "../types";
 import React from "react";
 import { make as SaferLink } from "./SaferLink.bs";
 import styles from "../styles/github-bar.module.css";
-
-type TLiteralUnion<T extends U, U = string> =
-  | T
-  | (U & { zz_IGNORE_ME?: never });
 
 export type TGithubProject = {
   id: number;
@@ -16,7 +13,7 @@ export type TGithubProject = {
   html_url: string;
 };
 
-export type TGithubLanguageType = TLiteralUnion<
+type TGithubLanguageType = TLiteralUnion<
   | "javascript"
   | "typescript"
   | "css"
@@ -31,7 +28,7 @@ export type TGithubLanguageType = TLiteralUnion<
   | "none"
 >;
 
-export type TGithubColor = TLiteralUnion<
+type TGithubColor = TLiteralUnion<
   | "#2b7489"
   | "#f1e05a"
   | "#563d7c"

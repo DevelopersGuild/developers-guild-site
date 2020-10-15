@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import Link from "next/link";
 import { make as SaferLink } from "./SaferLink.bs";
-import { ix } from "../ix/ix.gen";
+import { ix } from "../lib/ix/ix.gen";
 import styles from "../styles/navbar.module.css";
 
 const NavbarMain = () => (

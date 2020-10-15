@@ -1,6 +1,6 @@
 import React from "react";
 import { make as SaferLink } from "./SaferLink.bs";
-import { ix } from "../ix/ix.gen";
+import { ix } from "../lib/ix/ix.gen";
 import styles from "../styles/discordlink.module.css";
 import clsx from "clsx";
 
