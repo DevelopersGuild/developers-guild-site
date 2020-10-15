@@ -22,6 +22,7 @@
     "namespace": true,
     "bs-dependencies": [
         "reason-react",
+        "reason-recoil",
         "bs-fetch"
     ],
     "ppx-flags": [],

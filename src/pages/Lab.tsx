@@ -1,6 +1,6 @@
 import React from "react";
 import "../components/styles/image-headers.css";
-import Container from "../components/ui/Shared/Container";
+import Container from "../components/Container";
 import labpath from "../components/markdown/Groups-Lab.md";
 import { NavbarMain } from "../components/ui/NavbarMain";
 import ReactMarkdown from "react-markdown";

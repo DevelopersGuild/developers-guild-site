@@ -2,7 +2,7 @@ import type { CuratedCollection } from "../data/hardcode";
 import React from "react";
 import { ResponsiveEmbed } from "react-bootstrap";
 import { StyleSheet, css } from "aphrodite";
-import Container from "../ui/Shared/Container";
+import Container from "../Container";
 
 type EmbeddedFieldProps = {
   videoID: string;

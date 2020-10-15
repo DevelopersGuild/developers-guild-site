@@ -1,0 +1,12 @@
+.logo-image {
+  margin-right: 20;
+  width: 150px;
+  height: 150px;
+}
+
+.jumbo-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}

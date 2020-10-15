@@ -1,6 +1,6 @@
 import React from "react";
-import discordsource from "../graphic-assets/discord.svg";
-import "../styles/discordlink.css";
+// import discordsource from "../graphic-assets/discord.svg";
+// import "../styles/discordlink.css";
 import clsx from "clsx";
 import { make as SaferLink } from "./SaferLink.bs";
 
@@ -20,7 +20,7 @@ function DiscordLink(props: Props): JSX.Element {
       href="https://discord.gg/BpaFS4h"
     >
       <strong>Join Our Discord</strong>
-      <img className="discord-logo" src={discordsource} alt="Discord Logo" />
+      {/* <img className="discord-logo" src={discordsource} alt="Discord Logo" /> */}
     </SaferLink>
   );
 }

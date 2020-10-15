@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../components/ui/Shared/Container";
+import Container from "../components/Container";
 import "../components/styles/image-headers.css";
 import { StyleSheet, css } from "aphrodite";
 import { NavbarMain } from "../components/ui/NavbarMain";
