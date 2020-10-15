@@ -1,8 +1,8 @@
 import React from "react";
-// import discordsource from "../graphic-assets/discord.svg";
-// import "../styles/discordlink.css";
-import clsx from "clsx";
 import { make as SaferLink } from "./SaferLink.bs";
+import { ix } from "../ix/ix.gen";
+import styles from "../styles/discordlink.module.css";
+import clsx from "clsx";
 
 type Props = {
   style?: React.CSSProperties;
@@ -13,14 +13,20 @@ function DiscordLink(props: Props): JSX.Element {
   return (
     <SaferLink
       className={clsx(
-        "btn btn-primary discord-btn bounce-in-top",
+        "btn btn-primary",
+        styles.discordBtn,
+        styles.bounceInTop,
         props.className
       )}
       style={props.style}
       href="https://discord.gg/BpaFS4h"
     >
       <strong>Join Our Discord</strong>
-      {/* <img className="discord-logo" src={discordsource} alt="Discord Logo" /> */}
+      <img
+        className={styles.discordLogo}
+        src={ix("discord.svg")}
+        alt="Discord Logo"
+      />
     </SaferLink>
   );
 }
