@@ -1,15 +1,13 @@
 import React from "react";
-
 import Container from "../components/Container";
+import NavbarMain from "../components/NavbarMain";
+import styles from "../styles/about.module.css";
 
-import "../components/styles/image-headers.css";
-import { StyleSheet, css } from "aphrodite";
-import { NavbarMain } from "../components/ui/NavbarMain";
-export const About: React.FC = () => (
+export default () => (
   <>
     <NavbarMain />
     <br />
-    <div className={css(styles.containerOne)}>
+    <div className={styles.containerOne}>
       <Container type="normal">
         <h4>About The Developers' Guild</h4>
         <p className="text-justify">Learn more about the Developers' Guild.</p>
@@ -68,7 +66,3 @@ export const About: React.FC = () => (
     </div>
   </>
 );
-
-const styles = StyleSheet.create({
-  containerOne: { display: "flex", flexDirection: "column" },
-});
