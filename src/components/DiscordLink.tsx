@@ -1,34 +1,50 @@
 import React from "react";
 import { make as SaferLink } from "./SaferLink.bs";
 import { ix } from "../lib/ix/ix.gen";
-import styles from "../styles/discordlink.module.css";
-import clsx from "clsx";
 
-type Props = {
+type TProps = {
   style?: React.CSSProperties;
   className?: string;
 };
 
-function DiscordLink(props: Props): JSX.Element {
+export default function DiscordLink(
+  props: TProps
+): React.ReactElement<typeof SaferLink> {
   return (
     <SaferLink
-      className={clsx(
-        "btn btn-primary",
-        styles.discordBtn,
-        styles.bounceInTop,
-        props.className
-      )}
+      className={`btn btn-primary discord-btn ${props.className}`}
       style={props.style}
       href="https://discord.gg/BpaFS4h"
     >
       <strong>Join Our Discord</strong>
       <img
-        className={styles.discordLogo}
+        className="discord-logo"
         src={ix("discord.svg")}
         alt="Discord Logo"
       />
+      <style jsx>
+        {`
+          .discord-btn {
+            background-color: #738adb !important;
+            color: #ffffff !important;
+            border: none !important;
+            outline: none !important;
+          }
+
+          .discord-btn:focus {
+            outline: none !important;
+          }
+
+          .discord-btn:visited {
+            outline: none !important;
+          }
+
+          .discord-logo {
+            height: 35px;
+            width: 45px;
+          }
+        `}
+      </style>
     </SaferLink>
   );
 }
-
-export default DiscordLink;
