@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@atlaskit/code@^13.0.1":
-  version "13.0.2"
-  resolved "https://registry.yarnpkg.com/@atlaskit/code/-/code-13.0.2.tgz#651131e60dfb2f4207a21e2b6f3b24ab9ecabcbb"
-  integrity sha512-2uUYx2ckElwqmixqGLPYJ0sfkeplIR0ethv9diBjyzTQi/pvI71HSoOvvbgYHhAmlHwd6tiG7tf97+RwIFLvng==
+"@atlaskit/code@^13.0.3":
+  version "13.0.3"
+  resolved "https://registry.yarnpkg.com/@atlaskit/code/-/code-13.0.3.tgz#b95d392bb9e9c747a52a356849e1ccbadc8b900f"
+  integrity sha512-oZupVHhP3QEHl4GGGgwBtJQ2qhTRzrYzKu4q9WTuhXOQrrEKlEPYjppkXc/651+2dv6kLdJfhaUAvOPL60dNVA==
   dependencies:
     "@atlaskit/theme" "^11.0.0"
     memoize-one "^5.1.0"
