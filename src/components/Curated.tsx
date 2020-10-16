@@ -1,8 +1,16 @@
-import type { CuratedCollection } from "../data/hardcode";
 import React from "react";
 import { ResponsiveEmbed } from "react-bootstrap";
-import { StyleSheet, css } from "aphrodite";
-import Container from "../Container";
+import Container from "./Container";
+import styles from "../styles/curated.module.css";
+
+type TCurated = {
+  readonly source: string;
+  readonly recommendedBy: string;
+};
+
+export type TCuratedCollection = {
+  readonly data: ReadonlyArray<TCurated>;
+};
 
 type EmbeddedFieldProps = {
   videoID: string;
@@ -14,7 +22,7 @@ function EmbeddedField(props: EmbeddedFieldProps) {
   const { videoID, width, height } = props;
   return (
     <ResponsiveEmbed
-      className={css(embeddedStyles.embeddedContainer)}
+      className={styles.embeddedContainer}
       style={{
         width: width ? width : "560",
         height: height ? height : "315",
@@ -33,29 +41,20 @@ function EmbeddedField(props: EmbeddedFieldProps) {
   );
 }
 
-const embeddedStyles = StyleSheet.create({
-  embeddedContainer: {
-    marginRight: "2vw",
-    flex: "0 0 auto",
-  },
-});
-
 function stripVideoID(passed: string): string {
   return passed.split("https://www.youtube.com/watch?v=")[1];
 }
 
-// feed in Youtube Video Array
-type Props = {
-  curatedDataCollection: CuratedCollection;
+type TProps = {
+  curatedDataCollection: TCuratedCollection;
 };
 
-function Curated(props: Props): JSX.Element {
-  const { curatedDataCollection } = props;
+function Curated(props: TProps): JSX.Element {
   return (
     <Container type="normal" style={styles.container}>
       <h2>Community Curated Videos</h2>
-      <div className={css(styles.contentRow)}>
-        {curatedDataCollection.data.map((youtubeVideo, idx) => (
+      <div className={styles.contentRow}>
+        {props.curatedDataCollection.data.map((youtubeVideo, idx) => (
           <EmbeddedField
             key={`${idx}-${youtubeVideo.recommendedBy}`}
             height={300}
@@ -67,26 +66,5 @@ function Curated(props: Props): JSX.Element {
     </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: "1vh",
-    marginBottom: "1vh",
-  },
-  contentRow: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    alignItems: "center",
-    flexWrap: "nowrap",
-    whiteSpace: "nowrap",
-    overflowY: "hidden",
-    overflowX: "auto",
-    scrollbarWidth: "none",
-    "::-webkit-scrollbar": {
-      display: "none",
-    },
-  },
-});
 
 export default Curated;
