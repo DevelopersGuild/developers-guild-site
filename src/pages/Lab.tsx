@@ -1,19 +1,21 @@
-import React from "react";
-import "../components/styles/image-headers.css";
-import Container from "../components/ui/Shared/Container";
-import labpath from "../components/markdown/Groups-Lab.md";
-import { NavbarMain } from "../components/ui/NavbarMain";
+import type { GetServerSideProps } from "next";
+import Container from "../components/Container";
+import NavbarMain from "../components/NavbarMain";
 import ReactMarkdown from "react-markdown";
-import useMarkdown from "../components/hooks/useMarkdown";
-import { make as SaferLink } from "../components/ui/SaferLink.bs";
+import { make as SaferLink } from "../components/SaferLink.bs";
+import { genMarkdown } from "../lib/genMarkdown";
 
-const Lab: React.FC = () => {
-  const { markdown, loading, error } = useMarkdown(labpath);
+type TResponse = {
+  readonly text: string;
+};
 
-  if (loading) return <Container type="normal">Loading...</Container>;
-  if (error) return <Container type="normal">Error: {error}</Container>;
+type TProps = {
+  readonly markdown: TResponse;
+};
+
+export default function (props: TProps) {
   return (
-    <React.Fragment>
+    <>
       <NavbarMain />
       <br />
       <div style={{ display: "flex", flexDirection: "column" }}>
@@ -26,7 +28,7 @@ const Lab: React.FC = () => {
         <Container type="normal">
           <br />
           <br />
-          <ReactMarkdown source={markdown} />
+          <ReactMarkdown source={props.markdown.text} />
           <SaferLink href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/markdown/Groups-Lab.md">
             Edit this page here.
           </SaferLink>
@@ -34,8 +36,17 @@ const Lab: React.FC = () => {
           <br />
         </Container>
       </div>
-    </React.Fragment>
+    </>
   );
-};
+}
 
-export default Lab;
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const markdown = await genMarkdown("Groups-Lab.md", "http://localhost:3000");
+  return {
+    props: {
+      markdown: {
+        text: markdown,
+      },
+    },
+  };
+};

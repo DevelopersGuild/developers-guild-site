@@ -1,0 +1,25 @@
+.embedded-container {
+  margin-right: 2vw;
+  flex: 0 0 auto;
+}
+
+.container {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.content-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.content-row::-webkit-scrollbar {
+  display: none;
+}

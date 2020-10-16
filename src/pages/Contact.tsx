@@ -1,16 +1,15 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import Container from "../components/ui/Shared/Container";
-import "../components/styles/image-headers.css";
-import { StyleSheet, css } from "aphrodite";
-import { NavbarMain } from "../components/ui/NavbarMain";
-import { make as SaferLink } from "../components/ui/SaferLink.bs";
+import Container from "../components/Container";
+import NavbarMain from "../components/NavbarMain";
+import { make as SaferLink } from "../components/SaferLink.bs";
+import styles from "../styles/contact.module.css";
 
-export const Contact: React.FC = () => (
-  <React.Fragment>
+export default () => (
+  <>
     <NavbarMain />
     <br />
-    <div className={css(styles.containerOne)}>
+    <div className={styles.containerOne}>
       <Container type="normal">
         <h4>Contact The Developers' Guild</h4>
         <p className="text-justify">
@@ -89,9 +88,5 @@ export const Contact: React.FC = () => (
         </Table>
       </Container>
     </div>
-  </React.Fragment>
+  </>
 );
-
-const styles = StyleSheet.create({
-  containerOne: { display: "flex", flexDirection: "column" },
-});

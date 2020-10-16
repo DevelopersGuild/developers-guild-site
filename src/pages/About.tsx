@@ -1,19 +1,16 @@
 import React from "react";
+import Container from "../components/Container";
+import NavbarMain from "../components/NavbarMain";
+import styles from "../styles/about.module.css";
 
-import Container from "../components/ui/Shared/Container";
-
-import "../components/styles/image-headers.css";
-import { StyleSheet, css } from "aphrodite";
-import { NavbarMain } from "../components/ui/NavbarMain";
-export const About: React.FC = () => (
-  <React.Fragment>
+export default () => (
+  <>
     <NavbarMain />
     <br />
-    <div className={css(styles.containerOne)}>
+    <div className={styles.containerOne}>
       <Container type="normal">
         <h4>About The Developers' Guild</h4>
         <p className="text-justify">Learn more about the Developers' Guild.</p>
-
         <p className="text-justify">
           Developers’ Guild started in 2014 with the goal of facilitating the
           exploration of computer science through hands-on experience.
@@ -66,9 +63,5 @@ export const About: React.FC = () => (
         <br />
       </Container>
     </div>
-  </React.Fragment>
+  </>
 );
-
-const styles = StyleSheet.create({
-  containerOne: { display: "flex", flexDirection: "column" },
-});

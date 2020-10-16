@@ -1,26 +1,28 @@
+import type { GetServerSideProps } from "next";
 import React from "react";
-import Container from "../components/ui/Shared/Container";
-import "../components/styles/image-headers.css";
-import { StyleSheet, css } from "aphrodite";
-import { NavbarMain } from "../components/ui/NavbarMain";
-import useMarkdown from "../components/hooks/useMarkdown";
+import Container from "../components/Container";
+import NavbarMain from "../components/NavbarMain";
 import ReactMarkdown from "react-markdown";
-import constitutionpath from "../components/markdown/Constitution.md";
-import { make as SaferLink } from "../components/ui/SaferLink.bs";
+import { make as SaferLink } from "../components/SaferLink.bs";
+import { genMarkdown } from "../lib/genMarkdown";
+import styles from "../styles/constitution.module.css";
 
-function Constitution(): JSX.Element {
-  const { markdown, loading, error } = useMarkdown(constitutionpath);
+type TResponse = {
+  readonly text: string;
+};
 
-  if (loading) return <Container type="normal">Loading...</Container>;
-  if (error) return <Container type="normal">Error: {error}</Container>;
+type TProps = {
+  readonly markdown: TResponse;
+};
 
+export default function (props: TProps) {
   return (
-    <React.Fragment>
+    <>
       <NavbarMain />
       <br />
-      <div className={css(styles.containerOne)}>
+      <div className={styles.containerOne}>
         <Container type="normal">
-          <ReactMarkdown source={markdown} />
+          <ReactMarkdown source={props.markdown.text} />
           <SaferLink href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/markdown/Constitution.md">
             Edit this page here.
           </SaferLink>
@@ -28,12 +30,20 @@ function Constitution(): JSX.Element {
           <br />
         </Container>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 
-const styles = StyleSheet.create({
-  containerOne: { display: "flex", flexDirection: "column" },
-});
-
-export default Constitution;
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const markdown = await genMarkdown(
+    "Constitution.md",
+    "http://localhost:3000"
+  );
+  return {
+    props: {
+      markdown: {
+        text: markdown,
+      },
+    },
+  };
+};

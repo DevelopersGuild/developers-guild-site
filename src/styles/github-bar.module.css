@@ -1,0 +1,42 @@
+.projectNode {
+  padding: 30px;
+}
+
+.projectName {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.language {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #657786;
+}
+
+.languageColorIndicator {
+  height: 10px;
+  width: 50%;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.link {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.link:hover {
+  color: #7289da;
+}
