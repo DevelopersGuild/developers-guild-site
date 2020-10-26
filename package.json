@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@atlaskit/code": "^13.0.1",
+    "@atlaskit/code": "^13.1.0",
     "@types/jest": "26.0.14",
     "@types/node": "14.11.2",
     "@types/react": "^16.9.43",
