@@ -2,15 +2,15 @@
 # yarn lockfile v1
 
 
-"@atlaskit/code@^13.0.1":
-  version "13.0.2"
-  resolved "https://registry.yarnpkg.com/@atlaskit/code/-/code-13.0.2.tgz#651131e60dfb2f4207a21e2b6f3b24ab9ecabcbb"
-  integrity sha512-2uUYx2ckElwqmixqGLPYJ0sfkeplIR0ethv9diBjyzTQi/pvI71HSoOvvbgYHhAmlHwd6tiG7tf97+RwIFLvng==
+"@atlaskit/code@^13.1.1":
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/@atlaskit/code/-/code-13.1.1.tgz#5451fe7be7e93a87d40b842a32d33cf93feda788"
+  integrity sha512-3rjhIFIT/ZnZ9bhcRaJv0sDsiFFKkyxTwGbmL/F1fru81hFCCkyKwWg0rbMgq3w8rUS/eGvK1BkeWnQZWVL6Tw==
   dependencies:
     "@atlaskit/theme" "^11.0.0"
+    "@babel/runtime" "^7.0.0"
     memoize-one "^5.1.0"
     react-syntax-highlighter "^10.0.1"
-    tslib "^2.0.0"
 
 "@atlaskit/theme@^11.0.0":
   version "11.0.0"
