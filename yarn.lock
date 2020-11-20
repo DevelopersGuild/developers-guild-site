@@ -9190,10 +9190,10 @@ react-overlays@^4.1.0:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
-react-query@^2.23.0:
-  version "2.23.1"
-  resolved "https://registry.yarnpkg.com/react-query/-/react-query-2.23.1.tgz#7d676f56d3c6e96b4de4d0b178baf6bb6a0ec272"
-  integrity sha512-qIma0Kvr//LWgWFah7RcntvD4FurXXdQaQeIfqhCWKdhihhe3Xs5BHsljAP68jo719/+xhWxL3I96SvrU4gGHA==
+react-query@^2.26.3:
+  version "2.26.3"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-2.26.3.tgz#fb893058523213b17f0033d8184eb5cd6c70d778"
+  integrity sha512-h4bhZioVY3kXfo+GLNg0zDn9XvbZkvK3I5eTzW82zpRwtJvUtxrkhrAyZ5N6A0Z9WPeRyo+384JubT5RkMaxEQ==
   dependencies:
     "@babel/runtime" "^7.5.5"
 
