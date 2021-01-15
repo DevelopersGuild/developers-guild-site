@@ -5,7 +5,7 @@
   "dependencies": {
     "@atlaskit/code": "^13.0.1",
     "@types/jest": "26.0.14",
-    "@types/node": "14.11.2",
+    "@types/node": "14.14.21",
     "@types/react": "^16.9.43",
     "@types/react-dom": "16.9.8",
     "aphrodite": "^2.4.0",
