@@ -4,6 +4,7 @@ import NavbarMain from "../components/NavbarMain.react";
 import GithubBar from "../components/GithubBar.react";
 import CustomJumbotron from "../components/CustomJumbotron.react";
 import SaferLink from "../components/SaferLink.react";
+import Curated from "../components/Curated.react";
 import axios from "axios";
 
 export default function Home(props) {
@@ -18,7 +19,7 @@ export default function Home(props) {
         <br />
         <CustomJumbotron />
         <br />
-        <h1>Curated will go here</h1>
+        <Curated curated={props.curated} />
         <br />
         <GithubBar githubProjects={props.githubProjects} />
         <br />

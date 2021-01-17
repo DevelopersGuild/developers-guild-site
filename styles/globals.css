@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
-@import "~bootstrap/dist/css/bootstrap.min.css";
+/* @import "~bootstrap/dist/css/bootstrap.min.css"; */
+@import "./bootstrap.min.css";
 @import "./discord-link.css";
 
 * {
