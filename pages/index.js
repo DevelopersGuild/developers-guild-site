@@ -6,10 +6,16 @@ import CustomJumbotron from "../components/CustomJumbotron.react";
 import SaferLink from "../components/SaferLink.react";
 import Curated from "../components/Curated.react";
 import axios from "axios";
+import { useRecoilValue } from "recoil";
+import { isCuratedVideoPlayingAtom } from "../lib/AppAtoms";
+import VideoOverlay from "../components/VideoOverlay.react";
+import OverflowContainer from "../components/OverflowContainer.react";
 
 export default function Home(props) {
+  const isCuratedVideoPlaying = useRecoilValue(isCuratedVideoPlayingAtom);
   return (
-    <>
+    <OverflowContainer>
+      {isCuratedVideoPlaying && <VideoOverlay />}
       <NavbarMain links={props.links} />
       <br />
       <Container>
@@ -21,7 +27,7 @@ export default function Home(props) {
         <br />
         <Curated curated={props.curated} />
         <br />
-        <GithubBar githubProjects={props.githubProjects} />
+        {/* <GithubBar githubProjects={props.githubProjects} /> */}
         <br />
         <SaferLink
           className="float-right"
@@ -32,18 +38,18 @@ export default function Home(props) {
         <br />
         <br />
       </Container>
-    </>
+    </OverflowContainer>
   );
 }
 
 export const getStaticProps = async (context) => {
-  const githubProjects = await axios.get(
-    "https://api.github.com/orgs/DevelopersGuild/repos?sort=updated"
-  );
+  // const githubProjects = await axios.get(
+  //   "https://api.github.com/orgs/DevelopersGuild/repos?sort=updated"
+  // );
 
   return {
     props: {
-      githubProjects: githubProjects.data,
+      // githubProjects: githubProjects.data,
       links: [
         { name: "About", path: "/about", external: false },
         { name: "Contact", path: "/contact", external: false },

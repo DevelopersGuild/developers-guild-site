@@ -1,6 +1,8 @@
 import React from "react";
 import { ResponsiveEmbed, Container } from "react-bootstrap";
 import { StyleSheet, css } from "aphrodite";
+import { useSetRecoilState } from "recoil";
+import { isCuratedVideoPlayingAtom, curatedVideoInfoAtom } from "../lib/AppAtoms";
 
 type EFieldProps = Readonly<{
   videoID: string;
@@ -29,8 +31,18 @@ const EmbeddedField = ({ videoID, width, height }: EFieldProps) => (
 );
 
 const VideoThumbnail = ({ videoID, title }) => {
+  const setIsCuratedVideoPlaying = useSetRecoilState(isCuratedVideoPlayingAtom);
+
+  const setCuratedVideoInfo= useSetRecoilState(curatedVideoInfoAtom);
+
+  function clickHandler() {
+    setCuratedVideoInfo({videoID, title});
+    setIsCuratedVideoPlaying(true);
+  }
+
   return (
     <img
+      onClick={clickHandler}
       role="button"
       className={css(styles.videoThumbnail)}
       alt={title}

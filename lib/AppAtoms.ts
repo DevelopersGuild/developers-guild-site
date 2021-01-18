@@ -1,16 +1,11 @@
 import { atom } from 'recoil'
 
-const isCuratedVideoPlaying = atom({
+export const isCuratedVideoPlayingAtom = atom({
     key: 'isCuratedVideoPlaying', 
     default: false,
 });
 
-const curatedVideoID = atom({
+export const curatedVideoInfoAtom = atom({
     key: 'curatedVideoID', 
     default: null, 
 })
-
-export {
-    isCuratedVideoPlaying, 
-    curatedVideoID
-}
