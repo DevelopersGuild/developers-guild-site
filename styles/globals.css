@@ -3,6 +3,7 @@
 /* @import "~bootstrap/dist/css/bootstrap.min.css"; */
 @import "./bootstrap.min.css";
 @import "./discord-link.css";
+@import "./animations.css";
 
 * {
   -webkit-user-drag: none;
