@@ -1,4 +1,4 @@
-import { StyleSheet, css } from "aphrodite";
+import { StyleSheet } from "aphrodite";
 import "../styles/globals.css";
 
 // Rehydrate to ensure that the client doesn't duplicate styles
