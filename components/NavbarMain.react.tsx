@@ -36,31 +36,28 @@ function LinkRenderer({ node }: TLRendererProps) {
   );
 }
 
-export default function NavbarMain(props: TProps) {
-  return (
-    <React.Fragment>
-      <Navbar className="navbar-main" bg="dark" variant="dark" expand="lg">
-        <Navbar.Brand href="/">
-          <img
-            src="assets/logo.svg"
-            alt="Logo"
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav
-            className="mr-auto"
-            style={{ color: "black", fontWeight: "bold" }}
-          >
-            {props.links.map((node) => (
-              <LinkRenderer key={node.path} node={node} />
-            ))}
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </React.Fragment>
-  );
-}
+const NavbarMain = (props: TProps) => (
+  <React.Fragment>
+    <Navbar className="navbar-main" bg="dark" variant="dark" expand="lg">
+      <Navbar.Brand href="/">
+        <img
+          src="assets/logo.svg"
+          alt="Logo"
+          width="30"
+          height="30"
+          className="d-inline-block align-top"
+        />
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto" style={{ color: "black", fontWeight: "bold" }}>
+          {props.links.map((node) => (
+            <LinkRenderer key={node.path} node={node} />
+          ))}
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  </React.Fragment>
+);
+
+export default NavbarMain;
