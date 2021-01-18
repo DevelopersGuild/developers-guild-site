@@ -33,7 +33,7 @@ type Props = Readonly<{
 }>;
 
 const Curated = ({ curated }: Props) => (
-  <Container style={styles.container}>
+  <Container className={css(styles.container)}>
     <h2>Community Curated Videos</h2>
     <div className={css(styles.contentRow)}>
       {curated.map((youtubeVideo, idx) => (
