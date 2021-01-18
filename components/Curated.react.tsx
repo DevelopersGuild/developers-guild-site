@@ -28,22 +28,46 @@ const EmbeddedField = ({ videoID, width, height }: EFieldProps) => (
   </ResponsiveEmbed>
 );
 
+const VideoThumbnail = ({ videoID, title }) => {
+  return (
+    <img
+      role="button"
+      className={css(styles.videoThumbnail)}
+      alt={title}
+      src={`https://img.youtube.com/vi/${videoID}/maxresdefault.jpg`}
+    />
+  );
+};
+
 type Props = Readonly<{
-  curated: ReadonlyArray<Readonly<{ source: string; recommendedBy: string }>>;
+  curated: ReadonlyArray<Readonly<{ title: string; videoID: string }>>;
 }>;
+
+// const Curated = ({ curated }: Props) => (
+//   <Container className={css(styles.container)}>
+//     <h2>Community Curated Videos</h2>
+//     <div className={css(styles.contentRow)}>
+//       {curated.map((node) => (
+//         <EmbeddedField
+//           key={node.videoID}
+//           height={300}
+//           width={500}
+//           videoID={node.videoID}
+//         />
+//       ))}
+//     </div>
+//   </Container>
+// );
 
 const Curated = ({ curated }: Props) => (
   <Container className={css(styles.container)}>
     <h2>Community Curated Videos</h2>
     <div className={css(styles.contentRow)}>
-      {curated.map((youtubeVideo, idx) => (
-        <EmbeddedField
-          key={`${idx}-${youtubeVideo.recommendedBy}`}
-          height={300}
-          width={500}
-          videoID={
-            youtubeVideo.source.split("https://www.youtube.com/watch?v=")[1]
-          }
+      {curated.map((node) => (
+        <VideoThumbnail
+          key={node.videoID}
+          videoID={node.videoID}
+          title={node.title}
         />
       ))}
     </div>
@@ -52,7 +76,6 @@ const Curated = ({ curated }: Props) => (
 
 const styles = StyleSheet.create({
   container: {
-    cursor: "url(assets/stop-cursor.svg) 60 60, auto",
     marginTop: "1vh",
     marginBottom: "1vh",
   },
@@ -69,6 +92,13 @@ const styles = StyleSheet.create({
     "::-webkit-scrollbar": {
       display: "none",
     },
+  },
+  videoThumbnail: {
+    cursor: "url(assets/play-cursor.svg) 60 60, auto",
+    marginRight: "2vw",
+    flex: "0 0 auto",
+    width: "500px",
+    height: "300px",
   },
   embeddedContainer: {
     marginRight: "2vw",

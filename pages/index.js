@@ -53,40 +53,38 @@ export const getStaticProps = async (context) => {
       ],
       curated: [
         {
-          source: "https://www.youtube.com/watch?v=6ptI5B4a-ag",
-          recommendedBy: "Carlos Alba",
+          videoID: "6ptI5B4a-ag",
+          title: "How to Start Coding (and Keep Up With It)",
         },
         {
-          source: "https://www.youtube.com/watch?v=FTeE3OrTNoA",
-          recommendedBy: "Carlos Alba",
+          videoID: "FTeE3OrTNoA",
+          title: "Hacker101 - JavaScript for Hackers (Created by @STÖK)",
         },
         {
-          source: "https://www.youtube.com/watch?v=_NrSWLQsDL4",
-          recommendedBy: "Carlos Alba",
+          videoID: "CZO3AxdkgqM",
+          title: "Using reduce to code filter and map in vanilla JavaScript",
         },
         {
-          source: "https://www.youtube.com/watch?v=CZO3AxdkgqM",
-          recommendedBy: "Carlos Alba",
+          videoID: "Hfr-e13av5I",
+          title:
+            "Angular.js Most Dreaded Framework of 2020 | StackOverflow Survey",
         },
         {
-          source: "https://www.youtube.com/watch?v=Hfr-e13av5I",
-          recommendedBy: "Carlos Alba",
+          videoID: "FYTZkE5BZ-0",
+          title: "Making Music with Haskell From Scratch",
         },
         {
-          source: "https://www.youtube.com/watch?v=FYTZkE5BZ-0",
-          recommendedBy: "Carlos Alba",
+          videoID: "cbSrsYiRamo",
+          title: "Backend Development explained in 2 minutes // Tech in 2",
         },
         {
-          source: "https://www.youtube.com/watch?v=cbSrsYiRamo",
-          recommendedBy: "Carlos Alba",
+          videoID: "JTOJsU3FSD8",
+          title:
+            "7 Full Stack App Ideas for Developers w/ Instructions Included",
         },
         {
-          source: "https://www.youtube.com/watch?v=JTOJsU3FSD8",
-          recommendedBy: "Carlos Alba",
-        },
-        {
-          source: "https://www.youtube.com/watch?v=g2nMKzhkvxw",
-          recommendedBy: "Carlos Alba",
+          videoID: "g2nMKzhkvxw",
+          title: "Junior Vs Senior Code - How To Write Better Code",
         },
       ],
     },
