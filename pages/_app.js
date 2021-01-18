@@ -1,5 +1,7 @@
+import React from "react";
 import { StyleSheet } from "aphrodite";
 import "../styles/globals.css";
+import { RecoilRoot } from "recoil";
 
 // Rehydrate to ensure that the client doesn't duplicate styles
 // It has to execute before any code that defines styles
@@ -9,7 +11,11 @@ if (typeof window !== "undefined") {
 }
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <RecoilRoot>
+      <Component {...pageProps} />
+    </RecoilRoot>
+  );
 }
 
 export default MyApp;
