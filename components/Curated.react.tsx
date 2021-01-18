@@ -52,6 +52,7 @@ const Curated = ({ curated }: Props) => (
 
 const styles = StyleSheet.create({
   container: {
+    cursor: "url(assets/stop-cursor.svg) 60 60, auto",
     marginTop: "1vh",
     marginBottom: "1vh",
   },
