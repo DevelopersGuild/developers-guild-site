@@ -43,13 +43,13 @@ export default function Home(props) {
 }
 
 export const getStaticProps = async (context) => {
-  // const githubProjects = await axios.get(
-  //   "https://api.github.com/orgs/DevelopersGuild/repos?sort=updated"
-  // );
+  const githubProjects = await axios.get(
+    "https://api.github.com/orgs/DevelopersGuild/repos?sort=updated"
+  );
 
   return {
     props: {
-      // githubProjects: githubProjects.data,
+      githubProjects: githubProjects.data,
       links: [
         { name: "About", path: "/about", external: false },
         { name: "Contact", path: "/contact", external: false },
