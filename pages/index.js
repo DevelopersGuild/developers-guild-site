@@ -27,7 +27,7 @@ export default function Home(props) {
         <br />
         <Curated curated={props.curated} />
         <br />
-        {/* <GithubBar githubProjects={props.githubProjects} /> */}
+        <GithubBar githubProjects={props.githubProjects} />
         <br />
         <SaferLink
           className="float-right"
