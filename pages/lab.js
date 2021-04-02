@@ -3,10 +3,12 @@ import { StyleSheet, css } from "aphrodite";
 import NavbarMain from "../components/NavbarMain.react";
 import { Container } from "react-bootstrap";
 
-export default function Lab(props) {
+import CardList from "../components/cardlist"
+
+export default function Lab({ links, groups }) {
   return (
     <>
-      <NavbarMain links={props.links} />
+      <NavbarMain links={links} />
       <br />
       <div style={{ display: "flex", flexDirection: "column" }}>
         <Container>
@@ -16,7 +18,10 @@ export default function Lab(props) {
           </p>
           <br />
           <br />
-          <h1 id="interview-prep-group">Interview Prep Group</h1>
+          <CardList
+            cards={groups}
+          />
+          {/* <h2 id="interview-prep-group">Interview Prep Group</h2>
           <p>
             <strong>Quarter Proposed</strong>: Winter Quarter 2020
           </p>
@@ -74,7 +79,7 @@ export default function Lab(props) {
                 <li>TA and I will lead each teams respectively</li>
               </ul>
             </li>
-          </ul>
+          </ul> */}
 
           <br />
           <br />
@@ -94,6 +99,18 @@ export const getStaticProps = async (context) => {
         { name: "Lab", path: "/lab", external: false },
         { name: "DA Hack", path: "https://dahack.dev/", external: true },
       ],
+      groups: [
+        {
+          link: "/groups/interprep",
+          title: "Interview Prep Group",
+          description: "Career-oriented workshop focused on common solving technical interview questions."
+        },
+        {
+          link: "/groups/#",
+          title: "AI Group",
+          description: "To Be Written"
+        }
+      ]
     },
   };
 };
