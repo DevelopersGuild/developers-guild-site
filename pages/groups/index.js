@@ -1,23 +1,20 @@
 import React from "react";
 import { StyleSheet, css } from "aphrodite";
-import NavbarMain from "../components/NavbarMain.react";
+import NavbarMain from "../../components/NavbarMain.react";
 import { Container } from "react-bootstrap";
 
-import CardList from "../components/cardlist"
+import CardList from "../../components/cardlist"
 
 export default function Lab({ links, groups }) {
   return (
     <>
       <NavbarMain links={links} />
-      <br />
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <Container>
-          <h4>The Lab</h4>
-          <p className="text-justify">
-            "The Lab" are groups/projects that are active in Developers' Guild.
+        <Container className="text-center mt-4">
+          <h4>Developer's Guild Groups</h4>
+          <p className="mb-4">
+            Groups and projects that are currently active in Developers' Guild.
           </p>
-          <br />
-          <br />
           <CardList
             cards={groups}
           />
@@ -96,17 +93,17 @@ export const getStaticProps = async (context) => {
         { name: "About", path: "/about", external: false },
         { name: "Contact", path: "/contact", external: false },
         { name: "Constitution", path: "/constitution", external: false },
-        { name: "Lab", path: "/lab", external: false },
+        { name: "Groups", path: "/groups", external: false },
         { name: "DA Hack", path: "https://dahack.dev/", external: true },
       ],
       groups: [
         {
           link: "/groups/interprep",
           title: "Interview Prep Group",
-          description: "Career-oriented workshop focused on common solving technical interview questions."
+          description: "Career-oriented workshop focused preparing for technical interviews. We introduce the basic required knowledge of data structures and algorithms and solve many common problems from real interviews. We also offer 1-on-1 mock interview sessions and resume reviews. Come check us out!"
         },
         {
-          link: "/groups/#",
+          link: "/groups",
           title: "AI Group",
           description: "To Be Written"
         }

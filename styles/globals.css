@@ -13,6 +13,7 @@ body {
   text-rendering: optimizeLegibility;
   margin: 0;
   font-family: "Raleway", sans-serif !important;
+  /* font-family: Helvetica, Arial, Lucida, sans-serif; */
   font-display: swap;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,4 +41,10 @@ h5,
 h6 {
   font-family: "Cabin", sans-serif !important;
   font-display: swap;
+}
+
+.linkcard:hover {
+  cursor: pointer;
+  filter: brightness(1.25);
+  transform: scale(1.1);
 }
