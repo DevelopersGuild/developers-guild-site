@@ -1,15 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image"
 import { Navbar, Nav } from "react-bootstrap";
-import SaferLink from "./SaferLink.react";
 
-const navlinks = [
-  { name: "About", path: "/about", external: false },
-  { name: "Contact", path: "/contact", external: false },
-  { name: "Constitution", path: "/constitution", external: false },
-  { name: "Groups", path: "/groups", external: false },
-  { name: "DA Hack", path: "https://dahack.dev/", external: true },
-];
+import SaferLink from "./SaferLink.react";
+import DiscordLink from "./DiscordLink.react";
 
 type TLinkMetaInfo = Readonly<{
   name: string;
@@ -41,24 +36,44 @@ function LinkRenderer({ node }: TLRendererProps) {
 }
 
 const NavbarMain = (props: TProps) => {
+  const navlinks = [
+    { name: "About", path: "/about", external: false },
+    { name: "Contact", path: "/contact", external: false },
+    { name: "Constitution", path: "/constitution", external: false },
+    { name: "Groups", path: "/groups", external: false },
+    { name: "DA Hack", path: "https://dahack.dev/", external: true },
+  ];
+
   return (
     <React.Fragment>
-      <Navbar className="navbar-main" bg="dark" variant="dark" expand="lg">
+      <Navbar
+        className="navbar-main"
+        bg="dark"
+        variant="dark"
+        expand="md"
+      >
         <Navbar.Brand href="/">
-          <img
-            src="assets/logo.svg"
+          <Image
+            src="/assets/logo.svg"
             alt="Logo"
-            width="30"
-            height="30"
+            width={30}
+            height={30}
             className="d-inline-block align-top"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto" style={{ color: "black", fontWeight: "bold" }}>
+        <Navbar.Toggle aria-controls="navbar-collapse" />
+        <Navbar.Collapse id="navbar-collapse" className="justify-content-end">
+          <Nav
+            className="align-items-center"
+            style={{ color: "black", fontWeight: "bold" }}
+          >
             {navlinks.map((node) => (
-              <LinkRenderer key={node.path} node={node} />
+              <LinkRenderer
+                key={node.path}
+                node={node}
+              />
             ))}
+            <DiscordLink />
           </Nav>
         </Navbar.Collapse>
       </Navbar>

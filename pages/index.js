@@ -17,10 +17,6 @@ export default function Home(props) {
       {isCuratedVideoPlaying && <VideoOverlay />}
       <br />
       <Container>
-        <DiscordLink className="float-right" />
-        <br />
-        <br />
-        <br />
         <CustomJumbotron />
         <br />
         <Curated curated={props.curated} />

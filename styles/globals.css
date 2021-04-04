@@ -19,18 +19,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-  font-display: swap;
-}
-
 a {
   color: #ffffff !important;
 }
 
 a:hover {
   color: #7289da !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  font-display: swap;
 }
 
 h1,
@@ -47,7 +47,7 @@ h6 {
   content: '';
   display: block;
   margin: 1rem 0;
-  background-color: white;
+  background-color: #ffffff;
   height: 0.1rem;
   width: 12rem;
 }

@@ -27,13 +27,6 @@ export default function Groups({ links, groups }) {
 export const getStaticProps = async (context) => {
   return {
     props: {
-      links: [
-        { name: "About", path: "/about", external: false },
-        { name: "Contact", path: "/contact", external: false },
-        { name: "Constitution", path: "/constitution", external: false },
-        { name: "Groups", path: "/groups", external: false },
-        { name: "DA Hack", path: "https://dahack.dev/", external: true },
-      ],
       groups: [
         {
           link: "/groups/interviewprep",
@@ -43,7 +36,7 @@ export const getStaticProps = async (context) => {
         {
           link: "/groups",
           title: "AI Group",
-        }
+        },
       ]
     },
   };
