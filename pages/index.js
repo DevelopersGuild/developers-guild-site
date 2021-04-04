@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
 import DiscordLink from "../components/DiscordLink.react";
-import NavbarMain from "../components/NavbarMain.react";
 import GithubBar from "../components/GithubBar.react";
 import CustomJumbotron from "../components/CustomJumbotron.react";
 import SaferLink from "../components/SaferLink.react";
@@ -16,7 +15,6 @@ export default function Home(props) {
   return (
     <OverflowContainer>
       {isCuratedVideoPlaying && <VideoOverlay />}
-      <NavbarMain links={props.links} />
       <br />
       <Container>
         <DiscordLink className="float-right" />
@@ -27,7 +25,7 @@ export default function Home(props) {
         <br />
         <Curated curated={props.curated} />
         <br />
-        <GithubBar githubProjects={props.githubProjects} />
+        {/* <GithubBar githubProjects={props.githubProjects} /> */}
         <br />
         <SaferLink
           className="float-right"
@@ -43,13 +41,13 @@ export default function Home(props) {
 }
 
 export const getStaticProps = async (context) => {
-  const githubProjects = await axios.get(
-    "https://api.github.com/orgs/DevelopersGuild/repos?sort=updated"
-  );
+  // const githubProjects = await axios.get(
+  //   "https://api.github.com/orgs/DevelopersGuild/repos?sort=updated"
+  // );
 
   return {
     props: {
-      githubProjects: githubProjects.data,
+      // githubProjects: githubProjects.data,
       links: [
         { name: "About", path: "/about", external: false },
         { name: "Contact", path: "/contact", external: false },

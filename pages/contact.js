@@ -7,7 +7,6 @@ import SaferLink from "../components/SaferLink.react";
 export default function Contact(props) {
   return (
     <React.Fragment>
-      <NavbarMain links={props.links} />
       <br />
       <div className={css(styles.containerOne)}>
         <Container>
@@ -98,14 +97,6 @@ const styles = StyleSheet.create({
 
 export const getStaticProps = async (context) => {
   return {
-    props: {
-      links: [
-        { name: "About", path: "/about", external: false },
-        { name: "Contact", path: "/contact", external: false },
-        { name: "Constitution", path: "/constitution", external: false },
-        { name: "Groups", path: "/groups", external: false },
-        { name: "DA Hack", path: "https://dahack.dev/", external: true },
-      ],
-    },
+    props: {},
   };
 };

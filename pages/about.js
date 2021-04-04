@@ -1,12 +1,10 @@
 import React from "react";
 import { StyleSheet, css } from "aphrodite";
-import NavbarMain from "../components/NavbarMain.react";
 import { Container } from "react-bootstrap";
 
 export default function About(props) {
   return (
     <>
-      <NavbarMain links={props.links} />
       <br />
       <div className={css(styles.containerOne)}>
         <Container>
