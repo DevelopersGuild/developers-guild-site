@@ -113,9 +113,10 @@ const styles = StyleSheet.create({
     margin: '1.75rem 0 !important'
   },
   communityicon: {
+    filter: 'saturate(0) invert(1)',
     display: 'inline-block',
     ':hover': {
-      filter: 'opacity(0.5)'
+      filter: 'invert(0.65)'
     }
   }
 })
