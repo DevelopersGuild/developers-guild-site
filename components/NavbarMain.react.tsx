@@ -5,6 +5,7 @@ import { Navbar, Nav } from "react-bootstrap";
 
 import SaferLink from "./SaferLink.react";
 import DiscordLink from "./DiscordLink.react";
+import { getNavLinks } from "../lib/links"
 
 type TLinkMetaInfo = Readonly<{
   name: string;
@@ -36,13 +37,7 @@ function LinkRenderer({ node }: TLRendererProps) {
 }
 
 const NavbarMain = (props: TProps) => {
-  const navlinks = [
-    { name: "About", path: "/about", external: false },
-    { name: "Contact", path: "/contact", external: false },
-    { name: "Constitution", path: "/constitution", external: false },
-    { name: "Groups", path: "/groups", external: false },
-    { name: "DA Hack", path: "https://dahack.dev/", external: true },
-  ];
+  const navlinks = getNavLinks();
 
   return (
     <React.Fragment>
@@ -52,13 +47,15 @@ const NavbarMain = (props: TProps) => {
         variant="dark"
         expand="md"
       >
-        <Navbar.Brand href="/">
+        <Navbar.Brand
+          className="d-flex p-0 mx-0 align-items-center"
+          href="/"
+        >
           <Image
-            src="/assets/logo.svg"
+            src="/assets/icons/logo.svg"
             alt="Logo"
-            width={30}
-            height={30}
-            className="d-inline-block align-top"
+            width={40}
+            height={40}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-collapse" />

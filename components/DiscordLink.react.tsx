@@ -17,7 +17,7 @@ const DiscordLink = (props: Props) => (
   >
     <strong>Join Our Discord</strong>
     <Image
-      src="/assets/discord.svg"
+      src="/assets/icons/discord.svg"
       width={45}
       height={35}
       alt="Discord Logo"

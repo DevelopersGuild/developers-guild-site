@@ -1,47 +1,123 @@
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { StyleSheet, css } from 'aphrodite';
 import { Container, Row, Col } from 'react-bootstrap';
 
-const links = [];
-const contacts = [];
+import SaferLink from "./SaferLink.react";
+import { getNavLinks, getAdvisorLinks, getCommunityLinks } from "../lib/links"
+
+function LinkRenderer({ link }) {
+  return link.external ?
+    (
+      <SaferLink
+        className={`nav-link ${css(styles.footerlink)}`}
+        href={link.path}
+      >
+        {link.name}
+      </SaferLink>
+    )
+    :
+    (
+      <Link href={link.path}>
+        <a className=
+          {`nav-link ${css(styles.footerlink)}`}
+        >
+          {link.name}
+        </a>
+      </Link>
+    )
+}
 
 const Footer = () => {
+  const navlinks = getNavLinks();
+  const advisors = getAdvisorLinks();
+  const communitylinks = getCommunityLinks();
+
   return (
-    <Container>
-      <footer class="footer pt-6 pb-5 bg-dark text-white">
-        <Row>
-          <Col>
-            <img class="navbar-brand-dark mb-4" height="35" src="../../assets/img/brand/light.svg" alt="Logo light" />
-            <p>Pixel Pro is a premium Bootstrap 5 UI Kit that will help you prototype and design beautiful, creative
-                    and modern websites.</p>
-            <ul class="social-buttons mb-5 mb-lg-0">
-              <li>
-                <a href="https://twitter.com/themesberg" aria-label="twitter social link"
-                  class="icon-white me-2">
-                  <span class="fab fa-twitter"></span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/themesberg/" class="icon-white me-2"
-                  aria-label="facebook social link">
-                  <span class="fab fa-facebook"></span>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/themesberg" aria-label="github social link" class="icon-white me-2">
-                  <span class="fab fa-github"></span>
-                </a>
-              </li>
-              <li>
-                <a href="https://dribbble.com/themesberg" class="icon-white" aria-label="dribbble social link">
-                  <span class="fab fa-dribbble"></span>
-                </a>
-              </li>
-            </ul>
-          </Col>
-        </Row>
-      </footer>
+    <Container fluid className="footer pb-4 pt-4 px-0 bg-dark text-white text-center">
+      <Row className="justify-content-center mx-0">
+        <Image
+          src="/assets/icons/logo.svg"
+          height={55}
+          width={55}
+          alt="DG Logo"
+        />
+      </Row>
+      <div className={css(styles.divider)} />
+      <Row className="mx-5">
+        <Col
+          xs={6}
+          md={3}
+        >
+          <strong>Navigation</strong>
+          {navlinks.map(link =>
+            <LinkRenderer
+              key={link.path}
+              link={link}
+            />
+          )}
+        </Col>
+        <Col
+          xs={6}
+          md={3}
+        >
+          <strong>Advisors</strong>
+          {advisors.map(link =>
+            <LinkRenderer
+              key={link.path}
+              link={link}
+            />
+          )}
+        </Col>
+        <Col
+          md={5}
+          lg={5}
+          xl={4}
+          className="d-flex justify-content-around align-items-center mx-3 my-3"
+        >
+          {communitylinks.map(link =>
+            <div
+              key={link.path}
+            >
+              <a
+                rel="noreferrer noopener"
+                target="__blank"
+                href={link.path}
+              >
+                <Image
+                  className={css(styles.communityicon)}
+                  src={link.logo}
+                  height={40}
+                  width={40}
+                />
+              </a>
+            </div>
+          )}
+        </Col>
+      </Row>
+      <div className={css(styles.divider)} />
     </Container>
   );
 }
+
+const styles = StyleSheet.create({
+  footerlink: {
+    padding: '0.1rem 0 !important',
+  },
+  divider: {
+    display: 'inline-block',
+    height: '0.05rem !important',
+    width: '85vw !important',
+    backgroundColor: '#bdbdbd !important',
+    margin: '1.75rem 0 !important'
+  },
+  communityicon: {
+    display: 'inline-block',
+    ':hover': {
+      filter: 'opacity(0.5)'
+    }
+  }
+})
 
 export default Footer;

@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
       </Head>
       <NavbarMain />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </React.Fragment>
   );
 }

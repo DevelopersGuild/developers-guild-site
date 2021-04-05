@@ -1,5 +1,4 @@
 import { Container } from "react-bootstrap";
-import DiscordLink from "../components/DiscordLink.react";
 import GithubBar from "../components/GithubBar.react";
 import CustomJumbotron from "../components/CustomJumbotron.react";
 import SaferLink from "../components/SaferLink.react";
@@ -18,19 +17,14 @@ export default function Home(props) {
       <br />
       <Container>
         <CustomJumbotron />
-        <br />
-        <Curated curated={props.curated} />
-        <br />
         {/* <GithubBar githubProjects={props.githubProjects} /> */}
-        <br />
         <SaferLink
           className="float-right"
           href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/data/main-curated.json"
         >
           Want to recommend some videos for the Curated section?
         </SaferLink>
-        <br />
-        <br />
+        <Curated curated={props.curated} />
       </Container>
     </OverflowContainer>
   );

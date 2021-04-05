@@ -1,13 +1,15 @@
 import React from "react";
+import Image from "next/image";
 import { css, StyleSheet } from "aphrodite";
 import { Jumbotron } from "react-bootstrap";
 
 const CustomJumbotron = () => (
   <Jumbotron>
     <div className={css(styles.jumboContainer)}>
-      <img
-        src="assets/logo.svg"
-        className={css(styles.jumboImage)}
+      <Image
+        src="/assets/icons/logo.svg"
+        height={150}
+        width={150}
         alt="Logo"
       />
       <div>
@@ -26,11 +28,6 @@ const CustomJumbotron = () => (
 const styles = StyleSheet.create({
   strikeThrough: {
     textDecoration: "line-through",
-  },
-  jumboImage: {
-    marginRight: 20,
-    width: "150px",
-    height: "150px",
   },
   jumboContainer: {
     display: "flex",

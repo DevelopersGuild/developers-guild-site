@@ -31,7 +31,7 @@ const createCard = ({ className, link, image, title, description, handleClick })
 const LinkCard = (props) => {
   return (
     props.fade ?
-      <Fade bottom>
+      <Fade left>
         {createCard(props)}
       </Fade> :
       createCard(props)
