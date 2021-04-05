@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import Image from "next/image";
 import SaferLink from "./SaferLink.react";
 
 type Props = Readonly<{
@@ -10,14 +11,17 @@ type Props = Readonly<{
 const DiscordLink = (props: Props) => (
   <SaferLink
     className={clsx(
-      "btn btn-primary discord-btn bounce-in-top",
-      props.className
+      "btn discord-btn bounce-in-top",
     )}
-    style={props.style}
     href="https://discord.gg/BpaFS4h"
   >
     <strong>Join Our Discord</strong>
-    <img className="discord-logo" src="assets/discord.svg" alt="Discord Logo" />
+    <Image
+      src="/assets/icons/discord.svg"
+      width={45}
+      height={35}
+      alt="Discord Logo"
+    />
   </SaferLink>
 );
 

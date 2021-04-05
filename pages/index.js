@@ -1,6 +1,4 @@
 import { Container } from "react-bootstrap";
-import DiscordLink from "../components/DiscordLink.react";
-import NavbarMain from "../components/NavbarMain.react";
 import GithubBar from "../components/GithubBar.react";
 import CustomJumbotron from "../components/CustomJumbotron.react";
 import SaferLink from "../components/SaferLink.react";
@@ -16,45 +14,35 @@ export default function Home(props) {
   return (
     <OverflowContainer>
       {isCuratedVideoPlaying && <VideoOverlay />}
-      <NavbarMain links={props.links} />
       <br />
       <Container>
-        <DiscordLink className="float-right" />
-        <br />
-        <br />
-        <br />
         <CustomJumbotron />
-        <br />
-        <Curated curated={props.curated} />
-        <br />
-        <GithubBar githubProjects={props.githubProjects} />
-        <br />
+        {/* <GithubBar githubProjects={props.githubProjects} /> */}
         <SaferLink
           className="float-right"
           href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/data/main-curated.json"
         >
           Want to recommend some videos for the Curated section?
         </SaferLink>
-        <br />
-        <br />
+        <Curated curated={props.curated} />
       </Container>
     </OverflowContainer>
   );
 }
 
 export const getStaticProps = async (context) => {
-  const githubProjects = await axios.get(
-    "https://api.github.com/orgs/DevelopersGuild/repos?sort=updated"
-  );
+  // const githubProjects = await axios.get(
+  //   "https://api.github.com/orgs/DevelopersGuild/repos?sort=updated"
+  // );
 
   return {
     props: {
-      githubProjects: githubProjects.data,
+      // githubProjects: githubProjects.data,
       links: [
         { name: "About", path: "/about", external: false },
         { name: "Contact", path: "/contact", external: false },
         { name: "Constitution", path: "/constitution", external: false },
-        { name: "Lab", path: "/lab", external: false },
+        { name: "Groups", path: "/groups", external: false },
         { name: "DA Hack", path: "https://dahack.dev/", external: true },
       ],
       curated: [

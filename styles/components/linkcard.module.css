@@ -1,0 +1,5 @@
+.linkcard:hover {
+  cursor: pointer;
+  filter: brightness(1.25);
+  transform: scale(1.1);
+}

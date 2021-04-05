@@ -1,12 +1,10 @@
 import React from "react";
 import { StyleSheet, css } from "aphrodite";
-import NavbarMain from "../components/NavbarMain.react";
 import { Container } from "react-bootstrap";
 
 export default function Constitution(props) {
   return (
     <React.Fragment>
-      <NavbarMain links={props.links} />
       <br />
       <div className={css(styles.containerOne)}>
         <Container type="normal">
@@ -291,14 +289,6 @@ const styles = StyleSheet.create({
 
 export const getStaticProps = async (context) => {
   return {
-    props: {
-      links: [
-        { name: "About", path: "/about", external: false },
-        { name: "Contact", path: "/contact", external: false },
-        { name: "Constitution", path: "/constitution", external: false },
-        { name: "Lab", path: "/lab", external: false },
-        { name: "DA Hack", path: "https://dahack.dev/", external: true },
-      ],
-    },
+    props: {},
   };
 };

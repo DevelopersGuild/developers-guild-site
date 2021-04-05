@@ -1,12 +1,10 @@
 import React from "react";
 import { StyleSheet, css } from "aphrodite";
-import NavbarMain from "../components/NavbarMain.react";
 import { Container } from "react-bootstrap";
 
 export default function About(props) {
   return (
     <>
-      <NavbarMain links={props.links} />
       <br />
       <div className={css(styles.containerOne)}>
         <Container>
@@ -86,7 +84,7 @@ export const getStaticProps = async (context) => {
         { name: "About", path: "/about", external: false },
         { name: "Contact", path: "/contact", external: false },
         { name: "Constitution", path: "/constitution", external: false },
-        { name: "Lab", path: "/lab", external: false },
+        { name: "Groups", path: "/groups", external: false },
         { name: "DA Hack", path: "https://dahack.dev/", external: true },
       ],
     },
