@@ -1,32 +1,43 @@
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
+import Image from "next/image";
+import axios from "axios";
+import { useRecoilValue } from "recoil";
+
 import GithubBar from "../components/GithubBar.react";
 import CustomJumbotron from "../components/CustomJumbotron.react";
 import SaferLink from "../components/SaferLink.react";
 import Curated from "../components/Curated.react";
-import axios from "axios";
-import { useRecoilValue } from "recoil";
-import { isCuratedVideoPlayingAtom } from "../lib/AppAtoms";
 import VideoOverlay from "../components/VideoOverlay.react";
 import OverflowContainer from "../components/OverflowContainer.react";
+import { isCuratedVideoPlayingAtom } from "../lib/AppAtoms";
 
 export default function Home(props) {
   const isCuratedVideoPlaying = useRecoilValue(isCuratedVideoPlayingAtom);
   return (
-    <OverflowContainer>
-      {isCuratedVideoPlaying && <VideoOverlay />}
-      <br />
+    // <OverflowContainer>
+    //   {isCuratedVideoPlaying && <VideoOverlay />}
+    <Container>
+      <CustomJumbotron
+        className="my-5"
+      />
       <Container>
-        <CustomJumbotron />
-        {/* <GithubBar githubProjects={props.githubProjects} /> */}
+        <Image
+          src="/og.jpg"
+          width={1832}
+          height={1221}
+        />
+      </Container>
+      {/* <GithubBar githubProjects={props.githubProjects} /> */}
+      <Curated className="my-5" curated={props.curated} />
+      <Row className="justify-content-end my-4">
         <SaferLink
-          className="float-right"
           href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/data/main-curated.json"
         >
           Want to recommend some videos for the Curated section?
         </SaferLink>
-        <Curated curated={props.curated} />
-      </Container>
-    </OverflowContainer>
+      </Row>
+    </Container>
+    // </OverflowContainer>
   );
 }
 
@@ -38,13 +49,6 @@ export const getStaticProps = async (context) => {
   return {
     props: {
       // githubProjects: githubProjects.data,
-      links: [
-        { name: "About", path: "/about", external: false },
-        { name: "Contact", path: "/contact", external: false },
-        { name: "Constitution", path: "/constitution", external: false },
-        { name: "Groups", path: "/groups", external: false },
-        { name: "DA Hack", path: "https://dahack.dev/", external: true },
-      ],
       curated: [
         {
           videoID: "6ptI5B4a-ag",

@@ -3,8 +3,10 @@ import Image from "next/image";
 import { css, StyleSheet } from "aphrodite";
 import { Jumbotron } from "react-bootstrap";
 
-const CustomJumbotron = () => (
-  <Jumbotron>
+const CustomJumbotron = ({ className }) => (
+  <Jumbotron
+    className={className}
+  >
     <div className={css(styles.jumboContainer)}>
       <Image
         src="/assets/icons/logo.svg"
@@ -12,7 +14,7 @@ const CustomJumbotron = () => (
         width={150}
         alt="Logo"
       />
-      <div>
+      <div className="mt-4">
         <h1>Developers Guild - De Anza</h1>
         <p>A project and contribution based programming club.</p>
         <p>
@@ -32,6 +34,7 @@ const styles = StyleSheet.create({
   jumboContainer: {
     display: "flex",
     justifyContent: "center",
+    textAlign: "center",
     flexWrap: "wrap",
     alignItems: "center",
   },

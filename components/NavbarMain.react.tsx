@@ -70,7 +70,9 @@ const NavbarMain = (props: TProps) => {
                 node={node}
               />
             ))}
-            <DiscordLink />
+            <DiscordLink
+              className="mx-2"
+            />
           </Nav>
         </Navbar.Collapse>
       </Navbar>

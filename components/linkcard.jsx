@@ -1,14 +1,13 @@
 import React from 'react';
+import { StyleSheet, css } from 'aphrodite';
 import { Container, Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal';
 
-import cardStyles from "../styles/components/linkcard.module.css";
-
 const createCard = ({ className, link, image, title, description, handleClick }) => {
   return (
     <Card
-      className={cardStyles.linkcard + ' ' + className}
+      className={css(styles.linkcard) + ' ' + className}
       variant="Dark"
       onClick={() => handleClick(link)}
     >
@@ -37,6 +36,16 @@ const LinkCard = (props) => {
       createCard(props)
   );
 }
+
+const styles = StyleSheet.create({
+  linkcard: {
+    ':hover': {
+      cursor: 'pointer',
+      filter: 'brightness(1.25)',
+      transform: 'scale(1.1)'
+    }
+  }
+})
 
 LinkCard.propTypes = {
   className: PropTypes.string,

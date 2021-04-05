@@ -29,11 +29,12 @@ const VideoThumbnail = ({ videoID, title }) => {
 };
 
 type Props = Readonly<{
+  className: Readonly<String>;
   curated: ReadonlyArray<Readonly<{ title: string; videoID: string }>>;
 }>;
 
-const Curated = ({ curated }: Props) => (
-  <Container className={css(styles.container)}>
+const Curated = ({ curated, className }: Props) => (
+  <Container className={`${css(styles.container)} ${className}`}>
     <h2>Community Curated Videos</h2>
     <div className={css(styles.contentRow)}>
       {curated.map((node) => (

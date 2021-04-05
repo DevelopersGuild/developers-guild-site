@@ -13,7 +13,7 @@ type Props = Readonly<{
 const DiscordLink = (props: Props) => (
   <Tada>
     <SaferLink
-      className={clsx("btn discord-btn")}
+      className={clsx("btn discord-btn ") + props.className}
       href="https://discord.gg/BpaFS4h"
     >
       <strong>Join Our Discord</strong>
