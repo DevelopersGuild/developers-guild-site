@@ -1,11 +1,15 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Container } from 'react-bootstrap';
-import PropTypes from 'prop-types';
 
-import LinkCard from "./linkcard"
+import LinkCard from "./linkcard.react";
 
-const CardList = ({ cards, fade }) => {
+type TProps = Readonly<{
+  cards: ReadonlyArray<JSON>,
+  fade?: boolean
+}>
+
+const CardList = ({ cards, fade = false }) => {
   const router = useRouter()
 
   const handleClick = (link) => {
@@ -22,7 +26,7 @@ const CardList = ({ cards, fade }) => {
             handleClick={handleClick}
             link={card.link}
             title={card.title}
-            image={card.image || ""}
+            icon={card.icon || null}
             description={card.description}
             fade={fade}
           />
@@ -30,15 +34,6 @@ const CardList = ({ cards, fade }) => {
       })}
     </Container>
   );
-}
-
-CardList.propTypes = {
-  cards: PropTypes.arrayOf(Object).isRequired,
-  fade: PropTypes.bool,
-}
-
-CardList.defaultProps = {
-  fade: false,
 }
 
 export default CardList;

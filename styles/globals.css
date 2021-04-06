@@ -15,6 +15,7 @@ body {
   font-family: "Raleway", sans-serif !important;
   /* font-family: Helvetica, Arial, Lucida, sans-serif; */
   font-display: swap;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

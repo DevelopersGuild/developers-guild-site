@@ -1,24 +1,35 @@
 import React from 'react';
+import Image from 'next/image';
 import { StyleSheet, css } from 'aphrodite';
 import { Container, Card } from 'react-bootstrap';
-import PropTypes from 'prop-types';
 import Fade from 'react-reveal';
 
-const createCard = ({ className, link, image, title, description, handleClick }) => {
+type TProps = Readonly<{
+  className?: string,
+  link: string,
+  icon?: string,
+  title?: string,
+  description?: string,
+  handleClick: (string) => void,
+}>
+
+const createCard = ({ className, link, icon, title = "Title", description = "Description", handleClick }: TProps) => {
   return (
     <Card
       className={css(styles.linkcard) + ' ' + className}
-      variant="Dark"
+      bg="dark"
       onClick={() => handleClick(link)}
     >
       <Container>
-        {image ?
-          <Card.Img
-            src={image ? image : ""}
-            alt={title}
-          />
-          : null}
         <Card.Body className="text-center">
+          {icon ?
+            <Image
+              className={`${css(styles.icon)} py-3`}
+              src={icon}
+              width={65}
+              height={65}
+            />
+            : null}
           <Card.Title className="font-weight-bold">{title}</Card.Title>
           <Card.Text>{description}</Card.Text>
         </Card.Body>
@@ -44,23 +55,11 @@ const styles = StyleSheet.create({
       filter: 'brightness(1.25)',
       transform: 'scale(1.1)'
     }
+  },
+  icon: {
+    filter: 'saturate(0) invert(1)',
+    display: 'inline-block',
   }
 })
-
-LinkCard.propTypes = {
-  className: PropTypes.string,
-  link: PropTypes.string.isRequired,
-  image: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  handleClick: PropTypes.func.isRequired,
-}
-
-LinkCard.defaultProps = {
-  className: "",
-  image: null,
-  title: "Title",
-  description: "Description",
-}
 
 export default LinkCard;

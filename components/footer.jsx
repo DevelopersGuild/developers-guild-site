@@ -35,8 +35,11 @@ const Footer = () => {
   const communitylinks = getCommunityLinks();
 
   return (
-    <Container fluid className="footer pb-4 pt-4 px-0 bg-dark text-white text-center">
-      <Row className="justify-content-center mx-0">
+    <Container
+      fluid
+      className="footer d-flex flex-column align-items-center bg-dark text-white text-center pb-4 px-0"
+    >
+      <Row className="justify-content-center mx-0 py-4">
         <Image
           src="/assets/icons/logo.svg"
           height={55}
@@ -44,37 +47,9 @@ const Footer = () => {
           alt="DG Logo"
         />
       </Row>
-      <div className={css(styles.divider)} />
-      <Row className="mx-5">
-        <Col
-          xs={6}
-          md={3}
-        >
-          <strong>Navigation</strong>
-          {navlinks.map(link =>
-            <LinkRenderer
-              key={link.path}
-              link={link}
-            />
-          )}
-        </Col>
-        <Col
-          xs={6}
-          md={3}
-        >
-          <strong>Advisors</strong>
-          {advisors.map(link =>
-            <LinkRenderer
-              key={link.path}
-              link={link}
-            />
-          )}
-        </Col>
-        <Col
-          md={5}
-          lg={5}
-          xl={4}
-          className="d-flex justify-content-around align-items-center mx-3 my-3"
+      <Container fluid="sm">
+        <Row
+          className="d-flex justify-content-around align-items-center mx-5 my-2"
         >
           {communitylinks.map(link =>
             <div
@@ -86,7 +61,7 @@ const Footer = () => {
                 href={link.path}
               >
                 <Image
-                  className={css(styles.communityicon)}
+                  className={css(styles.communitylink)}
                   src={link.logo}
                   height={40}
                   width={40}
@@ -94,8 +69,35 @@ const Footer = () => {
               </a>
             </div>
           )}
-        </Col>
-      </Row>
+        </Row>
+      </Container>
+      <div className={css(styles.divider)} />
+      <Container fluid="sm" className="w-60">
+        <Row className="w-100 justify-content-around">
+          <Col
+            xs={5}
+          >
+            <strong>Navigation</strong>
+            {navlinks.map(link =>
+              <LinkRenderer
+                key={link.path}
+                link={link}
+              />
+            )}
+          </Col>
+          <Col
+            xs={5}
+          >
+            <strong>Advisors</strong>
+            {advisors.map(link =>
+              <LinkRenderer
+                key={link.path}
+                link={link}
+              />
+            )}
+          </Col>
+        </Row>
+      </Container>
       <div className={css(styles.divider)} />
     </Container>
   );
@@ -112,7 +114,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#bdbdbd !important',
     margin: '1.75rem 0 !important'
   },
-  communityicon: {
+  communitylink: {
     filter: 'saturate(0) invert(1)',
     display: 'inline-block',
     ':hover': {
