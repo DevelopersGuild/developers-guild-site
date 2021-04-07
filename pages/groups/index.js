@@ -6,7 +6,7 @@ import CardList from "../../components/cardlist.react"
 
 export default function Groups({ groups }) {
   return (
-    <Container className="text-center py-4">
+    <Container className="content-container text-center">
       <h1>Developer's Guild Groups</h1>
       <Row className="justify-content-center" >
         <div className="divider" />

@@ -2,20 +2,26 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 /* @import "~bootstrap/dist/css/bootstrap.min.css"; */
 @import "./bootstrap.min.css";
-@import "./discord-link.css";
 @import "./animations.css";
+
+:root {
+  --lighter-dark: #353535;
+}
+.bg-lighter-dark {
+  background-color: var(--lighter-dark);
+}
 
 * {
   -webkit-user-drag: none;
 }
 
 body {
+  min-height: 100vh;
   text-rendering: optimizeLegibility;
   margin: 0;
   font-family: "Raleway", sans-serif !important;
   /* font-family: Helvetica, Arial, Lucida, sans-serif; */
   font-display: swap;
-  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -44,8 +50,13 @@ h6 {
   font-display: swap;
 }
 
+.content-container {
+  margin: 0 auto;
+  padding: 5rem 15px;
+}
+
 .divider {
-  content: '';
+  content: "";
   display: block;
   margin: 1rem 0;
   background-color: #ffffff;

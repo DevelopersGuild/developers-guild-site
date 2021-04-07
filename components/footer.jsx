@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { StyleSheet, css } from 'aphrodite';
@@ -47,7 +47,7 @@ const Footer = () => {
           alt="DG Logo"
         />
       </Row>
-      <Container fluid="sm">
+      <Container fluid="sm" className={css(styles.communitybar)}>
         <Row
           className="d-flex justify-content-around align-items-center mx-5 my-2"
         >
@@ -113,6 +113,9 @@ const styles = StyleSheet.create({
     width: '85vw !important',
     backgroundColor: '#bdbdbd !important',
     margin: '1.75rem 0 !important'
+  },
+  communitybar: {
+    maxWidth: '575.98px',
   },
   communitylink: {
     filter: 'saturate(0) invert(1)',

@@ -16,10 +16,8 @@ export default function Home(props) {
   return (
     // <OverflowContainer>
     //   {isCuratedVideoPlaying && <VideoOverlay />}
-    <Container>
-      <CustomJumbotron
-        className="my-5"
-      />
+    <Container className="content-container">
+      <CustomJumbotron/>
       <Container>
         <Image
           src="/og.jpg"
@@ -29,7 +27,7 @@ export default function Home(props) {
       </Container>
       {/* <GithubBar githubProjects={props.githubProjects} /> */}
       <Curated className="my-5" curated={props.curated} />
-      <Row className="justify-content-end my-4">
+      <Row className="justify-content-end">
         <SaferLink
           href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/data/main-curated.json"
         >

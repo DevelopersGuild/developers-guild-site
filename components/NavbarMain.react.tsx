@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image"
 import { Navbar, Nav } from "react-bootstrap";
+import { StyleSheet, css } from "aphrodite";
 
 import SaferLink from "./SaferLink.react";
 import DiscordLink from "./DiscordLink.react";
@@ -42,42 +43,51 @@ const NavbarMain = (props: TProps) => {
   return (
     <React.Fragment>
       <Navbar
-        className="navbar-main"
+        sticky="top"
+        className="navbar-main py-2 justify-content-center"
         bg="dark"
         variant="dark"
         expand="md"
       >
-        <Navbar.Brand
-          className="d-flex p-0 mx-0 align-items-center"
-          href="/"
-        >
-          <Image
-            src="/assets/icons/logo.svg"
-            alt="Logo"
-            width={40}
-            height={40}
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbar-collapse" />
-        <Navbar.Collapse id="navbar-collapse" className="justify-content-end">
-          <Nav
-            className="align-items-center"
-            style={{ color: "black", fontWeight: "bold" }}
+        <div className={`${css(navStyles.navElements)} w-100 d-flex justify-content-between`}>
+          <Navbar.Brand
+            className="d-flex p-0 mx-0 align-items-center"
+            href="/"
           >
-            {navlinks.map((node) => (
-              <LinkRenderer
-                key={node.path}
-                node={node}
-              />
-            ))}
-            <DiscordLink
-              className="mx-2"
+            <Image
+              src="/assets/icons/logo.svg"
+              alt="Logo"
+              width={40}
+              height={40}
             />
-          </Nav>
-        </Navbar.Collapse>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbar-collapse" />
+          <Navbar.Collapse id="navbar-collapse" className="justify-content-end">
+            <Nav
+              className="align-items-center"
+              style={{ color: "black", fontWeight: "bold" }}
+            >
+              {navlinks.map((node) => (
+                <LinkRenderer
+                  key={node.path}
+                  node={node}
+                />
+              ))}
+              <DiscordLink
+                className="mx-2"
+              />
+            </Nav>
+          </Navbar.Collapse>
+        </div>
       </Navbar>
     </React.Fragment>
   );
 }
+
+const navStyles = StyleSheet.create({
+  navElements: {
+    maxWidth: '1199.98px'
+  }
+})
 
 export default NavbarMain;

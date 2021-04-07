@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyleSheet } from 'aphrodite'
+import { StyleSheet, css } from 'aphrodite'
 import { Container } from 'react-bootstrap'
 import Image from 'next/image'
 
 import SaferLink from "../../components/SaferLink.react"
 
-const InterviewPrep = ({ links, gallery }) => {
+const InterviewPrep = ({ gallery }) => {
   return (
-    <Container>
+    <Container className="content-container">
       <h2 className="mt-4">Interview Prep</h2>
       <hr style={{ backgroundColor: "white" }} />
       <h3>Leaders</h3>
