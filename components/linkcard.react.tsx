@@ -50,6 +50,7 @@ const LinkCard = (props) => {
 
 const styles = StyleSheet.create({
   linkcard: {
+    maxWidth: '85vw',
     ':hover': {
       cursor: 'pointer',
       filter: 'brightness(1.25)',

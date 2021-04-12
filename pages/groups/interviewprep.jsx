@@ -7,7 +7,7 @@ import SaferLink from "../../components/SaferLink.react"
 
 const InterviewPrep = ({ gallery }) => {
   return (
-    <Container className="content-container">
+    <>
       <h2 className="mt-4">Interview Prep</h2>
       <hr style={{ backgroundColor: "white" }} />
       <h3>Leaders</h3>
@@ -55,7 +55,7 @@ const InterviewPrep = ({ gallery }) => {
           alt={image.title}
         />
       )}
-    </Container>
+    </>
   );
 }
 

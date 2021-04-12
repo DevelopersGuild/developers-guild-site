@@ -37,7 +37,7 @@ const Footer = () => {
   return (
     <Container
       fluid
-      className="footer d-flex flex-column align-items-center bg-dark text-white text-center pb-4 px-0"
+      className="footer d-flex flex-column align-items-center bg-lighter-dark text-white text-center pb-4 px-0"
     >
       <Row className="justify-content-center mx-0 py-4">
         <Image

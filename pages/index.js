@@ -1,52 +1,44 @@
 import { Container, Row } from "react-bootstrap";
 import Image from "next/image";
-import axios from "axios";
 import { useRecoilValue } from "recoil";
 
-import GithubBar from "../components/GithubBar.react";
 import CustomJumbotron from "../components/CustomJumbotron.react";
 import SaferLink from "../components/SaferLink.react";
 import Curated from "../components/Curated.react";
+import OverflowContainer from "../components/OverflowContainer.react"
 import VideoOverlay from "../components/VideoOverlay.react";
-import OverflowContainer from "../components/OverflowContainer.react";
 import { isCuratedVideoPlayingAtom } from "../lib/AppAtoms";
 
 export default function Home(props) {
   const isCuratedVideoPlaying = useRecoilValue(isCuratedVideoPlayingAtom);
   return (
-    // <OverflowContainer>
-    //   {isCuratedVideoPlaying && <VideoOverlay />}
-    <Container className="content-container">
-      <CustomJumbotron/>
+    <OverflowContainer>
+    {isCuratedVideoPlaying && <VideoOverlay />}
       <Container>
-        <Image
-          src="/og.jpg"
-          width={1832}
-          height={1221}
-        />
+        <CustomJumbotron/>
+        <Container>
+          <Image
+            src="/og.jpg"
+            width={1832}
+            height={1221}
+          />
+        </Container>
+        <Curated className="my-5" curated={props.curated} />
+        <Row className="justify-content-end">
+          <SaferLink
+            href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/data/main-curated.json"
+          >
+            Want to recommend some videos for the Curated section?
+          </SaferLink>
+        </Row>
       </Container>
-      {/* <GithubBar githubProjects={props.githubProjects} /> */}
-      <Curated className="my-5" curated={props.curated} />
-      <Row className="justify-content-end">
-        <SaferLink
-          href="https://github.com/DevelopersGuild/developers-guild-site/blob/master/src/components/data/main-curated.json"
-        >
-          Want to recommend some videos for the Curated section?
-        </SaferLink>
-      </Row>
-    </Container>
-    // </OverflowContainer>
+    </OverflowContainer>
   );
 }
 
 export const getStaticProps = async (context) => {
-  // const githubProjects = await axios.get(
-  //   "https://api.github.com/orgs/DevelopersGuild/repos?sort=updated"
-  // );
-
   return {
     props: {
-      // githubProjects: githubProjects.data,
       curated: [
         {
           videoID: "6ptI5B4a-ag",

@@ -6,7 +6,7 @@ import CardList from "../../components/cardlist.react"
 
 export default function Groups({ groups }) {
   return (
-    <Container className="content-container text-center">
+    <div className="text-center">
       <h1>Developer's Guild Groups</h1>
       <Row className="justify-content-center" >
         <div className="divider" />
@@ -14,13 +14,13 @@ export default function Groups({ groups }) {
       <p className="mb-2">
         Groups and projects that are currently active in Developers' Guild.
       </p>
-      <Row>
+      <Row className="py-3">
         <CardList
           fade
           cards={groups}
         />
       </Row>
-    </Container>
+    </div>
   );
 }
 

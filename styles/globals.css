@@ -7,8 +7,19 @@
 :root {
   --lighter-dark: #353535;
 }
+.mw-85 {
+  max-width: 85vw;
+}
 .bg-lighter-dark {
   background-color: var(--lighter-dark);
+}
+.divider {
+  content: "";
+  display: block;
+  margin: 1rem 0;
+  background-color: #ffffff;
+  height: 0.1rem;
+  width: 12rem;
 }
 
 * {
@@ -48,18 +59,4 @@ h5,
 h6 {
   font-family: "Cabin", sans-serif !important;
   font-display: swap;
-}
-
-.content-container {
-  margin: 0 auto;
-  padding: 5rem 15px;
-}
-
-.divider {
-  content: "";
-  display: block;
-  margin: 1rem 0;
-  background-color: #ffffff;
-  height: 0.1rem;
-  width: 12rem;
 }

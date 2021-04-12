@@ -17,12 +17,12 @@ const CardList = ({ cards, fade = false }) => {
   }
 
   return (
-    <Container>
+    <Container className="d-flex flex-column align-items-center">
       {cards.map(card => {
         return (
           <LinkCard
             key={card.link}
-            className="my-5"
+            className="my-4"
             handleClick={handleClick}
             link={card.link}
             title={card.title}

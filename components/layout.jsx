@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head'
+import { Container } from 'react-bootstrap';
 
 import NavbarMain from './NavbarMain.react';
 import Footer from './footer';
@@ -35,7 +36,11 @@ const Layout = ({ children }) => {
         <meta property="og:type" content="website" />
       </Head>
       <NavbarMain />
-      <main>{children}</main>
+      <main>
+        <Container className="my-0 mx-auto py-5 px-2">
+          {children}
+        </Container>
+      </main>
       <Footer />
     </React.Fragment>
   );
