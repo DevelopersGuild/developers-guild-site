@@ -33,10 +33,10 @@ const styles = StyleSheet.create({
   },
   jumboContainer: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-around",
+    alignItems: "center",
     textAlign: "center",
     flexWrap: "wrap",
-    alignItems: "center",
   },
 });
 
