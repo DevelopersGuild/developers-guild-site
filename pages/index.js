@@ -13,7 +13,7 @@ export default function Home(props) {
   const isCuratedVideoPlaying = useRecoilValue(isCuratedVideoPlayingAtom);
   return (
     <OverflowContainer>
-    {isCuratedVideoPlaying && <VideoOverlay />}
+      {isCuratedVideoPlaying && <VideoOverlay />}
       <Container>
         <CustomJumbotron/>
         <Container>

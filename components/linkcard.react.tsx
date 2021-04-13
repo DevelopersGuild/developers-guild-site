@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { StyleSheet, css } from 'aphrodite';
+import { StyleSheet, css, minify } from 'aphrodite';
 import { Container, Card } from 'react-bootstrap';
 import Fade from 'react-reveal';
 
@@ -50,7 +50,7 @@ const LinkCard = (props) => {
 
 const styles = StyleSheet.create({
   linkcard: {
-    maxWidth: '85vw',
+    margin: "auto 2.5rem !important",
     ':hover': {
       cursor: 'pointer',
       filter: 'brightness(1.25)',

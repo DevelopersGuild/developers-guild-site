@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, css } from "aphrodite";
-import { Container, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 import CardList from "../../components/cardlist.react"
 
@@ -18,11 +18,18 @@ export default function Groups({ groups }) {
         <CardList
           fade
           cards={groups}
+          cardStyle={css(styles.cardStyle)}
         />
       </Row>
     </div>
   );
 }
+
+const styles = StyleSheet.create({
+  cardStyle: {
+    maxWidth: "45.425rem !important"
+  }
+})
 
 export const getStaticProps = async (context) => {
   return {

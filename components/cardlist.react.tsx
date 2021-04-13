@@ -4,12 +4,20 @@ import { Container } from 'react-bootstrap';
 
 import LinkCard from "./linkcard.react";
 
-type TProps = Readonly<{
-  cards: ReadonlyArray<JSON>,
+type Props = Readonly<{
   fade?: boolean
+  cards: ReadonlyArray<CardProps>,
+  cardStyle?: Readonly<JSON>
 }>
 
-const CardList = ({ cards, fade = false }) => {
+type CardProps = Readonly<{
+  link: String,
+  title?: String,
+  icon?: String,
+  description?: String,
+}>;
+
+const CardList = ({ fade = false, cards, cardStyle }: Props) => {
   const router = useRouter()
 
   const handleClick = (link) => {
@@ -22,7 +30,7 @@ const CardList = ({ cards, fade = false }) => {
         return (
           <LinkCard
             key={card.link}
-            className="my-4"
+            className={`my-4 ${cardStyle}`}
             handleClick={handleClick}
             link={card.link}
             title={card.title}

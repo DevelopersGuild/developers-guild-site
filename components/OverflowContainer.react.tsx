@@ -13,7 +13,8 @@ function OverflowContainer(props: Props) {
       style={{
         height: "auto",
         width: "auto",
-        overflow: isCuratedVideoPlaying ? "hidden" : "visible",
+        overflow: isCuratedVideoPlaying ? "hide" : "show",
+        zIndex: 999,
       }}
     >
       {props.children}

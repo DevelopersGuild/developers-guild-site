@@ -59,10 +59,6 @@ export default function About(props) {
         "Communication with mentors, industry leaders and speakers."
       ]
     },
-    {
-      title: "Constitution",
-      body: "Constitution pdf?"
-    }
   ]
 
   return (
