@@ -1,6 +1,9 @@
 import React from "react";
-import clsx from "clsx";
+import Image from "next/image";
+import Tada from "react-reveal/Tada";
+
 import SaferLink from "./SaferLink.react";
+import discordstyles from "../styles/modules/discord-link.module.css";
 
 type Props = Readonly<{
   style?: React.CSSProperties;
@@ -8,17 +11,20 @@ type Props = Readonly<{
 }>;
 
 const DiscordLink = (props: Props) => (
-  <SaferLink
-    className={clsx(
-      "btn btn-primary discord-btn bounce-in-top",
-      props.className
-    )}
-    style={props.style}
-    href="https://discord.gg/BpaFS4h"
-  >
-    <strong>Join Our Discord</strong>
-    <img className="discord-logo" src="assets/discord.svg" alt="Discord Logo" />
-  </SaferLink>
+  <Tada>
+    <SaferLink
+      className={`btn ${discordstyles["discord-btn"]} ${props.className}`}
+      href="https://discord.gg/BpaFS4h"
+    >
+      <strong>Join Our Discord</strong>
+      <Image
+        src="/assets/icons/discord.svg"
+        width={45}
+        height={35}
+        alt="Discord Logo"
+      />
+    </SaferLink>
+  </Tada>
 );
 
 export default DiscordLink;

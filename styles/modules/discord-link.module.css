@@ -1,8 +1,19 @@
 .discord-btn {
+  width: 12rem;
+  height: 3rem;
   background-color: #7289da !important;
   color: #ffffff !important;
   border: none !important;
   outline: none !important;
+  text-decoration: none !important;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.discord-btn:hover {
+  color: #ffffff !important;
+  filter: brightness(1.25);
 }
 
 .discord-btn:focus {
@@ -11,11 +22,6 @@
 
 .discord-btn:visited {
   outline: none !important;
-}
-
-.discord-logo {
-  height: 35px;
-  width: 45px;
 }
 
 .bounce-in-top {

@@ -79,8 +79,6 @@ function generateLanguageColor(language: TGithubLanguageType): TGithubColor {
 
 const GithubBar = (props: TProps) => (
   <>
-    <h2>Projects</h2>
-    <br />
     <div className="row">
       {props.githubProjects.map((node) => {
         return (

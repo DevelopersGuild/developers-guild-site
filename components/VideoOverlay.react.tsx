@@ -51,7 +51,7 @@ function VideoOverlay() {
           className={`${css(styles.greyAreaContent)} fade-in`}
         ></div>
         <div className={`${css(styles.videoContentContainer)} slide-in-right`}>
-          <h1 className={css(styles.videoTitle)}>{title}</h1>
+          <h3 className={css(styles.videoTitle)}>{title}</h3>
           <EmbeddedField videoID={videoID} />
         </div>
       </div>
@@ -61,20 +61,22 @@ function VideoOverlay() {
 
 const styles = StyleSheet.create({
   embeddedContainer: {
-    marginTop: "40px",
-    marginLeft: "40px",
+    marginTop: "2.25rem",
     flex: "0 0 auto",
     width: "900px",
-    height: "500px",
+    maxWidth: "90%",
+    height: "auto",
+    // width: "900px",
+    // height: "500px",
   },
   videoTitle: {
-    marginTop: "40px",
-    paddingLeft: "40px",
     textAlign: "start",
   },
   greaterContainer: {
-    position: "absolute",
-    zIndex: 2,
+    position: "fixed",
+    top: 0,
+    left: 0,
+    zIndex: 9999,
     width: "100vw",
     height: "100vh",
   },
@@ -86,17 +88,33 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   videoContentContainer: {
+    overflow: "auto",
+    padding: "2.25rem 1.5rem",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "baseline",
+    position: "absolute",
+    top: 0,
+    right: 0,
+    zIndex: 2,
     backgroundColor: "#ffff",
     color: "#181a1b",
-    width: "100%",
+    width: "auto",
+    maxWidth: "70vw",
     height: "100%",
+    maxHeight: "100vh",
   },
   greyAreaContent: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    zIndex: 1,
     cursor: "url(assets/stop-cursor.svg) 60 60, auto",
     color: "#323436",
     backgroundColor: "#1c1e20",
     opacity: 0.8,
-    width: "45%",
+    width: "100%",
     height: "100%",
   },
 });
