@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image"
 import { Navbar, Nav, Row, Col } from "react-bootstrap";
 import { StyleSheet, css } from "aphrodite";
 
@@ -60,7 +59,7 @@ const NavbarMain = (props: TProps) => {
                 className="d-flex p-0 mx-0 align-items-center"
                 href="/"
               >
-                <Image
+                <img
                   src="/assets/icons/logo.svg"
                   alt="Logo"
                   width={40}

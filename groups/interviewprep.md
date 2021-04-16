@@ -1,5 +1,8 @@
 ---
 title: "Interview Prep"
+description: "Career-oriented workshop focused preparing for technical interviews. We introduce the basic required knowledge of data structures and algorithms and solve many common problems from real interviews. We also offer 1-on-1 mock interview sessions and resume reviews. Come check us out!"
+icon: "/assets/icons/chat.svg"
+link: "/groups/interviewprep"
 ---
 
 <style>
@@ -39,9 +42,17 @@ It is recommended for new members to have experience coding in at least one lang
 
 We explain these topics enough to start solving some basic coding problems that are often brought up in real interviews.
 
+### Resources
+
+<a rel="noreferrer noopener" target="__blank" href="https://www.pramp.com/#/" class="ext-link">Pramp</a> is an online resource for practicing live mock interviews and interview questions with peers, free of charge. Proven to help with job interview skills by thousands of professionals.
+
+<a rel="noreferrer noopener" target="__blank" href="https://leetcode.com/" class="ext-link">LeetCode</a> is an online resource for learning and practicing solutions to coding problems, designed to prepare for techincal interviews. Basic understanding of at least 1 programming language is recommended. Great for beginners.
+
 ### Gallery
 
-<div class="container">
-  <img style="width: 100%; max-width: 1920;" src="/images/groups/interprep/10-30-2020.png" alt="Fall 2020 Day 5"></img>
-  <img style="width: 100%; max-width: 1920;" src="/images/groups/interprep/1-29-2021.png" alt="Winter 2021 Day 1"></img>
+<div 
+  style="width: 80vw; display: flex; flex-direction: row; flex-wrap: nowrap; overflow-y: hidden; overflow-x: auto;"
+>
+  <img class="mx-3" style="width: 80vw; max-width: 1920px;" src="/images/groups/interprep/10-30-2020.png" alt="Fall 2020 Day 5"></img>
+  <img class="mx-3" style="width: 80vw; max-width: 1920px;" src="/images/groups/interprep/1-29-2021.png" alt="Winter 2021 Day 1"></img>
 </div>
