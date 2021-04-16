@@ -18,6 +18,7 @@ export default function Home(props) {
         <CustomJumbotron/>
         <Container>
           <Image
+            priority={true}
             src="/og.jpg"
             width={1832}
             height={1221}
