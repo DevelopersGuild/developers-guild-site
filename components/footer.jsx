@@ -4,7 +4,7 @@ import { StyleSheet, css } from 'aphrodite';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import SaferLink from "./SaferLink.react";
-import { getNavLinks, getAdvisorLinks, getCommunityLinks } from "../lib/links"
+import { getNavLinks, getAdvisorLinks, getCommunityLinks, getDocumentLinks } from "../lib/links"
 
 function LinkRenderer({ link }) {
   return link.external ?
@@ -19,8 +19,7 @@ function LinkRenderer({ link }) {
     :
     (
       <Link href={link.path}>
-        <a className=
-          {`nav-link ${css(styles.footerlink)}`}
+        <a className={`nav-link ${css(styles.footerlink)}`}
         >
           {link.name}
         </a>
@@ -32,6 +31,7 @@ const Footer = () => {
   const navlinks = getNavLinks();
   const advisors = getAdvisorLinks();
   const communitylinks = getCommunityLinks();
+  const documents = getDocumentLinks();
 
   return (
     <Container
@@ -72,9 +72,9 @@ const Footer = () => {
       </Container>
       <div className={css(styles.divider)} />
       <Container fluid="sm" className="w-60">
-        <Row className="w-100 justify-content-around">
+        <Row className="mx-0 w-100 justify-content-around">
           <Col
-            xs={5}
+            xs={4}
           >
             <strong>Navigation</strong>
             {navlinks.map(link =>
@@ -85,7 +85,7 @@ const Footer = () => {
             )}
           </Col>
           <Col
-            xs={5}
+            xs={4}
           >
             <strong>Advisors</strong>
             {advisors.map(link =>
@@ -93,6 +93,24 @@ const Footer = () => {
                 key={link.path}
                 link={link}
               />
+            )}
+          </Col>
+          <Col
+            xs={4}
+          >
+            <strong>Documents</strong>
+            {documents.map(link =>
+              <Link
+                key={link.path}
+                href={link.path}
+              >
+                <a 
+                  className={`nav-link ${css(styles.footerlink)}`}
+                  target="__blank"
+                >
+                  {link.name}
+                </a>
+              </Link>
             )}
           </Col>
         </Row>

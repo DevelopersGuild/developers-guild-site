@@ -62,10 +62,6 @@ export default function About(props) {
         "Communication with mentors, industry leaders and speakers."
       ]
     },
-    {
-      title: "Club Constitution",
-      body: <Link href="/documents/constitution.pdf"><a target="__blank" style={{textDecoration: "underline"}}>constitution.pdf</a></Link>
-    }
   ]
 
   return (

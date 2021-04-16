@@ -8,7 +8,7 @@ const CustomJumbotron = ({ className }) => (
     className={className}
   >
     <div className={css(styles.jumboContainer)}>
-      <Image
+      <img
         src="/assets/icons/logo.svg"
         height={150}
         width={150}
