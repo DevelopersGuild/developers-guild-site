@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Tada from "react-reveal/Tada";
 
 import SaferLink from "./SaferLink.react";
@@ -17,7 +16,7 @@ const DiscordLink = (props: Props) => (
       href="https://discord.gg/BpaFS4h"
     >
       <strong>Join Our Discord</strong>
-      <Image
+      <img
         src="/assets/icons/discord.svg"
         width={45}
         height={35}

@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { StyleSheet, css, minify } from 'aphrodite';
 import { Container, Card } from 'react-bootstrap';
 import Fade from 'react-reveal';
@@ -23,11 +22,10 @@ const createCard = ({ className, link, icon, title = "Title", description = "Des
       <Container>
         <Card.Body className="text-center">
           {icon ?
-            <Image
+            <img
               className={`${css(styles.icon)} py-3`}
               src={icon}
-              width={65}
-              height={65}
+              height={70}
             />
             : null}
           <Card.Title className="font-weight-bold">{title}</Card.Title>

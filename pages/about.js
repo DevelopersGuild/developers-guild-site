@@ -1,13 +1,16 @@
 import React from "react";
+import Link from "next/link";
 import { StyleSheet, css } from "aphrodite";
 import { Container, Row, Jumbotron } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
 
 function renderList(elements) {
+  let count = 0;
+  
   return (
     <ul>
       {elements.map(element => (
-        <li>{element}</li>
+        <li key={count++}>{element}</li>
       ))}
     </ul>
   )
@@ -59,6 +62,10 @@ export default function About(props) {
         "Communication with mentors, industry leaders and speakers."
       ]
     },
+    {
+      title: "Club Constitution",
+      body: <Link href="/documents/constitution.pdf"><a target="__blank" style={{textDecoration: "underline"}}>constitution.pdf</a></Link>
+    }
   ]
 
   return (

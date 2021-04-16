@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { StyleSheet, css } from 'aphrodite';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -40,7 +39,7 @@ const Footer = () => {
       className="footer d-flex flex-column align-items-center bg-lighter-dark text-white text-center pb-4 px-0"
     >
       <Row className="justify-content-center mx-0 py-4">
-        <Image
+        <img
           src="/assets/icons/logo.svg"
           height={55}
           width={55}
@@ -60,7 +59,7 @@ const Footer = () => {
                 target="__blank"
                 href={link.path}
               >
-                <Image
+                <img
                   className={css(styles.communitylink)}
                   src={link.logo}
                   height={40}

@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image"
 import { Navbar, Nav, Row, Col } from "react-bootstrap";
 import { StyleSheet, css } from "aphrodite";
 
