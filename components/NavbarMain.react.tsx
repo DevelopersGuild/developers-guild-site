@@ -60,7 +60,7 @@ const NavbarMain = (props: TProps) => {
                 className="d-flex p-0 mx-0 align-items-center"
                 href="/"
               >
-                <Image
+                <img
                   src="/assets/icons/logo.svg"
                   alt="Logo"
                   width={40}
