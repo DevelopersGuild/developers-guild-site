@@ -6,15 +6,34 @@ import {
   isCuratedVideoPlayingAtom,
   curatedVideoInfoAtom,
 } from "../lib/AppAtoms";
+import { useMediaQuery } from "react-responsive";
+import SaferLink from "./SaferLink.react";
 
 const VideoThumbnail = ({ videoID, title }) => {
   const setIsCuratedVideoPlaying = useSetRecoilState(isCuratedVideoPlayingAtom);
 
   const setCuratedVideoInfo = useSetRecoilState(curatedVideoInfoAtom);
 
+  const isOnMobile = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
+
   function clickHandler() {
     setCuratedVideoInfo({ videoID, title });
     setIsCuratedVideoPlaying(true);
+  }
+
+  if (isOnMobile) {
+    return (
+      <SaferLink href={`https://www.youtube.com/watch?v=${videoID}`}>
+        <img
+          role="button"
+          className={css(styles.videoThumbnail)}
+          alt={title}
+          src={`https://img.youtube.com/vi/${videoID}/maxresdefault.jpg`}
+        />
+      </SaferLink>
+    );
   }
 
   return (
