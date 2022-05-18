@@ -8,18 +8,23 @@ import Curated from "../components/Curated.react";
 import OverflowContainer from "../components/OverflowContainer.react"
 import VideoOverlay from "../components/VideoOverlay.react";
 import { isCuratedVideoPlayingAtom } from "../lib/AppAtoms";
+import Head from 'next/head'
 
 export default function Home(props) {
   const isCuratedVideoPlaying = useRecoilValue(isCuratedVideoPlayingAtom);
   return (
     <OverflowContainer>
+      <Head>
+        <link rel="preload" as="image" href="/og.webp"/>
+        <title>Developers Guild</title>
+      </Head>
       {isCuratedVideoPlaying && <VideoOverlay />}
       <Container>
         <CustomJumbotron/>
         <Container>
           <Image
             priority={true}
-            src="/og.jpg"
+            src="/og.webp"
             width={1832}
             height={1221}
           />
