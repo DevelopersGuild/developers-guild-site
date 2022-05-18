@@ -15,7 +15,7 @@ export default function Home(props) {
   return (
     <OverflowContainer>
       <Head>
-        <link rel="preload" as="image" href="/og.webp"/>
+        <link rel="preload" as="image" href="/og.jpg"/>
         <title>Developers Guild</title>
       </Head>
       {isCuratedVideoPlaying && <VideoOverlay />}
@@ -24,7 +24,7 @@ export default function Home(props) {
         <Container>
           <Image
             priority={true}
-            src="/og.webp"
+            src="/og.jpg"
             width={1832}
             height={1221}
           />
