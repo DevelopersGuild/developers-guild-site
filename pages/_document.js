@@ -3,9 +3,9 @@ import { StyleSheetServer } from "aphrodite";
 
 class MyDocument extends Document {
   static async getInitialProps({ renderPage }) {
-    const { html, css } = StyleSheetServer.renderStatic(() => renderPage());
-    const ids = css.renderedClassNames;
-    return { ...html, css, ids };
+    const { html, css } = StyleSheetServer.renderStatic(() => renderPage())
+    const ids = css.renderedClassNames
+    return { ...(await html), css, ids }
   }
 
   render() {
@@ -13,7 +13,7 @@ class MyDocument extends Document {
     so that aphrodite knows which style tag it's in control of when
     the client goes to render styles. If you don't you'll get a second
     <style> tag */
-    const { css, ids } = this.props;
+    const { css, ids } = this.props
     return (
       <Html>
         <Head>
@@ -36,7 +36,7 @@ class MyDocument extends Document {
           )}
         </body>
       </Html>
-    );
+    )
   }
 }
 

@@ -36,7 +36,6 @@ const CardList = ({ fade = false, cards, cardStyle }: Props) => {
             title={card.title}
             icon={card.icon || null}
             description={card.description}
-            fade={fade}
           />
         )
       })}

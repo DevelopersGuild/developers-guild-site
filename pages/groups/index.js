@@ -17,7 +17,6 @@ export default function Groups({ groups }) {
       </p>
       <Row className="py-3">
         <CardList
-          fade
           cards={groups}
           cardStyle={css(styles.cardStyle)}
         />

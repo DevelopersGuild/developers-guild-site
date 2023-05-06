@@ -30,8 +30,8 @@ function LinkRenderer({ node }: TLRendererProps) {
     </Nav.Item>)
     :
     (<Nav.Item>
-      <Link href={node.path}>
-        <a className="nav-link">{node.name}</a>
+      <Link href={node.path} className="nav-link">
+        {node.name}
       </Link>
     </Nav.Item>)
 }

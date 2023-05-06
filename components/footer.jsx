@@ -1,30 +1,29 @@
-import React, { useEffect } from 'react';
-import Link from 'next/link';
-import { StyleSheet, css } from 'aphrodite';
-import { Container, Row, Col } from 'react-bootstrap';
+import React, { useEffect } from "react";
+import Link from "next/link";
+import { StyleSheet, css } from "aphrodite";
+import { Container, Row, Col } from "react-bootstrap";
 
 import SaferLink from "./SaferLink.react";
-import { getNavLinks, getAdvisorLinks, getCommunityLinks, getDocumentLinks } from "../lib/links"
+import {
+  getNavLinks,
+  getAdvisorLinks,
+  getCommunityLinks,
+  getDocumentLinks,
+} from "../lib/links";
 
 function LinkRenderer({ link }) {
-  return link.external ?
-    (
-      <SaferLink
-        className={`nav-link ${css(styles.footerlink)}`}
-        href={link.path}
-      >
-        {link.name}
-      </SaferLink>
-    )
-    :
-    (
-      <Link href={link.path}>
-        <a className={`nav-link ${css(styles.footerlink)}`}
-        >
-          {link.name}
-        </a>
-      </Link>
-    )
+  return link.external ? (
+    <SaferLink
+      className={`nav-link ${css(styles.footerlink)}`}
+      href={link.path}
+    >
+      {link.name}
+    </SaferLink>
+  ) : (
+    <Link href={link.path} className={`nav-link ${css(styles.footerlink)}`}>
+      {link.name}
+    </Link>
+  );
 }
 
 const Footer = () => {
@@ -47,18 +46,10 @@ const Footer = () => {
         />
       </Row>
       <Container fluid="sm" className={css(styles.communitybar)}>
-        <Row
-          className="d-flex justify-content-around align-items-center mx-5 my-2"
-        >
-          {communitylinks.map(link =>
-            <div
-              key={link.path}
-            >
-              <a
-                rel="noreferrer noopener"
-                target="__blank"
-                href={link.path}
-              >
+        <Row className="d-flex justify-content-around align-items-center mx-5 my-2">
+          {communitylinks.map((link) => (
+            <div key={link.path}>
+              <a rel="noreferrer noopener" target="__blank" href={link.path}>
                 <img
                   className={css(styles.communitylink)}
                   src={link.logo}
@@ -67,80 +58,65 @@ const Footer = () => {
                 />
               </a>
             </div>
-          )}
+          ))}
         </Row>
       </Container>
       <div className={css(styles.divider)} />
       <Container fluid="sm" className="w-60">
         <Row className="mx-0 w-100 justify-content-around">
-          <Col
-            xs={4}
-          >
+          <Col xs={4}>
             <strong>Navigation</strong>
-            {navlinks.map(link =>
-              <LinkRenderer
-                key={link.path}
-                link={link}
-              />
-            )}
+            {navlinks.map((link) => (
+              <LinkRenderer key={link.path} link={link} />
+            ))}
           </Col>
-          <Col
-            xs={4}
-          >
+          <Col xs={4}>
             <strong>Advisors</strong>
-            {advisors.map(link =>
-              <LinkRenderer
-                key={link.path}
-                link={link}
-              />
-            )}
+            {advisors.map((link) => (
+              <LinkRenderer key={link.path} link={link} />
+            ))}
           </Col>
-          <Col
-            xs={4}
-          >
+          <Col xs={4}>
             <strong>Documents</strong>
-            {documents.map(link =>
+            {documents.map((link) => (
               <Link
                 key={link.path}
                 href={link.path}
+                className={`nav-link ${css(styles.footerlink)}`}
+                target="__blank"
               >
-                <a 
-                  className={`nav-link ${css(styles.footerlink)}`}
-                  target="__blank"
-                >
-                  {link.name}
-                </a>
+                {link.name}
               </Link>
-            )}
+            ))}
           </Col>
         </Row>
       </Container>
       <div className={css(styles.divider)} />
     </Container>
   );
-}
+};
 
 const styles = StyleSheet.create({
   footerlink: {
-    padding: '0.1rem 0 !important',
+    padding: "0.1rem 0 !important",
   },
   divider: {
-    display: 'inline-block',
-    height: '0.05rem !important',
-    width: '85vw !important',
-    backgroundColor: '#bdbdbd !important',
-    margin: '1.75rem 0 !important'
+    display: "inline-block",
+    height: "0.05rem !important",
+    width: "85vw !important",
+    backgroundColor: "#bdbdbd !important",
+    margin: "1.75rem 0 !important",
   },
   communitybar: {
-    maxWidth: '575.98px',
+    maxWidth: "575.98px",
   },
   communitylink: {
-    filter: 'saturate(0) invert(1)',
-    display: 'inline-block',
-    ':hover': {
-      filter: 'invert(0.65)'
-    }
-  }
-})
+    filter: "saturate(0) invert(1)",
+    display: "inline-block",
+    ":hover": {
+      filter: "invert(0.65)",
+    },
+  },
+});
 
 export default Footer;

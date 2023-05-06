@@ -4,14 +4,14 @@ import {
   curatedVideoInfoAtom,
 } from "../lib/AppAtoms";
 import { StyleSheet, css } from "aphrodite";
-import { ResponsiveEmbed } from "react-bootstrap";
+import { Ratio } from "react-bootstrap";
 
 type EFieldProps = Readonly<{
   videoID: string;
 }>;
 
 const EmbeddedField = ({ videoID }: EFieldProps) => (
-  <ResponsiveEmbed
+  <Ratio
     className={css(styles.embeddedContainer)}
     aspectRatio="16by9"
   >
@@ -23,7 +23,7 @@ const EmbeddedField = ({ videoID }: EFieldProps) => (
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
     ></iframe>
-  </ResponsiveEmbed>
+   </Ratio>
 );
 
 // TODO(!ONE) ADD FADE IN ANIMATION FOR "greyAreaContent" on entrance
