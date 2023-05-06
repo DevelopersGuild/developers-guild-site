@@ -1,29 +1,39 @@
-import React from "react";
-import { Container } from "react-bootstrap";
+import React, { useEffect, useRef, useState } from "react";
+import { Container, ResponsiveEmbed } from "react-bootstrap";
 import { StyleSheet, css } from "aphrodite";
-import { useSetRecoilState } from "recoil";
-import {
-  isCuratedVideoPlayingAtom,
-  curatedVideoInfoAtom,
-} from "../lib/AppAtoms";
 import { useMediaQuery } from "react-responsive";
 import SaferLink from "./SaferLink.react";
 
 const VideoThumbnail = ({ videoID, title }) => {
-  const setIsCuratedVideoPlaying = useSetRecoilState(isCuratedVideoPlayingAtom);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const dialogRef = useRef<HTMLDialogElement | null>(null);
+  const dialogIFrameRef = useRef<HTMLIFrameElement | null>(null);
 
-  const setCuratedVideoInfo = useSetRecoilState(curatedVideoInfoAtom);
-
-  const isOnMobile = useMediaQuery({
-    query: "(max-width: 768px)",
-  });
-
-  function clickHandler() {
-    setCuratedVideoInfo({ videoID, title });
-    setIsCuratedVideoPlaying(true);
+  function handleClickOutside(event) {
+    if (dialogRef.current && dialogIFrameRef.current && !dialogIFrameRef.current?.contains(event.target)) {
+      setIsModalOpen(false);
+    }
   }
 
-  if (isOnMobile) {
+  useEffect(() => {
+    if (isModalOpen) {
+      dialogRef.current?.showModal();
+    } else {
+      dialogRef.current?.close();
+    }
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isModalOpen, dialogRef]);
+
+  if (
+    useMediaQuery({
+      query: "(max-width: 768px)",
+    })
+  ) {
     return (
       <SaferLink href={`https://www.youtube.com/watch?v=${videoID}`}>
         <img
@@ -37,13 +47,42 @@ const VideoThumbnail = ({ videoID, title }) => {
   }
 
   return (
-    <img
-      onClick={clickHandler}
-      role="button"
-      className={css(styles.videoThumbnail)}
-      alt={title}
-      src={`https://img.youtube.com/vi/${videoID}/maxresdefault.jpg`}
-    />
+    <>
+      <dialog
+        style={{
+          width: "900px",
+          height: "500px",
+          padding: 0,
+        }}
+        ref={dialogRef}
+      >
+        {isModalOpen && (
+          <ResponsiveEmbed
+            id="dialog-responsive-embed"
+            aspectRatio="16by9"
+            style={{ width: "100%", height: "100%" }}
+          >
+            <iframe
+              ref={dialogIFrameRef}
+              title={videoID}
+              width={900}
+              height={500}
+              src={`https://www.youtube.com/embed/${videoID}?autoplay=1`}
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </ResponsiveEmbed>
+        )}
+        {/* <button onClick={() => setIsModalOpen(false)}>Close</button> */}
+      </dialog>
+      <img
+        onClick={() => setIsModalOpen(true)}
+        role="button"
+        className={css(styles.videoThumbnail)}
+        alt={title}
+        src={`https://img.youtube.com/vi/${videoID}/maxresdefault.jpg`}
+      />
+    </>
   );
 };
 

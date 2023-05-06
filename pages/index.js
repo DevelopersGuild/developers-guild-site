@@ -1,26 +1,23 @@
 import { Container, Row } from "react-bootstrap";
 import Image from "next/image";
-import { useRecoilValue } from "recoil";
+import dynamic from 'next/dynamic';
 
 import CustomJumbotron from "../components/CustomJumbotron.react";
 import SaferLink from "../components/SaferLink.react";
-import Curated from "../components/Curated.react";
-import OverflowContainer from "../components/OverflowContainer.react"
-import VideoOverlay from "../components/VideoOverlay.react";
-import { isCuratedVideoPlayingAtom } from "../lib/AppAtoms";
 import Head from 'next/head'
+const Curated = dynamic(() => import("../components/Curated.react"), {
+  ssr: false,
+})
 
 export default function Home(props) {
-  const isCuratedVideoPlaying = useRecoilValue(isCuratedVideoPlayingAtom);
   return (
-    <OverflowContainer>
+    <>
       <Head>
-        <link rel="preload" as="image" href="/og.jpg"/>
+        <link rel="preload" as="image" href="/og.jpg" />
         <title>Developers Guild</title>
       </Head>
-      {isCuratedVideoPlaying && <VideoOverlay />}
       <Container>
-        <CustomJumbotron/>
+        <CustomJumbotron />
         <Container>
           <Image
             priority={true}
@@ -38,7 +35,7 @@ export default function Home(props) {
           </SaferLink>
         </Row>
       </Container>
-    </OverflowContainer>
+    </>
   );
 }
 

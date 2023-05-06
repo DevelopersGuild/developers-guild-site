@@ -1,7 +1,6 @@
 import React from "react";
 import { StyleSheet } from "aphrodite";
 import "../styles/globals.css";
-import { RecoilRoot } from "recoil";
 import Layout from "../components/Layout";
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -14,11 +13,9 @@ if (typeof window !== "undefined") {
 
 function MyApp({ Component, pageProps }) {
   return (
-    <RecoilRoot>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </RecoilRoot>
   );
 }
 
