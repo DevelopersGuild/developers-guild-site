@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { Container } from 'react-bootstrap';
 
 import NavbarMain from './NavbarMain.react';
-import Footer from './footer';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (

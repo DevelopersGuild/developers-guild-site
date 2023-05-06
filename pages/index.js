@@ -25,8 +25,8 @@ export default function Home(props) {
           <Image
             priority={true}
             src="/og.jpg"
-            width={1832}
-            height={1221}
+            width={800}
+            height={500}
           />
         </Container>
         <Curated className="my-5" curated={props.curated} />

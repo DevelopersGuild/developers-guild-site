@@ -2,7 +2,8 @@ import React from "react";
 import { StyleSheet } from "aphrodite";
 import "../styles/globals.css";
 import { RecoilRoot } from "recoil";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
+import 'bootstrap/dist/css/bootstrap.css';
 
 // Rehydrate to ensure that the client doesn't duplicate styles
 // It has to execute before any code that defines styles

@@ -4,14 +4,14 @@ import {
   curatedVideoInfoAtom,
 } from "../lib/AppAtoms";
 import { StyleSheet, css } from "aphrodite";
-import { Ratio } from "react-bootstrap";
+import { ResponsiveEmbed } from "react-bootstrap";
 
 type EFieldProps = Readonly<{
   videoID: string;
 }>;
 
 const EmbeddedField = ({ videoID }: EFieldProps) => (
-  <Ratio
+  <ResponsiveEmbed
     className={css(styles.embeddedContainer)}
     aspectRatio="16by9"
   >
@@ -23,20 +23,13 @@ const EmbeddedField = ({ videoID }: EFieldProps) => (
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
     ></iframe>
-   </Ratio>
+  </ResponsiveEmbed>
 );
-
-// TODO(!ONE) ADD FADE IN ANIMATION FOR "greyAreaContent" on entrance
-// TODO(!TWO) ADD SLIDE IN ANIMATION FOR "videoContentContainer" on entrance
-
-// TODO(!THREE) ADD FADE OUT ANIMATION FOR "greyAreaContent" on exit
-// TODO(!FOUR) ADD SLIDE OUT ANIMATION FOR "videoContentContainer" on exit
 
 function VideoOverlay() {
   const setIsCuratedVideoPlaying = useSetRecoilState(isCuratedVideoPlayingAtom);
-  const [{ videoID, title }, setCuratedVideoInfo] = useRecoilState(
-    curatedVideoInfoAtom
-  );
+  const [{ videoID, title }, setCuratedVideoInfo] =
+    useRecoilState(curatedVideoInfoAtom);
 
   function clickGreyHandle() {
     setIsCuratedVideoPlaying(false);
