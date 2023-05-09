@@ -18,13 +18,17 @@ export default function Home(props) {
       </Head>
       <Container>
         <CustomJumbotron />
-        <Container>
-          <Image
-            priority={true}
-            src="/og.jpg"
-            width={800}
-            height={500}
-          />
+        <Container className="d-flex justify-content-center align-items-center">
+          <figure>
+            <Image
+              className="img-fluid"
+              priority={true}
+              src="/og.jpg"
+              width={800}
+              height={500}
+            />
+            <figcaption>Yusuf and the DG crew.</figcaption>
+          </figure>
         </Container>
         <Curated className="my-5" curated={props.curated} />
         <Row className="justify-content-end">
