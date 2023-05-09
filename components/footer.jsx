@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
-import { StyleSheet, css } from "aphrodite";
 import { Container, Row, Col } from "react-bootstrap";
-
 import SaferLink from "./SaferLink.react";
+import styles from "../styles/modules/Footer.module.css";
+
 import {
   getNavLinks,
   getAdvisorLinks,
@@ -11,16 +11,17 @@ import {
   getDocumentLinks,
 } from "../lib/links";
 
+
 function LinkRenderer({ link }) {
   return link.external ? (
     <SaferLink
-      className={`nav-link ${css(styles.footerlink)}`}
+      className={`${styles.footerlink} nav-link`}
       href={link.path}
     >
       {link.name}
     </SaferLink>
   ) : (
-    <Link href={link.path} className={`nav-link ${css(styles.footerlink)}`}>
+    <Link href={link.path} className={`${styles.footerlink} nav-link`}>
       {link.name}
     </Link>
   );
@@ -35,7 +36,7 @@ const Footer = () => {
   return (
     <Container
       fluid
-      className="footer d-flex flex-column align-items-center bg-lighter-dark text-white text-center pb-4 px-0"
+      className={`${styles.footer} d-flex flex-column align-items-center bg-lighter-dark text-white text-center pb-4 px-0`}
     >
       <Row className="justify-content-center mx-0 py-4">
         <img
@@ -45,13 +46,13 @@ const Footer = () => {
           alt="DG Logo"
         />
       </Row>
-      <Container fluid="sm" className={css(styles.communitybar)}>
+      <Container fluid="sm" className={styles.communitybar}>
         <Row className="d-flex justify-content-around align-items-center mx-5 my-2">
           {communitylinks.map((link) => (
             <div key={link.path}>
               <a rel="noreferrer noopener" target="__blank" href={link.path}>
                 <img
-                  className={css(styles.communitylink)}
+                  className={styles.communitylink}
                   src={link.logo}
                   height={40}
                   width={40}
@@ -61,7 +62,7 @@ const Footer = () => {
           ))}
         </Row>
       </Container>
-      <div className={css(styles.divider)} />
+      <div className={styles.divider} />
       <Container fluid="sm" className="w-60">
         <Row className="mx-0 w-100 justify-content-around">
           <Col xs={4}>
@@ -82,7 +83,7 @@ const Footer = () => {
               <Link
                 key={link.path}
                 href={link.path}
-                className={`nav-link ${css(styles.footerlink)}`}
+                className={`${styles.footerlink} nav-link`}
                 target="__blank"
               >
                 {link.name}
@@ -91,32 +92,10 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
-      <div className={css(styles.divider)} />
+      <div className={styles.divider} />
     </Container>
   );
 };
 
-const styles = StyleSheet.create({
-  footerlink: {
-    padding: "0.1rem 0 !important",
-  },
-  divider: {
-    display: "inline-block",
-    height: "0.05rem !important",
-    width: "85vw !important",
-    backgroundColor: "#bdbdbd !important",
-    margin: "1.75rem 0 !important",
-  },
-  communitybar: {
-    maxWidth: "575.98px",
-  },
-  communitylink: {
-    filter: "saturate(0) invert(1)",
-    display: "inline-block",
-    ":hover": {
-      filter: "invert(0.65)",
-    },
-  },
-});
-
 export default Footer;
+

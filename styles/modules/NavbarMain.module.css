@@ -1,0 +1,27 @@
+.navbar-main {
+  background-color: black;
+  color: white;
+}
+
+.navbar-main .navbar-brand img {
+  margin-right: 10px;
+}
+
+.navbar-main .nav-link {
+  color: white !important;
+  margin-right: 10px;
+}
+
+.navbar-main .nav-link:hover {
+  color: #ccc !important;
+}
+
+.navbar-main .discord-link {
+  color: #7289da;
+  font-weight: bold;
+}
+
+.navbar-main .discord-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
