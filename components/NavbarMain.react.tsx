@@ -42,7 +42,7 @@ const NavbarMain = (props: TProps) => {
     <React.Fragment>
       <Navbar
         sticky="top"
-        className={`${styles["navbar-main"]} py-2 justify-content-center`}
+        className={`${styles["navbarMain"]} py-2 justify-content-center`}
         expand="lg"
       >
         <div className={`${styles["navElements"]} w-100`}>
@@ -81,7 +81,7 @@ const NavbarMain = (props: TProps) => {
                     />
                   ))}
                   <DiscordLink
-                    className={`${styles["discord-link"]} mx-2`}
+                    className={`${styles["discordLink"]} mx-2`}
                   />
                 </Nav>
               </Navbar.Collapse>

@@ -6,8 +6,8 @@ import styles from "../styles/modules/Curated.react.module.css";
 
 const VideoThumbnail = ({ videoID, title }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const dialogRef = useRef(null);
-  const dialogIFrameRef = useRef(null);
+  const dialogRef = useRef<HTMLDialogElement | null>(null);
+  const dialogIFrameRef = useRef<HTMLIFrameElement | null>(null);
 
   function handleClickOutside(event) {
     if (
@@ -98,19 +98,7 @@ type Props = Readonly<{
 const Curated = ({ curated, className }: Props) => (
   <Container className={`${styles.container} ${className}`} >
     <h2>Community Curated Videos</h2>
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        flexWrap: "nowrap",
-        whiteSpace: "nowrap",
-        overflowY: "hidden",
-        overflowX: "auto",
-        scrollbarWidth: "none",
-      }}
-    >
+    <div className={styles.contentRow}>
       {curated.map((node) => (
         <VideoThumbnail
           key={node.videoID}
