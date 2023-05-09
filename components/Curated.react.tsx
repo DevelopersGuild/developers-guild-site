@@ -1,16 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Container, ResponsiveEmbed } from "react-bootstrap";
-import { StyleSheet, css } from "aphrodite";
 import { useMediaQuery } from "react-responsive";
 import SaferLink from "./SaferLink.react";
+import styles from "../styles/modules/Curated.react.module.css";
 
 const VideoThumbnail = ({ videoID, title }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const dialogRef = useRef<HTMLDialogElement | null>(null);
-  const dialogIFrameRef = useRef<HTMLIFrameElement | null>(null);
+  const dialogRef = useRef(null);
+  const dialogIFrameRef = useRef(null);
 
   function handleClickOutside(event) {
-    if (dialogRef.current && dialogIFrameRef.current && !dialogIFrameRef.current?.contains(event.target)) {
+    if (
+      dialogRef.current &&
+      dialogIFrameRef.current &&
+      !dialogIFrameRef.current.contains(event.target)
+    ) {
       setIsModalOpen(false);
     }
   }
@@ -38,7 +42,7 @@ const VideoThumbnail = ({ videoID, title }) => {
       <SaferLink href={`https://www.youtube.com/watch?v=${videoID}`}>
         <img
           role="button"
-          className={css(styles.videoThumbnail)}
+          className={styles.videoThumbnail}
           alt={title}
           src={`https://img.youtube.com/vi/${videoID}/maxresdefault.jpg`}
         />
@@ -78,7 +82,7 @@ const VideoThumbnail = ({ videoID, title }) => {
       <img
         onClick={() => setIsModalOpen(true)}
         role="button"
-        className={css(styles.videoThumbnail)}
+        className={styles.videoThumbnail}
         alt={title}
         src={`https://img.youtube.com/vi/${videoID}/maxresdefault.jpg`}
       />
@@ -92,9 +96,21 @@ type Props = Readonly<{
 }>;
 
 const Curated = ({ curated, className }: Props) => (
-  <Container className={`${css(styles.container)} ${className}`}>
+  <Container className={`${styles.container} ${className}`} >
     <h2>Community Curated Videos</h2>
-    <div className={css(styles.contentRow)}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        flexWrap: "nowrap",
+        whiteSpace: "nowrap",
+        overflowY: "hidden",
+        overflowX: "auto",
+        scrollbarWidth: "none",
+      }}
+    >
       {curated.map((node) => (
         <VideoThumbnail
           key={node.videoID}
@@ -105,33 +121,5 @@ const Curated = ({ curated, className }: Props) => (
     </div>
   </Container>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: "1vh",
-    marginBottom: "1vh",
-  },
-  contentRow: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    alignItems: "center",
-    flexWrap: "nowrap",
-    whiteSpace: "nowrap",
-    overflowY: "hidden",
-    overflowX: "auto",
-    scrollbarWidth: "none",
-    "::-webkit-scrollbar": {
-      display: "none",
-    },
-  },
-  videoThumbnail: {
-    cursor: "url(assets/play-cursor.svg) 60 60, auto",
-    marginRight: "2vw",
-    flex: "0 0 auto",
-    width: "500px",
-    height: "300px",
-  },
-});
 
 export default Curated;

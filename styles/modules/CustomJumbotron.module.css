@@ -1,0 +1,12 @@
+.jumbotron-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  
+  .jumbotron-time span {
+    text-decoration: line-through;
+  }
+  

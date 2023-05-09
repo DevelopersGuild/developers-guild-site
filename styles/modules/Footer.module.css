@@ -1,0 +1,30 @@
+.footer {
+  padding: 2rem;
+  background-color: #222;
+  color: #fff;
+}
+
+.footerlink {
+  padding: 0.1rem 0 !important;
+}
+
+.divider {
+  display: inline-block;
+  height: 0.05rem !important;
+  width: 85vw !important;
+  background-color: #bdbdbd !important;
+  margin: 1.75rem 0 !important;
+}
+
+.communitybar {
+  max-width: 575.98px;
+}
+
+.communitylink {
+  filter: saturate(0) invert(1);
+  display: inline-block;
+}
+
+.communitylink:hover {
+  filter: invert(0.65);
+}

@@ -1,11 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import { Navbar, Nav, Row, Col } from "react-bootstrap";
-import { StyleSheet, css } from "aphrodite";
-
 import SaferLink from "./SaferLink.react";
 import DiscordLink from "./DiscordLink.react";
-import { getNavLinks } from "../lib/links"
+import { getNavLinks } from "../lib/links";
+import styles from "../styles/modules/NavbarMain.module.css";
 
 type TLinkMetaInfo = Readonly<{
   name: string;
@@ -43,12 +42,10 @@ const NavbarMain = (props: TProps) => {
     <React.Fragment>
       <Navbar
         sticky="top"
-        className="navbar-main py-2 justify-content-center"
-        bg="dark"
-        variant="dark"
+        className={`${styles["navbar-main"]} py-2 justify-content-center`}
         expand="lg"
       >
-        <div className={`${css(navStyles.navElements)} w-100`}>
+        <div className={`${styles["navElements"]} w-100`}>
           <Row className="justify-content-between">
             <Col
               md={12}
@@ -65,6 +62,7 @@ const NavbarMain = (props: TProps) => {
                   width={40}
                   height={40}
                 />
+                My Site
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="navbar-collapse" />
             </Col>
@@ -84,7 +82,7 @@ const NavbarMain = (props: TProps) => {
                     />
                   ))}
                   <DiscordLink
-                    className="mx-2"
+                    className={`${styles["discord-link"]} mx-2`}
                   />
                 </Nav>
               </Navbar.Collapse>
@@ -96,10 +94,5 @@ const NavbarMain = (props: TProps) => {
   );
 }
 
-const navStyles = StyleSheet.create({
-  navElements: {
-    maxWidth: '1199.98px'
-  }
-})
-
 export default NavbarMain;
+
