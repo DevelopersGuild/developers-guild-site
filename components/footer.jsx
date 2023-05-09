@@ -81,20 +81,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-/*
-removed constitution as instructed, code snippet if we need to add it back:
-<Col xs={4}>
-  <strong>Documents</strong>
-  {documents.map((link) => (
-  <Link
-    key={link.path}
-    href={link.path}
-    className={`${styles.footerlink} nav-link`}
-    target="__blank"
-  >
-  {link.name}
-  </Link>
-  ))}
-  </Col> 
-*/

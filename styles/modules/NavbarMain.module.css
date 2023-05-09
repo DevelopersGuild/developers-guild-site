@@ -1,27 +1,31 @@
-.navbar-main {
+.navbarMain {
   background-color: black;
   color: white;
 }
 
-.navbar-main .navbar-brand img {
+.navbarMain .navbar-brand img {
   margin-right: 10px;
 }
 
-.navbar-main .nav-link {
+.navbarMain .nav-link {
   color: white !important;
   margin-right: 10px;
 }
 
-.navbar-main .nav-link:hover {
+.navbarMain .nav-link:hover {
   color: #ccc !important;
 }
 
-.navbar-main .discord-link {
+.navbarMain .discordLink {
   color: #7289da;
   font-weight: bold;
 }
 
-.navbar-main .discord-link:hover {
+.navbarMain .discordLink:hover {
   color: #fff;
   text-decoration: none;
+}
+
+.navElements {
+  max-width: "1199.98px";
 }
