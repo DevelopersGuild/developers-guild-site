@@ -62,7 +62,6 @@ const NavbarMain = (props: TProps) => {
                   width={40}
                   height={40}
                 />
-                My Site
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="navbar-collapse" />
             </Col>
